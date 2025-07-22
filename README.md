@@ -582,32 +582,36 @@ style I fill:#047857,color:#fff
 </div>
 
 ---
+## 🚀 Deployment
 
-## 🔧 Installation & Setup
-
-<div align="center">
-
-<img src="https://capsule-render.vercel.app/api?type=cylinder&color=gradient&customColorList=0,2,2,5,30&height=120&section=header&text=🛠️%20Easy%20Installation&fontSize=30&fontColor=fff" />
-
-</div>
-
-### ⚡ **One-Line Installation**
-
-<div align="center">
-
-```bash
-curl -sSL https://raw.githubusercontent.com/yourusername/amff-cnn-steel-defect/main/install.sh | bash
-```
-
-<img src="https://img.shields.io/badge/⏱️-Setup%20Time-blue?style=for-the-badge&logo=clock&logoColor=white" alt="Setup Time"/>
-<img src="https://img.shields.io/badge/⚡-2%20minutes-green?style=for-the-badge&logo=lightning&logoColor=white" alt="2 minutes"/>
-
-</div>
+### 🐳 Docker Deployment
 
 <details>
-<summary>
-<img src="https://img.shields.io/badge/🐍-Manual%20Python%20Setup-informational?style=for-the-badge&logo=python&logoColor=white" alt="Manual Setup"/>
-</summary>
+<summary>📦 Containerization</summary>
+
+```dockerfile
+# Dockerfile
+FROM tensorflow/tensorflow:2.8.0-gpu
+
+WORKDIR /app
+
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+
+COPY . .
+
+EXPOSE 8000
+
+CMD ["python", "app.py"]
+```
+
+```bash
+# Build and run
+docker build -t amff-cnn-steel-defect .
+docker run -p 8000:8000 amff-cnn-steel-defect
+```
+
+</details>
 
 ### 📋 **Step-by-Step Installation**
 
