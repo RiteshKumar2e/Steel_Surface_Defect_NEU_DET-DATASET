@@ -645,67 +645,6 @@ docker run -p 8000:8000 amff-cnn-steel-defect
 
 </details>
 
-<details>
-<summary>
-<img src="https://img.shields.io/badge/🐳-Docker%20Setup-blue?style=for-the-badge&logo=docker&logoColor=white" alt="Docker Setup"/>
-</summary>
-
-### 🐳 **Docker Installation**
-
-```bash
-# Pull and run the container
-docker pull yourusername/amff-cnn-steel-defect:latest
-docker run -p 8000:8000 yourusername/amff-cnn-steel-defect:latest
-
-# Or build from source
-docker build -t amff-cnn-steel-defect .
-docker run -p 8000:8000 amff-cnn-steel-defect
-```
-
-**🎯 Container includes:**
-- Pre-trained AMFF-CNN model
-- REST API server
-- Interactive web interface
-- Sample images for testing
-
-</details>
-
-<details>
-<summary>
-<img src="https://img.shields.io/badge/☁️-Cloud%20Deployment-purple?style=for-the-badge&logo=cloud&logoColor=white" alt="Cloud Deploy"/>
-</summary>
-
-### ☁️ **Cloud Deployment Options**
-
-<table>
-<tr>
-<td align="center">
-<img src="https://img.shields.io/badge/Google%20Colab-F9AB00?style=for-the-badge&logo=googlecolab&color=525252" alt="Google Colab"/>
-<br>
-<a href="https://colab.research.google.com/github/yourusername/amff-cnn-steel-defect/blob/main/notebooks/AMFF_CNN_Demo.ipynb">
-<img src="https://img.shields.io/badge/Open%20in%20Colab-blue?style=for-the-badge&logo=google-colab&logoColor=white" alt="Open in Colab"/>
-</a>
-</td>
-<td align="center">
-<img src="https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=Kaggle&logoColor=white" alt="Kaggle"/>
-<br>
-<a href="https://www.kaggle.com/yourusername/amff-cnn-steel-defect">
-<img src="https://img.shields.io/badge/Run%20on%20Kaggle-blue?style=for-the-badge&logo=kaggle&logoColor=white" alt="Run on Kaggle"/>
-</a>
-</td>
-<td align="center">
-<img src="https://img.shields.io/badge/Hugging%20Face-FFD21E?style=for-the-badge&logo=huggingface&logoColor=black" alt="Hugging Face"/>
-<br>
-<a href="https://huggingface.co/spaces/yourusername/amff-cnn-steel-defect">
-<img src="https://img.shields.io/badge/Try%20on%20HF%20Spaces-blue?style=for-the-badge&logo=huggingface&logoColor=white" alt="HF Spaces"/>
-</a>
-</td>
-</tr>
-</table>
-
-</details>
-
----
 
 ## 🚀 Quick Start Guide
 
