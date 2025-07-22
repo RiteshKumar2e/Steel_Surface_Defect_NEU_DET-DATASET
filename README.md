@@ -750,15 +750,15 @@ New_Defect/
 
 <div align="center">
 
-| Class | Training Images | Validation Images | Total |
-|-------|----------------|-------------------|-------|
-| Crazing | 192 | 48 | 240 |
-| Inclusion | 192 | 48 | 240 |
-| Patches | 192 | 48 | 240 |
-| Pitted Surface | 192 | 48 | 240 |
-| Rolled-in Scale | 192 | 48 | 240 |
-| Scratches | 192 | 48 | 240 |
-| **Total** | **1152** | **288** | **1440** |
+| Class           | Training Images | Validation Images | Total |
+|----------------|------------------|--------------------|-------|
+| Crazing        | 240              | 60                 | 300   |
+| Inclusion      | 240              | 60                 | 300   |
+| Patches        | 240              | 60                 | 300   |
+| Pitted Surface | 240              | 60                 | 300   |
+| Rolled-in Scale| 240              | 60                 | 300   |
+| Scratches      | 240              | 60                 | 300   |
+| **Total**      | **1440**         | **360**            | **1800** |
 
 </div>
 
@@ -826,8 +826,8 @@ enhanced_features = Multiply()([prev_resized, attention_weights])
 ```mermaid
 graph LR
     subgraph "Model Performance"
-        A[Base CNN<br/>93.75%] 
-        B[AMFF-CNN<br/>99.65%]
+        A[Base CNN<br/>93.47%] 
+        B[AMFF-CNN<br/>98.58%]
     end
     
     subgraph "Improvement"
