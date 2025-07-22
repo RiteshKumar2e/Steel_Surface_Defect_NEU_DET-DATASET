@@ -811,8 +811,8 @@ enhanced_features = Multiply()([prev_resized, attention_weights])
 
 | Model                | Parameters | FLOPs | Accuracy   | Training Time |
 | -------------------- | ---------- | ----- | ---------- | ------------- |
-| Base CNN             | 2.1M       | 1.2G  | **93.75%** | 45 min        |
-| AMFF-CNN (SEAM+CEAM) | 3.8M       | 2.1G  | **99.65%** | 78 min        |
+| Base CNN             | 2.1M       | 1.2G  | **93.47%** | 45 min        |
+| AMFF-CNN (SEAM+CEAM) | 3.8M       | 2.1G  | **98.58%** | 78 min        |
 
 
 ---
@@ -848,16 +848,29 @@ style C fill:#ff8f00,stroke:#ffe0b2,color:#ffffff
 ### 📊 Detailed Results
 
 <details>
-<summary>🎯 Per-Class Performance</summary>
+### 🧠 Classification Metrics Comparison
 
-| Defect Type | Base CNN | AMFF-CNN | Improvement |
-|-------------|----------|----------|-------------|
-| Crazing | 82.3% | 91.7% | +9.4% |
-| Inclusion | 79.1% | 89.2% | +10.1% |
-| Patches | 88.7% | 94.3% | +5.6% |
-| Pitted Surface | 81.5% | 90.8% | +9.3% |
-| Rolled-in Scale | 87.2% | 95.1% | +7.9% |
-| Scratches | 93.6% | 97.2% | +3.6% |
+| Metric            | Base CNN | AMFF-CNN |
+|-------------------|----------|----------|
+| Precision         | 98.4%    | 99.7%    |
+| Recall            | 98.3%    | 99.7%    |
+| mAP               | 99.7%    | 99.9%    |
+| Macro Precision   | 98.36%   | 99.72%   |
+| Macro Recall      | 98.32%   | 99.72%   |
+| Weighted Accuracy | 98%      | 100%     |
+
+---
+
+### 🔍 Per-Class Defect Detection Accuracy
+
+| Defect Type       | Base CNN | AMFF-CNN | Improvement |
+|-------------------|----------|----------|-------------|
+| Crazing           | 82.3%    | 91.7%    | +9.4%       |
+| Inclusion         | 79.1%    | 89.2%    | +10.1%      |
+| Patches           | 88.7%    | 94.3%    | +5.6%       |
+| Pitted Surface    | 81.5%    | 90.8%    | +9.3%       |
+| Rolled-in Scale   | 87.2%    | 95.1%    | +7.9%       |
+| Scratches         | 93.6%    | 97.2%    | +3.6%       |
 
 </details>
 
