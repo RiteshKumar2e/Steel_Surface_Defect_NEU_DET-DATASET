@@ -404,8 +404,8 @@ enhanced_features = Multiply()([prev_resized, attention_weights])
 ```mermaid
 graph LR
     subgraph "Model Performance"
-        A[Base CNN<br/>93.75%] 
-        B[AMFF-CNN<br/>99.65%]
+        A[Base CNN<br/>93.47%] 
+        B[AMFF-CNN<br/>98.58%]
     end
     
     subgraph "Improvement"
