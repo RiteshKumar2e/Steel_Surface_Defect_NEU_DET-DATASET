@@ -1,0 +1,39 @@
+{
+    "mAP@[.5:.95]": 0.8517296013460461,
+    "AP@50": 0.9734309882065788,
+    "AP@75": 0.7300282144855137,
+    "accuracy": 0.9833333333333333,
+    "precision_macro": 0.9844472467423288,
+    "recall_macro": 0.9833333333333334,
+    "f1_macro": 0.9833089858293299,
+    "crazing": {
+        "precision": 1.0,
+        "recall": 0.9833333333333333,
+        "f1_score": 0.9915966386554622
+    },
+    "inclusion": {
+        "precision": 0.9230769230769231,
+        "recall": 1.0,
+        "f1_score": 0.96
+    },
+    "patches": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0
+    },
+    "pitted_surface": {
+        "precision": 1.0,
+        "recall": 1.0,
+        "f1_score": 1.0
+    },
+    "rolled-in_scale": {
+        "precision": 0.9836065573770492,
+        "recall": 1.0,
+        "f1_score": 0.9917355371900827
+    },
+    "scratches": {
+        "precision": 1.0,
+        "recall": 0.9166666666666666,
+        "f1_score": 0.9565217391304348
+    }
+}
