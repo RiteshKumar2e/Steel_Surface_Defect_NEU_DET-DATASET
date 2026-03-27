@@ -1,0 +1,11 @@
+MobileNetV2 + FPN + AMFF COMPLETE REPORT
+
+Total Params: 13537007
+Trainable Params: 11275951
+Frozen Params: 2261056
+Backbone Params: 2257984
+FPN+AMFF+Head Params: 11279023
+Total Layers: 12
+Conv Layers: 0
+BN Layers: 0
+Dense Layers: 3
