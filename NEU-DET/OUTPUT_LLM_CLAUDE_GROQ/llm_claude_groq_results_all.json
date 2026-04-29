@@ -44079,5 +44079,6978 @@
         ]
       ]
     }
+  },
+  {
+    "filename": "crazing_234.jpg",
+    "true_label": "crazing",
+    "pred_label": "pitted_surface",
+    "confidence": 0.6714691467840082,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.19)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          57,
+          5,
+          142,
+          68
+        ],
+        "label": "crazing",
+        "area": 9656,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          8,
+          76,
+          192,
+          90
+        ],
+        "label": "crazing",
+        "area": 17280,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 154.03,
+      "std_intensity": 31.37,
+      "contrast": 0.204,
+      "dark_pixel_pct": 19.59,
+      "bright_pixel_pct": 19.59,
+      "entropy": 7.004,
+      "edge_density": 38.13,
+      "sobel_magnitude": 96.836,
+      "horizontal_edge_ratio": 0.341,
+      "vertical_edge_ratio": 0.335,
+      "diagonal_edge_ratio": 0.324,
+      "hough_line_count": 80,
+      "avg_line_length": 165.04,
+      "max_line_length": 277.19,
+      "line_horizontal_pct": 12.5,
+      "quadrant_std": {
+        "top_left": 30.39,
+        "top_right": 29.48,
+        "bottom_left": 31.75,
+        "bottom_right": 26.97
+      },
+      "quadrant_edge_density": {
+        "top_left": 37.99,
+        "top_right": 37.95,
+        "bottom_left": 38.06,
+        "bottom_right": 38.53
+      },
+      "glcm_contrast": 0.604,
+      "glcm_homogeneity": 0.749,
+      "glcm_energy": 0.329,
+      "glcm_correlation": 0.71,
+      "lbp_uniformity": 0.3952,
+      "lbp_entropy": 3.345,
+      "num_regions": 149,
+      "avg_area": 83.81,
+      "max_area": 4601.0,
+      "total_defect_pct": 31.22,
+      "avg_aspect_ratio": 1.413,
+      "max_aspect_ratio": 3.571,
+      "avg_circularity": 0.584,
+      "min_circularity": 0.087,
+      "regions_raw": [
+        [
+          183,
+          197,
+          5,
+          3,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          47,
+          196,
+          9,
+          4,
+          18.5,
+          2.25,
+          0.5673450392562135
+        ],
+        [
+          124,
+          195,
+          5,
+          5,
+          12.0,
+          1.0,
+          0.6858054571908726
+        ],
+        [
+          102,
+          194,
+          9,
+          6,
+          22.5,
+          1.5,
+          0.48109687369466847
+        ],
+        [
+          173,
+          192,
+          8,
+          8,
+          28.5,
+          1.0,
+          0.5200434820459647
+        ],
+        [
+          61,
+          191,
+          11,
+          6,
+          41.0,
+          1.8333333333333333,
+          0.6735784143918375
+        ],
+        [
+          47,
+          183,
+          3,
+          5,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          128,
+          182,
+          10,
+          11,
+          50.5,
+          1.1,
+          0.526191288692696
+        ],
+        [
+          94,
+          182,
+          6,
+          5,
+          14.0,
+          1.2,
+          0.7176767646817969
+        ],
+        [
+          67,
+          182,
+          13,
+          10,
+          39.5,
+          1.3,
+          0.367971557463482
+        ],
+        [
+          140,
+          181,
+          25,
+          19,
+          114.0,
+          1.3157894736842106,
+          0.172566664152926
+        ],
+        [
+          103,
+          181,
+          7,
+          10,
+          29.5,
+          1.4285714285714286,
+          0.5058492537166661
+        ],
+        [
+          114,
+          179,
+          13,
+          8,
+          55.0,
+          1.625,
+          0.5929133007955538
+        ],
+        [
+          194,
+          177,
+          6,
+          5,
+          18.0,
+          1.2,
+          0.7987213940695521
+        ],
+        [
+          62,
+          177,
+          7,
+          4,
+          12.0,
+          1.75,
+          0.5324809293797014
+        ],
+        [
+          81,
+          176,
+          5,
+          6,
+          15.5,
+          1.2,
+          0.7382922169994482
+        ],
+        [
+          76,
+          174,
+          4,
+          8,
+          18.0,
+          2.0,
+          0.6380493735608272
+        ],
+        [
+          110,
+          173,
+          6,
+          4,
+          12.5,
+          1.5,
+          0.6611151857406026
+        ],
+        [
+          166,
+          172,
+          24,
+          19,
+          171.5,
+          1.263157894736842,
+          0.2982026901418072
+        ],
+        [
+          53,
+          168,
+          9,
+          19,
+          67.0,
+          2.111111111111111,
+          0.3816217750167503
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "crazing_235.jpg",
+    "true_label": "crazing",
+    "pred_label": "pitted_surface",
+    "confidence": 0.6714691467840082,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.19)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          37,
+          1,
+          126,
+          50
+        ],
+        "label": "crazing",
+        "area": 6300,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          3,
+          65,
+          176,
+          57
+        ],
+        "label": "crazing",
+        "area": 10032,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          47,
+          145,
+          136,
+          54
+        ],
+        "label": "crazing",
+        "area": 7344,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          2,
+          3,
+          51,
+          59
+        ],
+        "label": "crazing",
+        "area": 3009,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 118.11,
+      "std_intensity": 32.47,
+      "contrast": 0.275,
+      "dark_pixel_pct": 19.82,
+      "bright_pixel_pct": 19.45,
+      "entropy": 7.009,
+      "edge_density": 36.81,
+      "sobel_magnitude": 79.369,
+      "horizontal_edge_ratio": 0.334,
+      "vertical_edge_ratio": 0.338,
+      "diagonal_edge_ratio": 0.328,
+      "hough_line_count": 80,
+      "avg_line_length": 153.06,
+      "max_line_length": 265.32,
+      "line_horizontal_pct": 8.75,
+      "quadrant_std": {
+        "top_left": 21.21,
+        "top_right": 31.72,
+        "bottom_left": 24.24,
+        "bottom_right": 31.36
+      },
+      "quadrant_edge_density": {
+        "top_left": 35.3,
+        "top_right": 37.57,
+        "bottom_left": 36.16,
+        "bottom_right": 38.22
+      },
+      "glcm_contrast": 0.46,
+      "glcm_homogeneity": 0.795,
+      "glcm_energy": 0.368,
+      "glcm_correlation": 0.79,
+      "lbp_uniformity": 0.3996,
+      "lbp_entropy": 3.319,
+      "num_regions": 167,
+      "avg_area": 73.85,
+      "max_area": 5670.5,
+      "total_defect_pct": 30.83,
+      "avg_aspect_ratio": 1.413,
+      "max_aspect_ratio": 3.636,
+      "avg_circularity": 0.578,
+      "min_circularity": 0.102,
+      "regions_raw": [
+        [
+          102,
+          197,
+          7,
+          3,
+          10.5,
+          2.3333333333333335,
+          0.5553367560221062
+        ],
+        [
+          183,
+          196,
+          6,
+          4,
+          11.5,
+          1.5,
+          0.7124045270070712
+        ],
+        [
+          32,
+          196,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          156,
+          195,
+          5,
+          5,
+          11.5,
+          1.0,
+          0.7124045270070712
+        ],
+        [
+          62,
+          195,
+          4,
+          5,
+          10.5,
+          1.25,
+          0.7332781254381423
+        ],
+        [
+          83,
+          192,
+          8,
+          8,
+          40.0,
+          1.0,
+          0.6983601223756832
+        ],
+        [
+          191,
+          190,
+          7,
+          6,
+          22.5,
+          1.1666666666666667,
+          0.6900142369332327
+        ],
+        [
+          48,
+          189,
+          9,
+          6,
+          18.5,
+          1.5,
+          0.3955685405933941
+        ],
+        [
+          156,
+          186,
+          4,
+          5,
+          10.0,
+          1.25,
+          0.7635949399760016
+        ],
+        [
+          110,
+          186,
+          22,
+          14,
+          135.5,
+          1.5714285714285714,
+          0.2971493566620304
+        ],
+        [
+          163,
+          184,
+          16,
+          14,
+          62.5,
+          1.1428571428571428,
+          0.3354844611766514
+        ],
+        [
+          181,
+          182,
+          7,
+          8,
+          25.5,
+          1.1428571428571428,
+          0.6020251808161815
+        ],
+        [
+          174,
+          179,
+          5,
+          9,
+          19.0,
+          1.8,
+          0.4266281219864351
+        ],
+        [
+          115,
+          178,
+          7,
+          4,
+          17.5,
+          1.75,
+          0.7251705858721779
+        ],
+        [
+          59,
+          178,
+          25,
+          10,
+          133.0,
+          2.5,
+          0.40443810609789127
+        ],
+        [
+          31,
+          177,
+          13,
+          8,
+          46.5,
+          1.625,
+          0.5084829151348714
+        ],
+        [
+          96,
+          176,
+          14,
+          18,
+          82.5,
+          1.2857142857142858,
+          0.3167169376371318
+        ],
+        [
+          93,
+          176,
+          5,
+          8,
+          27.0,
+          1.6,
+          0.7820971062628184
+        ],
+        [
+          195,
+          175,
+          5,
+          7,
+          21.0,
+          1.4,
+          0.7443909358209652
+        ],
+        [
+          30,
+          172,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "crazing_236.jpg",
+    "true_label": "crazing",
+    "pred_label": "pitted_surface",
+    "confidence": 0.6947839998360228,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          5,
+          1,
+          193,
+          69
+        ],
+        "label": "crazing",
+        "area": 13317,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          1,
+          65,
+          100,
+          71
+        ],
+        "label": "crazing",
+        "area": 7100,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          107,
+          32,
+          93,
+          94
+        ],
+        "label": "crazing",
+        "area": 8742,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          76,
+          111,
+          124,
+          70
+        ],
+        "label": "crazing",
+        "area": 8680,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 166.32,
+      "std_intensity": 31.07,
+      "contrast": 0.187,
+      "dark_pixel_pct": 19.5,
+      "bright_pixel_pct": 19.82,
+      "entropy": 6.971,
+      "edge_density": 38.38,
+      "sobel_magnitude": 115.004,
+      "horizontal_edge_ratio": 0.357,
+      "vertical_edge_ratio": 0.319,
+      "diagonal_edge_ratio": 0.324,
+      "hough_line_count": 80,
+      "avg_line_length": 149.09,
+      "max_line_length": 252.24,
+      "line_horizontal_pct": 21.25,
+      "quadrant_std": {
+        "top_left": 29.84,
+        "top_right": 27.05,
+        "bottom_left": 34.41,
+        "bottom_right": 30.41
+      },
+      "quadrant_edge_density": {
+        "top_left": 37.93,
+        "top_right": 38.87,
+        "bottom_left": 38.61,
+        "bottom_right": 38.09
+      },
+      "glcm_contrast": 0.728,
+      "glcm_homogeneity": 0.721,
+      "glcm_energy": 0.33,
+      "glcm_correlation": 0.642,
+      "lbp_uniformity": 0.371,
+      "lbp_entropy": 3.456,
+      "num_regions": 149,
+      "avg_area": 72.45,
+      "max_area": 498.0,
+      "total_defect_pct": 26.99,
+      "avg_aspect_ratio": 1.436,
+      "max_aspect_ratio": 3.364,
+      "avg_circularity": 0.53,
+      "min_circularity": 0.08,
+      "regions_raw": [
+        [
+          21,
+          196,
+          11,
+          4,
+          20.0,
+          2.75,
+          0.4490822336699317
+        ],
+        [
+          0,
+          195,
+          10,
+          5,
+          25.5,
+          2.0,
+          0.6020251808161815
+        ],
+        [
+          170,
+          191,
+          10,
+          5,
+          28.0,
+          2.0,
+          0.6287151271379045
+        ],
+        [
+          110,
+          191,
+          22,
+          9,
+          98.5,
+          2.4444444444444446,
+          0.35302786448947443
+        ],
+        [
+          34,
+          191,
+          6,
+          9,
+          26.5,
+          1.5,
+          0.6256340114364239
+        ],
+        [
+          54,
+          189,
+          18,
+          11,
+          101.0,
+          1.6363636363636365,
+          0.43851353250736363
+        ],
+        [
+          78,
+          187,
+          30,
+          13,
+          227.5,
+          2.3076923076923075,
+          0.3526180732286894
+        ],
+        [
+          135,
+          185,
+          26,
+          15,
+          133.5,
+          1.7333333333333334,
+          0.2124125682828251
+        ],
+        [
+          21,
+          184,
+          6,
+          9,
+          28.0,
+          1.5,
+          0.5707809637358245
+        ],
+        [
+          29,
+          183,
+          6,
+          3,
+          10.0,
+          2.0,
+          0.6411413546043386
+        ],
+        [
+          134,
+          181,
+          7,
+          6,
+          23.0,
+          1.1666666666666667,
+          0.7480138999487623
+        ],
+        [
+          124,
+          181,
+          9,
+          7,
+          38.5,
+          1.2857142857142858,
+          0.7697061097599064
+        ],
+        [
+          113,
+          181,
+          7,
+          7,
+          22.5,
+          1.0,
+          0.5715045491030267
+        ],
+        [
+          84,
+          181,
+          13,
+          7,
+          32.0,
+          1.8571428571428572,
+          0.38105404856685077
+        ],
+        [
+          164,
+          179,
+          8,
+          9,
+          47.0,
+          1.125,
+          0.8419737344393178
+        ],
+        [
+          0,
+          178,
+          12,
+          12,
+          88.5,
+          1.0,
+          0.586205917478965
+        ],
+        [
+          181,
+          177,
+          19,
+          23,
+          246.0,
+          1.2105263157894737,
+          0.431641113287188
+        ],
+        [
+          145,
+          171,
+          5,
+          4,
+          10.5,
+          1.25,
+          0.7332781254381423
+        ],
+        [
+          39,
+          171,
+          37,
+          14,
+          175.0,
+          2.642857142857143,
+          0.20490159951455253
+        ],
+        [
+          114,
+          168,
+          7,
+          4,
+          13.0,
+          1.75,
+          0.5768543401613432
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "crazing_237.jpg",
+    "true_label": "crazing",
+    "pred_label": "pitted_surface",
+    "confidence": 0.6947839998360228,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          23,
+          4,
+          143,
+          83
+        ],
+        "label": "crazing",
+        "area": 11869,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          1,
+          119,
+          170,
+          76
+        ],
+        "label": "crazing",
+        "area": 12920,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          69,
+          7,
+          74,
+          182
+        ],
+        "label": "crazing",
+        "area": 13468,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 165.88,
+      "std_intensity": 28.94,
+      "contrast": 0.174,
+      "dark_pixel_pct": 19.92,
+      "bright_pixel_pct": 19.68,
+      "entropy": 6.879,
+      "edge_density": 38.45,
+      "sobel_magnitude": 111.372,
+      "horizontal_edge_ratio": 0.351,
+      "vertical_edge_ratio": 0.326,
+      "diagonal_edge_ratio": 0.323,
+      "hough_line_count": 80,
+      "avg_line_length": 161.9,
+      "max_line_length": 260.22,
+      "line_horizontal_pct": 17.5,
+      "quadrant_std": {
+        "top_left": 26.12,
+        "top_right": 26.16,
+        "bottom_left": 31.02,
+        "bottom_right": 30.34
+      },
+      "quadrant_edge_density": {
+        "top_left": 38.87,
+        "top_right": 38.41,
+        "bottom_left": 38.41,
+        "bottom_right": 38.13
+      },
+      "glcm_contrast": 0.714,
+      "glcm_homogeneity": 0.723,
+      "glcm_energy": 0.341,
+      "glcm_correlation": 0.6,
+      "lbp_uniformity": 0.3821,
+      "lbp_entropy": 3.401,
+      "num_regions": 155,
+      "avg_area": 70.9,
+      "max_area": 1652.0,
+      "total_defect_pct": 27.47,
+      "avg_aspect_ratio": 1.417,
+      "max_aspect_ratio": 3.364,
+      "avg_circularity": 0.548,
+      "min_circularity": 0.073,
+      "regions_raw": [
+        [
+          115,
+          197,
+          8,
+          3,
+          12.5,
+          2.6666666666666665,
+          0.5179789899086985
+        ],
+        [
+          105,
+          196,
+          9,
+          4,
+          15.5,
+          2.25,
+          0.47534314099844915
+        ],
+        [
+          29,
+          195,
+          8,
+          5,
+          23.5,
+          1.6,
+          0.7206815363524874
+        ],
+        [
+          16,
+          194,
+          8,
+          6,
+          26.0,
+          1.3333333333333333,
+          0.6966144393801039
+        ],
+        [
+          0,
+          193,
+          5,
+          7,
+          16.0,
+          1.4,
+          0.6449160594699758
+        ],
+        [
+          158,
+          191,
+          6,
+          9,
+          31.0,
+          1.5,
+          0.6497725555109857
+        ],
+        [
+          118,
+          189,
+          15,
+          8,
+          55.5,
+          1.875,
+          0.4038574336838214
+        ],
+        [
+          138,
+          188,
+          7,
+          9,
+          33.5,
+          1.2857142857142858,
+          0.540831518119448
+        ],
+        [
+          165,
+          187,
+          6,
+          9,
+          31.0,
+          1.5,
+          0.6960774621883942
+        ],
+        [
+          145,
+          186,
+          10,
+          12,
+          51.5,
+          1.2,
+          0.5366109218557693
+        ],
+        [
+          85,
+          183,
+          8,
+          8,
+          34.0,
+          1.0,
+          0.7126537774997027
+        ],
+        [
+          72,
+          183,
+          5,
+          9,
+          26.5,
+          1.8,
+          0.6731053578324536
+        ],
+        [
+          8,
+          183,
+          13,
+          8,
+          51.0,
+          1.625,
+          0.5240525128969152
+        ],
+        [
+          72,
+          182,
+          30,
+          18,
+          126.5,
+          1.6666666666666667,
+          0.18764274855244334
+        ],
+        [
+          185,
+          181,
+          15,
+          19,
+          119.0,
+          1.2666666666666666,
+          0.3490277654587334
+        ],
+        [
+          23,
+          181,
+          25,
+          11,
+          125.5,
+          2.272727272727273,
+          0.4142901435274321
+        ],
+        [
+          175,
+          176,
+          9,
+          15,
+          59.0,
+          1.6666666666666667,
+          0.4797045672026119
+        ],
+        [
+          140,
+          175,
+          12,
+          10,
+          66.0,
+          1.2,
+          0.5461104085355781
+        ],
+        [
+          0,
+          175,
+          6,
+          9,
+          18.5,
+          1.5,
+          0.36985878001450045
+        ],
+        [
+          160,
+          172,
+          14,
+          12,
+          65.5,
+          1.1666666666666667,
+          0.433858619266065
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "crazing_238.jpg",
+    "true_label": "crazing",
+    "pred_label": "pitted_surface",
+    "confidence": 0.7806799998347227,
+    "cls_method": "Claude+GroqWeighted(1/1LLM,best_w=0.69)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.2834,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "pitted_surface",
+        "confidence": 0.283,
+        "weight": 0.49,
+        "reason": "many small round pits indicated by high regions_count and small avg_area"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          1,
+          91,
+          105,
+          95
+        ],
+        "label": "crazing",
+        "area": 9975,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          1,
+          10,
+          177,
+          64
+        ],
+        "label": "crazing",
+        "area": 11328,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 148.9,
+      "std_intensity": 29.06,
+      "contrast": 0.195,
+      "dark_pixel_pct": 19.09,
+      "bright_pixel_pct": 19.86,
+      "entropy": 6.896,
+      "edge_density": 37.54,
+      "sobel_magnitude": 92.006,
+      "horizontal_edge_ratio": 0.358,
+      "vertical_edge_ratio": 0.316,
+      "diagonal_edge_ratio": 0.327,
+      "hough_line_count": 80,
+      "avg_line_length": 148.21,
+      "max_line_length": 274.36,
+      "line_horizontal_pct": 11.25,
+      "quadrant_std": {
+        "top_left": 27.94,
+        "top_right": 27.91,
+        "bottom_left": 27.37,
+        "bottom_right": 26.31
+      },
+      "quadrant_edge_density": {
+        "top_left": 37.71,
+        "top_right": 37.24,
+        "bottom_left": 38.32,
+        "bottom_right": 36.88
+      },
+      "glcm_contrast": 0.567,
+      "glcm_homogeneity": 0.76,
+      "glcm_energy": 0.35,
+      "glcm_correlation": 0.688,
+      "lbp_uniformity": 0.3942,
+      "lbp_entropy": 3.354,
+      "num_regions": 135,
+      "avg_area": 86.96,
+      "max_area": 2067.5,
+      "total_defect_pct": 29.35,
+      "avg_aspect_ratio": 1.436,
+      "max_aspect_ratio": 3.727,
+      "avg_circularity": 0.552,
+      "min_circularity": 0.054,
+      "regions_raw": [
+        [
+          16,
+          196,
+          5,
+          4,
+          10.0,
+          1.25,
+          0.7635949399760016
+        ],
+        [
+          8,
+          196,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          97,
+          190,
+          10,
+          5,
+          30.5,
+          2.0,
+          0.5713827413313806
+        ],
+        [
+          144,
+          189,
+          5,
+          11,
+          33.0,
+          2.2,
+          0.5761471009599387
+        ],
+        [
+          109,
+          188,
+          12,
+          10,
+          40.0,
+          1.2,
+          0.40307253269574655
+        ],
+        [
+          76,
+          188,
+          10,
+          10,
+          40.0,
+          1.0,
+          0.40307253269574655
+        ],
+        [
+          48,
+          188,
+          5,
+          9,
+          16.0,
+          1.8,
+          0.305437977382395
+        ],
+        [
+          57,
+          187,
+          6,
+          6,
+          22.5,
+          1.0,
+          0.8496048361652792
+        ],
+        [
+          66,
+          186,
+          5,
+          4,
+          11.0,
+          1.25,
+          0.8399544339736016
+        ],
+        [
+          0,
+          186,
+          13,
+          9,
+          63.5,
+          1.4444444444444444,
+          0.5099777058053351
+        ],
+        [
+          17,
+          185,
+          11,
+          10,
+          52.0,
+          1.1,
+          0.5605725752976145
+        ],
+        [
+          146,
+          183,
+          5,
+          4,
+          11.5,
+          1.25,
+          0.8031141373846319
+        ],
+        [
+          31,
+          182,
+          19,
+          18,
+          96.5,
+          1.0555555555555556,
+          0.3067958419417976
+        ],
+        [
+          128,
+          180,
+          8,
+          10,
+          43.0,
+          1.25,
+          0.6659433646644294
+        ],
+        [
+          95,
+          177,
+          4,
+          8,
+          18.0,
+          2.0,
+          0.6380493735608272
+        ],
+        [
+          53,
+          174,
+          11,
+          10,
+          34.0,
+          1.1,
+          0.4135607637096998
+        ],
+        [
+          50,
+          174,
+          5,
+          5,
+          14.5,
+          1.0,
+          0.8982491862263072
+        ],
+        [
+          15,
+          173,
+          13,
+          13,
+          58.0,
+          1.0,
+          0.4342041875666021
+        ],
+        [
+          7,
+          172,
+          5,
+          6,
+          18.0,
+          1.2,
+          0.7987213940695521
+        ],
+        [
+          65,
+          170,
+          28,
+          16,
+          139.0,
+          1.75,
+          0.21758464115796408
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "crazing_239.jpg",
+    "true_label": "crazing",
+    "pred_label": "pitted_surface",
+    "confidence": 0.6947839998360228,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          29,
+          120,
+          137,
+          56
+        ],
+        "label": "crazing",
+        "area": 7672,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          53,
+          1,
+          147,
+          81
+        ],
+        "label": "crazing",
+        "area": 11907,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          33,
+          36,
+          148,
+          64
+        ],
+        "label": "crazing",
+        "area": 9472,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          1,
+          72,
+          193,
+          60
+        ],
+        "label": "crazing",
+        "area": 11580,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 180.35,
+      "std_intensity": 30.5,
+      "contrast": 0.169,
+      "dark_pixel_pct": 19.37,
+      "bright_pixel_pct": 19.32,
+      "entropy": 6.937,
+      "edge_density": 37.97,
+      "sobel_magnitude": 110.684,
+      "horizontal_edge_ratio": 0.335,
+      "vertical_edge_ratio": 0.337,
+      "diagonal_edge_ratio": 0.328,
+      "hough_line_count": 80,
+      "avg_line_length": 165.56,
+      "max_line_length": 275.77,
+      "line_horizontal_pct": 8.75,
+      "quadrant_std": {
+        "top_left": 28.87,
+        "top_right": 34.74,
+        "bottom_left": 26.98,
+        "bottom_right": 29.06
+      },
+      "quadrant_edge_density": {
+        "top_left": 37.86,
+        "top_right": 37.47,
+        "bottom_left": 38.33,
+        "bottom_right": 38.23
+      },
+      "glcm_contrast": 0.695,
+      "glcm_homogeneity": 0.726,
+      "glcm_energy": 0.328,
+      "glcm_correlation": 0.638,
+      "lbp_uniformity": 0.386,
+      "lbp_entropy": 3.386,
+      "num_regions": 152,
+      "avg_area": 73.52,
+      "max_area": 745.0,
+      "total_defect_pct": 27.94,
+      "avg_aspect_ratio": 1.426,
+      "max_aspect_ratio": 3.25,
+      "avg_circularity": 0.554,
+      "min_circularity": 0.073,
+      "regions_raw": [
+        [
+          62,
+          197,
+          9,
+          3,
+          16.0,
+          3.0,
+          0.5026548233177298
+        ],
+        [
+          91,
+          196,
+          7,
+          4,
+          18.0,
+          1.75,
+          0.6981316986430044
+        ],
+        [
+          37,
+          196,
+          6,
+          4,
+          12.0,
+          1.5,
+          0.6858054571908726
+        ],
+        [
+          11,
+          196,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          51,
+          195,
+          6,
+          5,
+          16.0,
+          1.2,
+          0.7099745725062685
+        ],
+        [
+          107,
+          194,
+          8,
+          6,
+          23.0,
+          1.3333333333333333,
+          0.6162358434367698
+        ],
+        [
+          190,
+          193,
+          6,
+          7,
+          20.0,
+          1.1666666666666667,
+          0.6504468774099528
+        ],
+        [
+          75,
+          193,
+          5,
+          4,
+          11.0,
+          1.25,
+          0.8399544339736016
+        ],
+        [
+          23,
+          192,
+          5,
+          8,
+          17.5,
+          1.6,
+          0.5366777398369588
+        ],
+        [
+          102,
+          189,
+          5,
+          5,
+          15.0,
+          1.0,
+          0.8572568214885907
+        ],
+        [
+          84,
+          188,
+          8,
+          6,
+          25.5,
+          1.3333333333333333,
+          0.7217336577705261
+        ],
+        [
+          116,
+          185,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          45,
+          185,
+          13,
+          9,
+          59.5,
+          1.4444444444444444,
+          0.6199679497479821
+        ],
+        [
+          9,
+          182,
+          10,
+          9,
+          41.5,
+          1.1111111111111112,
+          0.5833514217007713
+        ],
+        [
+          142,
+          181,
+          7,
+          5,
+          20.0,
+          1.4,
+          0.7089437484009192
+        ],
+        [
+          32,
+          180,
+          11,
+          13,
+          53.5,
+          1.1818181818181819,
+          0.35437307069823626
+        ],
+        [
+          143,
+          178,
+          26,
+          22,
+          138.0,
+          1.1818181818181819,
+          0.25313240340157556
+        ],
+        [
+          47,
+          177,
+          5,
+          4,
+          11.0,
+          1.25,
+          0.8399544339736016
+        ],
+        [
+          128,
+          176,
+          10,
+          24,
+          110.5,
+          2.4,
+          0.2830477137708198
+        ],
+        [
+          0,
+          176,
+          7,
+          15,
+          47.5,
+          2.142857142857143,
+          0.4155627699063335
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "crazing_24.jpg",
+    "true_label": "crazing",
+    "pred_label": "pitted_surface",
+    "confidence": 0.6763559998623485,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.20)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.2834,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          1,
+          1,
+          195,
+          62
+        ],
+        "label": "crazing",
+        "area": 12090,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          2,
+          105,
+          151,
+          52
+        ],
+        "label": "crazing",
+        "area": 7852,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 149.69,
+      "std_intensity": 27.84,
+      "contrast": 0.186,
+      "dark_pixel_pct": 19.92,
+      "bright_pixel_pct": 19.1,
+      "entropy": 6.839,
+      "edge_density": 38.14,
+      "sobel_magnitude": 94.206,
+      "horizontal_edge_ratio": 0.359,
+      "vertical_edge_ratio": 0.317,
+      "diagonal_edge_ratio": 0.324,
+      "hough_line_count": 80,
+      "avg_line_length": 156.1,
+      "max_line_length": 262.27,
+      "line_horizontal_pct": 18.75,
+      "quadrant_std": {
+        "top_left": 25.62,
+        "top_right": 31.44,
+        "bottom_left": 24.01,
+        "bottom_right": 27.28
+      },
+      "quadrant_edge_density": {
+        "top_left": 38.04,
+        "top_right": 37.89,
+        "bottom_left": 38.51,
+        "bottom_right": 38.12
+      },
+      "glcm_contrast": 0.574,
+      "glcm_homogeneity": 0.758,
+      "glcm_energy": 0.362,
+      "glcm_correlation": 0.656,
+      "lbp_uniformity": 0.3881,
+      "lbp_entropy": 3.374,
+      "num_regions": 147,
+      "avg_area": 80.91,
+      "max_area": 2966.0,
+      "total_defect_pct": 29.73,
+      "avg_aspect_ratio": 1.529,
+      "max_aspect_ratio": 5.462,
+      "avg_circularity": 0.562,
+      "min_circularity": 0.081,
+      "regions_raw": [
+        [
+          152,
+          194,
+          8,
+          6,
+          24.0,
+          1.3333333333333333,
+          0.6430287061948903
+        ],
+        [
+          140,
+          194,
+          9,
+          6,
+          24.0,
+          1.5,
+          0.48924082605927816
+        ],
+        [
+          27,
+          194,
+          11,
+          6,
+          33.0,
+          1.8333333333333333,
+          0.555856219227604
+        ],
+        [
+          85,
+          192,
+          14,
+          8,
+          53.0,
+          1.75,
+          0.36069793555624
+        ],
+        [
+          71,
+          192,
+          8,
+          8,
+          37.0,
+          1.0,
+          0.7063253226967884
+        ],
+        [
+          18,
+          190,
+          6,
+          8,
+          26.0,
+          1.3333333333333333,
+          0.6966144317111312
+        ],
+        [
+          1,
+          190,
+          10,
+          10,
+          56.0,
+          1.0,
+          0.7745507134626296
+        ],
+        [
+          82,
+          188,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          31,
+          186,
+          10,
+          5,
+          30.0,
+          2.0,
+          0.6736233505048975
+        ],
+        [
+          140,
+          185,
+          12,
+          6,
+          35.5,
+          2.0,
+          0.5278569594728145
+        ],
+        [
+          124,
+          184,
+          7,
+          16,
+          55.5,
+          2.2857142857142856,
+          0.3618960165978724
+        ],
+        [
+          43,
+          183,
+          9,
+          7,
+          40.0,
+          1.2857142857142858,
+          0.7635949434559874
+        ],
+        [
+          26,
+          183,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          62,
+          182,
+          6,
+          8,
+          27.0,
+          1.3333333333333333,
+          0.7234072944692516
+        ],
+        [
+          53,
+          181,
+          5,
+          8,
+          21.5,
+          1.6,
+          0.6593469375139779
+        ],
+        [
+          141,
+          180,
+          5,
+          4,
+          10.5,
+          1.25,
+          0.7332781254381423
+        ],
+        [
+          113,
+          179,
+          8,
+          13,
+          35.5,
+          1.625,
+          0.36269389175769035
+        ],
+        [
+          34,
+          178,
+          3,
+          6,
+          10.0,
+          2.0,
+          0.6411413546043386
+        ],
+        [
+          71,
+          176,
+          8,
+          6,
+          20.5,
+          1.3333333333333333,
+          0.4383327071440312
+        ],
+        [
+          0,
+          176,
+          3,
+          7,
+          11.5,
+          2.3333333333333335,
+          0.6082259708813543
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "crazing_240.jpg",
+    "true_label": "crazing",
+    "pred_label": "pitted_surface",
+    "confidence": 0.6947839998360228,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          12,
+          2,
+          164,
+          56
+        ],
+        "label": "crazing",
+        "area": 9184,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          71,
+          84,
+          129,
+          88
+        ],
+        "label": "crazing",
+        "area": 11352,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          47,
+          140,
+          153,
+          60
+        ],
+        "label": "crazing",
+        "area": 9180,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 183.59,
+      "std_intensity": 30.47,
+      "contrast": 0.166,
+      "dark_pixel_pct": 19.21,
+      "bright_pixel_pct": 19.73,
+      "entropy": 6.927,
+      "edge_density": 38.32,
+      "sobel_magnitude": 111.429,
+      "horizontal_edge_ratio": 0.339,
+      "vertical_edge_ratio": 0.333,
+      "diagonal_edge_ratio": 0.327,
+      "hough_line_count": 80,
+      "avg_line_length": 163.16,
+      "max_line_length": 272.28,
+      "line_horizontal_pct": 16.25,
+      "quadrant_std": {
+        "top_left": 27.6,
+        "top_right": 32.0,
+        "bottom_left": 32.23,
+        "bottom_right": 28.97
+      },
+      "quadrant_edge_density": {
+        "top_left": 38.26,
+        "top_right": 37.99,
+        "bottom_left": 38.58,
+        "bottom_right": 38.46
+      },
+      "glcm_contrast": 0.699,
+      "glcm_homogeneity": 0.725,
+      "glcm_energy": 0.328,
+      "glcm_correlation": 0.632,
+      "lbp_uniformity": 0.3887,
+      "lbp_entropy": 3.374,
+      "num_regions": 145,
+      "avg_area": 74.44,
+      "max_area": 754.5,
+      "total_defect_pct": 26.98,
+      "avg_aspect_ratio": 1.473,
+      "max_aspect_ratio": 3.333,
+      "avg_circularity": 0.541,
+      "min_circularity": 0.081,
+      "regions_raw": [
+        [
+          156,
+          197,
+          7,
+          3,
+          12.0,
+          2.3333333333333335,
+          0.589048620247115
+        ],
+        [
+          190,
+          194,
+          8,
+          6,
+          26.0,
+          1.3333333333333333,
+          0.6966144317111312
+        ],
+        [
+          116,
+          193,
+          9,
+          7,
+          24.5,
+          1.2857142857142858,
+          0.5960140436886076
+        ],
+        [
+          147,
+          191,
+          6,
+          5,
+          16.5,
+          1.2,
+          0.7859239729348965
+        ],
+        [
+          134,
+          191,
+          7,
+          9,
+          26.5,
+          1.2857142857142858,
+          0.5297977119126628
+        ],
+        [
+          36,
+          191,
+          8,
+          6,
+          28.0,
+          1.3333333333333333,
+          0.750200157227372
+        ],
+        [
+          0,
+          190,
+          8,
+          10,
+          36.5,
+          1.25,
+          0.5130681178814012
+        ],
+        [
+          14,
+          186,
+          11,
+          11,
+          55.5,
+          1.0,
+          0.4944656409910406
+        ],
+        [
+          19,
+          182,
+          6,
+          5,
+          18.0,
+          1.2,
+          0.7987213940695521
+        ],
+        [
+          181,
+          181,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          117,
+          179,
+          15,
+          9,
+          45.5,
+          1.6666666666666667,
+          0.31318266783439347
+        ],
+        [
+          140,
+          178,
+          32,
+          13,
+          152.5,
+          2.4615384615384617,
+          0.2296211278619463
+        ],
+        [
+          171,
+          176,
+          9,
+          17,
+          55.5,
+          1.8888888888888888,
+          0.2979102044608035
+        ],
+        [
+          48,
+          175,
+          61,
+          25,
+          541.0,
+          2.44,
+          0.12756654415638707
+        ],
+        [
+          0,
+          173,
+          6,
+          8,
+          27.0,
+          1.3333333333333333,
+          0.7234072944692516
+        ],
+        [
+          56,
+          172,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          114,
+          167,
+          7,
+          8,
+          30.5,
+          1.1428571428571428,
+          0.7991743124483706
+        ],
+        [
+          24,
+          164,
+          14,
+          14,
+          68.5,
+          1.0,
+          0.4147654897990031
+        ],
+        [
+          171,
+          162,
+          8,
+          8,
+          39.5,
+          1.0,
+          0.7896984762471767
+        ],
+        [
+          153,
+          161,
+          14,
+          13,
+          91.5,
+          1.0769230769230769,
+          0.6400459859310086
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "crazing_241.jpg",
+    "true_label": "crazing",
+    "pred_label": "pitted_surface",
+    "confidence": 0.6947839998360228,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          42,
+          124,
+          141,
+          60
+        ],
+        "label": "crazing",
+        "area": 8460,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          38,
+          9,
+          150,
+          75
+        ],
+        "label": "crazing",
+        "area": 11250,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          1,
+          65,
+          171,
+          91
+        ],
+        "label": "crazing",
+        "area": 15561,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 180.97,
+      "std_intensity": 29.74,
+      "contrast": 0.164,
+      "dark_pixel_pct": 19.75,
+      "bright_pixel_pct": 19.2,
+      "entropy": 6.901,
+      "edge_density": 38.42,
+      "sobel_magnitude": 111.238,
+      "horizontal_edge_ratio": 0.35,
+      "vertical_edge_ratio": 0.323,
+      "diagonal_edge_ratio": 0.327,
+      "hough_line_count": 80,
+      "avg_line_length": 152.16,
+      "max_line_length": 278.6,
+      "line_horizontal_pct": 22.5,
+      "quadrant_std": {
+        "top_left": 30.9,
+        "top_right": 28.55,
+        "bottom_left": 29.49,
+        "bottom_right": 28.11
+      },
+      "quadrant_edge_density": {
+        "top_left": 38.76,
+        "top_right": 38.35,
+        "bottom_left": 38.07,
+        "bottom_right": 38.52
+      },
+      "glcm_contrast": 0.704,
+      "glcm_homogeneity": 0.724,
+      "glcm_energy": 0.334,
+      "glcm_correlation": 0.615,
+      "lbp_uniformity": 0.3922,
+      "lbp_entropy": 3.36,
+      "num_regions": 147,
+      "avg_area": 72.94,
+      "max_area": 1567.5,
+      "total_defect_pct": 26.8,
+      "avg_aspect_ratio": 1.395,
+      "max_aspect_ratio": 3.333,
+      "avg_circularity": 0.536,
+      "min_circularity": 0.078,
+      "regions_raw": [
+        [
+          22,
+          197,
+          7,
+          3,
+          11.0,
+          2.3333333333333335,
+          0.6286550024249665
+        ],
+        [
+          38,
+          193,
+          6,
+          7,
+          30.0,
+          1.1666666666666667,
+          0.77890726787576
+        ],
+        [
+          146,
+          191,
+          7,
+          5,
+          22.0,
+          1.4,
+          0.779838123241011
+        ],
+        [
+          128,
+          186,
+          12,
+          9,
+          44.5,
+          1.3333333333333333,
+          0.4546444558652738
+        ],
+        [
+          111,
+          186,
+          11,
+          11,
+          53.5,
+          1.0,
+          0.5574501733028074
+        ],
+        [
+          94,
+          185,
+          14,
+          15,
+          58.0,
+          1.0714285714285714,
+          0.3144757487871198
+        ],
+        [
+          24,
+          184,
+          6,
+          8,
+          24.5,
+          1.3333333333333333,
+          0.6223049534677401
+        ],
+        [
+          179,
+          182,
+          21,
+          18,
+          161.5,
+          1.1666666666666667,
+          0.25696352031265635
+        ],
+        [
+          155,
+          182,
+          23,
+          17,
+          136.5,
+          1.3529411764705883,
+          0.2497740051496636
+        ],
+        [
+          84,
+          182,
+          10,
+          17,
+          76.5,
+          1.7,
+          0.5351204084466978
+        ],
+        [
+          76,
+          182,
+          8,
+          6,
+          27.5,
+          1.3333333333333333,
+          0.7783402191642929
+        ],
+        [
+          35,
+          181,
+          12,
+          10,
+          38.0,
+          1.2,
+          0.3829189060609592
+        ],
+        [
+          67,
+          179,
+          9,
+          21,
+          82.0,
+          2.3333333333333335,
+          0.24671191502336734
+        ],
+        [
+          4,
+          176,
+          20,
+          24,
+          131.5,
+          1.2,
+          0.28578062371153923
+        ],
+        [
+          50,
+          175,
+          11,
+          25,
+          147.5,
+          2.272727272727273,
+          0.3070271564956679
+        ],
+        [
+          120,
+          173,
+          21,
+          11,
+          118.5,
+          1.9090909090909092,
+          0.3868671167453421
+        ],
+        [
+          68,
+          173,
+          5,
+          5,
+          11.0,
+          1.0,
+          0.6286550024249665
+        ],
+        [
+          142,
+          171,
+          20,
+          10,
+          91.5,
+          2.0,
+          0.3771768879993503
+        ],
+        [
+          108,
+          171,
+          12,
+          10,
+          56.0,
+          1.2,
+          0.6036935426282002
+        ],
+        [
+          74,
+          171,
+          13,
+          8,
+          41.0,
+          1.625,
+          0.4332376349165303
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "crazing_242.jpg",
+    "true_label": "crazing",
+    "pred_label": "pitted_surface",
+    "confidence": 0.7806799998347227,
+    "cls_method": "Claude+GroqWeighted(1/1LLM,best_w=0.69)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.2834,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "pitted_surface",
+        "confidence": 0.283,
+        "weight": 0.49,
+        "reason": "many small round pits, high regions count and small area"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          36,
+          4,
+          148,
+          51
+        ],
+        "label": "crazing",
+        "area": 7548,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          64,
+          76,
+          117,
+          92
+        ],
+        "label": "crazing",
+        "area": 10764,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          17,
+          128,
+          179,
+          71
+        ],
+        "label": "crazing",
+        "area": 12709,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 171.83,
+      "std_intensity": 31.45,
+      "contrast": 0.183,
+      "dark_pixel_pct": 20.0,
+      "bright_pixel_pct": 19.7,
+      "entropy": 6.997,
+      "edge_density": 38.4,
+      "sobel_magnitude": 108.724,
+      "horizontal_edge_ratio": 0.35,
+      "vertical_edge_ratio": 0.323,
+      "diagonal_edge_ratio": 0.327,
+      "hough_line_count": 80,
+      "avg_line_length": 167.28,
+      "max_line_length": 278.6,
+      "line_horizontal_pct": 6.25,
+      "quadrant_std": {
+        "top_left": 31.52,
+        "top_right": 29.1,
+        "bottom_left": 34.16,
+        "bottom_right": 30.54
+      },
+      "quadrant_edge_density": {
+        "top_left": 37.98,
+        "top_right": 38.8,
+        "bottom_left": 38.31,
+        "bottom_right": 38.49
+      },
+      "glcm_contrast": 0.692,
+      "glcm_homogeneity": 0.728,
+      "glcm_energy": 0.324,
+      "glcm_correlation": 0.661,
+      "lbp_uniformity": 0.3865,
+      "lbp_entropy": 3.385,
+      "num_regions": 148,
+      "avg_area": 78.81,
+      "max_area": 2108.5,
+      "total_defect_pct": 29.16,
+      "avg_aspect_ratio": 1.484,
+      "max_aspect_ratio": 3.8,
+      "avg_circularity": 0.53,
+      "min_circularity": 0.077,
+      "regions_raw": [
+        [
+          68,
+          197,
+          5,
+          3,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          170,
+          196,
+          10,
+          4,
+          21.0,
+          2.5,
+          0.5063807414884866
+        ],
+        [
+          134,
+          194,
+          6,
+          3,
+          10.0,
+          2.0,
+          0.6411413546043386
+        ],
+        [
+          93,
+          194,
+          8,
+          4,
+          18.5,
+          2.0,
+          0.6167966226006659
+        ],
+        [
+          36,
+          194,
+          5,
+          6,
+          14.0,
+          1.2,
+          0.7176767646817969
+        ],
+        [
+          87,
+          188,
+          5,
+          5,
+          14.0,
+          1.0,
+          0.9432711561082695
+        ],
+        [
+          73,
+          187,
+          11,
+          12,
+          48.0,
+          1.0909090909090908,
+          0.35934139451574015
+        ],
+        [
+          184,
+          184,
+          16,
+          10,
+          75.0,
+          1.6,
+          0.5306865169653655
+        ],
+        [
+          51,
+          182,
+          17,
+          18,
+          91.5,
+          1.0588235294117647,
+          0.2483599353444668
+        ],
+        [
+          92,
+          180,
+          3,
+          5,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          151,
+          179,
+          33,
+          19,
+          188.0,
+          1.736842105263158,
+          0.26037163693815546
+        ],
+        [
+          194,
+          176,
+          6,
+          6,
+          21.5,
+          1.0,
+          0.8118446212246
+        ],
+        [
+          19,
+          174,
+          4,
+          5,
+          11.0,
+          1.25,
+          0.8399544339736016
+        ],
+        [
+          188,
+          173,
+          4,
+          8,
+          17.0,
+          2.0,
+          0.6026021861407813
+        ],
+        [
+          90,
+          172,
+          16,
+          14,
+          71.0,
+          1.1428571428571428,
+          0.28306772870421937
+        ],
+        [
+          63,
+          172,
+          24,
+          11,
+          120.5,
+          2.1818181818181817,
+          0.31609601049889846
+        ],
+        [
+          113,
+          170,
+          33,
+          30,
+          301.0,
+          1.1,
+          0.15761879073384616
+        ],
+        [
+          182,
+          169,
+          5,
+          4,
+          12.0,
+          1.25,
+          0.7693696255252064
+        ],
+        [
+          158,
+          169,
+          9,
+          6,
+          24.0,
+          1.5,
+          0.5388986804039181
+        ],
+        [
+          51,
+          168,
+          8,
+          12,
+          36.5,
+          1.5,
+          0.45074936001716376
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "crazing_243.jpg",
+    "true_label": "crazing",
+    "pred_label": "pitted_surface",
+    "confidence": 0.6947839998360228,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          9,
+          143,
+          106,
+          55
+        ],
+        "label": "crazing",
+        "area": 5830,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          1,
+          38,
+          92,
+          89
+        ],
+        "label": "crazing",
+        "area": 8188,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          112,
+          47,
+          75,
+          95
+        ],
+        "label": "crazing",
+        "area": 7125,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          42,
+          1,
+          120,
+          41
+        ],
+        "label": "crazing",
+        "area": 4920,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 175.14,
+      "std_intensity": 28.34,
+      "contrast": 0.162,
+      "dark_pixel_pct": 19.75,
+      "bright_pixel_pct": 19.78,
+      "entropy": 6.85,
+      "edge_density": 38.18,
+      "sobel_magnitude": 107.169,
+      "horizontal_edge_ratio": 0.345,
+      "vertical_edge_ratio": 0.327,
+      "diagonal_edge_ratio": 0.328,
+      "hough_line_count": 80,
+      "avg_line_length": 164.62,
+      "max_line_length": 275.8,
+      "line_horizontal_pct": 6.25,
+      "quadrant_std": {
+        "top_left": 28.38,
+        "top_right": 26.96,
+        "bottom_left": 30.16,
+        "bottom_right": 27.74
+      },
+      "quadrant_edge_density": {
+        "top_left": 38.38,
+        "top_right": 37.87,
+        "bottom_left": 38.24,
+        "bottom_right": 38.23
+      },
+      "glcm_contrast": 0.681,
+      "glcm_homogeneity": 0.73,
+      "glcm_energy": 0.346,
+      "glcm_correlation": 0.601,
+      "lbp_uniformity": 0.3854,
+      "lbp_entropy": 3.393,
+      "num_regions": 154,
+      "avg_area": 67.32,
+      "max_area": 605.5,
+      "total_defect_pct": 25.92,
+      "avg_aspect_ratio": 1.422,
+      "max_aspect_ratio": 2.6,
+      "avg_circularity": 0.55,
+      "min_circularity": 0.07,
+      "regions_raw": [
+        [
+          120,
+          197,
+          7,
+          3,
+          11.5,
+          2.3333333333333335,
+          0.6082259708813543
+        ],
+        [
+          69,
+          197,
+          6,
+          3,
+          9.5,
+          2.0,
+          0.6634421134916525
+        ],
+        [
+          187,
+          196,
+          8,
+          4,
+          17.5,
+          2.0,
+          0.5834562646222515
+        ],
+        [
+          107,
+          196,
+          9,
+          4,
+          15.5,
+          2.25,
+          0.47534314099844915
+        ],
+        [
+          150,
+          195,
+          5,
+          5,
+          12.5,
+          1.0,
+          0.7743527467468166
+        ],
+        [
+          18,
+          194,
+          6,
+          6,
+          20.5,
+          1.0,
+          0.774084406283921
+        ],
+        [
+          80,
+          193,
+          18,
+          7,
+          61.0,
+          2.5714285714285716,
+          0.40859115771470694
+        ],
+        [
+          0,
+          190,
+          7,
+          10,
+          31.5,
+          1.4285714285714286,
+          0.5401441136183003
+        ],
+        [
+          153,
+          188,
+          6,
+          5,
+          15.5,
+          1.2,
+          0.7382922169994482
+        ],
+        [
+          131,
+          187,
+          20,
+          13,
+          113.0,
+          1.5384615384615385,
+          0.43014996794049193
+        ],
+        [
+          55,
+          186,
+          5,
+          5,
+          9.0,
+          1.0,
+          0.5143540928931545
+        ],
+        [
+          31,
+          185,
+          32,
+          15,
+          154.5,
+          2.1333333333333333,
+          0.22114300995445216
+        ],
+        [
+          92,
+          184,
+          8,
+          8,
+          31.5,
+          1.0,
+          0.6297595443490143
+        ],
+        [
+          172,
+          183,
+          7,
+          17,
+          66.5,
+          2.4285714285714284,
+          0.5249243465018549
+        ],
+        [
+          0,
+          182,
+          6,
+          5,
+          15.0,
+          1.2,
+          0.7689393907304966
+        ],
+        [
+          166,
+          181,
+          3,
+          5,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          150,
+          179,
+          8,
+          6,
+          24.5,
+          1.3333333333333333,
+          0.6934303849197893
+        ],
+        [
+          34,
+          178,
+          5,
+          5,
+          13.0,
+          1.0,
+          0.7429559119567787
+        ],
+        [
+          68,
+          177,
+          22,
+          14,
+          126.5,
+          1.5714285714285714,
+          0.343361005915298
+        ],
+        [
+          66,
+          175,
+          9,
+          6,
+          33.0,
+          1.5,
+          0.7409856855553874
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "crazing_244.jpg",
+    "true_label": "crazing",
+    "pred_label": "pitted_surface",
+    "confidence": 0.6763559998623485,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.20)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.2834,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          1,
+          57,
+          191,
+          65
+        ],
+        "label": "crazing",
+        "area": 12415,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          36,
+          6,
+          159,
+          83
+        ],
+        "label": "crazing",
+        "area": 13197,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          8,
+          127,
+          190,
+          65
+        ],
+        "label": "crazing",
+        "area": 12350,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 172.83,
+      "std_intensity": 31.93,
+      "contrast": 0.185,
+      "dark_pixel_pct": 19.39,
+      "bright_pixel_pct": 19.96,
+      "entropy": 7.016,
+      "edge_density": 38.17,
+      "sobel_magnitude": 108.148,
+      "horizontal_edge_ratio": 0.347,
+      "vertical_edge_ratio": 0.33,
+      "diagonal_edge_ratio": 0.323,
+      "hough_line_count": 80,
+      "avg_line_length": 153.98,
+      "max_line_length": 268.7,
+      "line_horizontal_pct": 18.75,
+      "quadrant_std": {
+        "top_left": 31.24,
+        "top_right": 29.59,
+        "bottom_left": 37.1,
+        "bottom_right": 28.87
+      },
+      "quadrant_edge_density": {
+        "top_left": 38.51,
+        "top_right": 38.33,
+        "bottom_left": 37.75,
+        "bottom_right": 38.1
+      },
+      "glcm_contrast": 0.683,
+      "glcm_homogeneity": 0.73,
+      "glcm_energy": 0.321,
+      "glcm_correlation": 0.675,
+      "lbp_uniformity": 0.3845,
+      "lbp_entropy": 3.391,
+      "num_regions": 133,
+      "avg_area": 89.53,
+      "max_area": 3736.0,
+      "total_defect_pct": 29.77,
+      "avg_aspect_ratio": 1.465,
+      "max_aspect_ratio": 4.25,
+      "avg_circularity": 0.54,
+      "min_circularity": 0.054,
+      "regions_raw": [
+        [
+          114,
+          196,
+          5,
+          4,
+          11.5,
+          1.25,
+          0.8031141373846319
+        ],
+        [
+          102,
+          196,
+          5,
+          4,
+          11.5,
+          1.25,
+          0.8031141373846319
+        ],
+        [
+          63,
+          194,
+          13,
+          6,
+          17.0,
+          2.1666666666666665,
+          0.21316862025394295
+        ],
+        [
+          50,
+          194,
+          4,
+          6,
+          10.0,
+          1.5,
+          0.5715045476590606
+        ],
+        [
+          35,
+          193,
+          5,
+          5,
+          14.0,
+          1.0,
+          0.8001063667226848
+        ],
+        [
+          190,
+          192,
+          10,
+          8,
+          49.5,
+          1.25,
+          0.6801044950925248
+        ],
+        [
+          155,
+          192,
+          13,
+          8,
+          62.0,
+          1.625,
+          0.6247624256784071
+        ],
+        [
+          171,
+          188,
+          9,
+          12,
+          51.0,
+          1.3333333333333333,
+          0.5774761896928381
+        ],
+        [
+          78,
+          183,
+          31,
+          13,
+          145.0,
+          2.3846153846153846,
+          0.19795581037162607
+        ],
+        [
+          25,
+          183,
+          5,
+          7,
+          19.5,
+          1.4,
+          0.7363241913432419
+        ],
+        [
+          66,
+          180,
+          8,
+          9,
+          42.0,
+          1.125,
+          0.7524020605627947
+        ],
+        [
+          182,
+          179,
+          5,
+          16,
+          38.0,
+          3.2,
+          0.3089622636220212
+        ],
+        [
+          111,
+          178,
+          15,
+          16,
+          106.0,
+          1.0666666666666667,
+          0.40350351142386487
+        ],
+        [
+          26,
+          175,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          40,
+          173,
+          18,
+          20,
+          123.0,
+          1.1111111111111112,
+          0.19831168621988715
+        ],
+        [
+          83,
+          172,
+          5,
+          4,
+          11.0,
+          1.25,
+          0.8399544339736016
+        ],
+        [
+          65,
+          171,
+          4,
+          7,
+          16.5,
+          1.75,
+          0.6837322666794821
+        ],
+        [
+          127,
+          170,
+          7,
+          6,
+          25.0,
+          1.1666666666666667,
+          0.8130585869008287
+        ],
+        [
+          92,
+          169,
+          5,
+          6,
+          18.5,
+          1.2,
+          0.881187484805793
+        ],
+        [
+          194,
+          167,
+          6,
+          11,
+          29.5,
+          1.8333333333333333,
+          0.5058492537166661
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "crazing_245.jpg",
+    "true_label": "crazing",
+    "pred_label": "pitted_surface",
+    "confidence": 0.6714691467840082,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.19)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          63,
+          1,
+          115,
+          80
+        ],
+        "label": "crazing",
+        "area": 9200,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          82,
+          121,
+          118,
+          43
+        ],
+        "label": "crazing",
+        "area": 5074,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 149.11,
+      "std_intensity": 37.59,
+      "contrast": 0.252,
+      "dark_pixel_pct": 19.61,
+      "bright_pixel_pct": 19.26,
+      "entropy": 7.253,
+      "edge_density": 37.26,
+      "sobel_magnitude": 94.469,
+      "horizontal_edge_ratio": 0.354,
+      "vertical_edge_ratio": 0.317,
+      "diagonal_edge_ratio": 0.329,
+      "hough_line_count": 80,
+      "avg_line_length": 162.74,
+      "max_line_length": 268.7,
+      "line_horizontal_pct": 20.0,
+      "quadrant_std": {
+        "top_left": 29.18,
+        "top_right": 27.82,
+        "bottom_left": 27.61,
+        "bottom_right": 31.61
+      },
+      "quadrant_edge_density": {
+        "top_left": 38.75,
+        "top_right": 36.06,
+        "bottom_left": 38.22,
+        "bottom_right": 36.0
+      },
+      "glcm_contrast": 0.566,
+      "glcm_homogeneity": 0.762,
+      "glcm_energy": 0.304,
+      "glcm_correlation": 0.805,
+      "lbp_uniformity": 0.3813,
+      "lbp_entropy": 3.413,
+      "num_regions": 140,
+      "avg_area": 94.42,
+      "max_area": 5836.0,
+      "total_defect_pct": 33.05,
+      "avg_aspect_ratio": 1.355,
+      "max_aspect_ratio": 2.536,
+      "avg_circularity": 0.572,
+      "min_circularity": 0.057,
+      "regions_raw": [
+        [
+          121,
+          197,
+          6,
+          3,
+          8.0,
+          2.0,
+          0.6108759519808012
+        ],
+        [
+          34,
+          196,
+          9,
+          4,
+          19.0,
+          2.25,
+          0.5503646303330944
+        ],
+        [
+          106,
+          194,
+          5,
+          6,
+          13.5,
+          1.2,
+          0.6430287051285517
+        ],
+        [
+          20,
+          194,
+          7,
+          6,
+          26.0,
+          1.1666666666666667,
+          0.8455809303768619
+        ],
+        [
+          114,
+          193,
+          4,
+          5,
+          10.0,
+          1.25,
+          0.7635949399760016
+        ],
+        [
+          129,
+          192,
+          6,
+          8,
+          24.0,
+          1.3333333333333333,
+          0.6430287061948903
+        ],
+        [
+          62,
+          191,
+          14,
+          7,
+          51.0,
+          2.0,
+          0.549792333464968
+        ],
+        [
+          0,
+          191,
+          7,
+          9,
+          28.5,
+          1.2857142857142858,
+          0.5697824448872034
+        ],
+        [
+          121,
+          190,
+          6,
+          4,
+          11.0,
+          1.5,
+          0.6286550024249665
+        ],
+        [
+          61,
+          184,
+          7,
+          5,
+          15.5,
+          1.4,
+          0.5852833315805256
+        ],
+        [
+          37,
+          184,
+          5,
+          4,
+          10.5,
+          1.25,
+          0.7332781254381423
+        ],
+        [
+          140,
+          182,
+          20,
+          18,
+          137.5,
+          1.1111111111111112,
+          0.29241399442590454
+        ],
+        [
+          49,
+          181,
+          8,
+          19,
+          71.5,
+          2.375,
+          0.3539298902925388
+        ],
+        [
+          71,
+          180,
+          7,
+          8,
+          26.0,
+          1.1428571428571428,
+          0.5838069037709113
+        ],
+        [
+          141,
+          177,
+          4,
+          5,
+          11.5,
+          1.25,
+          0.8031141373846319
+        ],
+        [
+          101,
+          177,
+          12,
+          12,
+          67.5,
+          1.0,
+          0.6013771271173332
+        ],
+        [
+          0,
+          174,
+          11,
+          14,
+          55.5,
+          1.2727272727272727,
+          0.42045386168201665
+        ],
+        [
+          81,
+          173,
+          6,
+          4,
+          14.0,
+          1.5,
+          0.8001063667226848
+        ],
+        [
+          170,
+          171,
+          5,
+          5,
+          13.5,
+          1.0,
+          0.8363009664865618
+        ],
+        [
+          80,
+          170,
+          20,
+          30,
+          144.5,
+          1.5,
+          0.27435040062089155
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "crazing_246.jpg",
+    "true_label": "crazing",
+    "pred_label": "pitted_surface",
+    "confidence": 0.7915199998256134,
+    "cls_method": "Claude+GroqWeighted(1/1LLM,best_w=0.73)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "pitted_surface",
+        "confidence": 0.338,
+        "weight": 0.49,
+        "reason": "many small round pits, high regions count and small area"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          4,
+          1,
+          196,
+          59
+        ],
+        "label": "crazing",
+        "area": 11564,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          41,
+          109,
+          158,
+          64
+        ],
+        "label": "crazing",
+        "area": 10112,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          1,
+          73,
+          168,
+          51
+        ],
+        "label": "crazing",
+        "area": 8568,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          23,
+          19,
+          156,
+          71
+        ],
+        "label": "crazing",
+        "area": 11076,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 171.57,
+      "std_intensity": 28.72,
+      "contrast": 0.167,
+      "dark_pixel_pct": 19.06,
+      "bright_pixel_pct": 19.56,
+      "entropy": 6.873,
+      "edge_density": 38.02,
+      "sobel_magnitude": 105.772,
+      "horizontal_edge_ratio": 0.36,
+      "vertical_edge_ratio": 0.318,
+      "diagonal_edge_ratio": 0.323,
+      "hough_line_count": 80,
+      "avg_line_length": 156.28,
+      "max_line_length": 278.6,
+      "line_horizontal_pct": 12.5,
+      "quadrant_std": {
+        "top_left": 25.96,
+        "top_right": 29.72,
+        "bottom_left": 29.25,
+        "bottom_right": 28.76
+      },
+      "quadrant_edge_density": {
+        "top_left": 38.3,
+        "top_right": 38.02,
+        "bottom_left": 37.99,
+        "bottom_right": 37.75
+      },
+      "glcm_contrast": 0.676,
+      "glcm_homogeneity": 0.731,
+      "glcm_energy": 0.345,
+      "glcm_correlation": 0.615,
+      "lbp_uniformity": 0.3934,
+      "lbp_entropy": 3.355,
+      "num_regions": 141,
+      "avg_area": 74.81,
+      "max_area": 662.0,
+      "total_defect_pct": 26.37,
+      "avg_aspect_ratio": 1.531,
+      "max_aspect_ratio": 5.0,
+      "avg_circularity": 0.531,
+      "min_circularity": 0.068,
+      "regions_raw": [
+        [
+          132,
+          196,
+          6,
+          4,
+          13.0,
+          1.5,
+          0.7429559119567787
+        ],
+        [
+          105,
+          196,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          48,
+          195,
+          6,
+          5,
+          18.0,
+          1.2,
+          0.7987213940695521
+        ],
+        [
+          0,
+          195,
+          11,
+          5,
+          20.5,
+          2.2,
+          0.3229632636665376
+        ],
+        [
+          86,
+          194,
+          6,
+          6,
+          18.0,
+          1.0,
+          0.7255305571069626
+        ],
+        [
+          80,
+          194,
+          4,
+          6,
+          12.5,
+          1.5,
+          0.6611151857406026
+        ],
+        [
+          59,
+          194,
+          13,
+          6,
+          44.0,
+          2.1666666666666665,
+          0.5130531882252396
+        ],
+        [
+          185,
+          193,
+          15,
+          7,
+          68.5,
+          2.142857142857143,
+          0.5885789024142137
+        ],
+        [
+          152,
+          192,
+          6,
+          6,
+          20.0,
+          1.0,
+          0.8061450634521806
+        ],
+        [
+          112,
+          192,
+          15,
+          8,
+          39.0,
+          1.875,
+          0.2871349881086623
+        ],
+        [
+          159,
+          191,
+          9,
+          9,
+          49.5,
+          1.0,
+          0.7360259012367414
+        ],
+        [
+          93,
+          191,
+          8,
+          8,
+          28.0,
+          1.0,
+          0.5868913404615355
+        ],
+        [
+          7,
+          188,
+          9,
+          4,
+          21.0,
+          2.25,
+          0.562650117920529
+        ],
+        [
+          181,
+          186,
+          6,
+          3,
+          10.0,
+          2.0,
+          0.6411413546043386
+        ],
+        [
+          142,
+          186,
+          11,
+          5,
+          33.0,
+          2.2,
+          0.5761471009599387
+        ],
+        [
+          42,
+          186,
+          5,
+          6,
+          14.5,
+          1.2,
+          0.6008556282940902
+        ],
+        [
+          170,
+          185,
+          10,
+          10,
+          58.0,
+          1.0,
+          0.8022132452887926
+        ],
+        [
+          20,
+          185,
+          11,
+          15,
+          80.5,
+          1.3636363636363635,
+          0.4632898766297235
+        ],
+        [
+          188,
+          183,
+          4,
+          5,
+          11.5,
+          1.25,
+          0.8031141373846319
+        ],
+        [
+          48,
+          182,
+          6,
+          5,
+          17.0,
+          1.2,
+          0.7543479832879103
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "crazing_247.jpg",
+    "true_label": "crazing",
+    "pred_label": "pitted_surface",
+    "confidence": 0.6947839998360228,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          1,
+          1,
+          128,
+          67
+        ],
+        "label": "crazing",
+        "area": 8576,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          1,
+          134,
+          87,
+          56
+        ],
+        "label": "crazing",
+        "area": 4872,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          1,
+          48,
+          147,
+          86
+        ],
+        "label": "crazing",
+        "area": 12642,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 172.07,
+      "std_intensity": 29.71,
+      "contrast": 0.173,
+      "dark_pixel_pct": 19.33,
+      "bright_pixel_pct": 19.69,
+      "entropy": 6.914,
+      "edge_density": 37.99,
+      "sobel_magnitude": 107.052,
+      "horizontal_edge_ratio": 0.351,
+      "vertical_edge_ratio": 0.319,
+      "diagonal_edge_ratio": 0.33,
+      "hough_line_count": 80,
+      "avg_line_length": 162.06,
+      "max_line_length": 277.19,
+      "line_horizontal_pct": 13.75,
+      "quadrant_std": {
+        "top_left": 30.41,
+        "top_right": 26.01,
+        "bottom_left": 32.68,
+        "bottom_right": 27.1
+      },
+      "quadrant_edge_density": {
+        "top_left": 38.14,
+        "top_right": 38.29,
+        "bottom_left": 37.05,
+        "bottom_right": 38.48
+      },
+      "glcm_contrast": 0.68,
+      "glcm_homogeneity": 0.73,
+      "glcm_energy": 0.339,
+      "glcm_correlation": 0.637,
+      "lbp_uniformity": 0.3878,
+      "lbp_entropy": 3.383,
+      "num_regions": 153,
+      "avg_area": 69.86,
+      "max_area": 1289.5,
+      "total_defect_pct": 26.72,
+      "avg_aspect_ratio": 1.495,
+      "max_aspect_ratio": 2.917,
+      "avg_circularity": 0.541,
+      "min_circularity": 0.049,
+      "regions_raw": [
+        [
+          0,
+          197,
+          6,
+          3,
+          9.5,
+          2.0,
+          0.6634421134916525
+        ],
+        [
+          11,
+          196,
+          6,
+          4,
+          13.5,
+          1.5,
+          0.7140044005998508
+        ],
+        [
+          144,
+          193,
+          11,
+          7,
+          40.0,
+          1.5714285714285714,
+          0.5126262620553843
+        ],
+        [
+          114,
+          193,
+          18,
+          7,
+          34.0,
+          2.5714285714285716,
+          0.21590171887733128
+        ],
+        [
+          64,
+          193,
+          17,
+          7,
+          75.0,
+          2.4285714285714284,
+          0.5431229913992492
+        ],
+        [
+          31,
+          192,
+          6,
+          6,
+          20.0,
+          1.0,
+          0.8061450634521806
+        ],
+        [
+          105,
+          190,
+          8,
+          10,
+          35.0,
+          1.25,
+          0.4732574903383942
+        ],
+        [
+          38,
+          190,
+          9,
+          10,
+          52.0,
+          1.1111111111111112,
+          0.7031254197160298
+        ],
+        [
+          186,
+          189,
+          12,
+          11,
+          62.5,
+          1.0909090909090908,
+          0.5236504696447828
+        ],
+        [
+          145,
+          187,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          115,
+          187,
+          5,
+          4,
+          11.0,
+          1.25,
+          0.8399544339736016
+        ],
+        [
+          177,
+          186,
+          8,
+          8,
+          22.5,
+          1.0,
+          0.33455722783488245
+        ],
+        [
+          171,
+          186,
+          5,
+          5,
+          12.5,
+          1.0,
+          0.7743527467468166
+        ],
+        [
+          60,
+          186,
+          6,
+          3,
+          10.0,
+          2.0,
+          0.6411413546043386
+        ],
+        [
+          21,
+          186,
+          11,
+          5,
+          33.0,
+          2.2,
+          0.5761471009599387
+        ],
+        [
+          49,
+          185,
+          10,
+          10,
+          58.0,
+          1.0,
+          0.8022132452887926
+        ],
+        [
+          90,
+          182,
+          16,
+          13,
+          80.0,
+          1.2307692307692308,
+          0.5047732867782856
+        ],
+        [
+          31,
+          179,
+          3,
+          6,
+          10.0,
+          2.0,
+          0.6411413546043386
+        ],
+        [
+          158,
+          178,
+          15,
+          18,
+          96.0,
+          1.2,
+          0.37620762924461837
+        ],
+        [
+          67,
+          178,
+          14,
+          12,
+          68.0,
+          1.1666666666666667,
+          0.37400839213490555
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "crazing_248.jpg",
+    "true_label": "crazing",
+    "pred_label": "pitted_surface",
+    "confidence": 0.6947839998360228,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          2,
+          52,
+          177,
+          100
+        ],
+        "label": "crazing",
+        "area": 17700,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          77,
+          23,
+          123,
+          60
+        ],
+        "label": "crazing",
+        "area": 7380,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          18,
+          127,
+          179,
+          65
+        ],
+        "label": "crazing",
+        "area": 11635,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 169.95,
+      "std_intensity": 30.07,
+      "contrast": 0.177,
+      "dark_pixel_pct": 19.41,
+      "bright_pixel_pct": 19.81,
+      "entropy": 6.934,
+      "edge_density": 37.8,
+      "sobel_magnitude": 109.161,
+      "horizontal_edge_ratio": 0.36,
+      "vertical_edge_ratio": 0.321,
+      "diagonal_edge_ratio": 0.319,
+      "hough_line_count": 80,
+      "avg_line_length": 156.7,
+      "max_line_length": 264.09,
+      "line_horizontal_pct": 25.0,
+      "quadrant_std": {
+        "top_left": 29.18,
+        "top_right": 30.2,
+        "bottom_left": 28.4,
+        "bottom_right": 31.73
+      },
+      "quadrant_edge_density": {
+        "top_left": 37.8,
+        "top_right": 37.66,
+        "bottom_left": 37.9,
+        "bottom_right": 37.84
+      },
+      "glcm_contrast": 0.702,
+      "glcm_homogeneity": 0.725,
+      "glcm_energy": 0.335,
+      "glcm_correlation": 0.634,
+      "lbp_uniformity": 0.3879,
+      "lbp_entropy": 3.381,
+      "num_regions": 155,
+      "avg_area": 68.42,
+      "max_area": 675.5,
+      "total_defect_pct": 26.51,
+      "avg_aspect_ratio": 1.505,
+      "max_aspect_ratio": 3.625,
+      "avg_circularity": 0.55,
+      "min_circularity": 0.11,
+      "regions_raw": [
+        [
+          13,
+          196,
+          14,
+          4,
+          25.0,
+          3.5,
+          0.3305575939137369
+        ],
+        [
+          0,
+          195,
+          6,
+          5,
+          16.0,
+          1.2,
+          0.7099745725062685
+        ],
+        [
+          192,
+          193,
+          6,
+          4,
+          13.0,
+          1.5,
+          0.7429559119567787
+        ],
+        [
+          55,
+          193,
+          13,
+          7,
+          48.0,
+          1.8571428571428572,
+          0.5072050395064698
+        ],
+        [
+          39,
+          191,
+          5,
+          9,
+          24.5,
+          1.8,
+          0.6223049534677401
+        ],
+        [
+          11,
+          190,
+          3,
+          5,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          138,
+          189,
+          6,
+          4,
+          13.0,
+          1.5,
+          0.7429559119567787
+        ],
+        [
+          47,
+          187,
+          5,
+          6,
+          15.5,
+          1.2,
+          0.7382922169994482
+        ],
+        [
+          183,
+          186,
+          8,
+          13,
+          51.5,
+          1.625,
+          0.5631584974074383
+        ],
+        [
+          64,
+          184,
+          6,
+          7,
+          26.0,
+          1.1666666666666667,
+          0.753130546771603
+        ],
+        [
+          19,
+          184,
+          10,
+          5,
+          26.0,
+          2.0,
+          0.5838069037709113
+        ],
+        [
+          37,
+          182,
+          5,
+          4,
+          10.0,
+          1.25,
+          0.7635949399760016
+        ],
+        [
+          9,
+          180,
+          6,
+          4,
+          12.0,
+          1.5,
+          0.6858054571908726
+        ],
+        [
+          2,
+          179,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          119,
+          178,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          190,
+          176,
+          7,
+          6,
+          24.5,
+          1.1666666666666667,
+          0.7513488357717422
+        ],
+        [
+          147,
+          173,
+          27,
+          27,
+          180.5,
+          1.0,
+          0.24100964802663882
+        ],
+        [
+          43,
+          172,
+          20,
+          12,
+          91.0,
+          1.6666666666666667,
+          0.2737900520381272
+        ],
+        [
+          37,
+          172,
+          4,
+          6,
+          12.0,
+          1.5,
+          0.6858054571908726
+        ],
+        [
+          28,
+          169,
+          7,
+          8,
+          25.5,
+          1.1428571428571428,
+          0.6020251808161815
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "crazing_249.jpg",
+    "true_label": "crazing",
+    "pred_label": "pitted_surface",
+    "confidence": 0.6947839998360228,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          9,
+          10,
+          122,
+          42
+        ],
+        "label": "crazing",
+        "area": 5124,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          1,
+          62,
+          118,
+          112
+        ],
+        "label": "crazing",
+        "area": 13216,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          66,
+          111,
+          134,
+          80
+        ],
+        "label": "crazing",
+        "area": 10720,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 169.06,
+      "std_intensity": 28.99,
+      "contrast": 0.171,
+      "dark_pixel_pct": 19.66,
+      "bright_pixel_pct": 19.79,
+      "entropy": 6.881,
+      "edge_density": 38.36,
+      "sobel_magnitude": 107.579,
+      "horizontal_edge_ratio": 0.345,
+      "vertical_edge_ratio": 0.33,
+      "diagonal_edge_ratio": 0.326,
+      "hough_line_count": 80,
+      "avg_line_length": 156.73,
+      "max_line_length": 277.22,
+      "line_horizontal_pct": 12.5,
+      "quadrant_std": {
+        "top_left": 27.6,
+        "top_right": 31.54,
+        "bottom_left": 30.78,
+        "bottom_right": 24.66
+      },
+      "quadrant_edge_density": {
+        "top_left": 37.79,
+        "top_right": 38.28,
+        "bottom_left": 38.72,
+        "bottom_right": 38.65
+      },
+      "glcm_contrast": 0.685,
+      "glcm_homogeneity": 0.728,
+      "glcm_energy": 0.343,
+      "glcm_correlation": 0.616,
+      "lbp_uniformity": 0.3922,
+      "lbp_entropy": 3.361,
+      "num_regions": 153,
+      "avg_area": 69.84,
+      "max_area": 807.0,
+      "total_defect_pct": 26.71,
+      "avg_aspect_ratio": 1.528,
+      "max_aspect_ratio": 5.0,
+      "avg_circularity": 0.534,
+      "min_circularity": 0.05,
+      "regions_raw": [
+        [
+          134,
+          197,
+          8,
+          3,
+          9.5,
+          2.6666666666666665,
+          0.3936640323306108
+        ],
+        [
+          21,
+          197,
+          14,
+          3,
+          23.5,
+          4.666666666666667,
+          0.3413211843420903
+        ],
+        [
+          107,
+          196,
+          5,
+          4,
+          10.5,
+          1.25,
+          0.7332781254381423
+        ],
+        [
+          78,
+          195,
+          5,
+          5,
+          13.5,
+          1.0,
+          0.7140044005998508
+        ],
+        [
+          193,
+          193,
+          7,
+          7,
+          16.0,
+          1.0,
+          0.42868580412992685
+        ],
+        [
+          180,
+          193,
+          11,
+          7,
+          31.5,
+          1.5714285714285714,
+          0.5085430692764958
+        ],
+        [
+          142,
+          193,
+          6,
+          7,
+          23.5,
+          1.1666666666666667,
+          0.7206815363524874
+        ],
+        [
+          113,
+          192,
+          11,
+          8,
+          42.0,
+          1.375,
+          0.5679089928475625
+        ],
+        [
+          0,
+          192,
+          10,
+          8,
+          30.0,
+          1.25,
+          0.4286284122063111
+        ],
+        [
+          151,
+          190,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          63,
+          189,
+          8,
+          5,
+          21.5,
+          1.6,
+          0.6593469375139779
+        ],
+        [
+          168,
+          188,
+          6,
+          10,
+          27.5,
+          1.6666666666666667,
+          0.5497900783999331
+        ],
+        [
+          157,
+          187,
+          8,
+          4,
+          17.5,
+          2.0,
+          0.5834562646222515
+        ],
+        [
+          86,
+          187,
+          9,
+          8,
+          26.0,
+          1.125,
+          0.4271472871753117
+        ],
+        [
+          121,
+          186,
+          9,
+          5,
+          24.0,
+          1.8,
+          0.5388986804039181
+        ],
+        [
+          8,
+          186,
+          9,
+          7,
+          40.0,
+          1.2857142857142858,
+          0.7635949434559874
+        ],
+        [
+          3,
+          180,
+          9,
+          5,
+          25.0,
+          1.8,
+          0.5613527920874147
+        ],
+        [
+          169,
+          177,
+          7,
+          9,
+          27.0,
+          1.2857142857142858,
+          0.48368703893322507
+        ],
+        [
+          89,
+          174,
+          36,
+          15,
+          215.5,
+          2.4,
+          0.25114387919108444
+        ],
+        [
+          14,
+          174,
+          8,
+          9,
+          37.5,
+          1.125,
+          0.6430287123516942
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "crazing_25.jpg",
+    "true_label": "crazing",
+    "pred_label": "pitted_surface",
+    "confidence": 0.78745606382152,
+    "cls_method": "Claude+GroqWeighted(1/1LLM,best_w=0.71)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3174,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 2,
+        "label": "pitted_surface",
+        "confidence": 0.317,
+        "weight": 0.49,
+        "reason": "many tiny circular pits"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          1,
+          1,
+          117,
+          44
+        ],
+        "label": "crazing",
+        "area": 5148,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          18,
+          80,
+          141,
+          64
+        ],
+        "label": "crazing",
+        "area": 9024,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 155.28,
+      "std_intensity": 24.36,
+      "contrast": 0.157,
+      "dark_pixel_pct": 19.1,
+      "bright_pixel_pct": 19.44,
+      "entropy": 6.645,
+      "edge_density": 38.54,
+      "sobel_magnitude": 97.506,
+      "horizontal_edge_ratio": 0.351,
+      "vertical_edge_ratio": 0.322,
+      "diagonal_edge_ratio": 0.327,
+      "hough_line_count": 80,
+      "avg_line_length": 165.36,
+      "max_line_length": 274.36,
+      "line_horizontal_pct": 2.5,
+      "quadrant_std": {
+        "top_left": 25.35,
+        "top_right": 24.41,
+        "bottom_left": 24.82,
+        "bottom_right": 21.68
+      },
+      "quadrant_edge_density": {
+        "top_left": 38.55,
+        "top_right": 38.04,
+        "bottom_left": 39.05,
+        "bottom_right": 38.53
+      },
+      "glcm_contrast": 0.604,
+      "glcm_homogeneity": 0.748,
+      "glcm_energy": 0.387,
+      "glcm_correlation": 0.541,
+      "lbp_uniformity": 0.3997,
+      "lbp_entropy": 3.318,
+      "num_regions": 185,
+      "avg_area": 53.32,
+      "max_area": 642.0,
+      "total_defect_pct": 24.66,
+      "avg_aspect_ratio": 1.478,
+      "max_aspect_ratio": 5.0,
+      "avg_circularity": 0.565,
+      "min_circularity": 0.089,
+      "regions_raw": [
+        [
+          103,
+          198,
+          10,
+          2,
+          9.0,
+          5.0,
+          0.28274333811622304
+        ],
+        [
+          81,
+          197,
+          10,
+          3,
+          14.5,
+          3.3333333333333335,
+          0.3973503566803488
+        ],
+        [
+          9,
+          196,
+          7,
+          4,
+          17.0,
+          1.75,
+          0.7543479832879103
+        ],
+        [
+          180,
+          195,
+          15,
+          5,
+          51.5,
+          3.0,
+          0.492694174838277
+        ],
+        [
+          137,
+          195,
+          6,
+          5,
+          20.0,
+          1.2,
+          0.7757018873811159
+        ],
+        [
+          116,
+          195,
+          13,
+          5,
+          33.0,
+          2.6,
+          0.3929619875845649
+        ],
+        [
+          103,
+          193,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          93,
+          190,
+          8,
+          7,
+          36.5,
+          1.1428571428571428,
+          0.7804460395491288
+        ],
+        [
+          138,
+          189,
+          4,
+          5,
+          10.0,
+          1.25,
+          0.7635949399760016
+        ],
+        [
+          73,
+          189,
+          6,
+          11,
+          38.0,
+          1.8333333333333333,
+          0.680744721461576
+        ],
+        [
+          124,
+          188,
+          7,
+          5,
+          19.5,
+          1.4,
+          0.7363241913432419
+        ],
+        [
+          172,
+          187,
+          5,
+          8,
+          23.5,
+          1.6,
+          0.7206815363524874
+        ],
+        [
+          147,
+          184,
+          14,
+          16,
+          78.5,
+          1.1428571428571428,
+          0.2893878438757783
+        ],
+        [
+          146,
+          184,
+          4,
+          4,
+          9.0,
+          1.0,
+          0.7853981579432944
+        ],
+        [
+          118,
+          184,
+          3,
+          5,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          15,
+          184,
+          20,
+          15,
+          72.5,
+          1.3333333333333333,
+          0.25685719716465016
+        ],
+        [
+          103,
+          183,
+          7,
+          6,
+          24.5,
+          1.1666666666666667,
+          0.7513488357717422
+        ],
+        [
+          76,
+          183,
+          6,
+          4,
+          14.5,
+          1.5,
+          0.7668936154590991
+        ],
+        [
+          91,
+          182,
+          7,
+          5,
+          16.0,
+          1.4,
+          0.6449160507617445
+        ],
+        [
+          182,
+          177,
+          18,
+          15,
+          86.0,
+          1.2,
+          0.3471008253961799
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "crazing_250.jpg",
+    "true_label": "crazing",
+    "pred_label": "pitted_surface",
+    "confidence": 0.6947839998360228,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          7,
+          2,
+          161,
+          44
+        ],
+        "label": "crazing",
+        "area": 7084,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          38,
+          18,
+          153,
+          93
+        ],
+        "label": "crazing",
+        "area": 14229,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          28,
+          121,
+          172,
+          59
+        ],
+        "label": "crazing",
+        "area": 10148,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 172.7,
+      "std_intensity": 29.59,
+      "contrast": 0.171,
+      "dark_pixel_pct": 19.88,
+      "bright_pixel_pct": 19.55,
+      "entropy": 6.908,
+      "edge_density": 38.51,
+      "sobel_magnitude": 109.723,
+      "horizontal_edge_ratio": 0.344,
+      "vertical_edge_ratio": 0.329,
+      "diagonal_edge_ratio": 0.327,
+      "hough_line_count": 80,
+      "avg_line_length": 164.95,
+      "max_line_length": 265.87,
+      "line_horizontal_pct": 5.0,
+      "quadrant_std": {
+        "top_left": 28.07,
+        "top_right": 31.61,
+        "bottom_left": 28.87,
+        "bottom_right": 26.0
+      },
+      "quadrant_edge_density": {
+        "top_left": 38.56,
+        "top_right": 37.95,
+        "bottom_left": 38.94,
+        "bottom_right": 38.57
+      },
+      "glcm_contrast": 0.706,
+      "glcm_homogeneity": 0.723,
+      "glcm_energy": 0.335,
+      "glcm_correlation": 0.619,
+      "lbp_uniformity": 0.3887,
+      "lbp_entropy": 3.366,
+      "num_regions": 153,
+      "avg_area": 72.02,
+      "max_area": 832.0,
+      "total_defect_pct": 27.55,
+      "avg_aspect_ratio": 1.49,
+      "max_aspect_ratio": 4.8,
+      "avg_circularity": 0.529,
+      "min_circularity": 0.055,
+      "regions_raw": [
+        [
+          42,
+          196,
+          4,
+          4,
+          9.0,
+          1.0,
+          0.7853981579432944
+        ],
+        [
+          0,
+          195,
+          24,
+          5,
+          55.5,
+          4.8,
+          0.26739480926321924
+        ],
+        [
+          29,
+          194,
+          7,
+          6,
+          20.0,
+          1.1666666666666667,
+          0.5793311898243099
+        ],
+        [
+          192,
+          193,
+          8,
+          7,
+          29.0,
+          1.1428571428571428,
+          0.7207940841054122
+        ],
+        [
+          173,
+          191,
+          15,
+          9,
+          71.0,
+          1.6666666666666667,
+          0.5772716013209647
+        ],
+        [
+          148,
+          190,
+          22,
+          9,
+          85.5,
+          2.4444444444444446,
+          0.31152055824672387
+        ],
+        [
+          114,
+          190,
+          19,
+          10,
+          104.0,
+          1.9,
+          0.3912034832270938
+        ],
+        [
+          76,
+          190,
+          11,
+          6,
+          31.0,
+          1.8333333333333333,
+          0.509290996247487
+        ],
+        [
+          52,
+          186,
+          24,
+          14,
+          115.0,
+          1.7142857142857142,
+          0.18686315281672836
+        ],
+        [
+          137,
+          185,
+          9,
+          10,
+          56.0,
+          1.1111111111111112,
+          0.717676766877538
+        ],
+        [
+          14,
+          185,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          89,
+          183,
+          20,
+          17,
+          142.5,
+          1.1764705882352942,
+          0.30304723152677154
+        ],
+        [
+          193,
+          182,
+          7,
+          7,
+          27.5,
+          1.0,
+          0.7783402191642929
+        ],
+        [
+          150,
+          182,
+          6,
+          7,
+          21.5,
+          1.1666666666666667,
+          0.7428451760923759
+        ],
+        [
+          158,
+          180,
+          12,
+          7,
+          47.5,
+          1.7142857142857142,
+          0.6676913916081865
+        ],
+        [
+          44,
+          180,
+          11,
+          5,
+          29.5,
+          2.2,
+          0.5058492492615828
+        ],
+        [
+          0,
+          179,
+          14,
+          9,
+          54.0,
+          1.5555555555555556,
+          0.4211169100834728
+        ],
+        [
+          172,
+          178,
+          12,
+          9,
+          56.5,
+          1.3333333333333333,
+          0.6178340796800051
+        ],
+        [
+          184,
+          177,
+          5,
+          6,
+          17.0,
+          1.2,
+          0.7543479832879103
+        ],
+        [
+          98,
+          175,
+          6,
+          9,
+          28.0,
+          1.5,
+          0.6959391230672478
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "crazing_251.jpg",
+    "true_label": "crazing",
+    "pred_label": "pitted_surface",
+    "confidence": 0.6714691467840082,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.19)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          4,
+          80,
+          91,
+          112
+        ],
+        "label": "crazing",
+        "area": 10192,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          42,
+          7,
+          158,
+          58
+        ],
+        "label": "crazing",
+        "area": 9164,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          138,
+          48,
+          54,
+          125
+        ],
+        "label": "crazing",
+        "area": 6750,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 147.08,
+      "std_intensity": 36.6,
+      "contrast": 0.249,
+      "dark_pixel_pct": 19.56,
+      "bright_pixel_pct": 19.46,
+      "entropy": 7.221,
+      "edge_density": 37.79,
+      "sobel_magnitude": 92.955,
+      "horizontal_edge_ratio": 0.345,
+      "vertical_edge_ratio": 0.33,
+      "diagonal_edge_ratio": 0.326,
+      "hough_line_count": 80,
+      "avg_line_length": 153.52,
+      "max_line_length": 264.46,
+      "line_horizontal_pct": 10.0,
+      "quadrant_std": {
+        "top_left": 28.21,
+        "top_right": 28.13,
+        "bottom_left": 23.82,
+        "bottom_right": 25.77
+      },
+      "quadrant_edge_density": {
+        "top_left": 38.76,
+        "top_right": 37.37,
+        "bottom_left": 38.38,
+        "bottom_right": 36.65
+      },
+      "glcm_contrast": 0.569,
+      "glcm_homogeneity": 0.76,
+      "glcm_energy": 0.31,
+      "glcm_correlation": 0.793,
+      "lbp_uniformity": 0.3956,
+      "lbp_entropy": 3.345,
+      "num_regions": 145,
+      "avg_area": 90.7,
+      "max_area": 5562.0,
+      "total_defect_pct": 32.88,
+      "avg_aspect_ratio": 1.465,
+      "max_aspect_ratio": 3.455,
+      "avg_circularity": 0.542,
+      "min_circularity": 0.064,
+      "regions_raw": [
+        [
+          45,
+          196,
+          6,
+          4,
+          11.5,
+          1.5,
+          0.7124045270070712
+        ],
+        [
+          138,
+          194,
+          15,
+          6,
+          50.0,
+          2.5,
+          0.4512768379761632
+        ],
+        [
+          75,
+          193,
+          7,
+          7,
+          27.5,
+          1.0,
+          0.6492428420566664
+        ],
+        [
+          130,
+          191,
+          8,
+          6,
+          29.0,
+          1.3333333333333333,
+          0.7769930199854924
+        ],
+        [
+          165,
+          190,
+          4,
+          5,
+          10.0,
+          1.25,
+          0.7635949399760016
+        ],
+        [
+          25,
+          190,
+          10,
+          10,
+          34.5,
+          1.0,
+          0.3772615176807111
+        ],
+        [
+          15,
+          190,
+          9,
+          10,
+          38.5,
+          1.1111111111111112,
+          0.4516829919226103
+        ],
+        [
+          6,
+          190,
+          7,
+          5,
+          18.5,
+          1.4,
+          0.5673450392562135
+        ],
+        [
+          0,
+          190,
+          4,
+          10,
+          19.0,
+          2.5,
+          0.5090643924042881
+        ],
+        [
+          151,
+          187,
+          12,
+          9,
+          52.0,
+          1.3333333333333333,
+          0.5239942925044706
+        ],
+        [
+          89,
+          186,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          99,
+          184,
+          26,
+          16,
+          100.0,
+          1.625,
+          0.2695060488125496
+        ],
+        [
+          55,
+          183,
+          18,
+          17,
+          104.0,
+          1.0588235294117647,
+          0.2477661733110632
+        ],
+        [
+          74,
+          181,
+          14,
+          7,
+          43.0,
+          2.0,
+          0.48689168934886345
+        ],
+        [
+          8,
+          180,
+          12,
+          5,
+          31.5,
+          2.4,
+          0.4683801189688354
+        ],
+        [
+          120,
+          179,
+          6,
+          7,
+          27.5,
+          1.1666666666666667,
+          0.8433507340295067
+        ],
+        [
+          37,
+          177,
+          16,
+          17,
+          98.5,
+          1.0625,
+          0.22789194873108642
+        ],
+        [
+          160,
+          174,
+          10,
+          7,
+          43.0,
+          1.4285714285714286,
+          0.7703163953380993
+        ],
+        [
+          143,
+          173,
+          13,
+          16,
+          73.0,
+          1.2307692307692308,
+          0.31694542448552027
+        ],
+        [
+          64,
+          173,
+          6,
+          11,
+          35.0,
+          1.8333333333333333,
+          0.6270017171356621
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "crazing_252.jpg",
+    "true_label": "crazing",
+    "pred_label": "pitted_surface",
+    "confidence": 0.6947839998360228,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          1,
+          6,
+          103,
+          53
+        ],
+        "label": "crazing",
+        "area": 5459,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          1,
+          82,
+          198,
+          75
+        ],
+        "label": "crazing",
+        "area": 14850,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          108,
+          1,
+          83,
+          77
+        ],
+        "label": "crazing",
+        "area": 6391,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 172.61,
+      "std_intensity": 28.0,
+      "contrast": 0.162,
+      "dark_pixel_pct": 19.78,
+      "bright_pixel_pct": 19.86,
+      "entropy": 6.832,
+      "edge_density": 38.55,
+      "sobel_magnitude": 109.615,
+      "horizontal_edge_ratio": 0.341,
+      "vertical_edge_ratio": 0.33,
+      "diagonal_edge_ratio": 0.328,
+      "hough_line_count": 80,
+      "avg_line_length": 161.76,
+      "max_line_length": 280.01,
+      "line_horizontal_pct": 6.25,
+      "quadrant_std": {
+        "top_left": 29.48,
+        "top_right": 24.94,
+        "bottom_left": 28.98,
+        "bottom_right": 27.36
+      },
+      "quadrant_edge_density": {
+        "top_left": 39.11,
+        "top_right": 38.25,
+        "bottom_left": 38.49,
+        "bottom_right": 38.33
+      },
+      "glcm_contrast": 0.708,
+      "glcm_homogeneity": 0.723,
+      "glcm_energy": 0.345,
+      "glcm_correlation": 0.578,
+      "lbp_uniformity": 0.3934,
+      "lbp_entropy": 3.345,
+      "num_regions": 158,
+      "avg_area": 66.36,
+      "max_area": 855.5,
+      "total_defect_pct": 26.21,
+      "avg_aspect_ratio": 1.542,
+      "max_aspect_ratio": 5.0,
+      "avg_circularity": 0.527,
+      "min_circularity": 0.054,
+      "regions_raw": [
+        [
+          79,
+          198,
+          10,
+          2,
+          9.0,
+          5.0,
+          0.28274333811622304
+        ],
+        [
+          185,
+          194,
+          8,
+          6,
+          23.0,
+          1.3333333333333333,
+          0.6162358434367698
+        ],
+        [
+          169,
+          194,
+          6,
+          6,
+          19.0,
+          1.0,
+          0.6734965609808732
+        ],
+        [
+          42,
+          193,
+          9,
+          7,
+          37.0,
+          1.2857142857142858,
+          0.7755349856098861
+        ],
+        [
+          127,
+          191,
+          15,
+          9,
+          53.5,
+          1.6666666666666667,
+          0.3360517838376642
+        ],
+        [
+          101,
+          191,
+          21,
+          9,
+          89.0,
+          2.3333333333333335,
+          0.31638128209437244
+        ],
+        [
+          91,
+          189,
+          9,
+          11,
+          41.5,
+          1.2222222222222223,
+          0.4768277562948184
+        ],
+        [
+          190,
+          188,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          0,
+          188,
+          6,
+          5,
+          18.0,
+          1.2,
+          0.7987213940695521
+        ],
+        [
+          60,
+          186,
+          8,
+          14,
+          48.0,
+          1.75,
+          0.28330596784210077
+        ],
+        [
+          153,
+          184,
+          9,
+          13,
+          54.0,
+          1.4444444444444444,
+          0.38209429005336976
+        ],
+        [
+          16,
+          184,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          119,
+          183,
+          8,
+          7,
+          32.5,
+          1.1428571428571428,
+          0.5930320409296089
+        ],
+        [
+          197,
+          182,
+          3,
+          7,
+          10.5,
+          2.3333333333333335,
+          0.5553367560221062
+        ],
+        [
+          185,
+          181,
+          4,
+          5,
+          10.5,
+          1.25,
+          0.7332781254381423
+        ],
+        [
+          7,
+          180,
+          7,
+          10,
+          40.5,
+          1.4285714285714286,
+          0.694471003223529
+        ],
+        [
+          97,
+          178,
+          7,
+          5,
+          19.0,
+          1.4,
+          0.6734965609808732
+        ],
+        [
+          171,
+          177,
+          8,
+          5,
+          20.5,
+          1.6,
+          0.628679638094723
+        ],
+        [
+          0,
+          177,
+          5,
+          5,
+          12.5,
+          1.0,
+          0.7743527467468166
+        ],
+        [
+          196,
+          172,
+          4,
+          8,
+          16.0,
+          2.0,
+          0.6449160507617445
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "crazing_253.jpg",
+    "true_label": "crazing",
+    "pred_label": "pitted_surface",
+    "confidence": 0.7778114005077513,
+    "cls_method": "Claude+GroqWeighted(1/1LLM,best_w=0.68)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 3,
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.49,
+        "reason": "The image has a high total defect percentage (29.44%) and a significant number of regions (143), with many round pits indicated by a low average circularity (0."
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          31,
+          14,
+          152,
+          120
+        ],
+        "label": "crazing",
+        "area": 18240,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          131,
+          2,
+          62,
+          68
+        ],
+        "label": "crazing",
+        "area": 4216,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          87,
+          101,
+          109,
+          96
+        ],
+        "label": "crazing",
+        "area": 10464,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 112.87,
+      "std_intensity": 40.71,
+      "contrast": 0.361,
+      "dark_pixel_pct": 19.6,
+      "bright_pixel_pct": 19.77,
+      "entropy": 7.253,
+      "edge_density": 35.88,
+      "sobel_magnitude": 77.764,
+      "horizontal_edge_ratio": 0.342,
+      "vertical_edge_ratio": 0.335,
+      "diagonal_edge_ratio": 0.324,
+      "hough_line_count": 80,
+      "avg_line_length": 142.69,
+      "max_line_length": 267.32,
+      "line_horizontal_pct": 22.5,
+      "quadrant_std": {
+        "top_left": 30.51,
+        "top_right": 17.8,
+        "bottom_left": 33.93,
+        "bottom_right": 17.73
+      },
+      "quadrant_edge_density": {
+        "top_left": 37.5,
+        "top_right": 34.26,
+        "bottom_left": 37.93,
+        "bottom_right": 33.82
+      },
+      "glcm_contrast": 0.453,
+      "glcm_homogeneity": 0.799,
+      "glcm_energy": 0.345,
+      "glcm_correlation": 0.865,
+      "lbp_uniformity": 0.3906,
+      "lbp_entropy": 3.371,
+      "num_regions": 143,
+      "avg_area": 82.35,
+      "max_area": 2576.0,
+      "total_defect_pct": 29.44,
+      "avg_aspect_ratio": 1.423,
+      "max_aspect_ratio": 3.0,
+      "avg_circularity": 0.571,
+      "min_circularity": 0.101,
+      "regions_raw": [
+        [
+          13,
+          197,
+          6,
+          3,
+          10.0,
+          2.0,
+          0.6411413546043386
+        ],
+        [
+          81,
+          196,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          0,
+          195,
+          7,
+          5,
+          15.0,
+          1.4,
+          0.5317078113006893
+        ],
+        [
+          65,
+          194,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          31,
+          192,
+          5,
+          8,
+          26.0,
+          1.6,
+          0.6966144317111312
+        ],
+        [
+          78,
+          191,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          18,
+          191,
+          9,
+          5,
+          20.5,
+          1.8,
+          0.5207041447383132
+        ],
+        [
+          148,
+          187,
+          23,
+          13,
+          175.0,
+          1.7692307692307692,
+          0.5132761256746079
+        ],
+        [
+          68,
+          187,
+          8,
+          6,
+          27.5,
+          1.3333333333333333,
+          0.6985055600148105
+        ],
+        [
+          125,
+          186,
+          8,
+          8,
+          36.5,
+          1.0,
+          0.7297213837248043
+        ],
+        [
+          55,
+          185,
+          7,
+          13,
+          41.5,
+          1.8571428571428572,
+          0.5124958476907479
+        ],
+        [
+          136,
+          184,
+          11,
+          7,
+          35.0,
+          1.5714285714285714,
+          0.5118425471025986
+        ],
+        [
+          18,
+          184,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          13,
+          182,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          43,
+          181,
+          3,
+          5,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          44,
+          180,
+          10,
+          19,
+          91.0,
+          1.9,
+          0.40755111840829994
+        ],
+        [
+          105,
+          178,
+          18,
+          16,
+          118.5,
+          1.125,
+          0.2778109761459602
+        ],
+        [
+          24,
+          176,
+          10,
+          9,
+          55.5,
+          1.1111111111111112,
+          0.7801446723950073
+        ],
+        [
+          138,
+          175,
+          5,
+          8,
+          18.0,
+          1.6,
+          0.5854021825685967
+        ],
+        [
+          7,
+          175,
+          5,
+          10,
+          25.5,
+          2.0,
+          0.5452431235206243
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "crazing_254.jpg",
+    "true_label": "crazing",
+    "pred_label": "pitted_surface",
+    "confidence": 0.6947839998360228,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          46,
+          26,
+          137,
+          136
+        ],
+        "label": "crazing",
+        "area": 18632,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 171.07,
+      "std_intensity": 30.02,
+      "contrast": 0.175,
+      "dark_pixel_pct": 19.43,
+      "bright_pixel_pct": 19.57,
+      "entropy": 6.935,
+      "edge_density": 38.44,
+      "sobel_magnitude": 109.22,
+      "horizontal_edge_ratio": 0.339,
+      "vertical_edge_ratio": 0.336,
+      "diagonal_edge_ratio": 0.325,
+      "hough_line_count": 80,
+      "avg_line_length": 160.24,
+      "max_line_length": 267.66,
+      "line_horizontal_pct": 6.25,
+      "quadrant_std": {
+        "top_left": 29.73,
+        "top_right": 29.49,
+        "bottom_left": 30.48,
+        "bottom_right": 29.19
+      },
+      "quadrant_edge_density": {
+        "top_left": 38.42,
+        "top_right": 38.55,
+        "bottom_left": 38.68,
+        "bottom_right": 38.1
+      },
+      "glcm_contrast": 0.698,
+      "glcm_homogeneity": 0.726,
+      "glcm_energy": 0.332,
+      "glcm_correlation": 0.631,
+      "lbp_uniformity": 0.3867,
+      "lbp_entropy": 3.374,
+      "num_regions": 133,
+      "avg_area": 80.65,
+      "max_area": 1485.0,
+      "total_defect_pct": 26.82,
+      "avg_aspect_ratio": 1.486,
+      "max_aspect_ratio": 3.861,
+      "avg_circularity": 0.523,
+      "min_circularity": 0.055,
+      "regions_raw": [
+        [
+          122,
+          196,
+          8,
+          4,
+          14.5,
+          2.0,
+          0.5475231166398465
+        ],
+        [
+          50,
+          195,
+          10,
+          5,
+          22.5,
+          2.0,
+          0.5311986889554543
+        ],
+        [
+          108,
+          193,
+          11,
+          7,
+          40.0,
+          1.5714285714285714,
+          0.673765125977732
+        ],
+        [
+          19,
+          192,
+          4,
+          5,
+          11.0,
+          1.25,
+          0.8399544339736016
+        ],
+        [
+          142,
+          191,
+          11,
+          9,
+          52.5,
+          1.2222222222222223,
+          0.3021455717150371
+        ],
+        [
+          25,
+          190,
+          20,
+          10,
+          62.5,
+          2.0,
+          0.2655432052247508
+        ],
+        [
+          168,
+          189,
+          5,
+          11,
+          19.0,
+          2.2,
+          0.33172105812844954
+        ],
+        [
+          155,
+          188,
+          5,
+          4,
+          10.5,
+          1.25,
+          0.7332781254381423
+        ],
+        [
+          9,
+          184,
+          8,
+          10,
+          32.0,
+          1.25,
+          0.45720363968673183
+        ],
+        [
+          186,
+          182,
+          6,
+          6,
+          17.5,
+          1.0,
+          0.7546169368823323
+        ],
+        [
+          175,
+          182,
+          9,
+          10,
+          52.0,
+          1.1111111111111112,
+          0.7031254197160298
+        ],
+        [
+          106,
+          182,
+          10,
+          10,
+          43.5,
+          1.0,
+          0.40523449736085765
+        ],
+        [
+          186,
+          180,
+          14,
+          20,
+          68.5,
+          1.4285714285714286,
+          0.22466024433869036
+        ],
+        [
+          167,
+          179,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          27,
+          178,
+          8,
+          13,
+          49.5,
+          1.625,
+          0.5412882683053468
+        ],
+        [
+          82,
+          177,
+          22,
+          15,
+          123.0,
+          1.4666666666666666,
+          0.3517985215558061
+        ],
+        [
+          120,
+          173,
+          19,
+          14,
+          91.0,
+          1.3571428571428572,
+          0.18113383016779383
+        ],
+        [
+          161,
+          170,
+          7,
+          9,
+          38.0,
+          1.2857142857142858,
+          0.7254151962831881
+        ],
+        [
+          185,
+          166,
+          10,
+          13,
+          72.5,
+          1.3,
+          0.6342800172254563
+        ],
+        [
+          141,
+          165,
+          20,
+          24,
+          161.0,
+          1.2,
+          0.29048401411706143
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "crazing_255.jpg",
+    "true_label": "crazing",
+    "pred_label": "pitted_surface",
+    "confidence": 0.6947839998360228,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          40,
+          102,
+          149,
+          64
+        ],
+        "label": "crazing",
+        "area": 9536,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          4,
+          2,
+          196,
+          55
+        ],
+        "label": "crazing",
+        "area": 10780,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          19,
+          36,
+          170,
+          59
+        ],
+        "label": "crazing",
+        "area": 10030,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 176.15,
+      "std_intensity": 28.7,
+      "contrast": 0.163,
+      "dark_pixel_pct": 19.98,
+      "bright_pixel_pct": 19.78,
+      "entropy": 6.859,
+      "edge_density": 38.18,
+      "sobel_magnitude": 107.346,
+      "horizontal_edge_ratio": 0.348,
+      "vertical_edge_ratio": 0.326,
+      "diagonal_edge_ratio": 0.326,
+      "hough_line_count": 80,
+      "avg_line_length": 177.62,
+      "max_line_length": 278.6,
+      "line_horizontal_pct": 15.0,
+      "quadrant_std": {
+        "top_left": 27.58,
+        "top_right": 30.68,
+        "bottom_left": 25.58,
+        "bottom_right": 27.73
+      },
+      "quadrant_edge_density": {
+        "top_left": 37.36,
+        "top_right": 38.66,
+        "bottom_left": 38.59,
+        "bottom_right": 38.12
+      },
+      "glcm_contrast": 0.694,
+      "glcm_homogeneity": 0.727,
+      "glcm_energy": 0.346,
+      "glcm_correlation": 0.604,
+      "lbp_uniformity": 0.3937,
+      "lbp_entropy": 3.346,
+      "num_regions": 155,
+      "avg_area": 69.07,
+      "max_area": 628.0,
+      "total_defect_pct": 26.77,
+      "avg_aspect_ratio": 1.462,
+      "max_aspect_ratio": 2.8,
+      "avg_circularity": 0.526,
+      "min_circularity": 0.127,
+      "regions_raw": [
+        [
+          112,
+          196,
+          9,
+          4,
+          16.0,
+          2.25,
+          0.4634649518594479
+        ],
+        [
+          193,
+          194,
+          5,
+          6,
+          15.0,
+          1.2,
+          0.7689393907304966
+        ],
+        [
+          104,
+          193,
+          6,
+          5,
+          17.5,
+          1.2,
+          0.8335557288703448
+        ],
+        [
+          26,
+          193,
+          7,
+          4,
+          16.0,
+          1.75,
+          0.7099745725062685
+        ],
+        [
+          16,
+          191,
+          5,
+          7,
+          15.0,
+          1.4,
+          0.6046087975891354
+        ],
+        [
+          83,
+          190,
+          12,
+          10,
+          66.5,
+          1.2,
+          0.4577285145271905
+        ],
+        [
+          160,
+          187,
+          7,
+          4,
+          15.0,
+          1.75,
+          0.6656011617246267
+        ],
+        [
+          174,
+          185,
+          14,
+          15,
+          98.5,
+          1.0714285714285714,
+          0.5753010505370129
+        ],
+        [
+          189,
+          183,
+          11,
+          7,
+          31.5,
+          1.5714285714285714,
+          0.4100228529428471
+        ],
+        [
+          125,
+          183,
+          14,
+          17,
+          77.0,
+          1.2142857142857142,
+          0.31077632041285874
+        ],
+        [
+          33,
+          182,
+          4,
+          5,
+          11.5,
+          1.25,
+          0.8031141373846319
+        ],
+        [
+          159,
+          181,
+          6,
+          5,
+          16.5,
+          1.2,
+          0.7859239729348965
+        ],
+        [
+          104,
+          181,
+          7,
+          7,
+          31.0,
+          1.0,
+          0.8305787455017333
+        ],
+        [
+          1,
+          181,
+          13,
+          19,
+          89.5,
+          1.4615384615384615,
+          0.23477670489337268
+        ],
+        [
+          140,
+          180,
+          15,
+          20,
+          119.5,
+          1.3333333333333333,
+          0.20611822398872984
+        ],
+        [
+          89,
+          179,
+          11,
+          8,
+          55.0,
+          1.375,
+          0.6549366507810384
+        ],
+        [
+          175,
+          177,
+          7,
+          7,
+          29.0,
+          1.0,
+          0.7769930199854924
+        ],
+        [
+          188,
+          174,
+          6,
+          4,
+          14.0,
+          1.5,
+          0.8001063667226848
+        ],
+        [
+          113,
+          174,
+          10,
+          12,
+          40.5,
+          1.2,
+          0.37033494829783453
+        ],
+        [
+          20,
+          174,
+          6,
+          11,
+          38.0,
+          1.8333333333333333,
+          0.6242921889485323
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "crazing_256.jpg",
+    "true_label": "crazing",
+    "pred_label": "pitted_surface",
+    "confidence": 0.6947839998360228,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          24,
+          125,
+          172,
+          62
+        ],
+        "label": "crazing",
+        "area": 10664,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          31,
+          48,
+          144,
+          71
+        ],
+        "label": "crazing",
+        "area": 10224,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          57,
+          1,
+          107,
+          49
+        ],
+        "label": "crazing",
+        "area": 5243,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 178.28,
+      "std_intensity": 27.36,
+      "contrast": 0.153,
+      "dark_pixel_pct": 19.81,
+      "bright_pixel_pct": 19.95,
+      "entropy": 6.797,
+      "edge_density": 38.32,
+      "sobel_magnitude": 105.334,
+      "horizontal_edge_ratio": 0.353,
+      "vertical_edge_ratio": 0.323,
+      "diagonal_edge_ratio": 0.324,
+      "hough_line_count": 80,
+      "avg_line_length": 145.68,
+      "max_line_length": 277.19,
+      "line_horizontal_pct": 13.75,
+      "quadrant_std": {
+        "top_left": 27.98,
+        "top_right": 25.31,
+        "bottom_left": 28.19,
+        "bottom_right": 27.77
+      },
+      "quadrant_edge_density": {
+        "top_left": 38.07,
+        "top_right": 38.73,
+        "bottom_left": 38.64,
+        "bottom_right": 37.84
+      },
+      "glcm_contrast": 0.679,
+      "glcm_homogeneity": 0.73,
+      "glcm_energy": 0.352,
+      "glcm_correlation": 0.576,
+      "lbp_uniformity": 0.3987,
+      "lbp_entropy": 3.323,
+      "num_regions": 161,
+      "avg_area": 65.06,
+      "max_area": 715.0,
+      "total_defect_pct": 26.19,
+      "avg_aspect_ratio": 1.457,
+      "max_aspect_ratio": 3.833,
+      "avg_circularity": 0.553,
+      "min_circularity": 0.073,
+      "regions_raw": [
+        [
+          150,
+          196,
+          5,
+          4,
+          11.5,
+          1.25,
+          0.8031141373846319
+        ],
+        [
+          89,
+          195,
+          5,
+          3,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          63,
+          194,
+          10,
+          6,
+          38.5,
+          1.6666666666666667,
+          0.7697061097599064
+        ],
+        [
+          142,
+          192,
+          5,
+          3,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          185,
+          191,
+          5,
+          4,
+          9.0,
+          1.25,
+          0.6872354459784014
+        ],
+        [
+          78,
+          191,
+          6,
+          9,
+          28.5,
+          1.5,
+          0.6728516796302212
+        ],
+        [
+          197,
+          187,
+          3,
+          6,
+          10.0,
+          2.0,
+          0.6411413546043386
+        ],
+        [
+          175,
+          182,
+          5,
+          7,
+          19.5,
+          1.4,
+          0.7363241913432419
+        ],
+        [
+          40,
+          180,
+          30,
+          20,
+          199.0,
+          1.5,
+          0.2651617661460948
+        ],
+        [
+          0,
+          177,
+          5,
+          7,
+          17.0,
+          1.4,
+          0.6852233039343536
+        ],
+        [
+          182,
+          176,
+          8,
+          10,
+          45.5,
+          1.25,
+          0.7345622111771607
+        ],
+        [
+          125,
+          175,
+          5,
+          7,
+          17.5,
+          1.4,
+          0.6608037614618838
+        ],
+        [
+          81,
+          172,
+          35,
+          28,
+          222.5,
+          1.25,
+          0.10048229824935881
+        ],
+        [
+          80,
+          170,
+          7,
+          7,
+          25.5,
+          1.0,
+          0.6477051556500969
+        ],
+        [
+          41,
+          170,
+          16,
+          16,
+          79.5,
+          1.0,
+          0.27398202637999003
+        ],
+        [
+          120,
+          166,
+          10,
+          8,
+          49.0,
+          1.25,
+          0.7588656946176056
+        ],
+        [
+          37,
+          166,
+          8,
+          7,
+          34.5,
+          1.1428571428571428,
+          0.8145046563983633
+        ],
+        [
+          6,
+          165,
+          26,
+          35,
+          397.0,
+          1.3461538461538463,
+          0.15852873088922198
+        ],
+        [
+          114,
+          163,
+          4,
+          8,
+          21.0,
+          2.0,
+          0.6597344556045205
+        ],
+        [
+          59,
+          161,
+          15,
+          13,
+          103.5,
+          1.1538461538461537,
+          0.5370156583288185
+        ]
+      ]
+    }
   }
 ]

@@ -7039,5 +7039,625 @@
         "reason": "many small round pits, high regions count and small area"
       }
     ]
+  },
+  "crazing/crazing_234.jpg/b3c15fef07f813e8ebf638be36b7efd3": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.6715,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.19)",
+    "weighted_scores": {
+      "crazing": 0.1066,
+      "inclusion": 0.0995,
+      "patches": 0.1777,
+      "pitted_surface": 0.1883,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1279
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "crazing/crazing_235.jpg/4c40ea7debd2cd8d873bbc0e00b99218": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.6715,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.19)",
+    "weighted_scores": {
+      "crazing": 0.1066,
+      "inclusion": 0.0995,
+      "patches": 0.1777,
+      "pitted_surface": 0.1883,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1279
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "crazing/crazing_236.jpg/aab20b62c146520be600b1a04d132466": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.6948,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "weighted_scores": {
+      "crazing": 0.0892,
+      "inclusion": 0.1248,
+      "patches": 0.0892,
+      "pitted_surface": 0.2363,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1605
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "crazing/crazing_237.jpg/a9248e101f497b9d60de95872415b63d": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.6948,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "weighted_scores": {
+      "crazing": 0.0892,
+      "inclusion": 0.1248,
+      "patches": 0.0892,
+      "pitted_surface": 0.2363,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1605
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "crazing/crazing_238.jpg/68be9795dec913a95bff5b2282c0be81": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.7807,
+    "method": "Claude+GroqWeighted(1/1LLM,best_w=0.69)",
+    "weighted_scores": {
+      "crazing": 0.0749,
+      "inclusion": 0.1048,
+      "patches": 0.1872,
+      "pitted_surface": 0.6884,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1347
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.2834,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "pitted_surface",
+        "confidence": 0.283,
+        "weight": 0.49,
+        "reason": "many small round pits indicated by high regions_count and small avg_area"
+      }
+    ]
+  },
+  "crazing/crazing_239.jpg/92f81ff08a23ce7be1512fe36c6144e5": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.6948,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "weighted_scores": {
+      "crazing": 0.0892,
+      "inclusion": 0.1248,
+      "patches": 0.0892,
+      "pitted_surface": 0.2363,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1605
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "crazing/crazing_24.jpg/75c2dfff7d4b8bf70ff2834c14ddf338": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.6764,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.20)",
+    "weighted_scores": {
+      "crazing": 0.0749,
+      "inclusion": 0.1048,
+      "patches": 0.1872,
+      "pitted_surface": 0.1984,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1347
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.2834,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "crazing/crazing_240.jpg/332e9c5f2a933d87fcb442e287b14844": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.6948,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "weighted_scores": {
+      "crazing": 0.0892,
+      "inclusion": 0.1248,
+      "patches": 0.0892,
+      "pitted_surface": 0.2363,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1605
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "crazing/crazing_241.jpg/8bb30d912d165861c359a377cda0682d": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.6948,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "weighted_scores": {
+      "crazing": 0.0892,
+      "inclusion": 0.1248,
+      "patches": 0.0892,
+      "pitted_surface": 0.2363,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1605
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "crazing/crazing_242.jpg/c1ba0744d28ebd9598fe38f83da79504": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.7807,
+    "method": "Claude+GroqWeighted(1/1LLM,best_w=0.69)",
+    "weighted_scores": {
+      "crazing": 0.0749,
+      "inclusion": 0.1048,
+      "patches": 0.1872,
+      "pitted_surface": 0.6884,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1347
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.2834,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "pitted_surface",
+        "confidence": 0.283,
+        "weight": 0.49,
+        "reason": "many small round pits, high regions count and small area"
+      }
+    ]
+  },
+  "crazing/crazing_243.jpg/6c5390ef7b9593acf6b8d37ce684722b": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.6948,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "weighted_scores": {
+      "crazing": 0.0892,
+      "inclusion": 0.1248,
+      "patches": 0.0892,
+      "pitted_surface": 0.2363,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1605
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "crazing/crazing_244.jpg/5aab88e3ffb272f20e95a15f5e369efa": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.6764,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.20)",
+    "weighted_scores": {
+      "crazing": 0.0749,
+      "inclusion": 0.1048,
+      "patches": 0.1872,
+      "pitted_surface": 0.1984,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1347
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.2834,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "crazing/crazing_245.jpg/6b13453277089e372e93d180223a1f15": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.6715,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.19)",
+    "weighted_scores": {
+      "crazing": 0.1066,
+      "inclusion": 0.0995,
+      "patches": 0.1777,
+      "pitted_surface": 0.1883,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1279
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "crazing/crazing_246.jpg/325f7833670908a371db81ff21b87a3a": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.7915,
+    "method": "Claude+GroqWeighted(1/1LLM,best_w=0.73)",
+    "weighted_scores": {
+      "crazing": 0.0892,
+      "inclusion": 0.1248,
+      "patches": 0.0892,
+      "pitted_surface": 0.7263,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1605
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "pitted_surface",
+        "confidence": 0.338,
+        "weight": 0.49,
+        "reason": "many small round pits, high regions count and small area"
+      }
+    ]
+  },
+  "crazing/crazing_247.jpg/1bf4c479da25ffd5d84d7b4a8c62f871": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.6948,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "weighted_scores": {
+      "crazing": 0.0892,
+      "inclusion": 0.1248,
+      "patches": 0.0892,
+      "pitted_surface": 0.2363,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1605
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "crazing/crazing_248.jpg/34bd18a7e0baf9f60f9fc4d268135a77": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.6948,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "weighted_scores": {
+      "crazing": 0.0892,
+      "inclusion": 0.1248,
+      "patches": 0.0892,
+      "pitted_surface": 0.2363,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1605
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "crazing/crazing_249.jpg/9a000bd76aaee2b7436a4a54d07e042f": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.6948,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "weighted_scores": {
+      "crazing": 0.0892,
+      "inclusion": 0.1248,
+      "patches": 0.0892,
+      "pitted_surface": 0.2363,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1605
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "crazing/crazing_25.jpg/e06eefa1b368c64d1f58bade0bd3fb44": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.7875,
+    "method": "Claude+GroqWeighted(1/1LLM,best_w=0.71)",
+    "weighted_scores": {
+      "crazing": 0.0839,
+      "inclusion": 0.1174,
+      "patches": 0.0839,
+      "pitted_surface": 0.7122,
+      "rolled-in_scale": 0.0419,
+      "scratches": 0.1509
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3174,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 2,
+        "label": "pitted_surface",
+        "confidence": 0.317,
+        "weight": 0.49,
+        "reason": "many tiny circular pits"
+      }
+    ]
+  },
+  "crazing/crazing_250.jpg/2f309fef5b6d8e3338afa9dfa9a25ecb": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.6948,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "weighted_scores": {
+      "crazing": 0.0892,
+      "inclusion": 0.1248,
+      "patches": 0.0892,
+      "pitted_surface": 0.2363,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1605
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "crazing/crazing_251.jpg/920173e0c04fcf9caee89b54f59aa598": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.6715,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.19)",
+    "weighted_scores": {
+      "crazing": 0.1066,
+      "inclusion": 0.0995,
+      "patches": 0.1777,
+      "pitted_surface": 0.1883,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1279
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "crazing/crazing_252.jpg/e04829a56cb9c911e02b45020fdec3c4": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.6948,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "weighted_scores": {
+      "crazing": 0.0892,
+      "inclusion": 0.1248,
+      "patches": 0.0892,
+      "pitted_surface": 0.2363,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1605
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "crazing/crazing_253.jpg/5c69c28b6d802e670d175672b0cccf35": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.7778,
+    "method": "Claude+GroqWeighted(1/1LLM,best_w=0.68)",
+    "weighted_scores": {
+      "crazing": 0.1066,
+      "inclusion": 0.0995,
+      "patches": 0.1777,
+      "pitted_surface": 0.6783,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1279
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 3,
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.49,
+        "reason": "The image has a high total defect percentage (29.44%) and a significant number of regions (143), with many round pits indicated by a low average circularity (0."
+      }
+    ]
+  },
+  "crazing/crazing_254.jpg/267f65a172fa6fc9a084ea379be3dc67": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.6948,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "weighted_scores": {
+      "crazing": 0.0892,
+      "inclusion": 0.1248,
+      "patches": 0.0892,
+      "pitted_surface": 0.2363,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1605
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "crazing/crazing_255.jpg/12444b747dd2a4bed9b5ba70544f24d7": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.6948,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "weighted_scores": {
+      "crazing": 0.0892,
+      "inclusion": 0.1248,
+      "patches": 0.0892,
+      "pitted_surface": 0.2363,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1605
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "crazing/crazing_256.jpg/723427da710d77690a90e9ebeca5d9a4": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.6948,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "weighted_scores": {
+      "crazing": 0.0892,
+      "inclusion": 0.1248,
+      "patches": 0.0892,
+      "pitted_surface": 0.2363,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1605
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
   }
 }
