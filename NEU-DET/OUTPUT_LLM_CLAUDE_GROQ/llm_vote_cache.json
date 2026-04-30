@@ -19360,5 +19360,643 @@
         "reason": "handcrafted feature prior"
       }
     ]
+  },
+  "patches/patches_1.jpg/d67cd9ffd4dcbcf012b524cc50bf4d3b": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.6715,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.19)",
+    "weighted_scores": {
+      "crazing": 0.1066,
+      "inclusion": 0.0995,
+      "patches": 0.1777,
+      "pitted_surface": 0.1883,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1279
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "patches/patches_10.jpg/97bf3dc8e83dfe3d300236306f23af13": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.6715,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.19)",
+    "weighted_scores": {
+      "crazing": 0.1066,
+      "inclusion": 0.0995,
+      "patches": 0.1777,
+      "pitted_surface": 0.1883,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1279
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "patches/patches_100.jpg/2b5e2247186c67d9515d23899f3acc5a": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.6715,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.19)",
+    "weighted_scores": {
+      "crazing": 0.1066,
+      "inclusion": 0.0995,
+      "patches": 0.1777,
+      "pitted_surface": 0.1883,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1279
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "patches/patches_101.jpg/d45b463ecce087387e4d5b0f60f8fdfa": {
+    "pred_label": "patches",
+    "confidence": 0.676,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.20)",
+    "weighted_scores": {
+      "crazing": 0.1187,
+      "inclusion": 0.1107,
+      "patches": 0.1977,
+      "pitted_surface": 0.1305,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1424
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2825,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "patches/patches_102.jpg/a1d591a0c740c5a3966ce174d5657a5b": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.6715,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.19)",
+    "weighted_scores": {
+      "crazing": 0.1066,
+      "inclusion": 0.0995,
+      "patches": 0.1777,
+      "pitted_surface": 0.1883,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1279
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "patches/patches_103.jpg/1f73a025867dcf9b628df48f8d873085": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.6715,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.19)",
+    "weighted_scores": {
+      "crazing": 0.1066,
+      "inclusion": 0.0995,
+      "patches": 0.1777,
+      "pitted_surface": 0.1883,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1279
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "patches/patches_104.jpg/0858bf6c41d9bc2a833163597c7b5336": {
+    "pred_label": "patches",
+    "confidence": 0.676,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.20)",
+    "weighted_scores": {
+      "crazing": 0.1187,
+      "inclusion": 0.1107,
+      "patches": 0.1977,
+      "pitted_surface": 0.1305,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1424
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2825,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "patches/patches_105.jpg/d45b463ecce087387e4d5b0f60f8fdfa": {
+    "pred_label": "patches",
+    "confidence": 0.676,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.20)",
+    "weighted_scores": {
+      "crazing": 0.1187,
+      "inclusion": 0.1107,
+      "patches": 0.1977,
+      "pitted_surface": 0.1305,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1424
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2825,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "patches/patches_106.jpg/d0e4587b732f47182ebb8c781a7ef782": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.667,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.18)",
+    "weighted_scores": {
+      "crazing": 0.1014,
+      "inclusion": 0.0947,
+      "patches": 0.169,
+      "pitted_surface": 0.1792,
+      "rolled-in_scale": 0.0338,
+      "scratches": 0.1217
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.256,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "patches/patches_107.jpg/edb6f1b5ed1808042f42024ef230fe5b": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.6715,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.19)",
+    "weighted_scores": {
+      "crazing": 0.1066,
+      "inclusion": 0.0995,
+      "patches": 0.1777,
+      "pitted_surface": 0.1883,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1279
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "patches/patches_108.jpg/d28ab2df0d340248225e0504e705cfff": {
+    "pred_label": "patches",
+    "confidence": 0.676,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.20)",
+    "weighted_scores": {
+      "crazing": 0.1187,
+      "inclusion": 0.1107,
+      "patches": 0.1977,
+      "pitted_surface": 0.1305,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1424
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2825,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "patches/patches_109.jpg/2eef8d6b4bd245f4de4b9cd0497a2c29": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.679,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.20)",
+    "weighted_scores": {
+      "crazing": 0.1154,
+      "inclusion": 0.1077,
+      "patches": 0.1923,
+      "pitted_surface": 0.2038,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.0808
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.2912,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "patches/patches_11.jpg/d6becedb149c8daf326ca9b03e4856a7": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.6715,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.19)",
+    "weighted_scores": {
+      "crazing": 0.1066,
+      "inclusion": 0.0995,
+      "patches": 0.1777,
+      "pitted_surface": 0.1883,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1279
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "patches/patches_110.jpg/03de5680681bf602d2b41e4ea68d621b": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.6715,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.19)",
+    "weighted_scores": {
+      "crazing": 0.1066,
+      "inclusion": 0.0995,
+      "patches": 0.1777,
+      "pitted_surface": 0.1883,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1279
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "patches/patches_111.jpg/709358b577eb5f9ebe309a51dd7cde6a": {
+    "pred_label": "patches",
+    "confidence": 0.676,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.20)",
+    "weighted_scores": {
+      "crazing": 0.1187,
+      "inclusion": 0.1107,
+      "patches": 0.1977,
+      "pitted_surface": 0.1305,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1424
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2825,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "patches/patches_112.jpg/07a8ed3a3d82eef870b2305922943512": {
+    "pred_label": "patches",
+    "confidence": 0.676,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.20)",
+    "weighted_scores": {
+      "crazing": 0.1187,
+      "inclusion": 0.1107,
+      "patches": 0.1977,
+      "pitted_surface": 0.1305,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1424
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2825,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "patches/patches_113.jpg/5389a52765f8149737ea9cf1bbdea41c": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.6715,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.19)",
+    "weighted_scores": {
+      "crazing": 0.1066,
+      "inclusion": 0.0995,
+      "patches": 0.1777,
+      "pitted_surface": 0.1883,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1279
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "patches/patches_114.jpg/0c7723dd2c036ab2d70d00e49462631e": {
+    "pred_label": "patches",
+    "confidence": 0.676,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.20)",
+    "weighted_scores": {
+      "crazing": 0.1187,
+      "inclusion": 0.1107,
+      "patches": 0.1977,
+      "pitted_surface": 0.1305,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1424
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2825,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "patches/patches_115.jpg/4eaff658e0bd5470fc6ac2a6d2492606": {
+    "pred_label": "patches",
+    "confidence": 0.676,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.20)",
+    "weighted_scores": {
+      "crazing": 0.1187,
+      "inclusion": 0.1107,
+      "patches": 0.1977,
+      "pitted_surface": 0.1305,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1424
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2825,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "patches/patches_116.jpg/00597dd52c94ed16304c70bca3d053e5": {
+    "pred_label": "patches",
+    "confidence": 0.676,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.20)",
+    "weighted_scores": {
+      "crazing": 0.1187,
+      "inclusion": 0.1107,
+      "patches": 0.1977,
+      "pitted_surface": 0.1305,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1424
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2825,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "patches/patches_117.jpg/637dcd62bd85a97733a6bee63fbaac46": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.667,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.18)",
+    "weighted_scores": {
+      "crazing": 0.1014,
+      "inclusion": 0.0947,
+      "patches": 0.169,
+      "pitted_surface": 0.1792,
+      "rolled-in_scale": 0.0338,
+      "scratches": 0.1217
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.256,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "patches/patches_118.jpg/c34066080731ea34bd04c5cf4e1bb770": {
+    "pred_label": "patches",
+    "confidence": 0.676,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.20)",
+    "weighted_scores": {
+      "crazing": 0.1187,
+      "inclusion": 0.1107,
+      "patches": 0.1977,
+      "pitted_surface": 0.1305,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1424
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2825,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "patches/patches_119.jpg/87701bb4213df26b9ec55995f3e4b3cd": {
+    "pred_label": "patches",
+    "confidence": 0.676,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.20)",
+    "weighted_scores": {
+      "crazing": 0.1187,
+      "inclusion": 0.1107,
+      "patches": 0.1977,
+      "pitted_surface": 0.1305,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1424
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2825,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "patches/patches_12.jpg/d9ab4ad27686a17ca7842c3e2cc0e99e": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.6715,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.19)",
+    "weighted_scores": {
+      "crazing": 0.1066,
+      "inclusion": 0.0995,
+      "patches": 0.1777,
+      "pitted_surface": 0.1883,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1279
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "patches/patches_120.jpg/33eadd78a68be1279eca50c3a8398676": {
+    "pred_label": "patches",
+    "confidence": 0.7708,
+    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.30)",
+    "weighted_scores": {
+      "crazing": 1.7957,
+      "inclusion": 0.1107,
+      "patches": 2.3048,
+      "pitted_surface": 0.1305,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1424
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2825,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "patches",
+        "confidence": 0.282,
+        "weight": 0.49,
+        "reason": "high max area, broad irregular damaged area and high total defect percentage"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 2,
+        "label": "patches",
+        "confidence": 0.282,
+        "weight": 0.49,
+        "reason": "one or few large regions dominate"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 3,
+        "label": "patches",
+        "confidence": 0.282,
+        "weight": 0.49,
+        "reason": "The image has a high total defect percentage (36.76%) and a large max area (4589.5), which are characteristic of patches. Additionally, the top rule prior sugge"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 4,
+        "label": "patches",
+        "confidence": 0.65,
+        "weight": 0.637,
+        "reason": "{\"label\":\"patches\", \"confidence\":0.6, \"reason\":\"The visual features of the image, such as the high total defect percentage (36.76%) and the presence of a large "
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given options based on the provided visual features and rule-"
+      }
+    ]
   }
 }

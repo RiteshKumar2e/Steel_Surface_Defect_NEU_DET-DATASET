@@ -161377,5 +161377,6963 @@
         ]
       ]
     }
+  },
+  {
+    "filename": "patches_1.jpg",
+    "true_label": "patches",
+    "pred_label": "pitted_surface",
+    "confidence": 0.6714691467840082,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.19)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          43,
+          10,
+          63,
+          87
+        ],
+        "label": "patches",
+        "area": 5481,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          32,
+          91,
+          49,
+          57
+        ],
+        "label": "patches",
+        "area": 2793,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          23,
+          156,
+          39,
+          42
+        ],
+        "label": "patches",
+        "area": 1638,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 166.91,
+      "std_intensity": 51.89,
+      "contrast": 0.311,
+      "dark_pixel_pct": 19.72,
+      "bright_pixel_pct": 19.9,
+      "entropy": 7.483,
+      "edge_density": 36.77,
+      "sobel_magnitude": 94.413,
+      "horizontal_edge_ratio": 0.397,
+      "vertical_edge_ratio": 0.28,
+      "diagonal_edge_ratio": 0.323,
+      "hough_line_count": 80,
+      "avg_line_length": 143.9,
+      "max_line_length": 270.11,
+      "line_horizontal_pct": 15.0,
+      "quadrant_std": {
+        "top_left": 73.26,
+        "top_right": 34.09,
+        "bottom_left": 55.68,
+        "bottom_right": 30.43
+      },
+      "quadrant_edge_density": {
+        "top_left": 33.09,
+        "top_right": 38.42,
+        "bottom_left": 37.26,
+        "bottom_right": 38.31
+      },
+      "glcm_contrast": 0.596,
+      "glcm_homogeneity": 0.757,
+      "glcm_energy": 0.265,
+      "glcm_correlation": 0.885,
+      "lbp_uniformity": 0.4152,
+      "lbp_entropy": 3.25,
+      "num_regions": 129,
+      "avg_area": 99.88,
+      "max_area": 6834.5,
+      "total_defect_pct": 32.21,
+      "avg_aspect_ratio": 1.485,
+      "max_aspect_ratio": 4.857,
+      "avg_circularity": 0.566,
+      "min_circularity": 0.071,
+      "regions_raw": [
+        [
+          133,
+          197,
+          8,
+          3,
+          12.0,
+          2.6666666666666665,
+          0.5324809293797014
+        ],
+        [
+          190,
+          194,
+          6,
+          6,
+          21.0,
+          1.0,
+          0.7443909358209652
+        ],
+        [
+          68,
+          186,
+          7,
+          11,
+          40.5,
+          1.5714285714285714,
+          0.5692947609368971
+        ],
+        [
+          173,
+          179,
+          6,
+          18,
+          56.5,
+          3.0,
+          0.3548958090995893
+        ],
+        [
+          21,
+          179,
+          5,
+          5,
+          12.5,
+          1.0,
+          0.7743527467468166
+        ],
+        [
+          0,
+          179,
+          9,
+          21,
+          102.0,
+          2.3333333333333335,
+          0.4189329166788655
+        ],
+        [
+          156,
+          177,
+          13,
+          23,
+          158.0,
+          1.7692307692307692,
+          0.40193022349668
+        ],
+        [
+          114,
+          177,
+          7,
+          5,
+          14.5,
+          1.4,
+          0.5475231166398465
+        ],
+        [
+          188,
+          175,
+          12,
+          15,
+          53.5,
+          1.25,
+          0.2418144983586667
+        ],
+        [
+          130,
+          173,
+          5,
+          7,
+          19.0,
+          1.4,
+          0.7658378102795715
+        ],
+        [
+          139,
+          171,
+          13,
+          29,
+          158.5,
+          2.230769230769231,
+          0.29840846104924496
+        ],
+        [
+          125,
+          168,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          82,
+          165,
+          10,
+          30,
+          147.5,
+          3.0,
+          0.33371493193312285
+        ],
+        [
+          96,
+          164,
+          17,
+          36,
+          250.0,
+          2.1176470588235294,
+          0.2799114812382307
+        ],
+        [
+          95,
+          163,
+          7,
+          11,
+          37.0,
+          1.5714285714285714,
+          0.5286417083877837
+        ],
+        [
+          131,
+          162,
+          4,
+          8,
+          19.0,
+          2.0,
+          0.6734965609808732
+        ],
+        [
+          182,
+          160,
+          7,
+          9,
+          27.0,
+          1.2857142857142858,
+          0.5154265868327915
+        ],
+        [
+          162,
+          159,
+          7,
+          15,
+          47.0,
+          2.142857142857143,
+          0.4436825265528828
+        ],
+        [
+          139,
+          159,
+          17,
+          11,
+          84.0,
+          1.5454545454545454,
+          0.42564554149309297
+        ],
+        [
+          171,
+          158,
+          8,
+          17,
+          61.5,
+          2.125,
+          0.40736343418029763
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "patches_10.jpg",
+    "true_label": "patches",
+    "pred_label": "pitted_surface",
+    "confidence": 0.6714691467840082,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.19)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          9,
+          88,
+          40,
+          52
+        ],
+        "label": "patches",
+        "area": 2080,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          124,
+          1,
+          49,
+          116
+        ],
+        "label": "patches",
+        "area": 5684,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 148.38,
+      "std_intensity": 48.7,
+      "contrast": 0.328,
+      "dark_pixel_pct": 19.59,
+      "bright_pixel_pct": 19.39,
+      "entropy": 7.556,
+      "edge_density": 36.49,
+      "sobel_magnitude": 86.798,
+      "horizontal_edge_ratio": 0.406,
+      "vertical_edge_ratio": 0.275,
+      "diagonal_edge_ratio": 0.32,
+      "hough_line_count": 80,
+      "avg_line_length": 134.99,
+      "max_line_length": 271.53,
+      "line_horizontal_pct": 17.5,
+      "quadrant_std": {
+        "top_left": 34.51,
+        "top_right": 41.97,
+        "bottom_left": 37.73,
+        "bottom_right": 26.81
+      },
+      "quadrant_edge_density": {
+        "top_left": 38.43,
+        "top_right": 33.93,
+        "bottom_left": 37.33,
+        "bottom_right": 36.27
+      },
+      "glcm_contrast": 0.536,
+      "glcm_homogeneity": 0.772,
+      "glcm_energy": 0.273,
+      "glcm_correlation": 0.887,
+      "lbp_uniformity": 0.4082,
+      "lbp_entropy": 3.274,
+      "num_regions": 140,
+      "avg_area": 93.92,
+      "max_area": 5948.5,
+      "total_defect_pct": 32.87,
+      "avg_aspect_ratio": 1.426,
+      "max_aspect_ratio": 3.083,
+      "avg_circularity": 0.575,
+      "min_circularity": 0.138,
+      "regions_raw": [
+        [
+          161,
+          197,
+          6,
+          3,
+          9.5,
+          2.0,
+          0.6634421134916525
+        ],
+        [
+          150,
+          197,
+          7,
+          3,
+          11.5,
+          2.3333333333333335,
+          0.6082259708813543
+        ],
+        [
+          22,
+          196,
+          7,
+          4,
+          13.5,
+          1.75,
+          0.6430287051285517
+        ],
+        [
+          171,
+          194,
+          5,
+          5,
+          12.5,
+          1.0,
+          0.7743527467468166
+        ],
+        [
+          135,
+          194,
+          7,
+          6,
+          28.5,
+          1.1666666666666667,
+          0.7809989769234441
+        ],
+        [
+          91,
+          194,
+          8,
+          6,
+          20.0,
+          1.3333333333333333,
+          0.5358572551624086
+        ],
+        [
+          112,
+          193,
+          5,
+          7,
+          21.5,
+          1.4,
+          0.716817696535909
+        ],
+        [
+          5,
+          188,
+          11,
+          12,
+          60.0,
+          1.0909090909090908,
+          0.5415322055713957
+        ],
+        [
+          180,
+          186,
+          18,
+          14,
+          93.0,
+          1.2857142857142858,
+          0.2902348552272374
+        ],
+        [
+          109,
+          186,
+          5,
+          5,
+          14.0,
+          1.0,
+          0.8001063667226848
+        ],
+        [
+          99,
+          186,
+          4,
+          5,
+          9.0,
+          1.25,
+          0.6872354459784014
+        ],
+        [
+          42,
+          186,
+          6,
+          10,
+          28.0,
+          1.6666666666666667,
+          0.5868913461762257
+        ],
+        [
+          20,
+          186,
+          10,
+          8,
+          38.0,
+          1.25,
+          0.513822418081685
+        ],
+        [
+          83,
+          185,
+          9,
+          10,
+          35.5,
+          1.1111111111111112,
+          0.49901145711752715
+        ],
+        [
+          32,
+          185,
+          6,
+          12,
+          34.5,
+          2.0,
+          0.4490726519070965
+        ],
+        [
+          123,
+          184,
+          11,
+          12,
+          53.5,
+          1.0909090909090908,
+          0.49839185631129834
+        ],
+        [
+          156,
+          183,
+          7,
+          7,
+          31.5,
+          1.0,
+          0.8001063687442374
+        ],
+        [
+          180,
+          181,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          69,
+          181,
+          11,
+          16,
+          58.0,
+          1.4545454545454546,
+          0.3474770012647772
+        ],
+        [
+          192,
+          180,
+          8,
+          7,
+          17.5,
+          1.1428571428571428,
+          0.3741864573180755
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "patches_100.jpg",
+    "true_label": "patches",
+    "pred_label": "pitted_surface",
+    "confidence": 0.6714691467840082,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.19)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          1,
+          73,
+          20,
+          59
+        ],
+        "label": "patches",
+        "area": 1180,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          109,
+          1,
+          51,
+          110
+        ],
+        "label": "patches",
+        "area": 5610,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          120,
+          117,
+          43,
+          69
+        ],
+        "label": "patches",
+        "area": 2967,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 119.41,
+      "std_intensity": 55.43,
+      "contrast": 0.464,
+      "dark_pixel_pct": 19.85,
+      "bright_pixel_pct": 19.38,
+      "entropy": 7.643,
+      "edge_density": 31.82,
+      "sobel_magnitude": 67.14,
+      "horizontal_edge_ratio": 0.376,
+      "vertical_edge_ratio": 0.298,
+      "diagonal_edge_ratio": 0.326,
+      "hough_line_count": 80,
+      "avg_line_length": 109.95,
+      "max_line_length": 222.55,
+      "line_horizontal_pct": 5.0,
+      "quadrant_std": {
+        "top_left": 33.15,
+        "top_right": 35.72,
+        "bottom_left": 33.0,
+        "bottom_right": 36.83
+      },
+      "quadrant_edge_density": {
+        "top_left": 37.35,
+        "top_right": 24.46,
+        "bottom_left": 36.83,
+        "bottom_right": 28.64
+      },
+      "glcm_contrast": 0.407,
+      "glcm_homogeneity": 0.814,
+      "glcm_energy": 0.278,
+      "glcm_correlation": 0.936,
+      "lbp_uniformity": 0.4053,
+      "lbp_entropy": 3.3,
+      "num_regions": 122,
+      "avg_area": 96.37,
+      "max_area": 6698.0,
+      "total_defect_pct": 29.39,
+      "avg_aspect_ratio": 1.482,
+      "max_aspect_ratio": 4.571,
+      "avg_circularity": 0.603,
+      "min_circularity": 0.162,
+      "regions_raw": [
+        [
+          184,
+          195,
+          7,
+          5,
+          20.5,
+          1.4,
+          0.774084406283921
+        ],
+        [
+          130,
+          195,
+          5,
+          5,
+          12.0,
+          1.0,
+          0.8085181338070881
+        ],
+        [
+          101,
+          193,
+          7,
+          5,
+          17.5,
+          1.4,
+          0.6608037614618838
+        ],
+        [
+          158,
+          192,
+          7,
+          5,
+          20.5,
+          1.4,
+          0.774084406283921
+        ],
+        [
+          68,
+          192,
+          9,
+          8,
+          39.5,
+          1.125,
+          0.6773235710451703
+        ],
+        [
+          45,
+          192,
+          10,
+          8,
+          37.0,
+          1.25,
+          0.44059374365542125
+        ],
+        [
+          59,
+          190,
+          3,
+          5,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          170,
+          189,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          7,
+          189,
+          12,
+          11,
+          67.0,
+          1.0909090909090908,
+          0.5787282197769947
+        ],
+        [
+          22,
+          186,
+          8,
+          14,
+          44.0,
+          1.75,
+          0.3971236174190235
+        ],
+        [
+          32,
+          184,
+          5,
+          6,
+          15.0,
+          1.2,
+          0.6656011617246267
+        ],
+        [
+          107,
+          183,
+          6,
+          4,
+          12.0,
+          1.5,
+          0.6858054571908726
+        ],
+        [
+          83,
+          183,
+          8,
+          12,
+          55.0,
+          1.5,
+          0.6549366507810384
+        ],
+        [
+          102,
+          178,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          193,
+          177,
+          7,
+          8,
+          30.0,
+          1.1428571428571428,
+          0.6288121566173847
+        ],
+        [
+          41,
+          176,
+          18,
+          15,
+          109.5,
+          1.2,
+          0.43812947129458285
+        ],
+        [
+          34,
+          176,
+          4,
+          6,
+          14.0,
+          1.5,
+          0.8001063667226848
+        ],
+        [
+          110,
+          174,
+          5,
+          5,
+          12.5,
+          1.0,
+          0.7743527467468166
+        ],
+        [
+          20,
+          172,
+          10,
+          11,
+          70.5,
+          1.1,
+          0.6567593577917349
+        ],
+        [
+          4,
+          172,
+          13,
+          15,
+          91.0,
+          1.1538461538461537,
+          0.4934016034121368
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "patches_101.jpg",
+    "true_label": "patches",
+    "pred_label": "patches",
+    "confidence": 0.6760499998627857,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.20)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2825,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          27,
+          1,
+          51,
+          91
+        ],
+        "label": "patches",
+        "area": 4641,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          113,
+          1,
+          62,
+          58
+        ],
+        "label": "patches",
+        "area": 3596,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          129,
+          79,
+          47,
+          121
+        ],
+        "label": "patches",
+        "area": 5687,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 116.34,
+      "std_intensity": 59.19,
+      "contrast": 0.509,
+      "dark_pixel_pct": 19.74,
+      "bright_pixel_pct": 19.57,
+      "entropy": 7.76,
+      "edge_density": 30.44,
+      "sobel_magnitude": 71.432,
+      "horizontal_edge_ratio": 0.397,
+      "vertical_edge_ratio": 0.28,
+      "diagonal_edge_ratio": 0.323,
+      "hough_line_count": 80,
+      "avg_line_length": 108.1,
+      "max_line_length": 257.39,
+      "line_horizontal_pct": 2.5,
+      "quadrant_std": {
+        "top_left": 49.56,
+        "top_right": 42.27,
+        "bottom_left": 36.63,
+        "bottom_right": 51.49
+      },
+      "quadrant_edge_density": {
+        "top_left": 27.79,
+        "top_right": 28.27,
+        "bottom_left": 38.16,
+        "bottom_right": 27.54
+      },
+      "glcm_contrast": 0.425,
+      "glcm_homogeneity": 0.81,
+      "glcm_energy": 0.267,
+      "glcm_correlation": 0.94,
+      "lbp_uniformity": 0.3918,
+      "lbp_entropy": 3.376,
+      "num_regions": 100,
+      "avg_area": 136.57,
+      "max_area": 3594.0,
+      "total_defect_pct": 34.14,
+      "avg_aspect_ratio": 1.392,
+      "max_aspect_ratio": 2.889,
+      "avg_circularity": 0.601,
+      "min_circularity": 0.094,
+      "regions_raw": [
+        [
+          36,
+          196,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          185,
+          195,
+          5,
+          3,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          117,
+          191,
+          8,
+          4,
+          18.0,
+          2.0,
+          0.6380493735608272
+        ],
+        [
+          65,
+          191,
+          6,
+          9,
+          30.0,
+          1.5,
+          0.6736233505048975
+        ],
+        [
+          194,
+          187,
+          6,
+          8,
+          23.5,
+          1.3333333333333333,
+          0.6651271039026551
+        ],
+        [
+          98,
+          187,
+          5,
+          7,
+          19.0,
+          1.4,
+          0.7658378102795715
+        ],
+        [
+          0,
+          187,
+          6,
+          8,
+          25.0,
+          1.3333333333333333,
+          0.6698215689530107
+        ],
+        [
+          9,
+          184,
+          21,
+          16,
+          140.5,
+          1.3125,
+          0.2924563779822096
+        ],
+        [
+          104,
+          183,
+          12,
+          17,
+          68.0,
+          1.4166666666666667,
+          0.2557868918241427
+        ],
+        [
+          35,
+          182,
+          6,
+          7,
+          19.0,
+          1.1666666666666667,
+          0.6179245260446298
+        ],
+        [
+          190,
+          180,
+          8,
+          5,
+          20.5,
+          1.6,
+          0.5207041447383132
+        ],
+        [
+          63,
+          179,
+          5,
+          11,
+          28.0,
+          2.2,
+          0.4600047708041818
+        ],
+        [
+          47,
+          176,
+          15,
+          18,
+          110.0,
+          1.2,
+          0.4310712436577324
+        ],
+        [
+          34,
+          175,
+          5,
+          6,
+          9.0,
+          1.2,
+          0.39936069703477606
+        ],
+        [
+          7,
+          172,
+          7,
+          7,
+          29.0,
+          1.0,
+          0.7769930199854924
+        ],
+        [
+          0,
+          172,
+          5,
+          5,
+          12.5,
+          1.0,
+          0.7743527467468166
+        ],
+        [
+          46,
+          171,
+          9,
+          9,
+          37.5,
+          1.0,
+          0.6054084158053522
+        ],
+        [
+          97,
+          170,
+          10,
+          12,
+          46.0,
+          1.2,
+          0.32548772856398167
+        ],
+        [
+          108,
+          169,
+          7,
+          10,
+          34.5,
+          1.4285714285714286,
+          0.5569757425409241
+        ],
+        [
+          64,
+          169,
+          10,
+          6,
+          30.0,
+          1.6666666666666667,
+          0.537430043259139
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "patches_102.jpg",
+    "true_label": "patches",
+    "pred_label": "pitted_surface",
+    "confidence": 0.6714691467840082,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.19)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          20,
+          53,
+          74,
+          86
+        ],
+        "label": "patches",
+        "area": 6364,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          126,
+          108,
+          40,
+          48
+        ],
+        "label": "patches",
+        "area": 1920,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 178.65,
+      "std_intensity": 52.36,
+      "contrast": 0.293,
+      "dark_pixel_pct": 19.86,
+      "bright_pixel_pct": 19.43,
+      "entropy": 7.386,
+      "edge_density": 35.33,
+      "sobel_magnitude": 91.458,
+      "horizontal_edge_ratio": 0.375,
+      "vertical_edge_ratio": 0.303,
+      "diagonal_edge_ratio": 0.322,
+      "hough_line_count": 80,
+      "avg_line_length": 126.45,
+      "max_line_length": 264.46,
+      "line_horizontal_pct": 7.5,
+      "quadrant_std": {
+        "top_left": 55.39,
+        "top_right": 35.45,
+        "bottom_left": 63.61,
+        "bottom_right": 48.43
+      },
+      "quadrant_edge_density": {
+        "top_left": 34.87,
+        "top_right": 37.67,
+        "bottom_left": 32.52,
+        "bottom_right": 36.24
+      },
+      "glcm_contrast": 0.546,
+      "glcm_homogeneity": 0.77,
+      "glcm_energy": 0.284,
+      "glcm_correlation": 0.896,
+      "lbp_uniformity": 0.4111,
+      "lbp_entropy": 3.28,
+      "num_regions": 121,
+      "avg_area": 101.29,
+      "max_area": 3852.0,
+      "total_defect_pct": 30.64,
+      "avg_aspect_ratio": 1.485,
+      "max_aspect_ratio": 3.909,
+      "avg_circularity": 0.587,
+      "min_circularity": 0.084,
+      "regions_raw": [
+        [
+          91,
+          193,
+          4,
+          5,
+          11.5,
+          1.25,
+          0.8031141373846319
+        ],
+        [
+          25,
+          190,
+          10,
+          8,
+          33.5,
+          1.25,
+          0.49811853922082494
+        ],
+        [
+          37,
+          189,
+          8,
+          11,
+          38.5,
+          1.375,
+          0.39334407979355146
+        ],
+        [
+          78,
+          186,
+          4,
+          5,
+          11.5,
+          1.25,
+          0.8031141373846319
+        ],
+        [
+          57,
+          186,
+          6,
+          12,
+          42.5,
+          2.0,
+          0.6319414303547779
+        ],
+        [
+          189,
+          185,
+          11,
+          9,
+          33.5,
+          1.2222222222222223,
+          0.3849091526717208
+        ],
+        [
+          40,
+          182,
+          14,
+          9,
+          51.5,
+          1.5555555555555556,
+          0.4136039661255867
+        ],
+        [
+          47,
+          175,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          174,
+          174,
+          18,
+          23,
+          124.5,
+          1.2777777777777777,
+          0.27302652894010787
+        ],
+        [
+          5,
+          174,
+          13,
+          26,
+          138.5,
+          2.0,
+          0.28224262662764665
+        ],
+        [
+          57,
+          173,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          112,
+          172,
+          13,
+          11,
+          76.5,
+          1.1818181818181819,
+          0.5566683513434215
+        ],
+        [
+          29,
+          172,
+          13,
+          10,
+          47.5,
+          1.3,
+          0.3910145469121137
+        ],
+        [
+          158,
+          170,
+          5,
+          5,
+          15.5,
+          1.0,
+          0.8197828303183472
+        ],
+        [
+          113,
+          168,
+          41,
+          32,
+          409.0,
+          1.28125,
+          0.12165900356832395
+        ],
+        [
+          93,
+          168,
+          14,
+          32,
+          204.0,
+          2.2857142857142856,
+          0.28837761028532793
+        ],
+        [
+          172,
+          163,
+          10,
+          13,
+          68.5,
+          1.3,
+          0.40008245646482626
+        ],
+        [
+          38,
+          162,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          5,
+          161,
+          8,
+          9,
+          34.5,
+          1.125,
+          0.5915864101533765
+        ],
+        [
+          53,
+          158,
+          9,
+          9,
+          50.0,
+          1.0,
+          0.7743527496098016
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "patches_103.jpg",
+    "true_label": "patches",
+    "pred_label": "pitted_surface",
+    "confidence": 0.6714691467840082,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.19)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          64,
+          30,
+          53,
+          151
+        ],
+        "label": "patches",
+        "area": 8003,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 151.89,
+      "std_intensity": 46.71,
+      "contrast": 0.308,
+      "dark_pixel_pct": 19.43,
+      "bright_pixel_pct": 19.38,
+      "entropy": 7.407,
+      "edge_density": 35.55,
+      "sobel_magnitude": 82.432,
+      "horizontal_edge_ratio": 0.382,
+      "vertical_edge_ratio": 0.295,
+      "diagonal_edge_ratio": 0.324,
+      "hough_line_count": 80,
+      "avg_line_length": 112.46,
+      "max_line_length": 220.74,
+      "line_horizontal_pct": 16.25,
+      "quadrant_std": {
+        "top_left": 38.3,
+        "top_right": 40.04,
+        "bottom_left": 35.17,
+        "bottom_right": 48.54
+      },
+      "quadrant_edge_density": {
+        "top_left": 34.55,
+        "top_right": 37.41,
+        "bottom_left": 34.64,
+        "bottom_right": 35.58
+      },
+      "glcm_contrast": 0.508,
+      "glcm_homogeneity": 0.779,
+      "glcm_energy": 0.297,
+      "glcm_correlation": 0.885,
+      "lbp_uniformity": 0.4187,
+      "lbp_entropy": 3.229,
+      "num_regions": 131,
+      "avg_area": 91.15,
+      "max_area": 5621.5,
+      "total_defect_pct": 29.85,
+      "avg_aspect_ratio": 1.433,
+      "max_aspect_ratio": 3.2,
+      "avg_circularity": 0.568,
+      "min_circularity": 0.139,
+      "regions_raw": [
+        [
+          117,
+          195,
+          9,
+          5,
+          11.5,
+          1.8,
+          0.24589395766616387
+        ],
+        [
+          19,
+          191,
+          7,
+          8,
+          27.5,
+          1.1428571428571428,
+          0.649242848766003
+        ],
+        [
+          156,
+          189,
+          7,
+          7,
+          29.0,
+          1.0,
+          0.8684083786346687
+        ],
+        [
+          131,
+          189,
+          4,
+          5,
+          11.5,
+          1.25,
+          0.8031141373846319
+        ],
+        [
+          82,
+          189,
+          8,
+          11,
+          45.5,
+          1.375,
+          0.4740931380425745
+        ],
+        [
+          190,
+          186,
+          10,
+          14,
+          79.5,
+          1.4,
+          0.49936667210284885
+        ],
+        [
+          97,
+          186,
+          12,
+          14,
+          86.5,
+          1.1666666666666667,
+          0.5953912256631876
+        ],
+        [
+          28,
+          186,
+          15,
+          14,
+          90.5,
+          1.0714285714285714,
+          0.3964939093164106
+        ],
+        [
+          168,
+          184,
+          17,
+          16,
+          87.0,
+          1.0625,
+          0.21207645416154097
+        ],
+        [
+          20,
+          182,
+          5,
+          5,
+          15.0,
+          1.0,
+          0.8572568214885907
+        ],
+        [
+          173,
+          179,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          118,
+          178,
+          10,
+          15,
+          69.5,
+          1.5,
+          0.5265142983416424
+        ],
+        [
+          135,
+          174,
+          19,
+          26,
+          126.0,
+          1.368421052631579,
+          0.19073157566992788
+        ],
+        [
+          68,
+          172,
+          4,
+          5,
+          11.5,
+          1.25,
+          0.8031141373846319
+        ],
+        [
+          0,
+          171,
+          9,
+          19,
+          121.0,
+          2.111111111111111,
+          0.5698221473783387
+        ],
+        [
+          160,
+          170,
+          10,
+          16,
+          54.5,
+          1.6,
+          0.27887383044583386
+        ],
+        [
+          196,
+          168,
+          4,
+          7,
+          15.0,
+          1.75,
+          0.6656011617246267
+        ],
+        [
+          131,
+          168,
+          9,
+          13,
+          50.0,
+          1.4444444444444444,
+          0.4318867338764962
+        ],
+        [
+          119,
+          168,
+          5,
+          7,
+          17.0,
+          1.4,
+          0.6026021861407813
+        ],
+        [
+          177,
+          167,
+          8,
+          13,
+          49.5,
+          1.625,
+          0.4826567558633447
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "patches_104.jpg",
+    "true_label": "patches",
+    "pred_label": "patches",
+    "confidence": 0.6760499998627857,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.20)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2825,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          1,
+          88,
+          40,
+          112
+        ],
+        "label": "patches",
+        "area": 4480,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          50,
+          107,
+          34,
+          50
+        ],
+        "label": "patches",
+        "area": 1700,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          129,
+          26,
+          39,
+          68
+        ],
+        "label": "patches",
+        "area": 2652,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          152,
+          140,
+          47,
+          60
+        ],
+        "label": "patches",
+        "area": 2820,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 163.6,
+      "std_intensity": 57.25,
+      "contrast": 0.35,
+      "dark_pixel_pct": 19.97,
+      "bright_pixel_pct": 19.88,
+      "entropy": 7.621,
+      "edge_density": 35.32,
+      "sobel_magnitude": 90.092,
+      "horizontal_edge_ratio": 0.392,
+      "vertical_edge_ratio": 0.283,
+      "diagonal_edge_ratio": 0.325,
+      "hough_line_count": 80,
+      "avg_line_length": 132.55,
+      "max_line_length": 262.27,
+      "line_horizontal_pct": 17.5,
+      "quadrant_std": {
+        "top_left": 44.5,
+        "top_right": 48.82,
+        "bottom_left": 58.08,
+        "bottom_right": 56.29
+      },
+      "quadrant_edge_density": {
+        "top_left": 35.16,
+        "top_right": 35.43,
+        "bottom_left": 35.57,
+        "bottom_right": 35.13
+      },
+      "glcm_contrast": 0.529,
+      "glcm_homogeneity": 0.776,
+      "glcm_energy": 0.259,
+      "glcm_correlation": 0.915,
+      "lbp_uniformity": 0.3991,
+      "lbp_entropy": 3.345,
+      "num_regions": 94,
+      "avg_area": 137.47,
+      "max_area": 2475.5,
+      "total_defect_pct": 32.3,
+      "avg_aspect_ratio": 1.421,
+      "max_aspect_ratio": 2.9,
+      "avg_circularity": 0.552,
+      "min_circularity": 0.105,
+      "regions_raw": [
+        [
+          61,
+          195,
+          7,
+          5,
+          24.0,
+          1.4,
+          0.7539822349765948
+        ],
+        [
+          112,
+          192,
+          10,
+          8,
+          33.5,
+          1.25,
+          0.426581765731304
+        ],
+        [
+          130,
+          190,
+          10,
+          10,
+          33.5,
+          1.0,
+          0.41370147050504086
+        ],
+        [
+          127,
+          189,
+          5,
+          4,
+          11.0,
+          1.25,
+          0.8399544339736016
+        ],
+        [
+          66,
+          185,
+          7,
+          7,
+          17.5,
+          1.0,
+          0.4953074121954591
+        ],
+        [
+          126,
+          177,
+          16,
+          9,
+          70.5,
+          1.7777777777777777,
+          0.4428345936552397
+        ],
+        [
+          56,
+          174,
+          5,
+          6,
+          16.0,
+          1.2,
+          0.8202020167791964
+        ],
+        [
+          109,
+          172,
+          10,
+          17,
+          67.5,
+          1.7,
+          0.39424183666242
+        ],
+        [
+          140,
+          170,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          119,
+          170,
+          6,
+          4,
+          12.5,
+          1.5,
+          0.6611151857406026
+        ],
+        [
+          78,
+          167,
+          27,
+          33,
+          262.5,
+          1.2222222222222223,
+          0.14216466357949972
+        ],
+        [
+          129,
+          164,
+          9,
+          8,
+          38.5,
+          1.125,
+          0.6601761388668115
+        ],
+        [
+          102,
+          164,
+          5,
+          8,
+          20.0,
+          1.6,
+          0.5793311898243099
+        ],
+        [
+          103,
+          154,
+          6,
+          5,
+          16.0,
+          1.2,
+          0.8202020167791964
+        ],
+        [
+          49,
+          151,
+          14,
+          11,
+          96.5,
+          1.2727272727272727,
+          0.6642225812311862
+        ],
+        [
+          113,
+          150,
+          3,
+          7,
+          12.0,
+          2.3333333333333335,
+          0.589048620247115
+        ],
+        [
+          43,
+          141,
+          5,
+          7,
+          16.5,
+          1.4,
+          0.5501159066438371
+        ],
+        [
+          90,
+          140,
+          4,
+          6,
+          14.5,
+          1.5,
+          0.7668936154590991
+        ],
+        [
+          126,
+          138,
+          16,
+          26,
+          133.5,
+          1.625,
+          0.31176523061896494
+        ],
+        [
+          190,
+          137,
+          10,
+          29,
+          139.5,
+          2.9,
+          0.2818121801214772
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "patches_105.jpg",
+    "true_label": "patches",
+    "pred_label": "patches",
+    "confidence": 0.6760499998627857,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.20)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2825,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          29,
+          1,
+          47,
+          91
+        ],
+        "label": "patches",
+        "area": 4277,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          116,
+          1,
+          58,
+          52
+        ],
+        "label": "patches",
+        "area": 3016,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          130,
+          78,
+          43,
+          122
+        ],
+        "label": "patches",
+        "area": 5246,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 116.34,
+      "std_intensity": 59.19,
+      "contrast": 0.509,
+      "dark_pixel_pct": 19.74,
+      "bright_pixel_pct": 19.57,
+      "entropy": 7.76,
+      "edge_density": 30.44,
+      "sobel_magnitude": 71.432,
+      "horizontal_edge_ratio": 0.397,
+      "vertical_edge_ratio": 0.28,
+      "diagonal_edge_ratio": 0.323,
+      "hough_line_count": 80,
+      "avg_line_length": 108.1,
+      "max_line_length": 257.39,
+      "line_horizontal_pct": 2.5,
+      "quadrant_std": {
+        "top_left": 49.56,
+        "top_right": 42.27,
+        "bottom_left": 36.63,
+        "bottom_right": 51.49
+      },
+      "quadrant_edge_density": {
+        "top_left": 27.79,
+        "top_right": 28.27,
+        "bottom_left": 38.16,
+        "bottom_right": 27.54
+      },
+      "glcm_contrast": 0.425,
+      "glcm_homogeneity": 0.81,
+      "glcm_energy": 0.267,
+      "glcm_correlation": 0.94,
+      "lbp_uniformity": 0.3918,
+      "lbp_entropy": 3.376,
+      "num_regions": 100,
+      "avg_area": 136.57,
+      "max_area": 3594.0,
+      "total_defect_pct": 34.14,
+      "avg_aspect_ratio": 1.392,
+      "max_aspect_ratio": 2.889,
+      "avg_circularity": 0.601,
+      "min_circularity": 0.094,
+      "regions_raw": [
+        [
+          36,
+          196,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          185,
+          195,
+          5,
+          3,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          117,
+          191,
+          8,
+          4,
+          18.0,
+          2.0,
+          0.6380493735608272
+        ],
+        [
+          65,
+          191,
+          6,
+          9,
+          30.0,
+          1.5,
+          0.6736233505048975
+        ],
+        [
+          194,
+          187,
+          6,
+          8,
+          23.5,
+          1.3333333333333333,
+          0.6651271039026551
+        ],
+        [
+          98,
+          187,
+          5,
+          7,
+          19.0,
+          1.4,
+          0.7658378102795715
+        ],
+        [
+          0,
+          187,
+          6,
+          8,
+          25.0,
+          1.3333333333333333,
+          0.6698215689530107
+        ],
+        [
+          9,
+          184,
+          21,
+          16,
+          140.5,
+          1.3125,
+          0.2924563779822096
+        ],
+        [
+          104,
+          183,
+          12,
+          17,
+          68.0,
+          1.4166666666666667,
+          0.2557868918241427
+        ],
+        [
+          35,
+          182,
+          6,
+          7,
+          19.0,
+          1.1666666666666667,
+          0.6179245260446298
+        ],
+        [
+          190,
+          180,
+          8,
+          5,
+          20.5,
+          1.6,
+          0.5207041447383132
+        ],
+        [
+          63,
+          179,
+          5,
+          11,
+          28.0,
+          2.2,
+          0.4600047708041818
+        ],
+        [
+          47,
+          176,
+          15,
+          18,
+          110.0,
+          1.2,
+          0.4310712436577324
+        ],
+        [
+          34,
+          175,
+          5,
+          6,
+          9.0,
+          1.2,
+          0.39936069703477606
+        ],
+        [
+          7,
+          172,
+          7,
+          7,
+          29.0,
+          1.0,
+          0.7769930199854924
+        ],
+        [
+          0,
+          172,
+          5,
+          5,
+          12.5,
+          1.0,
+          0.7743527467468166
+        ],
+        [
+          46,
+          171,
+          9,
+          9,
+          37.5,
+          1.0,
+          0.6054084158053522
+        ],
+        [
+          97,
+          170,
+          10,
+          12,
+          46.0,
+          1.2,
+          0.32548772856398167
+        ],
+        [
+          108,
+          169,
+          7,
+          10,
+          34.5,
+          1.4285714285714286,
+          0.5569757425409241
+        ],
+        [
+          64,
+          169,
+          10,
+          6,
+          30.0,
+          1.6666666666666667,
+          0.537430043259139
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "patches_106.jpg",
+    "true_label": "patches",
+    "pred_label": "pitted_surface",
+    "confidence": 0.6670487047461193,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.18)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.256,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          75,
+          67,
+          33,
+          72
+        ],
+        "label": "patches",
+        "area": 2376,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 54.56,
+      "std_intensity": 23.03,
+      "contrast": 0.422,
+      "dark_pixel_pct": 19.27,
+      "bright_pixel_pct": 19.13,
+      "entropy": 6.446,
+      "edge_density": 15.23,
+      "sobel_magnitude": 39.201,
+      "horizontal_edge_ratio": 0.387,
+      "vertical_edge_ratio": 0.287,
+      "diagonal_edge_ratio": 0.326,
+      "hough_line_count": 80,
+      "avg_line_length": 57.41,
+      "max_line_length": 171.94,
+      "line_horizontal_pct": 1.25,
+      "quadrant_std": {
+        "top_left": 11.43,
+        "top_right": 20.4,
+        "bottom_left": 12.73,
+        "bottom_right": 20.13
+      },
+      "quadrant_edge_density": {
+        "top_left": 4.35,
+        "top_right": 30.18,
+        "bottom_left": 4.16,
+        "bottom_right": 22.23
+      },
+      "glcm_contrast": 0.205,
+      "glcm_homogeneity": 0.898,
+      "glcm_energy": 0.542,
+      "glcm_correlation": 0.806,
+      "lbp_uniformity": 0.4374,
+      "lbp_entropy": 3.097,
+      "num_regions": 114,
+      "avg_area": 72.09,
+      "max_area": 5064.0,
+      "total_defect_pct": 20.55,
+      "avg_aspect_ratio": 1.363,
+      "max_aspect_ratio": 2.5,
+      "avg_circularity": 0.661,
+      "min_circularity": 0.12,
+      "regions_raw": [
+        [
+          59,
+          196,
+          6,
+          4,
+          12.0,
+          1.5,
+          0.6858054571908726
+        ],
+        [
+          182,
+          190,
+          4,
+          6,
+          14.0,
+          1.5,
+          0.8001063667226848
+        ],
+        [
+          24,
+          190,
+          5,
+          4,
+          11.0,
+          1.25,
+          0.8399544339736016
+        ],
+        [
+          163,
+          189,
+          6,
+          4,
+          12.5,
+          1.5,
+          0.6611151857406026
+        ],
+        [
+          80,
+          189,
+          25,
+          11,
+          185.0,
+          2.272727272727273,
+          0.5314044275604421
+        ],
+        [
+          146,
+          188,
+          5,
+          5,
+          12.5,
+          1.0,
+          0.7743527467468166
+        ],
+        [
+          115,
+          188,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          53,
+          188,
+          6,
+          8,
+          30.5,
+          1.3333333333333333,
+          0.7747061665618806
+        ],
+        [
+          138,
+          186,
+          5,
+          5,
+          13.5,
+          1.0,
+          0.8363009664865618
+        ],
+        [
+          6,
+          180,
+          6,
+          6,
+          20.5,
+          1.0,
+          0.774084406283921
+        ],
+        [
+          170,
+          179,
+          4,
+          5,
+          11.5,
+          1.25,
+          0.8031141373846319
+        ],
+        [
+          24,
+          179,
+          6,
+          8,
+          23.5,
+          1.3333333333333333,
+          0.6651270963767594
+        ],
+        [
+          65,
+          178,
+          5,
+          5,
+          14.5,
+          1.0,
+          0.8982491862263072
+        ],
+        [
+          113,
+          175,
+          6,
+          8,
+          26.5,
+          1.3333333333333333,
+          0.7500369384674095
+        ],
+        [
+          182,
+          174,
+          8,
+          14,
+          59.0,
+          1.75,
+          0.5675893845069847
+        ],
+        [
+          85,
+          168,
+          7,
+          8,
+          28.5,
+          1.1428571428571428,
+          0.6728516726769087
+        ],
+        [
+          165,
+          166,
+          5,
+          11,
+          28.0,
+          2.2,
+          0.5345164604191912
+        ],
+        [
+          145,
+          166,
+          6,
+          7,
+          26.0,
+          1.1666666666666667,
+          0.753130546771603
+        ],
+        [
+          178,
+          165,
+          6,
+          8,
+          28.0,
+          1.3333333333333333,
+          0.8384632621300249
+        ],
+        [
+          8,
+          164,
+          5,
+          5,
+          14.0,
+          1.0,
+          0.8001063667226848
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "patches_107.jpg",
+    "true_label": "patches",
+    "pred_label": "pitted_surface",
+    "confidence": 0.6714691467840082,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.19)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          97,
+          9,
+          55,
+          102
+        ],
+        "label": "patches",
+        "area": 5610,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          69,
+          1,
+          34,
+          13
+        ],
+        "label": "patches",
+        "area": 442,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 138.65,
+      "std_intensity": 40.34,
+      "contrast": 0.291,
+      "dark_pixel_pct": 19.49,
+      "bright_pixel_pct": 19.36,
+      "entropy": 7.297,
+      "edge_density": 35.52,
+      "sobel_magnitude": 79.296,
+      "horizontal_edge_ratio": 0.389,
+      "vertical_edge_ratio": 0.289,
+      "diagonal_edge_ratio": 0.322,
+      "hough_line_count": 80,
+      "avg_line_length": 132.78,
+      "max_line_length": 274.36,
+      "line_horizontal_pct": 12.5,
+      "quadrant_std": {
+        "top_left": 30.86,
+        "top_right": 54.56,
+        "bottom_left": 27.17,
+        "bottom_right": 28.01
+      },
+      "quadrant_edge_density": {
+        "top_left": 35.69,
+        "top_right": 32.15,
+        "bottom_left": 36.74,
+        "bottom_right": 37.51
+      },
+      "glcm_contrast": 0.493,
+      "glcm_homogeneity": 0.782,
+      "glcm_energy": 0.314,
+      "glcm_correlation": 0.85,
+      "lbp_uniformity": 0.4208,
+      "lbp_entropy": 3.221,
+      "num_regions": 160,
+      "avg_area": 71.74,
+      "max_area": 3646.0,
+      "total_defect_pct": 28.7,
+      "avg_aspect_ratio": 1.338,
+      "max_aspect_ratio": 3.682,
+      "avg_circularity": 0.611,
+      "min_circularity": 0.064,
+      "regions_raw": [
+        [
+          128,
+          197,
+          5,
+          3,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          186,
+          196,
+          6,
+          4,
+          11.5,
+          1.5,
+          0.7124045270070712
+        ],
+        [
+          101,
+          195,
+          6,
+          5,
+          15.5,
+          1.2,
+          0.7382922169994482
+        ],
+        [
+          31,
+          193,
+          5,
+          6,
+          9.0,
+          1.2,
+          0.39936069703477606
+        ],
+        [
+          170,
+          192,
+          8,
+          8,
+          42.5,
+          1.0,
+          0.8496755757089876
+        ],
+        [
+          150,
+          192,
+          5,
+          8,
+          19.5,
+          1.6,
+          0.49530394255595644
+        ],
+        [
+          142,
+          192,
+          8,
+          8,
+          25.0,
+          1.0,
+          0.4772468396599922
+        ],
+        [
+          61,
+          192,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          75,
+          191,
+          6,
+          9,
+          26.0,
+          1.5,
+          0.5838069037709113
+        ],
+        [
+          51,
+          191,
+          4,
+          5,
+          12.0,
+          1.25,
+          0.7693696255252064
+        ],
+        [
+          2,
+          191,
+          5,
+          5,
+          12.0,
+          1.0,
+          0.8085181338070881
+        ],
+        [
+          157,
+          190,
+          7,
+          10,
+          27.5,
+          1.4285714285714286,
+          0.4439661753845594
+        ],
+        [
+          118,
+          189,
+          9,
+          6,
+          23.5,
+          1.5,
+          0.4288077834414096
+        ],
+        [
+          38,
+          188,
+          7,
+          7,
+          15.0,
+          1.0,
+          0.40189294137180637
+        ],
+        [
+          129,
+          187,
+          6,
+          8,
+          21.0,
+          1.3333333333333333,
+          0.6288474465975187
+        ],
+        [
+          7,
+          186,
+          10,
+          10,
+          47.0,
+          1.0,
+          0.5596731338325621
+        ],
+        [
+          59,
+          184,
+          13,
+          6,
+          33.0,
+          2.1666666666666665,
+          0.3929619875845649
+        ],
+        [
+          176,
+          183,
+          8,
+          5,
+          17.0,
+          1.6,
+          0.5528798390925636
+        ],
+        [
+          19,
+          183,
+          10,
+          13,
+          41.0,
+          1.3,
+          0.3478599189790844
+        ],
+        [
+          75,
+          182,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "patches_108.jpg",
+    "true_label": "patches",
+    "pred_label": "patches",
+    "confidence": 0.6760499998627857,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.20)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2825,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          8,
+          1,
+          56,
+          121
+        ],
+        "label": "patches",
+        "area": 6776,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          75,
+          1,
+          102,
+          110
+        ],
+        "label": "patches",
+        "area": 11220,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          145,
+          117,
+          45,
+          70
+        ],
+        "label": "patches",
+        "area": 3150,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 143.2,
+      "std_intensity": 70.57,
+      "contrast": 0.493,
+      "dark_pixel_pct": 19.84,
+      "bright_pixel_pct": 19.91,
+      "entropy": 7.598,
+      "edge_density": 32.23,
+      "sobel_magnitude": 86.128,
+      "horizontal_edge_ratio": 0.392,
+      "vertical_edge_ratio": 0.288,
+      "diagonal_edge_ratio": 0.32,
+      "hough_line_count": 80,
+      "avg_line_length": 95.99,
+      "max_line_length": 263.69,
+      "line_horizontal_pct": 16.25,
+      "quadrant_std": {
+        "top_left": 57.69,
+        "top_right": 73.19,
+        "bottom_left": 55.63,
+        "bottom_right": 65.24
+      },
+      "quadrant_edge_density": {
+        "top_left": 30.32,
+        "top_right": 29.56,
+        "bottom_left": 35.18,
+        "bottom_right": 33.85
+      },
+      "glcm_contrast": 0.506,
+      "glcm_homogeneity": 0.788,
+      "glcm_energy": 0.274,
+      "glcm_correlation": 0.947,
+      "lbp_uniformity": 0.3884,
+      "lbp_entropy": 3.397,
+      "num_regions": 92,
+      "avg_area": 166.26,
+      "max_area": 9900.0,
+      "total_defect_pct": 38.24,
+      "avg_aspect_ratio": 1.33,
+      "max_aspect_ratio": 3.167,
+      "avg_circularity": 0.612,
+      "min_circularity": 0.042,
+      "regions_raw": [
+        [
+          196,
+          194,
+          4,
+          6,
+          13.0,
+          1.5,
+          0.7429559119567787
+        ],
+        [
+          133,
+          194,
+          4,
+          6,
+          15.0,
+          1.5,
+          0.7363107753088938
+        ],
+        [
+          34,
+          190,
+          8,
+          10,
+          37.0,
+          1.25,
+          0.36570048681970807
+        ],
+        [
+          98,
+          188,
+          22,
+          12,
+          122.0,
+          1.8333333333333333,
+          0.22643108453177088
+        ],
+        [
+          16,
+          188,
+          13,
+          12,
+          50.5,
+          1.0833333333333333,
+          0.33450168172528505
+        ],
+        [
+          89,
+          187,
+          6,
+          5,
+          16.5,
+          1.2,
+          0.7859239729348965
+        ],
+        [
+          6,
+          184,
+          11,
+          10,
+          53.0,
+          1.1,
+          0.5600388939164904
+        ],
+        [
+          45,
+          175,
+          26,
+          25,
+          179.0,
+          1.04,
+          0.17179494464215794
+        ],
+        [
+          99,
+          174,
+          9,
+          12,
+          55.5,
+          1.3333333333333333,
+          0.5411606050589016
+        ],
+        [
+          56,
+          174,
+          6,
+          7,
+          23.0,
+          1.1666666666666667,
+          0.7480138999487623
+        ],
+        [
+          36,
+          173,
+          6,
+          10,
+          37.0,
+          1.6666666666666667,
+          0.7063253226967884
+        ],
+        [
+          125,
+          171,
+          18,
+          18,
+          167.0,
+          1.0,
+          0.4898120724310892
+        ],
+        [
+          113,
+          170,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          45,
+          169,
+          9,
+          6,
+          28.0,
+          1.5,
+          0.6287151271379045
+        ],
+        [
+          63,
+          166,
+          4,
+          8,
+          17.0,
+          2.0,
+          0.6026021861407813
+        ],
+        [
+          18,
+          165,
+          13,
+          15,
+          85.5,
+          1.1538461538461537,
+          0.45894274515112415
+        ],
+        [
+          136,
+          164,
+          5,
+          5,
+          12.0,
+          1.0,
+          0.8085181338070881
+        ],
+        [
+          8,
+          164,
+          7,
+          10,
+          36.0,
+          1.4285714285714286,
+          0.6449160577164543
+        ],
+        [
+          0,
+          163,
+          6,
+          9,
+          23.5,
+          1.5,
+          0.5024789569699871
+        ],
+        [
+          101,
+          162,
+          4,
+          5,
+          11.5,
+          1.25,
+          0.8031141373846319
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "patches_109.jpg",
+    "true_label": "patches",
+    "pred_label": "pitted_surface",
+    "confidence": 0.6790179016487107,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.20)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.2912,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          1,
+          124,
+          22,
+          29
+        ],
+        "label": "patches",
+        "area": 638,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          67,
+          20,
+          63,
+          150
+        ],
+        "label": "patches",
+        "area": 9450,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          176,
+          116,
+          24,
+          41
+        ],
+        "label": "patches",
+        "area": 984,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 125.37,
+      "std_intensity": 43.58,
+      "contrast": 0.348,
+      "dark_pixel_pct": 19.68,
+      "bright_pixel_pct": 19.38,
+      "entropy": 7.329,
+      "edge_density": 33.42,
+      "sobel_magnitude": 75.182,
+      "horizontal_edge_ratio": 0.402,
+      "vertical_edge_ratio": 0.28,
+      "diagonal_edge_ratio": 0.319,
+      "hough_line_count": 80,
+      "avg_line_length": 106.67,
+      "max_line_length": 217.35,
+      "line_horizontal_pct": 15.0,
+      "quadrant_std": {
+        "top_left": 33.15,
+        "top_right": 48.22,
+        "bottom_left": 30.21,
+        "bottom_right": 51.79
+      },
+      "quadrant_edge_density": {
+        "top_left": 33.85,
+        "top_right": 33.49,
+        "bottom_left": 35.01,
+        "bottom_right": 31.34
+      },
+      "glcm_contrast": 0.458,
+      "glcm_homogeneity": 0.795,
+      "glcm_energy": 0.316,
+      "glcm_correlation": 0.879,
+      "lbp_uniformity": 0.4073,
+      "lbp_entropy": 3.289,
+      "num_regions": 138,
+      "avg_area": 86.69,
+      "max_area": 5109.5,
+      "total_defect_pct": 29.91,
+      "avg_aspect_ratio": 1.39,
+      "max_aspect_ratio": 2.667,
+      "avg_circularity": 0.61,
+      "min_circularity": 0.195,
+      "regions_raw": [
+        [
+          120,
+          197,
+          7,
+          3,
+          11.5,
+          2.3333333333333335,
+          0.6082259708813543
+        ],
+        [
+          55,
+          195,
+          6,
+          5,
+          11.0,
+          1.2,
+          0.48810751859805956
+        ],
+        [
+          135,
+          194,
+          8,
+          6,
+          23.0,
+          1.3333333333333333,
+          0.6162358434367698
+        ],
+        [
+          99,
+          192,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          150,
+          190,
+          24,
+          9,
+          84.0,
+          2.6666666666666665,
+          0.2691287877849275
+        ],
+        [
+          184,
+          189,
+          11,
+          11,
+          40.5,
+          1.0,
+          0.3949009846926571
+        ],
+        [
+          122,
+          187,
+          7,
+          8,
+          22.5,
+          1.1428571428571428,
+          0.48109687369466847
+        ],
+        [
+          82,
+          187,
+          11,
+          7,
+          49.5,
+          1.5714285714285714,
+          0.7360259012367414
+        ],
+        [
+          45,
+          187,
+          7,
+          13,
+          37.5,
+          1.8571428571428572,
+          0.43086845448326955
+        ],
+        [
+          16,
+          184,
+          5,
+          5,
+          13.5,
+          1.0,
+          0.8363009664865618
+        ],
+        [
+          95,
+          183,
+          6,
+          7,
+          20.5,
+          1.1666666666666667,
+          0.7082942376694746
+        ],
+        [
+          175,
+          182,
+          6,
+          7,
+          20.5,
+          1.1666666666666667,
+          0.7082942465242755
+        ],
+        [
+          25,
+          176,
+          7,
+          18,
+          63.0,
+          2.5714285714285716,
+          0.35365225948901163
+        ],
+        [
+          152,
+          175,
+          6,
+          7,
+          24.0,
+          1.1666666666666667,
+          0.7805362434247954
+        ],
+        [
+          72,
+          174,
+          16,
+          12,
+          81.0,
+          1.3333333333333333,
+          0.46136363611124365
+        ],
+        [
+          133,
+          173,
+          11,
+          20,
+          94.0,
+          1.8181818181818181,
+          0.4608570012421137
+        ],
+        [
+          118,
+          173,
+          9,
+          10,
+          51.5,
+          1.1111111111111112,
+          0.5021580389285303
+        ],
+        [
+          168,
+          171,
+          12,
+          8,
+          48.0,
+          1.5,
+          0.5072050359998403
+        ],
+        [
+          149,
+          170,
+          4,
+          4,
+          9.0,
+          1.0,
+          0.7853981579432944
+        ],
+        [
+          108,
+          170,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "patches_11.jpg",
+    "true_label": "patches",
+    "pred_label": "pitted_surface",
+    "confidence": 0.6714691467840082,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.19)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          1,
+          65,
+          49,
+          99
+        ],
+        "label": "patches",
+        "area": 4851,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          158,
+          65,
+          34,
+          103
+        ],
+        "label": "patches",
+        "area": 3502,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 161.82,
+      "std_intensity": 56.01,
+      "contrast": 0.346,
+      "dark_pixel_pct": 19.8,
+      "bright_pixel_pct": 19.84,
+      "entropy": 7.599,
+      "edge_density": 35.13,
+      "sobel_magnitude": 85.372,
+      "horizontal_edge_ratio": 0.386,
+      "vertical_edge_ratio": 0.29,
+      "diagonal_edge_ratio": 0.324,
+      "hough_line_count": 80,
+      "avg_line_length": 141.68,
+      "max_line_length": 280.01,
+      "line_horizontal_pct": 10.0,
+      "quadrant_std": {
+        "top_left": 48.28,
+        "top_right": 51.5,
+        "bottom_left": 55.38,
+        "bottom_right": 55.8
+      },
+      "quadrant_edge_density": {
+        "top_left": 36.34,
+        "top_right": 36.13,
+        "bottom_left": 32.42,
+        "bottom_right": 35.65
+      },
+      "glcm_contrast": 0.513,
+      "glcm_homogeneity": 0.783,
+      "glcm_energy": 0.264,
+      "glcm_correlation": 0.915,
+      "lbp_uniformity": 0.4103,
+      "lbp_entropy": 3.286,
+      "num_regions": 117,
+      "avg_area": 115.11,
+      "max_area": 4112.5,
+      "total_defect_pct": 33.67,
+      "avg_aspect_ratio": 1.48,
+      "max_aspect_ratio": 4.775,
+      "avg_circularity": 0.569,
+      "min_circularity": 0.107,
+      "regions_raw": [
+        [
+          78,
+          195,
+          9,
+          5,
+          21.5,
+          1.8,
+          0.5461043469206699
+        ],
+        [
+          3,
+          195,
+          4,
+          5,
+          9.5,
+          1.25,
+          0.6634421134916525
+        ],
+        [
+          72,
+          193,
+          3,
+          5,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          89,
+          192,
+          8,
+          8,
+          38.0,
+          1.0,
+          0.7254151962831881
+        ],
+        [
+          171,
+          191,
+          13,
+          9,
+          50.0,
+          1.4444444444444444,
+          0.47200268782221577
+        ],
+        [
+          155,
+          191,
+          10,
+          9,
+          36.5,
+          1.1111111111111112,
+          0.3991317505897378
+        ],
+        [
+          103,
+          188,
+          9,
+          12,
+          48.5,
+          1.3333333333333333,
+          0.40635276194274417
+        ],
+        [
+          191,
+          185,
+          9,
+          12,
+          53.5,
+          1.3333333333333333,
+          0.5850287344310314
+        ],
+        [
+          106,
+          181,
+          5,
+          5,
+          14.0,
+          1.0,
+          0.8001063667226848
+        ],
+        [
+          70,
+          181,
+          8,
+          8,
+          35.5,
+          1.0,
+          0.7810175198311118
+        ],
+        [
+          181,
+          178,
+          8,
+          7,
+          31.0,
+          1.1428571428571428,
+          0.6960774621883942
+        ],
+        [
+          122,
+          178,
+          24,
+          20,
+          158.5,
+          1.2,
+          0.2660337444686778
+        ],
+        [
+          0,
+          176,
+          17,
+          17,
+          110.0,
+          1.0,
+          0.2934994221976763
+        ],
+        [
+          32,
+          172,
+          6,
+          4,
+          12.5,
+          1.5,
+          0.6611151857406026
+        ],
+        [
+          16,
+          171,
+          7,
+          6,
+          20.0,
+          1.1666666666666667,
+          0.5793311898243099
+        ],
+        [
+          49,
+          170,
+          19,
+          30,
+          219.0,
+          1.5789473684210527,
+          0.23055400081338365
+        ],
+        [
+          31,
+          170,
+          17,
+          30,
+          157.5,
+          1.7647058823529411,
+          0.18114826862524053
+        ],
+        [
+          188,
+          167,
+          8,
+          6,
+          22.0,
+          1.3333333333333333,
+          0.4611289103626349
+        ],
+        [
+          125,
+          167,
+          21,
+          9,
+          100.0,
+          2.3333333333333335,
+          0.46220244451677917
+        ],
+        [
+          111,
+          163,
+          7,
+          10,
+          32.5,
+          1.4285714285714286,
+          0.6088504732840045
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "patches_110.jpg",
+    "true_label": "patches",
+    "pred_label": "pitted_surface",
+    "confidence": 0.6714691467840082,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.19)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          11,
+          94,
+          36,
+          43
+        ],
+        "label": "patches",
+        "area": 1548,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          61,
+          68,
+          79,
+          97
+        ],
+        "label": "patches",
+        "area": 7663,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 171.49,
+      "std_intensity": 59.68,
+      "contrast": 0.348,
+      "dark_pixel_pct": 19.76,
+      "bright_pixel_pct": 19.98,
+      "entropy": 7.457,
+      "edge_density": 34.57,
+      "sobel_magnitude": 86.148,
+      "horizontal_edge_ratio": 0.391,
+      "vertical_edge_ratio": 0.289,
+      "diagonal_edge_ratio": 0.321,
+      "hough_line_count": 80,
+      "avg_line_length": 143.04,
+      "max_line_length": 274.36,
+      "line_horizontal_pct": 13.75,
+      "quadrant_std": {
+        "top_left": 37.27,
+        "top_right": 54.21,
+        "bottom_left": 63.59,
+        "bottom_right": 68.31
+      },
+      "quadrant_edge_density": {
+        "top_left": 37.86,
+        "top_right": 33.63,
+        "bottom_left": 34.08,
+        "bottom_right": 32.71
+      },
+      "glcm_contrast": 0.494,
+      "glcm_homogeneity": 0.788,
+      "glcm_energy": 0.282,
+      "glcm_correlation": 0.926,
+      "lbp_uniformity": 0.4134,
+      "lbp_entropy": 3.276,
+      "num_regions": 114,
+      "avg_area": 114.08,
+      "max_area": 7025.0,
+      "total_defect_pct": 32.51,
+      "avg_aspect_ratio": 1.459,
+      "max_aspect_ratio": 3.833,
+      "avg_circularity": 0.572,
+      "min_circularity": 0.058,
+      "regions_raw": [
+        [
+          32,
+          197,
+          7,
+          3,
+          11.5,
+          2.3333333333333335,
+          0.6082259708813543
+        ],
+        [
+          59,
+          196,
+          8,
+          4,
+          18.5,
+          2.0,
+          0.6985639764025628
+        ],
+        [
+          147,
+          195,
+          11,
+          5,
+          22.0,
+          2.2,
+          0.41997722280346844
+        ],
+        [
+          9,
+          195,
+          5,
+          5,
+          10.5,
+          1.0,
+          0.650456307267326
+        ],
+        [
+          194,
+          194,
+          5,
+          6,
+          18.5,
+          1.2,
+          0.7666089050648738
+        ],
+        [
+          170,
+          194,
+          6,
+          6,
+          21.0,
+          1.0,
+          0.7443909358209652
+        ],
+        [
+          17,
+          193,
+          7,
+          4,
+          14.5,
+          1.75,
+          0.6008556282940902
+        ],
+        [
+          45,
+          192,
+          8,
+          8,
+          29.0,
+          1.0,
+          0.6078517454780189
+        ],
+        [
+          92,
+          191,
+          11,
+          6,
+          38.0,
+          1.8333333333333333,
+          0.5885080897034491
+        ],
+        [
+          2,
+          189,
+          3,
+          6,
+          10.0,
+          2.0,
+          0.6411413546043386
+        ],
+        [
+          67,
+          188,
+          4,
+          5,
+          11.5,
+          1.25,
+          0.8031141373846319
+        ],
+        [
+          179,
+          187,
+          9,
+          8,
+          37.5,
+          1.125,
+          0.6430287066884527
+        ],
+        [
+          122,
+          187,
+          4,
+          5,
+          11.0,
+          1.25,
+          0.8399544339736016
+        ],
+        [
+          75,
+          185,
+          8,
+          9,
+          28.0,
+          1.125,
+          0.4600047708041818
+        ],
+        [
+          191,
+          182,
+          6,
+          8,
+          27.5,
+          1.3333333333333333,
+          0.7783402191642929
+        ],
+        [
+          46,
+          182,
+          6,
+          9,
+          28.5,
+          1.5,
+          0.6728516726769087
+        ],
+        [
+          152,
+          181,
+          8,
+          8,
+          33.5,
+          1.0,
+          0.6697442773235549
+        ],
+        [
+          104,
+          178,
+          11,
+          17,
+          74.0,
+          1.5454545454545454,
+          0.38776749517792203
+        ],
+        [
+          11,
+          174,
+          12,
+          17,
+          102.5,
+          1.4166666666666667,
+          0.377863108245443
+        ],
+        [
+          92,
+          173,
+          6,
+          8,
+          20.0,
+          1.3333333333333333,
+          0.5989023231225317
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "patches_111.jpg",
+    "true_label": "patches",
+    "pred_label": "patches",
+    "confidence": 0.6760499998627857,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.20)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2825,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          53,
+          147,
+          49,
+          52
+        ],
+        "label": "patches",
+        "area": 2548,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          132,
+          1,
+          63,
+          177
+        ],
+        "label": "patches",
+        "area": 11151,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 146.13,
+      "std_intensity": 72.11,
+      "contrast": 0.493,
+      "dark_pixel_pct": 19.83,
+      "bright_pixel_pct": 19.55,
+      "entropy": 7.741,
+      "edge_density": 31.16,
+      "sobel_magnitude": 81.669,
+      "horizontal_edge_ratio": 0.399,
+      "vertical_edge_ratio": 0.282,
+      "diagonal_edge_ratio": 0.319,
+      "hough_line_count": 80,
+      "avg_line_length": 118.16,
+      "max_line_length": 242.74,
+      "line_horizontal_pct": 3.75,
+      "quadrant_std": {
+        "top_left": 37.15,
+        "top_right": 60.16,
+        "bottom_left": 62.72,
+        "bottom_right": 54.49
+      },
+      "quadrant_edge_density": {
+        "top_left": 37.34,
+        "top_right": 23.96,
+        "bottom_left": 34.03,
+        "bottom_right": 29.31
+      },
+      "glcm_contrast": 0.473,
+      "glcm_homogeneity": 0.798,
+      "glcm_energy": 0.26,
+      "glcm_correlation": 0.952,
+      "lbp_uniformity": 0.4031,
+      "lbp_entropy": 3.323,
+      "num_regions": 100,
+      "avg_area": 143.0,
+      "max_area": 7569.5,
+      "total_defect_pct": 35.75,
+      "avg_aspect_ratio": 1.377,
+      "max_aspect_ratio": 3.0,
+      "avg_circularity": 0.586,
+      "min_circularity": 0.104,
+      "regions_raw": [
+        [
+          135,
+          196,
+          4,
+          4,
+          9.0,
+          1.0,
+          0.7853981579432944
+        ],
+        [
+          11,
+          196,
+          5,
+          4,
+          9.0,
+          1.25,
+          0.6872354459784014
+        ],
+        [
+          190,
+          195,
+          6,
+          5,
+          14.5,
+          1.2,
+          0.6906604610639999
+        ],
+        [
+          27,
+          193,
+          9,
+          7,
+          29.5,
+          1.2857142857142858,
+          0.5897748113744737
+        ],
+        [
+          123,
+          192,
+          7,
+          8,
+          29.5,
+          1.1428571428571428,
+          0.6307714566218987
+        ],
+        [
+          121,
+          185,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          151,
+          183,
+          24,
+          17,
+          146.5,
+          1.411764705882353,
+          0.21503609166542265
+        ],
+        [
+          141,
+          183,
+          9,
+          8,
+          37.0,
+          1.125,
+          0.6078634471340973
+        ],
+        [
+          20,
+          182,
+          11,
+          12,
+          42.5,
+          1.0909090909090908,
+          0.42243945634233954
+        ],
+        [
+          10,
+          182,
+          5,
+          11,
+          34.5,
+          2.2,
+          0.5915864101533765
+        ],
+        [
+          127,
+          176,
+          5,
+          6,
+          15.5,
+          1.2,
+          0.7382922169994482
+        ],
+        [
+          113,
+          176,
+          6,
+          5,
+          17.0,
+          1.2,
+          0.7543479832879103
+        ],
+        [
+          187,
+          175,
+          12,
+          18,
+          85.0,
+          1.5,
+          0.2987040414829189
+        ],
+        [
+          33,
+          175,
+          11,
+          16,
+          71.5,
+          1.4545454545454546,
+          0.42648140020094283
+        ],
+        [
+          18,
+          175,
+          5,
+          5,
+          14.5,
+          1.0,
+          0.8982491862263072
+        ],
+        [
+          172,
+          172,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          8,
+          172,
+          6,
+          7,
+          26.5,
+          1.1666666666666667,
+          0.915599868206882
+        ],
+        [
+          35,
+          169,
+          4,
+          5,
+          10.0,
+          1.25,
+          0.7635949399760016
+        ],
+        [
+          184,
+          164,
+          7,
+          5,
+          15.0,
+          1.4,
+          0.5317078113006893
+        ],
+        [
+          8,
+          155,
+          7,
+          8,
+          33.0,
+          1.1428571428571428,
+          0.7409856855553874
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "patches_112.jpg",
+    "true_label": "patches",
+    "pred_label": "patches",
+    "confidence": 0.6760499998627857,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.20)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2825,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          48,
+          136,
+          48,
+          38
+        ],
+        "label": "patches",
+        "area": 1824,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          58,
+          9,
+          42,
+          68
+        ],
+        "label": "patches",
+        "area": 2856,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          132,
+          24,
+          49,
+          52
+        ],
+        "label": "patches",
+        "area": 2548,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          132,
+          80,
+          68,
+          119
+        ],
+        "label": "patches",
+        "area": 8092,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 141.37,
+      "std_intensity": 71.04,
+      "contrast": 0.502,
+      "dark_pixel_pct": 19.84,
+      "bright_pixel_pct": 19.96,
+      "entropy": 7.81,
+      "edge_density": 30.76,
+      "sobel_magnitude": 83.845,
+      "horizontal_edge_ratio": 0.397,
+      "vertical_edge_ratio": 0.283,
+      "diagonal_edge_ratio": 0.319,
+      "hough_line_count": 80,
+      "avg_line_length": 108.05,
+      "max_line_length": 253.14,
+      "line_horizontal_pct": 11.25,
+      "quadrant_std": {
+        "top_left": 67.01,
+        "top_right": 55.04,
+        "bottom_left": 56.44,
+        "bottom_right": 57.92
+      },
+      "quadrant_edge_density": {
+        "top_left": 34.39,
+        "top_right": 32.13,
+        "bottom_left": 34.94,
+        "bottom_right": 21.6
+      },
+      "glcm_contrast": 0.484,
+      "glcm_homogeneity": 0.794,
+      "glcm_energy": 0.25,
+      "glcm_correlation": 0.95,
+      "lbp_uniformity": 0.3883,
+      "lbp_entropy": 3.394,
+      "num_regions": 93,
+      "avg_area": 162.2,
+      "max_area": 6982.5,
+      "total_defect_pct": 37.71,
+      "avg_aspect_ratio": 1.374,
+      "max_aspect_ratio": 3.167,
+      "avg_circularity": 0.596,
+      "min_circularity": 0.075,
+      "regions_raw": [
+        [
+          80,
+          195,
+          5,
+          5,
+          16.0,
+          1.0,
+          0.7853981603294867
+        ],
+        [
+          98,
+          194,
+          11,
+          6,
+          35.0,
+          1.8333333333333333,
+          0.5750059635052273
+        ],
+        [
+          31,
+          194,
+          7,
+          6,
+          21.0,
+          1.1666666666666667,
+          0.6082977493155254
+        ],
+        [
+          69,
+          191,
+          4,
+          5,
+          11.0,
+          1.25,
+          0.8399544339736016
+        ],
+        [
+          132,
+          187,
+          5,
+          5,
+          14.0,
+          1.0,
+          0.8001063667226848
+        ],
+        [
+          55,
+          183,
+          7,
+          5,
+          13.0,
+          1.4,
+          0.4608134364605975
+        ],
+        [
+          111,
+          179,
+          11,
+          17,
+          63.5,
+          1.5454545454545454,
+          0.3360685013435197
+        ],
+        [
+          44,
+          179,
+          16,
+          21,
+          137.5,
+          1.3125,
+          0.28621175869001464
+        ],
+        [
+          82,
+          178,
+          7,
+          9,
+          34.5,
+          1.2857142857142858,
+          0.6897366438108252
+        ],
+        [
+          96,
+          176,
+          10,
+          6,
+          31.5,
+          1.6666666666666667,
+          0.6297595443490143
+        ],
+        [
+          128,
+          174,
+          4,
+          5,
+          11.5,
+          1.25,
+          0.8031141373846319
+        ],
+        [
+          110,
+          152,
+          8,
+          13,
+          48.5,
+          1.625,
+          0.5690032454197332
+        ],
+        [
+          0,
+          143,
+          5,
+          5,
+          14.0,
+          1.0,
+          0.8001063667226848
+        ],
+        [
+          17,
+          139,
+          7,
+          11,
+          32.5,
+          1.5714285714285714,
+          0.5246872936979718
+        ],
+        [
+          2,
+          139,
+          41,
+          61,
+          662.0,
+          1.4878048780487805,
+          0.07480449095687956
+        ],
+        [
+          25,
+          137,
+          8,
+          12,
+          44.5,
+          1.5,
+          0.5495437402948984
+        ],
+        [
+          46,
+          131,
+          56,
+          47,
+          1487.0,
+          1.1914893617021276,
+          0.4035084314461459
+        ],
+        [
+          85,
+          128,
+          5,
+          3,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          98,
+          125,
+          25,
+          23,
+          187.5,
+          1.0869565217391304,
+          0.1696762669767661
+        ],
+        [
+          184,
+          123,
+          6,
+          7,
+          21.5,
+          1.1666666666666667,
+          0.7428451760923759
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "patches_113.jpg",
+    "true_label": "patches",
+    "pred_label": "pitted_surface",
+    "confidence": 0.6714691467840082,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.19)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          4,
+          71,
+          74,
+          96
+        ],
+        "label": "patches",
+        "area": 7104,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          135,
+          39,
+          46,
+          37
+        ],
+        "label": "patches",
+        "area": 1702,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 180.32,
+      "std_intensity": 60.05,
+      "contrast": 0.333,
+      "dark_pixel_pct": 19.86,
+      "bright_pixel_pct": 19.59,
+      "entropy": 7.328,
+      "edge_density": 34.53,
+      "sobel_magnitude": 92.237,
+      "horizontal_edge_ratio": 0.381,
+      "vertical_edge_ratio": 0.299,
+      "diagonal_edge_ratio": 0.32,
+      "hough_line_count": 80,
+      "avg_line_length": 127.06,
+      "max_line_length": 272.94,
+      "line_horizontal_pct": 10.0,
+      "quadrant_std": {
+        "top_left": 50.96,
+        "top_right": 56.08,
+        "bottom_left": 74.98,
+        "bottom_right": 38.04
+      },
+      "quadrant_edge_density": {
+        "top_left": 34.98,
+        "top_right": 36.01,
+        "bottom_left": 30.5,
+        "bottom_right": 36.65
+      },
+      "glcm_contrast": 0.531,
+      "glcm_homogeneity": 0.78,
+      "glcm_energy": 0.297,
+      "glcm_correlation": 0.922,
+      "lbp_uniformity": 0.4086,
+      "lbp_entropy": 3.294,
+      "num_regions": 113,
+      "avg_area": 115.44,
+      "max_area": 5263.0,
+      "total_defect_pct": 32.61,
+      "avg_aspect_ratio": 1.499,
+      "max_aspect_ratio": 3.667,
+      "avg_circularity": 0.57,
+      "min_circularity": 0.067,
+      "regions_raw": [
+        [
+          132,
+          197,
+          8,
+          3,
+          9.5,
+          2.6666666666666665,
+          0.3936640323306108
+        ],
+        [
+          34,
+          196,
+          6,
+          4,
+          15.0,
+          1.5,
+          0.7363107753088938
+        ],
+        [
+          96,
+          195,
+          6,
+          5,
+          11.5,
+          1.2,
+          0.4765406707160026
+        ],
+        [
+          3,
+          195,
+          3,
+          5,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          193,
+          194,
+          5,
+          6,
+          17.0,
+          1.2,
+          0.7543479832879103
+        ],
+        [
+          153,
+          192,
+          5,
+          8,
+          20.0,
+          1.6,
+          0.6504468695206629
+        ],
+        [
+          9,
+          192,
+          4,
+          4,
+          9.0,
+          1.0,
+          0.7853981579432944
+        ],
+        [
+          121,
+          191,
+          9,
+          8,
+          33.0,
+          1.125,
+          0.5421484798763572
+        ],
+        [
+          64,
+          191,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          161,
+          189,
+          28,
+          11,
+          150.5,
+          2.5454545454545454,
+          0.3482003886703402
+        ],
+        [
+          17,
+          189,
+          6,
+          6,
+          22.0,
+          1.0,
+          0.779838123241011
+        ],
+        [
+          0,
+          188,
+          4,
+          6,
+          9.0,
+          1.5,
+          0.5143540928931545
+        ],
+        [
+          133,
+          186,
+          6,
+          8,
+          26.0,
+          1.3333333333333333,
+          0.7785730291207374
+        ],
+        [
+          94,
+          184,
+          8,
+          9,
+          35.0,
+          1.125,
+          0.6270017171356621
+        ],
+        [
+          47,
+          183,
+          10,
+          14,
+          59.5,
+          1.4,
+          0.47785312879225694
+        ],
+        [
+          142,
+          180,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          183,
+          179,
+          7,
+          6,
+          25.0,
+          1.1666666666666667,
+          0.9193857054333475
+        ],
+        [
+          34,
+          177,
+          6,
+          8,
+          20.0,
+          1.3333333333333333,
+          0.5989023231225317
+        ],
+        [
+          195,
+          175,
+          5,
+          11,
+          23.5,
+          2.2,
+          0.46982061245085194
+        ],
+        [
+          23,
+          175,
+          6,
+          5,
+          16.5,
+          1.2,
+          0.7859239729348965
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "patches_114.jpg",
+    "true_label": "patches",
+    "pred_label": "patches",
+    "confidence": 0.6760499998627857,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.20)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2825,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          1,
+          1,
+          87,
+          112
+        ],
+        "label": "patches",
+        "area": 9744,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          58,
+          120,
+          44,
+          69
+        ],
+        "label": "patches",
+        "area": 3036,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          131,
+          125,
+          51,
+          73
+        ],
+        "label": "patches",
+        "area": 3723,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          130,
+          28,
+          48,
+          70
+        ],
+        "label": "patches",
+        "area": 3360,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          148,
+          1,
+          44,
+          28
+        ],
+        "label": "patches",
+        "area": 1232,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 127.53,
+      "std_intensity": 65.75,
+      "contrast": 0.516,
+      "dark_pixel_pct": 19.1,
+      "bright_pixel_pct": 19.93,
+      "entropy": 7.752,
+      "edge_density": 31.81,
+      "sobel_magnitude": 80.863,
+      "horizontal_edge_ratio": 0.398,
+      "vertical_edge_ratio": 0.284,
+      "diagonal_edge_ratio": 0.318,
+      "hough_line_count": 80,
+      "avg_line_length": 117.96,
+      "max_line_length": 254.8,
+      "line_horizontal_pct": 15.0,
+      "quadrant_std": {
+        "top_left": 70.16,
+        "top_right": 58.94,
+        "bottom_left": 68.66,
+        "bottom_right": 52.37
+      },
+      "quadrant_edge_density": {
+        "top_left": 28.6,
+        "top_right": 32.12,
+        "bottom_left": 33.79,
+        "bottom_right": 32.72
+      },
+      "glcm_contrast": 0.475,
+      "glcm_homogeneity": 0.796,
+      "glcm_energy": 0.271,
+      "glcm_correlation": 0.943,
+      "lbp_uniformity": 0.3867,
+      "lbp_entropy": 3.401,
+      "num_regions": 95,
+      "avg_area": 161.42,
+      "max_area": 5497.0,
+      "total_defect_pct": 38.34,
+      "avg_aspect_ratio": 1.355,
+      "max_aspect_ratio": 3.167,
+      "avg_circularity": 0.625,
+      "min_circularity": 0.139,
+      "regions_raw": [
+        [
+          106,
+          194,
+          6,
+          6,
+          19.5,
+          1.0,
+          0.6737433076694328
+        ],
+        [
+          44,
+          194,
+          4,
+          6,
+          15.0,
+          1.5,
+          0.7363107753088938
+        ],
+        [
+          129,
+          192,
+          8,
+          8,
+          39.5,
+          1.0,
+          0.7207620189759862
+        ],
+        [
+          182,
+          188,
+          11,
+          12,
+          53.5,
+          1.0909090909090908,
+          0.49839185307599737
+        ],
+        [
+          9,
+          188,
+          22,
+          12,
+          123.0,
+          1.8333333333333333,
+          0.22828707702793294
+        ],
+        [
+          0,
+          187,
+          5,
+          5,
+          13.5,
+          1.0,
+          0.8363009664865618
+        ],
+        [
+          193,
+          184,
+          7,
+          7,
+          23.5,
+          1.0,
+          0.6651270963767594
+        ],
+        [
+          114,
+          182,
+          4,
+          4,
+          9.0,
+          1.0,
+          0.7853981579432944
+        ],
+        [
+          128,
+          179,
+          6,
+          10,
+          28.5,
+          1.6666666666666667,
+          0.5697824448872034
+        ],
+        [
+          10,
+          174,
+          9,
+          12,
+          55.5,
+          1.3333333333333333,
+          0.5411606050589016
+        ],
+        [
+          191,
+          173,
+          6,
+          8,
+          28.5,
+          1.3333333333333333,
+          0.8066434998611762
+        ],
+        [
+          36,
+          171,
+          18,
+          18,
+          164.0,
+          1.0,
+          0.48101305316586
+        ],
+        [
+          24,
+          170,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          114,
+          167,
+          6,
+          5,
+          17.0,
+          1.2,
+          0.7543479832879103
+        ],
+        [
+          178,
+          165,
+          5,
+          3,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          47,
+          164,
+          5,
+          5,
+          12.0,
+          1.0,
+          0.8085181338070881
+        ],
+        [
+          12,
+          162,
+          4,
+          5,
+          11.5,
+          1.25,
+          0.8031141373846319
+        ],
+        [
+          114,
+          158,
+          7,
+          5,
+          19.5,
+          1.4,
+          0.7363241913432419
+        ],
+        [
+          36,
+          158,
+          7,
+          8,
+          27.5,
+          1.1428571428571428,
+          0.7205669951824467
+        ],
+        [
+          3,
+          156,
+          5,
+          9,
+          22.0,
+          1.8,
+          0.5894429806786493
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "patches_115.jpg",
+    "true_label": "patches",
+    "pred_label": "patches",
+    "confidence": 0.6760499998627857,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.20)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2825,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          16,
+          93,
+          76,
+          107
+        ],
+        "label": "patches",
+        "area": 8132,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          111,
+          127,
+          50,
+          52
+        ],
+        "label": "patches",
+        "area": 2600,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          56,
+          6,
+          36,
+          56
+        ],
+        "label": "patches",
+        "area": 2016,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          147,
+          41,
+          51,
+          92
+        ],
+        "label": "patches",
+        "area": 4692,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 115.59,
+      "std_intensity": 56.54,
+      "contrast": 0.489,
+      "dark_pixel_pct": 19.36,
+      "bright_pixel_pct": 19.96,
+      "entropy": 7.712,
+      "edge_density": 32.55,
+      "sobel_magnitude": 75.185,
+      "horizontal_edge_ratio": 0.381,
+      "vertical_edge_ratio": 0.295,
+      "diagonal_edge_ratio": 0.324,
+      "hough_line_count": 80,
+      "avg_line_length": 117.85,
+      "max_line_length": 259.67,
+      "line_horizontal_pct": 11.25,
+      "quadrant_std": {
+        "top_left": 55.46,
+        "top_right": 45.58,
+        "bottom_left": 49.16,
+        "bottom_right": 37.22
+      },
+      "quadrant_edge_density": {
+        "top_left": 36.93,
+        "top_right": 32.65,
+        "bottom_left": 26.85,
+        "bottom_right": 33.78
+      },
+      "glcm_contrast": 0.441,
+      "glcm_homogeneity": 0.803,
+      "glcm_energy": 0.276,
+      "glcm_correlation": 0.93,
+      "lbp_uniformity": 0.3864,
+      "lbp_entropy": 3.4,
+      "num_regions": 95,
+      "avg_area": 140.59,
+      "max_area": 3948.0,
+      "total_defect_pct": 33.39,
+      "avg_aspect_ratio": 1.43,
+      "max_aspect_ratio": 3.727,
+      "avg_circularity": 0.566,
+      "min_circularity": 0.078,
+      "regions_raw": [
+        [
+          179,
+          196,
+          6,
+          4,
+          13.0,
+          1.5,
+          0.7429559119567787
+        ],
+        [
+          139,
+          196,
+          6,
+          4,
+          12.5,
+          1.5,
+          0.7743527467468166
+        ],
+        [
+          191,
+          194,
+          4,
+          6,
+          11.5,
+          1.5,
+          0.6082259708813543
+        ],
+        [
+          142,
+          186,
+          6,
+          3,
+          10.0,
+          2.0,
+          0.6411413546043386
+        ],
+        [
+          134,
+          185,
+          4,
+          5,
+          10.5,
+          1.25,
+          0.7332781254381423
+        ],
+        [
+          6,
+          184,
+          9,
+          16,
+          85.5,
+          1.7777777777777777,
+          0.5099882504417993
+        ],
+        [
+          189,
+          183,
+          9,
+          7,
+          34.0,
+          1.2857142857142858,
+          0.6090873823603575
+        ],
+        [
+          152,
+          178,
+          16,
+          22,
+          134.5,
+          1.375,
+          0.2660921264074819
+        ],
+        [
+          130,
+          176,
+          7,
+          8,
+          30.0,
+          1.1428571428571428,
+          0.745649060429194
+        ],
+        [
+          0,
+          175,
+          5,
+          7,
+          18.5,
+          1.4,
+          0.6985639764025628
+        ],
+        [
+          99,
+          170,
+          4,
+          5,
+          10.5,
+          1.25,
+          0.7332781254381423
+        ],
+        [
+          43,
+          169,
+          19,
+          30,
+          277.5,
+          1.5789473684210527,
+          0.4367489257514594
+        ],
+        [
+          191,
+          159,
+          9,
+          23,
+          97.0,
+          2.5555555555555554,
+          0.33162210544314935
+        ],
+        [
+          66,
+          159,
+          3,
+          7,
+          12.0,
+          2.3333333333333335,
+          0.589048620247115
+        ],
+        [
+          95,
+          156,
+          5,
+          4,
+          11.0,
+          1.25,
+          0.8399544339736016
+        ],
+        [
+          61,
+          154,
+          6,
+          4,
+          15.0,
+          1.5,
+          0.7363107753088938
+        ],
+        [
+          5,
+          152,
+          13,
+          22,
+          103.5,
+          1.6923076923076923,
+          0.2809317301437411
+        ],
+        [
+          151,
+          150,
+          26,
+          25,
+          202.0,
+          1.04,
+          0.17264862194119734
+        ],
+        [
+          16,
+          143,
+          6,
+          3,
+          10.0,
+          2.0,
+          0.6411413546043386
+        ],
+        [
+          138,
+          142,
+          5,
+          6,
+          17.0,
+          1.2,
+          0.7543479832879103
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "patches_116.jpg",
+    "true_label": "patches",
+    "pred_label": "patches",
+    "confidence": 0.6760499998627857,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.20)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2825,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          27,
+          4,
+          65,
+          196
+        ],
+        "label": "patches",
+        "area": 12740,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          114,
+          62,
+          82,
+          138
+        ],
+        "label": "patches",
+        "area": 11316,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          163,
+          1,
+          31,
+          28
+        ],
+        "label": "patches",
+        "area": 868,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 125.35,
+      "std_intensity": 64.4,
+      "contrast": 0.514,
+      "dark_pixel_pct": 19.6,
+      "bright_pixel_pct": 19.86,
+      "entropy": 7.685,
+      "edge_density": 30.34,
+      "sobel_magnitude": 82.795,
+      "horizontal_edge_ratio": 0.401,
+      "vertical_edge_ratio": 0.28,
+      "diagonal_edge_ratio": 0.319,
+      "hough_line_count": 80,
+      "avg_line_length": 99.77,
+      "max_line_length": 212.61,
+      "line_horizontal_pct": 5.0,
+      "quadrant_std": {
+        "top_left": 66.94,
+        "top_right": 59.92,
+        "bottom_left": 61.77,
+        "bottom_right": 45.86
+      },
+      "quadrant_edge_density": {
+        "top_left": 30.15,
+        "top_right": 33.84,
+        "bottom_left": 31.38,
+        "bottom_right": 26.0
+      },
+      "glcm_contrast": 0.479,
+      "glcm_homogeneity": 0.796,
+      "glcm_energy": 0.288,
+      "glcm_correlation": 0.941,
+      "lbp_uniformity": 0.3734,
+      "lbp_entropy": 3.456,
+      "num_regions": 85,
+      "avg_area": 177.76,
+      "max_area": 6233.5,
+      "total_defect_pct": 37.77,
+      "avg_aspect_ratio": 1.409,
+      "max_aspect_ratio": 2.778,
+      "avg_circularity": 0.59,
+      "min_circularity": 0.053,
+      "regions_raw": [
+        [
+          9,
+          187,
+          7,
+          5,
+          11.0,
+          1.4,
+          0.3899190616205055
+        ],
+        [
+          21,
+          185,
+          16,
+          15,
+          87.0,
+          1.0666666666666667,
+          0.36635978282182086
+        ],
+        [
+          145,
+          183,
+          4,
+          6,
+          13.0,
+          1.5,
+          0.7429559119567787
+        ],
+        [
+          0,
+          181,
+          6,
+          9,
+          23.0,
+          1.5,
+          0.41202969983200655
+        ],
+        [
+          153,
+          180,
+          10,
+          14,
+          65.0,
+          1.4,
+          0.4353840205156713
+        ],
+        [
+          106,
+          180,
+          8,
+          9,
+          39.5,
+          1.125,
+          0.6773235710451703
+        ],
+        [
+          165,
+          178,
+          3,
+          5,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          197,
+          176,
+          3,
+          6,
+          9.0,
+          2.0,
+          0.6872354459784014
+        ],
+        [
+          2,
+          172,
+          9,
+          10,
+          40.0,
+          1.1111111111111112,
+          0.44373410899157784
+        ],
+        [
+          2,
+          160,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          25,
+          157,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          13,
+          157,
+          18,
+          27,
+          189.5,
+          1.5,
+          0.2637912583157792
+        ],
+        [
+          33,
+          151,
+          5,
+          10,
+          24.0,
+          2.0,
+          0.5388986804039181
+        ],
+        [
+          144,
+          148,
+          19,
+          20,
+          194.0,
+          1.0526315789473684,
+          0.4935092634358304
+        ],
+        [
+          100,
+          145,
+          9,
+          9,
+          38.5,
+          1.0,
+          0.6215526402268283
+        ],
+        [
+          0,
+          144,
+          10,
+          9,
+          44.5,
+          1.1111111111111112,
+          0.6255214039923932
+        ],
+        [
+          152,
+          140,
+          4,
+          7,
+          15.0,
+          1.75,
+          0.6656011617246267
+        ],
+        [
+          87,
+          135,
+          5,
+          5,
+          14.0,
+          1.0,
+          0.8001063667226848
+        ],
+        [
+          4,
+          134,
+          4,
+          4,
+          9.0,
+          1.0,
+          0.7853981579432944
+        ],
+        [
+          167,
+          130,
+          3,
+          7,
+          12.0,
+          2.3333333333333335,
+          0.589048620247115
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "patches_117.jpg",
+    "true_label": "patches",
+    "pred_label": "pitted_surface",
+    "confidence": 0.6670487047461193,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.18)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.256,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          1,
+          68,
+          50,
+          55
+        ],
+        "label": "patches",
+        "area": 2750,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          82,
+          83,
+          73,
+          77
+        ],
+        "label": "patches",
+        "area": 5621,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 44.12,
+      "std_intensity": 21.09,
+      "contrast": 0.478,
+      "dark_pixel_pct": 19.14,
+      "bright_pixel_pct": 19.27,
+      "entropy": 6.332,
+      "edge_density": 11.64,
+      "sobel_magnitude": 36.099,
+      "horizontal_edge_ratio": 0.397,
+      "vertical_edge_ratio": 0.284,
+      "diagonal_edge_ratio": 0.32,
+      "hough_line_count": 80,
+      "avg_line_length": 53.91,
+      "max_line_length": 127.8,
+      "line_horizontal_pct": 3.75,
+      "quadrant_std": {
+        "top_left": 15.29,
+        "top_right": 15.88,
+        "bottom_left": 14.3,
+        "bottom_right": 25.2
+      },
+      "quadrant_edge_density": {
+        "top_left": 6.96,
+        "top_right": 22.78,
+        "bottom_left": 4.86,
+        "bottom_right": 11.98
+      },
+      "glcm_contrast": 0.194,
+      "glcm_homogeneity": 0.903,
+      "glcm_energy": 0.533,
+      "glcm_correlation": 0.784,
+      "lbp_uniformity": 0.4206,
+      "lbp_entropy": 3.18,
+      "num_regions": 90,
+      "avg_area": 95.24,
+      "max_area": 4046.0,
+      "total_defect_pct": 21.43,
+      "avg_aspect_ratio": 1.337,
+      "max_aspect_ratio": 2.333,
+      "avg_circularity": 0.674,
+      "min_circularity": 0.161,
+      "regions_raw": [
+        [
+          106,
+          194,
+          14,
+          6,
+          34.0,
+          2.3333333333333335,
+          0.3771739926428412
+        ],
+        [
+          185,
+          191,
+          7,
+          5,
+          16.0,
+          1.4,
+          0.6449160507617445
+        ],
+        [
+          128,
+          190,
+          4,
+          7,
+          13.0,
+          1.75,
+          0.5768543401613432
+        ],
+        [
+          88,
+          190,
+          6,
+          9,
+          27.5,
+          1.5,
+          0.6492428420566664
+        ],
+        [
+          136,
+          188,
+          5,
+          4,
+          11.5,
+          1.25,
+          0.8031141373846319
+        ],
+        [
+          0,
+          183,
+          4,
+          6,
+          11.0,
+          1.5,
+          0.6286550024249665
+        ],
+        [
+          87,
+          182,
+          6,
+          4,
+          13.0,
+          1.5,
+          0.7429559119567787
+        ],
+        [
+          140,
+          181,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          165,
+          173,
+          11,
+          14,
+          74.0,
+          1.2727272727272727,
+          0.38776749329003324
+        ],
+        [
+          65,
+          173,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          157,
+          169,
+          4,
+          7,
+          15.5,
+          1.75,
+          0.6422939474867861
+        ],
+        [
+          193,
+          168,
+          5,
+          4,
+          12.0,
+          1.25,
+          0.7693696255252064
+        ],
+        [
+          119,
+          168,
+          6,
+          3,
+          10.0,
+          2.0,
+          0.6411413546043386
+        ],
+        [
+          17,
+          168,
+          5,
+          4,
+          10.5,
+          1.25,
+          0.7332781254381423
+        ],
+        [
+          62,
+          165,
+          6,
+          5,
+          19.0,
+          1.2,
+          0.8430948048511938
+        ],
+        [
+          44,
+          162,
+          5,
+          8,
+          20.0,
+          1.6,
+          0.6504468695206629
+        ],
+        [
+          70,
+          158,
+          11,
+          20,
+          108.5,
+          1.8181818181818181,
+          0.44725347407729765
+        ],
+        [
+          166,
+          156,
+          7,
+          10,
+          39.5,
+          1.4285714285714286,
+          0.6773235710451703
+        ],
+        [
+          52,
+          156,
+          6,
+          6,
+          18.0,
+          1.0,
+          0.6380493735608272
+        ],
+        [
+          17,
+          155,
+          6,
+          6,
+          13.5,
+          1.0,
+          0.5097629016991675
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "patches_118.jpg",
+    "true_label": "patches",
+    "pred_label": "patches",
+    "confidence": 0.6760499998627857,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.20)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2825,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          6,
+          18,
+          84,
+          73
+        ],
+        "label": "patches",
+        "area": 6132,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          129,
+          10,
+          69,
+          190
+        ],
+        "label": "patches",
+        "area": 13110,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          87,
+          68,
+          85,
+          131
+        ],
+        "label": "patches",
+        "area": 11135,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 106.0,
+      "std_intensity": 54.43,
+      "contrast": 0.514,
+      "dark_pixel_pct": 19.84,
+      "bright_pixel_pct": 19.79,
+      "entropy": 7.489,
+      "edge_density": 28.68,
+      "sobel_magnitude": 72.55,
+      "horizontal_edge_ratio": 0.392,
+      "vertical_edge_ratio": 0.287,
+      "diagonal_edge_ratio": 0.321,
+      "hough_line_count": 80,
+      "avg_line_length": 101.34,
+      "max_line_length": 248.9,
+      "line_horizontal_pct": 8.75,
+      "quadrant_std": {
+        "top_left": 50.12,
+        "top_right": 57.92,
+        "bottom_left": 39.17,
+        "bottom_right": 31.11
+      },
+      "quadrant_edge_density": {
+        "top_left": 29.75,
+        "top_right": 27.99,
+        "bottom_left": 35.72,
+        "bottom_right": 21.26
+      },
+      "glcm_contrast": 0.41,
+      "glcm_homogeneity": 0.819,
+      "glcm_energy": 0.339,
+      "glcm_correlation": 0.93,
+      "lbp_uniformity": 0.3811,
+      "lbp_entropy": 3.425,
+      "num_regions": 85,
+      "avg_area": 165.13,
+      "max_area": 3497.5,
+      "total_defect_pct": 35.09,
+      "avg_aspect_ratio": 1.488,
+      "max_aspect_ratio": 3.389,
+      "avg_circularity": 0.588,
+      "min_circularity": 0.071,
+      "regions_raw": [
+        [
+          57,
+          195,
+          4,
+          5,
+          10.5,
+          1.25,
+          0.7332781254381423
+        ],
+        [
+          0,
+          195,
+          4,
+          5,
+          11.5,
+          1.25,
+          0.8031141373846319
+        ],
+        [
+          44,
+          194,
+          8,
+          6,
+          23.0,
+          1.3333333333333333,
+          0.6162358434367698
+        ],
+        [
+          20,
+          193,
+          7,
+          7,
+          28.5,
+          1.0,
+          0.7239057621971671
+        ],
+        [
+          159,
+          192,
+          6,
+          5,
+          18.5,
+          1.2,
+          0.881187484805793
+        ],
+        [
+          67,
+          189,
+          20,
+          11,
+          72.0,
+          1.8181818181818181,
+          0.2559489013421231
+        ],
+        [
+          35,
+          187,
+          6,
+          9,
+          34.0,
+          1.5,
+          0.763439797238884
+        ],
+        [
+          5,
+          187,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          57,
+          185,
+          5,
+          6,
+          16.5,
+          1.2,
+          0.7859239729348965
+        ],
+        [
+          0,
+          180,
+          4,
+          7,
+          14.0,
+          1.75,
+          0.621227750942985
+        ],
+        [
+          78,
+          174,
+          8,
+          9,
+          46.0,
+          1.125,
+          0.7557221234640129
+        ],
+        [
+          31,
+          173,
+          11,
+          11,
+          58.5,
+          1.0,
+          0.49013683657011414
+        ],
+        [
+          126,
+          171,
+          31,
+          29,
+          308.0,
+          1.0689655172413792,
+          0.24480082636700118
+        ],
+        [
+          0,
+          170,
+          3,
+          7,
+          11.5,
+          2.3333333333333335,
+          0.6082259708813543
+        ],
+        [
+          44,
+          169,
+          7,
+          4,
+          14.5,
+          1.75,
+          0.6008556282940902
+        ],
+        [
+          66,
+          168,
+          10,
+          7,
+          37.0,
+          1.4285714285714286,
+          0.6078634471340973
+        ],
+        [
+          7,
+          168,
+          18,
+          21,
+          104.5,
+          1.1666666666666667,
+          0.1951001450026043
+        ],
+        [
+          26,
+          167,
+          5,
+          5,
+          13.5,
+          1.0,
+          0.8363009664865618
+        ],
+        [
+          33,
+          164,
+          8,
+          5,
+          22.0,
+          1.6,
+          0.6372643088067408
+        ],
+        [
+          4,
+          161,
+          6,
+          8,
+          25.0,
+          1.3333333333333333,
+          0.6698215689530107
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "patches_119.jpg",
+    "true_label": "patches",
+    "pred_label": "patches",
+    "confidence": 0.6760499998627857,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.20)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2825,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          1,
+          2,
+          79,
+          197
+        ],
+        "label": "patches",
+        "area": 15563,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          148,
+          1,
+          38,
+          42
+        ],
+        "label": "patches",
+        "area": 1596,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          104,
+          89,
+          96,
+          110
+        ],
+        "label": "patches",
+        "area": 10560,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 99.75,
+      "std_intensity": 60.14,
+      "contrast": 0.603,
+      "dark_pixel_pct": 19.33,
+      "bright_pixel_pct": 19.93,
+      "entropy": 7.695,
+      "edge_density": 26.91,
+      "sobel_magnitude": 68.645,
+      "horizontal_edge_ratio": 0.378,
+      "vertical_edge_ratio": 0.293,
+      "diagonal_edge_ratio": 0.329,
+      "hough_line_count": 80,
+      "avg_line_length": 114.52,
+      "max_line_length": 233.35,
+      "line_horizontal_pct": 21.25,
+      "quadrant_std": {
+        "top_left": 65.47,
+        "top_right": 39.95,
+        "bottom_left": 58.54,
+        "bottom_right": 45.51
+      },
+      "quadrant_edge_density": {
+        "top_left": 29.76,
+        "top_right": 33.69,
+        "bottom_left": 27.52,
+        "bottom_right": 16.65
+      },
+      "glcm_contrast": 0.383,
+      "glcm_homogeneity": 0.83,
+      "glcm_energy": 0.298,
+      "glcm_correlation": 0.948,
+      "lbp_uniformity": 0.3821,
+      "lbp_entropy": 3.418,
+      "num_regions": 87,
+      "avg_area": 165.15,
+      "max_area": 6316.0,
+      "total_defect_pct": 35.92,
+      "avg_aspect_ratio": 1.448,
+      "max_aspect_ratio": 4.167,
+      "avg_circularity": 0.615,
+      "min_circularity": 0.093,
+      "regions_raw": [
+        [
+          7,
+          187,
+          7,
+          8,
+          24.5,
+          1.1428571428571428,
+          0.5238610402453057
+        ],
+        [
+          10,
+          178,
+          4,
+          5,
+          11.0,
+          1.25,
+          0.8399544339736016
+        ],
+        [
+          98,
+          167,
+          9,
+          8,
+          49.5,
+          1.125,
+          0.8487978928287577
+        ],
+        [
+          31,
+          165,
+          7,
+          7,
+          22.5,
+          1.0,
+          0.636823815679876
+        ],
+        [
+          3,
+          165,
+          11,
+          10,
+          57.5,
+          1.1,
+          0.628769200556716
+        ],
+        [
+          140,
+          160,
+          6,
+          6,
+          19.5,
+          1.0,
+          0.7363241913432419
+        ],
+        [
+          116,
+          155,
+          10,
+          13,
+          83.5,
+          1.3,
+          0.6076053246689634
+        ],
+        [
+          85,
+          155,
+          5,
+          6,
+          14.5,
+          1.2,
+          0.6906604610639999
+        ],
+        [
+          43,
+          155,
+          16,
+          45,
+          285.5,
+          2.8125,
+          0.1452657683353077
+        ],
+        [
+          0,
+          149,
+          6,
+          5,
+          19.0,
+          1.2,
+          0.8430948048511938
+        ],
+        [
+          97,
+          148,
+          5,
+          7,
+          23.5,
+          1.4,
+          0.7834984124927379
+        ],
+        [
+          83,
+          145,
+          5,
+          7,
+          19.0,
+          1.4,
+          0.7658378102795715
+        ],
+        [
+          8,
+          145,
+          5,
+          4,
+          11.5,
+          1.25,
+          0.8031141373846319
+        ],
+        [
+          117,
+          143,
+          6,
+          4,
+          14.0,
+          1.5,
+          0.8001063667226848
+        ],
+        [
+          89,
+          141,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          97,
+          139,
+          3,
+          5,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          109,
+          134,
+          4,
+          5,
+          11.5,
+          1.25,
+          0.8031141373846319
+        ],
+        [
+          117,
+          124,
+          5,
+          9,
+          22.0,
+          1.8,
+          0.5894429806786493
+        ],
+        [
+          72,
+          124,
+          5,
+          4,
+          11.0,
+          1.25,
+          0.8399544339736016
+        ],
+        [
+          99,
+          121,
+          14,
+          9,
+          54.0,
+          1.5555555555555556,
+          0.4468176042500628
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "patches_12.jpg",
+    "true_label": "patches",
+    "pred_label": "pitted_surface",
+    "confidence": 0.6714691467840082,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.19)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          15,
+          154,
+          31,
+          46
+        ],
+        "label": "patches",
+        "area": 1426,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          89,
+          78,
+          77,
+          88
+        ],
+        "label": "patches",
+        "area": 6776,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          125,
+          14,
+          39,
+          49
+        ],
+        "label": "patches",
+        "area": 1911,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 122.06,
+      "std_intensity": 43.02,
+      "contrast": 0.352,
+      "dark_pixel_pct": 19.82,
+      "bright_pixel_pct": 19.79,
+      "entropy": 7.404,
+      "edge_density": 33.9,
+      "sobel_magnitude": 69.642,
+      "horizontal_edge_ratio": 0.389,
+      "vertical_edge_ratio": 0.287,
+      "diagonal_edge_ratio": 0.324,
+      "hough_line_count": 80,
+      "avg_line_length": 115.92,
+      "max_line_length": 243.24,
+      "line_horizontal_pct": 27.5,
+      "quadrant_std": {
+        "top_left": 22.24,
+        "top_right": 52.03,
+        "bottom_left": 35.32,
+        "bottom_right": 46.15
+      },
+      "quadrant_edge_density": {
+        "top_left": 37.57,
+        "top_right": 33.68,
+        "bottom_left": 34.4,
+        "bottom_right": 29.96
+      },
+      "glcm_contrast": 0.424,
+      "glcm_homogeneity": 0.805,
+      "glcm_energy": 0.315,
+      "glcm_correlation": 0.886,
+      "lbp_uniformity": 0.4134,
+      "lbp_entropy": 3.276,
+      "num_regions": 119,
+      "avg_area": 108.95,
+      "max_area": 4779.5,
+      "total_defect_pct": 32.41,
+      "avg_aspect_ratio": 1.423,
+      "max_aspect_ratio": 3.5,
+      "avg_circularity": 0.587,
+      "min_circularity": 0.092,
+      "regions_raw": [
+        [
+          146,
+          194,
+          10,
+          6,
+          30.5,
+          1.6666666666666667,
+          0.609767177861744
+        ],
+        [
+          172,
+          190,
+          6,
+          5,
+          15.5,
+          1.2,
+          0.7382922169994482
+        ],
+        [
+          55,
+          190,
+          9,
+          5,
+          30.0,
+          1.8,
+          0.7234010592692663
+        ],
+        [
+          182,
+          189,
+          10,
+          11,
+          38.5,
+          1.1,
+          0.4011557321898708
+        ],
+        [
+          86,
+          186,
+          9,
+          11,
+          54.5,
+          1.2222222222222223,
+          0.7253372645921102
+        ],
+        [
+          96,
+          185,
+          5,
+          5,
+          14.5,
+          1.0,
+          0.8982491862263072
+        ],
+        [
+          66,
+          182,
+          12,
+          18,
+          104.0,
+          1.5,
+          0.45979624495017435
+        ],
+        [
+          194,
+          181,
+          6,
+          5,
+          11.0,
+          1.2,
+          0.48810751859805956
+        ],
+        [
+          47,
+          180,
+          8,
+          6,
+          23.0,
+          1.3333333333333333,
+          0.6162358434367698
+        ],
+        [
+          113,
+          178,
+          8,
+          13,
+          56.0,
+          1.625,
+          0.5643015495838963
+        ],
+        [
+          79,
+          174,
+          5,
+          5,
+          12.5,
+          1.0,
+          0.6611151857406026
+        ],
+        [
+          94,
+          172,
+          8,
+          8,
+          35.0,
+          1.0,
+          0.668145575523989
+        ],
+        [
+          58,
+          171,
+          7,
+          5,
+          16.5,
+          1.4,
+          0.6230435465212047
+        ],
+        [
+          82,
+          168,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          184,
+          166,
+          6,
+          6,
+          21.0,
+          1.0,
+          0.7443909358209652
+        ],
+        [
+          159,
+          165,
+          29,
+          35,
+          221.0,
+          1.206896551724138,
+          0.10661330143037305
+        ],
+        [
+          67,
+          164,
+          11,
+          15,
+          51.5,
+          1.3636363636363635,
+          0.3234891003297141
+        ],
+        [
+          4,
+          164,
+          5,
+          6,
+          17.5,
+          1.2,
+          0.8335557288703448
+        ],
+        [
+          54,
+          161,
+          5,
+          7,
+          19.0,
+          1.4,
+          0.7658378102795715
+        ],
+        [
+          1,
+          157,
+          8,
+          4,
+          17.0,
+          2.0,
+          0.6026021861407813
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "patches_120.jpg",
+    "true_label": "patches",
+    "pred_label": "patches",
+    "confidence": 0.7707580285069674,
+    "cls_method": "Claude+GroqWeighted(4/7LLM,best_w=2.30)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2825,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "patches",
+        "confidence": 0.282,
+        "weight": 0.49,
+        "reason": "high max area, broad irregular damaged area and high total defect percentage"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 2,
+        "label": "patches",
+        "confidence": 0.282,
+        "weight": 0.49,
+        "reason": "one or few large regions dominate"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 3,
+        "label": "patches",
+        "confidence": 0.282,
+        "weight": 0.49,
+        "reason": "The image has a high total defect percentage (36.76%) and a large max area (4589.5), which are characteristic of patches. Additionally, the top rule prior sugge"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 4,
+        "label": "patches",
+        "confidence": 0.65,
+        "weight": 0.637,
+        "reason": "{\"label\":\"patches\", \"confidence\":0.6, \"reason\":\"The visual features of the image, such as the high total defect percentage (36.76%) and the presence of a large "
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given options based on the provided visual features and rule-"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          41,
+          1,
+          42,
+          72
+        ],
+        "label": "patches",
+        "area": 3024,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          105,
+          1,
+          78,
+          85
+        ],
+        "label": "patches",
+        "area": 6630,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          34,
+          91,
+          49,
+          109
+        ],
+        "label": "patches",
+        "area": 5341,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          85,
+          70,
+          62,
+          130
+        ],
+        "label": "patches",
+        "area": 8060,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          1,
+          154,
+          21,
+          44
+        ],
+        "label": "patches",
+        "area": 924,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 116.99,
+      "std_intensity": 61.02,
+      "contrast": 0.522,
+      "dark_pixel_pct": 19.51,
+      "bright_pixel_pct": 19.61,
+      "entropy": 7.599,
+      "edge_density": 29.89,
+      "sobel_magnitude": 80.352,
+      "horizontal_edge_ratio": 0.401,
+      "vertical_edge_ratio": 0.282,
+      "diagonal_edge_ratio": 0.316,
+      "hough_line_count": 80,
+      "avg_line_length": 96.62,
+      "max_line_length": 237.15,
+      "line_horizontal_pct": 10.0,
+      "quadrant_std": {
+        "top_left": 57.14,
+        "top_right": 48.67,
+        "bottom_left": 51.74,
+        "bottom_right": 65.31
+      },
+      "quadrant_edge_density": {
+        "top_left": 33.73,
+        "top_right": 29.39,
+        "bottom_left": 26.19,
+        "bottom_right": 30.26
+      },
+      "glcm_contrast": 0.463,
+      "glcm_homogeneity": 0.803,
+      "glcm_energy": 0.314,
+      "glcm_correlation": 0.937,
+      "lbp_uniformity": 0.3752,
+      "lbp_entropy": 3.447,
+      "num_regions": 68,
+      "avg_area": 216.24,
+      "max_area": 4589.5,
+      "total_defect_pct": 36.76,
+      "avg_aspect_ratio": 1.479,
+      "max_aspect_ratio": 4.25,
+      "avg_circularity": 0.586,
+      "min_circularity": 0.034,
+      "regions_raw": [
+        [
+          78,
+          196,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          194,
+          194,
+          6,
+          5,
+          15.5,
+          1.2,
+          0.7382922169994482
+        ],
+        [
+          179,
+          191,
+          8,
+          9,
+          34.5,
+          1.125,
+          0.6463181828174632
+        ],
+        [
+          192,
+          182,
+          8,
+          5,
+          21.5,
+          1.6,
+          0.6593469375139779
+        ],
+        [
+          189,
+          175,
+          3,
+          5,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          183,
+          173,
+          5,
+          5,
+          11.0,
+          1.0,
+          0.6286550024249665
+        ],
+        [
+          0,
+          172,
+          24,
+          28,
+          344.0,
+          1.1666666666666667,
+          0.500123647342677
+        ],
+        [
+          194,
+          169,
+          6,
+          6,
+          20.0,
+          1.0,
+          0.7089437484009192
+        ],
+        [
+          169,
+          169,
+          10,
+          10,
+          41.5,
+          1.0,
+          0.48687906566843164
+        ],
+        [
+          24,
+          163,
+          3,
+          5,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          195,
+          162,
+          3,
+          5,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          158,
+          160,
+          5,
+          5,
+          15.5,
+          1.0,
+          0.8197828303183472
+        ],
+        [
+          193,
+          149,
+          7,
+          7,
+          22.5,
+          1.0,
+          0.636823815679876
+        ],
+        [
+          4,
+          147,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          157,
+          146,
+          7,
+          13,
+          47.5,
+          1.8571428571428572,
+          0.4852946439011349
+        ],
+        [
+          80,
+          145,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          142,
+          144,
+          5,
+          7,
+          21.0,
+          1.4,
+          0.8464523166247897
+        ],
+        [
+          85,
+          144,
+          4,
+          5,
+          11.0,
+          1.25,
+          0.8399544339736016
+        ],
+        [
+          191,
+          138,
+          6,
+          7,
+          24.0,
+          1.1666666666666667,
+          0.7805362434247954
+        ],
+        [
+          168,
+          133,
+          24,
+          34,
+          280.5,
+          1.4166666666666667,
+          0.1406173126069126
+        ]
+      ]
+    }
   }
 ]
