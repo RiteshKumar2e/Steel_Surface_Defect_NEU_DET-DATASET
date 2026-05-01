@@ -49870,5 +49870,643 @@
         "reason": "handcrafted feature prior"
       }
     ]
+  },
+  "scratches/scratches_31.jpg/23f2154577fb58b6fe696f8265cfdebf": {
+    "pred_label": "scratches",
+    "confidence": 0.6654,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.18)",
+    "weighted_scores": {
+      "crazing": 0.0517,
+      "inclusion": 0.0965,
+      "patches": 0.1724,
+      "pitted_surface": 0.0862,
+      "rolled-in_scale": 0.1172,
+      "scratches": 0.1758
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "scratches",
+        "confidence": 0.2512,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "scratches/scratches_32.jpg/73db040566c4a0862853971158d24239": {
+    "pred_label": "patches",
+    "confidence": 0.7412,
+    "method": "Claude+GroqWeighted(1/2LLM,best_w=0.94)",
+    "weighted_scores": {
+      "crazing": 0.6072,
+      "inclusion": 0.0899,
+      "patches": 0.9446,
+      "pitted_surface": 0.0803,
+      "rolled-in_scale": 0.1092,
+      "scratches": 0.212
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "scratches",
+        "confidence": 0.3028,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "patches",
+        "confidence": 0.8,
+        "weight": 0.784,
+        "reason": "high max area, total defect percentage and average area, along with a moderate entropy and edge density"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification problem. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale"
+      }
+    ]
+  },
+  "scratches/scratches_33.jpg/605487e435590a3d533a9cb220cb3ad7": {
+    "pred_label": "patches",
+    "confidence": 0.7171,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.28)",
+    "weighted_scores": {
+      "crazing": 0.0847,
+      "inclusion": 0.0564,
+      "patches": 0.2822,
+      "pitted_surface": 0.0,
+      "rolled-in_scale": 0.1919,
+      "scratches": 0.0847
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.4032,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "scratches/scratches_34.jpg/6898e2fb636704329db0f7be6748079d": {
+    "pred_label": "scratches",
+    "confidence": 0.6951,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "weighted_scores": {
+      "crazing": 0.0538,
+      "inclusion": 0.0646,
+      "patches": 0.2225,
+      "pitted_surface": 0.0,
+      "rolled-in_scale": 0.1221,
+      "scratches": 0.2369
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "scratches",
+        "confidence": 0.3385,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "scratches/scratches_35.jpg/8e1514e3f8799e2ffc6dcfb278eed146": {
+    "pred_label": "scratches",
+    "confidence": 0.7047,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.26)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.07,
+      "patches": 0.2411,
+      "pitted_surface": 0.0,
+      "rolled-in_scale": 0.1322,
+      "scratches": 0.2567
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "scratches",
+        "confidence": 0.3667,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "scratches/scratches_36.jpg/64fce9dd8d5b245a440e8a63570e2fd3": {
+    "pred_label": "scratches",
+    "confidence": 0.7917,
+    "method": "Claude+GroqWeighted(1/1LLM,best_w=0.73)",
+    "weighted_scores": {
+      "crazing": 0.0538,
+      "inclusion": 0.0646,
+      "patches": 0.2225,
+      "pitted_surface": 0.0,
+      "rolled-in_scale": 0.1221,
+      "scratches": 0.7269
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "scratches",
+        "confidence": 0.3385,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "scratches",
+        "confidence": 0.339,
+        "weight": 0.49,
+        "reason": "high max aspect ratio and elongated defect line"
+      }
+    ]
+  },
+  "scratches/scratches_37.jpg/b677d4cf5a3ff087a5c3e242d0e5d738": {
+    "pred_label": "scratches",
+    "confidence": 0.7286,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.31)",
+    "weighted_scores": {
+      "crazing": 0.0695,
+      "inclusion": 0.0463,
+      "patches": 0.2318,
+      "pitted_surface": 0.0,
+      "rolled-in_scale": 0.0463,
+      "scratches": 0.306
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "scratches",
+        "confidence": 0.4371,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "scratches/scratches_38.jpg/f11e0b2adf399646ef2c50999b15e29e": {
+    "pred_label": "scratches",
+    "confidence": 0.7047,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.26)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.07,
+      "patches": 0.2411,
+      "pitted_surface": 0.0,
+      "rolled-in_scale": 0.1322,
+      "scratches": 0.2567
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "scratches",
+        "confidence": 0.3667,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "scratches/scratches_39.jpg/b405b0059ce71b6e3eb63d233f9a3c14": {
+    "pred_label": "scratches",
+    "confidence": 0.7097,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.27)",
+    "weighted_scores": {
+      "crazing": 0.0607,
+      "inclusion": 0.0728,
+      "patches": 0.2023,
+      "pitted_surface": 0.0,
+      "rolled-in_scale": 0.0971,
+      "scratches": 0.2671
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "scratches",
+        "confidence": 0.3815,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "scratches/scratches_4.jpg/84b2c78e17d2975446f4a32d72c23489": {
+    "pred_label": "scratches",
+    "confidence": 0.79,
+    "method": "Claude+GroqWeighted(1/1LLM,best_w=0.72)",
+    "weighted_scores": {
+      "crazing": 0.0525,
+      "inclusion": 0.035,
+      "patches": 0.175,
+      "pitted_surface": 0.0875,
+      "rolled-in_scale": 0.119,
+      "scratches": 0.721
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "scratches",
+        "confidence": 0.33,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 2,
+        "label": "scratches",
+        "confidence": 0.33,
+        "weight": 0.49,
+        "reason": "The defect has an average aspect ratio of 2.449 and a max aspect ratio of 6.667, indicating that the lines are extremely elongated, which is a key characteristi"
+      }
+    ]
+  },
+  "scratches/scratches_40.jpg/1ebaaaab57f2864f77c87ce1c99cf05c": {
+    "pred_label": "scratches",
+    "confidence": 0.7026,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.25)",
+    "weighted_scores": {
+      "crazing": 0.0574,
+      "inclusion": 0.0689,
+      "patches": 0.1912,
+      "pitted_surface": 0.0,
+      "rolled-in_scale": 0.1301,
+      "scratches": 0.2525
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "scratches",
+        "confidence": 0.3607,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "scratches/scratches_41.jpg/62f983190f882c6110743e872d4d02cd": {
+    "pred_label": "scratches",
+    "confidence": 0.7097,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.27)",
+    "weighted_scores": {
+      "crazing": 0.0607,
+      "inclusion": 0.0728,
+      "patches": 0.2023,
+      "pitted_surface": 0.0,
+      "rolled-in_scale": 0.0971,
+      "scratches": 0.2671
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "scratches",
+        "confidence": 0.3815,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "scratches/scratches_42.jpg/e6b17f77e129b099e3ce3147fcc3c481": {
+    "pred_label": "scratches",
+    "confidence": 0.7875,
+    "method": "Claude+GroqWeighted(1/1LLM,best_w=0.71)",
+    "weighted_scores": {
+      "crazing": 0.0505,
+      "inclusion": 0.0605,
+      "patches": 0.1683,
+      "pitted_surface": 0.0841,
+      "rolled-in_scale": 0.1144,
+      "scratches": 0.7121
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "scratches",
+        "confidence": 0.3173,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 3,
+        "label": "scratches",
+        "confidence": 0.317,
+        "weight": 0.49,
+        "reason": "The model predicts scratches as the most likely class due to the high rule prior probability of 0.3173, which is the highest among all classes, and the presence"
+      }
+    ]
+  },
+  "scratches/scratches_43.jpg/2dc5ed29e26ed39404b0033781a3d93e": {
+    "pred_label": "patches",
+    "confidence": 0.7014,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.25)",
+    "weighted_scores": {
+      "crazing": 0.075,
+      "inclusion": 0.05,
+      "patches": 0.25,
+      "pitted_surface": 0.125,
+      "rolled-in_scale": 0.05,
+      "scratches": 0.15
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.3571,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "scratches/scratches_44.jpg/1ccd18fe3fa6627b2c612784ff40aef2": {
+    "pred_label": "patches",
+    "confidence": 0.6629,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.17)",
+    "weighted_scores": {
+      "crazing": 0.0854,
+      "inclusion": 0.1593,
+      "patches": 0.1707,
+      "pitted_surface": 0.1423,
+      "rolled-in_scale": 0.0569,
+      "scratches": 0.0854
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2439,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "scratches/scratches_45.jpg/f34352de771178ef8bec7e1967cd8554": {
+    "pred_label": "scratches",
+    "confidence": 0.6849,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.22)",
+    "weighted_scores": {
+      "crazing": 0.0491,
+      "inclusion": 0.0589,
+      "patches": 0.1635,
+      "pitted_surface": 0.0818,
+      "rolled-in_scale": 0.1308,
+      "scratches": 0.2159
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "scratches",
+        "confidence": 0.3084,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "scratches/scratches_46.jpg/9fba91d16038e9f46760e9583069048c": {
+    "pred_label": "scratches",
+    "confidence": 0.6874,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.22)",
+    "weighted_scores": {
+      "crazing": 0.0503,
+      "inclusion": 0.0938,
+      "patches": 0.1674,
+      "pitted_surface": 0.0,
+      "rolled-in_scale": 0.1674,
+      "scratches": 0.2211
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "scratches",
+        "confidence": 0.3158,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "scratches/scratches_47.jpg/2d67ee382fdc7d3d0d9f096330c19010": {
+    "pred_label": "scratches",
+    "confidence": 0.7875,
+    "method": "Claude+GroqWeighted(1/1LLM,best_w=0.71)",
+    "weighted_scores": {
+      "crazing": 0.0505,
+      "inclusion": 0.0605,
+      "patches": 0.1683,
+      "pitted_surface": 0.0841,
+      "rolled-in_scale": 0.1144,
+      "scratches": 0.7121
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "scratches",
+        "confidence": 0.3173,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 2,
+        "label": "scratches",
+        "confidence": 0.317,
+        "weight": 0.49,
+        "reason": "The defect has an average aspect ratio of 3.906 and a max aspect ratio of 13.667, indicating that the lines are extremely elongated, which is a key characterist"
+      }
+    ]
+  },
+  "scratches/scratches_48.jpg/c5c6bad220f409cb4e2d2ba58d40cda8": {
+    "pred_label": "scratches",
+    "confidence": 0.716,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.28)",
+    "weighted_scores": {
+      "crazing": 0.0636,
+      "inclusion": 0.0,
+      "patches": 0.2121,
+      "pitted_surface": 0.0,
+      "rolled-in_scale": 0.1443,
+      "scratches": 0.28
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "scratches",
+        "confidence": 0.4,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "scratches/scratches_49.jpg/32a0b511ba5431347313b421b43369ca": {
+    "pred_label": "scratches",
+    "confidence": 0.6905,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.23)",
+    "weighted_scores": {
+      "crazing": 0.1207,
+      "inclusion": 0.0621,
+      "patches": 0.1724,
+      "pitted_surface": 0.0,
+      "rolled-in_scale": 0.1172,
+      "scratches": 0.2276
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "scratches",
+        "confidence": 0.3251,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "scratches/scratches_5.jpg/38989ce3bbee22c9ea7fc86e3947d68b": {
+    "pred_label": "patches",
+    "confidence": 0.6904,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.23)",
+    "weighted_scores": {
+      "crazing": 0.0682,
+      "inclusion": 0.1273,
+      "patches": 0.2273,
+      "pitted_surface": 0.1136,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1637
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.3247,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "scratches/scratches_50.jpg/93fd41204abfc2f4e37f3febc441fdb3": {
+    "pred_label": "scratches",
+    "confidence": 0.6854,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.22)",
+    "weighted_scores": {
+      "crazing": 0.0657,
+      "inclusion": 0.092,
+      "patches": 0.1643,
+      "pitted_surface": 0.0822,
+      "rolled-in_scale": 0.0789,
+      "scratches": 0.2169
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "scratches",
+        "confidence": 0.3099,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "scratches/scratches_51.jpg/c13b67dc4e7e19aa57f7689169262f00": {
+    "pred_label": "patches",
+    "confidence": 0.8084,
+    "method": "Claude+GroqWeighted(1/1LLM,best_w=0.98)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.1095,
+      "patches": 0.9795,
+      "pitted_surface": 0.0978,
+      "rolled-in_scale": 0.0391,
+      "scratches": 0.2581
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "scratches",
+        "confidence": 0.3687,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "patches",
+        "confidence": 0.8,
+        "weight": 0.784,
+        "reason": "high max area, total defect percentage and broad irregular damaged area"
+      }
+    ]
+  },
+  "scratches/scratches_52.jpg/53405d644425ee257649c4d4abf3db01": {
+    "pred_label": "scratches",
+    "confidence": 0.6806,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.21)",
+    "weighted_scores": {
+      "crazing": 0.0628,
+      "inclusion": 0.0879,
+      "patches": 0.1569,
+      "pitted_surface": 0.0785,
+      "rolled-in_scale": 0.1067,
+      "scratches": 0.2072
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "scratches",
+        "confidence": 0.296,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "scratches/scratches_53.jpg/63974d4259e6804f8c81203377390139": {
+    "pred_label": "scratches",
+    "confidence": 0.7013,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.25)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.0379,
+      "patches": 0.1892,
+      "pitted_surface": 0.0946,
+      "rolled-in_scale": 0.1287,
+      "scratches": 0.2498
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "scratches",
+        "confidence": 0.3568,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
   }
 }
