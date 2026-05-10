@@ -1,0 +1,1315 @@
+{
+  "crazing/crazing_1.jpg/7eec734d5b4275a40a078ed93bc799f9": {
+    "pred_label": "crazing",
+    "confidence": 0.7998,
+    "method": "Claude+GroqWeighted(3/4LLM,best_w=1.75)",
+    "weighted_scores": {
+      "crazing": 1.7519,
+      "inclusion": 0.1048,
+      "patches": 0.1872,
+      "pitted_surface": 0.6884,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1347
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.2834,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "pitted_surface",
+        "confidence": 0.283,
+        "weight": 0.49,
+        "reason": "many small round pits indicated by high regions_count and small avg_area"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The user wants me to determine the correct label based on the given visual features and rule-based prior probabilities."
+      }
+    ]
+  },
+  "crazing/crazing_10.jpg/2cb86d9f3debd96e86ecf3f895bdc74e": {
+    "pred_label": "crazing",
+    "confidence": 0.8471,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.78)",
+    "weighted_scores": {
+      "crazing": 1.7836,
+      "inclusion": 0.0995,
+      "patches": 0.1777,
+      "pitted_surface": 0.1883,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1279
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_100.jpg/dd7b3af3e2c42d0efe6c6312a11cebcf": {
+    "pred_label": "crazing",
+    "confidence": 0.8471,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.78)",
+    "weighted_scores": {
+      "crazing": 1.7836,
+      "inclusion": 0.0995,
+      "patches": 0.1777,
+      "pitted_surface": 0.1883,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1279
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_101.jpg/1c220b9a248e4155754f6e2e910f0874": {
+    "pred_label": "crazing",
+    "confidence": 0.842,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.75)",
+    "weighted_scores": {
+      "crazing": 1.7481,
+      "inclusion": 0.0995,
+      "patches": 0.1777,
+      "pitted_surface": 0.1883,
+      "rolled-in_scale": 0.0356,
+      "scratches": 0.1279
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the most likely c"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_102.jpg/0d9787d2c928f226625746ab14362f59": {
+    "pred_label": "crazing",
+    "confidence": 0.8471,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.78)",
+    "weighted_scores": {
+      "crazing": 1.7836,
+      "inclusion": 0.0995,
+      "patches": 0.1777,
+      "pitted_surface": 0.1883,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1279
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The features provided are a bit complex, but I'll go through them step by step.\n\nFirst, loo"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the most likely c"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_103.jpg/505714da9f00e2994e6ae7c6253ac108": {
+    "pred_label": "crazing",
+    "confidence": 0.8035,
+    "method": "Claude+GroqWeighted(3/4LLM,best_w=1.78)",
+    "weighted_scores": {
+      "crazing": 1.7836,
+      "inclusion": 0.0995,
+      "patches": 0.1777,
+      "pitted_surface": 0.6783,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1279
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 2,
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.49,
+        "reason": "many tiny circular pits"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification problem. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a set of numerical features and wants me to determine the most likely cla"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_104.jpg/b348da2f63e90f76490bb56c468956a8": {
+    "pred_label": "crazing",
+    "confidence": 0.8471,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.78)",
+    "weighted_scores": {
+      "crazing": 1.7836,
+      "inclusion": 0.0995,
+      "patches": 0.1777,
+      "pitted_surface": 0.1883,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1279
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_105.jpg/3e21a4d683ac99b1fb0eff9328398f90": {
+    "pred_label": "crazing",
+    "confidence": 0.8446,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.77)",
+    "weighted_scores": {
+      "crazing": 1.7662,
+      "inclusion": 0.1248,
+      "patches": 0.0892,
+      "pitted_surface": 0.2363,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1605
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class label b"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_106.jpg/b6bd9e9298b3c6848efbda3acc21e949": {
+    "pred_label": "crazing",
+    "confidence": 0.7986,
+    "method": "Claude+GroqWeighted(3/4LLM,best_w=1.78)",
+    "weighted_scores": {
+      "crazing": 1.7836,
+      "inclusion": 0.0995,
+      "patches": 0.1777,
+      "pitted_surface": 0.1883,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.6869
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 2,
+        "label": "scratches",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_107.jpg/2e9de9dccc275e60fa053690f6ce714e": {
+    "pred_label": "crazing",
+    "confidence": 0.7949,
+    "method": "Claude+GroqWeighted(3/4LLM,best_w=1.75)",
+    "weighted_scores": {
+      "crazing": 1.7519,
+      "inclusion": 0.1048,
+      "patches": 0.1872,
+      "pitted_surface": 0.1984,
+      "rolled-in_scale": 0.559,
+      "scratches": 0.1347
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.2834,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 2,
+        "label": "rolled-in_scale",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_108.jpg/423d5dddf0987ad7ca2caa99fc3b8cf0": {
+    "pred_label": "crazing",
+    "confidence": 0.8471,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.78)",
+    "weighted_scores": {
+      "crazing": 1.7836,
+      "inclusion": 0.0995,
+      "patches": 0.1777,
+      "pitted_surface": 0.1883,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1279
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_109.jpg/1a1fba4ac065745f34d90502227196a5": {
+    "pred_label": "crazing",
+    "confidence": 0.8128,
+    "method": "Claude+GroqWeighted(2/2LLM,best_w=1.20)",
+    "weighted_scores": {
+      "crazing": 1.2019,
+      "inclusion": 0.1174,
+      "patches": 0.0839,
+      "pitted_surface": 0.2222,
+      "rolled-in_scale": 0.0419,
+      "scratches": 0.1509
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3174,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_11.jpg/4890070f3d608fe9ee2794afdd79e231": {
+    "pred_label": "crazing",
+    "confidence": 0.8426,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.75)",
+    "weighted_scores": {
+      "crazing": 1.7519,
+      "inclusion": 0.1048,
+      "patches": 0.1872,
+      "pitted_surface": 0.1984,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1347
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.2834,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The user wants me to determine the correct label based on the given visual features and rule-based prior probabilities."
+      }
+    ]
+  },
+  "crazing/crazing_110.jpg/19b94c0b3e3b71a87f91fec3f5d68e6c": {
+    "pred_label": "crazing",
+    "confidence": 0.8035,
+    "method": "Claude+GroqWeighted(3/4LLM,best_w=1.78)",
+    "weighted_scores": {
+      "crazing": 1.7836,
+      "inclusion": 0.0995,
+      "patches": 0.1777,
+      "pitted_surface": 0.6783,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1279
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 3,
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.49,
+        "reason": "The image has a high total defect percentage (30.64%) and a large number of regions (131), with many round pits indicated by low circularity (0.55) and high edg"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_111.jpg/a4dc159dc37bd3f662b920bc04a8af11": {
+    "pred_label": "crazing",
+    "confidence": 0.7969,
+    "method": "Claude+GroqWeighted(3/4LLM,best_w=1.77)",
+    "weighted_scores": {
+      "crazing": 1.7695,
+      "inclusion": 0.0863,
+      "patches": 0.1542,
+      "pitted_surface": 0.1635,
+      "rolled-in_scale": 0.559,
+      "scratches": 0.2035
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "scratches",
+        "confidence": 0.2907,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 2,
+        "label": "rolled-in_scale",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_112.jpg/969fc964da6b59f0c452a04aadabd77a": {
+    "pred_label": "crazing",
+    "confidence": 0.8471,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.78)",
+    "weighted_scores": {
+      "crazing": 1.7836,
+      "inclusion": 0.0995,
+      "patches": 0.1777,
+      "pitted_surface": 0.1883,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1279
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_113.jpg/f101941813639cfbd767a724cd76af70": {
+    "pred_label": "crazing",
+    "confidence": 0.8426,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.75)",
+    "weighted_scores": {
+      "crazing": 1.7519,
+      "inclusion": 0.1048,
+      "patches": 0.1872,
+      "pitted_surface": 0.1984,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1347
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.2834,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The user wants me to determine the correct label based on the given visual features and rule-based prior probabilities."
+      }
+    ]
+  },
+  "crazing/crazing_114.jpg/2a7f631b080e95a48871397709bab781": {
+    "pred_label": "crazing",
+    "confidence": 0.8426,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.75)",
+    "weighted_scores": {
+      "crazing": 1.7519,
+      "inclusion": 0.1048,
+      "patches": 0.1872,
+      "pitted_surface": 0.1984,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1347
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.2834,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The user wants me to determine the correct label based on the given visual features and rule-based prior probabilities."
+      }
+    ]
+  },
+  "crazing/crazing_115.jpg/5bd5fb4f12c14017c2d883542c1ace18": {
+    "pred_label": "crazing",
+    "confidence": 0.7949,
+    "method": "Claude+GroqWeighted(3/4LLM,best_w=1.75)",
+    "weighted_scores": {
+      "crazing": 1.7519,
+      "inclusion": 0.1048,
+      "patches": 0.1872,
+      "pitted_surface": 0.1984,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.6938
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.2834,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 2,
+        "label": "scratches",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the correct label from the given options based on the provided visual features and rule-based pri"
+      }
+    ]
+  },
+  "crazing/crazing_116.jpg/1dca4bcc2885854eb7c6a2934583daf3": {
+    "pred_label": "crazing",
+    "confidence": 0.8471,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.78)",
+    "weighted_scores": {
+      "crazing": 1.7836,
+      "inclusion": 0.0995,
+      "patches": 0.1777,
+      "pitted_surface": 0.1883,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1279
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class label b"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to select the most appropriate label from the given list based on the provided visual features"
+      }
+    ]
+  },
+  "crazing/crazing_117.jpg/12aa6e64986cfaa089e41b0f161c6171": {
+    "pred_label": "crazing",
+    "confidence": 0.8446,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.77)",
+    "weighted_scores": {
+      "crazing": 1.7662,
+      "inclusion": 0.1248,
+      "patches": 0.0892,
+      "pitted_surface": 0.2363,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1605
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_118.jpg/e88304beed22ceebfed7fd3ada2b975c": {
+    "pred_label": "crazing",
+    "confidence": 0.8426,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.75)",
+    "weighted_scores": {
+      "crazing": 1.7519,
+      "inclusion": 0.1048,
+      "patches": 0.1872,
+      "pitted_surface": 0.1984,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1347
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.2834,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_119.jpg/b82df2bd76e88d394a84c8122158ed42": {
+    "pred_label": "crazing",
+    "confidence": 0.8035,
+    "method": "Claude+GroqWeighted(3/4LLM,best_w=1.78)",
+    "weighted_scores": {
+      "crazing": 1.7836,
+      "inclusion": 0.0995,
+      "patches": 0.1777,
+      "pitted_surface": 0.6783,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1279
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 2,
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.49,
+        "reason": "many tiny circular pits"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_12.jpg/77dea389fb7bf744198094f73ede02f7": {
+    "pred_label": "crazing",
+    "confidence": 0.8446,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.77)",
+    "weighted_scores": {
+      "crazing": 1.7662,
+      "inclusion": 0.1248,
+      "patches": 0.0892,
+      "pitted_surface": 0.2363,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1605
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_120.jpg/e61d904fbf6df429cbc31790f25a1b27": {
+    "pred_label": "crazing",
+    "confidence": 0.8426,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.75)",
+    "weighted_scores": {
+      "crazing": 1.7519,
+      "inclusion": 0.1048,
+      "patches": 0.1872,
+      "pitted_surface": 0.1984,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1347
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.2834,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The user wants me to determine the correct label based on the given visual features and rule-based prior probabilities."
+      }
+    ]
+  }
+}
