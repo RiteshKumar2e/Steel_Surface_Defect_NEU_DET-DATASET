@@ -45,7 +45,7 @@
         "label": "pitted_surface",
         "confidence": 0.283,
         "weight": 0.49,
-        "reason": "The image has a high total defect percentage (31.04%) and a large number of regions (149), with many round pits indicated by low circularity (0.071) and high ed"
+        "reason": "The image has a high total defect percentage (31.04%) and a large number of regions (149), with many round pits indicated by a low average circularity (0.538) a"
       },
       {
         "provider": "groq",
@@ -87,13 +87,13 @@
   },
   "crazing/crazing_10.jpg/2cb86d9f3debd96e86ecf3f895bdc74e": {
     "pred_label": "pitted_surface",
-    "confidence": 0.7718,
-    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.34)",
+    "confidence": 0.7818,
+    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.64)",
     "weighted_scores": {
       "crazing": 1.7836,
       "inclusion": 0.0995,
       "patches": 0.1777,
-      "pitted_surface": 2.3443,
+      "pitted_surface": 2.6383,
       "rolled-in_scale": 0.0,
       "scratches": 0.1279
     },
@@ -111,9 +111,9 @@
         "model": "llama-3.3-70b-versatile",
         "prompt": 1,
         "label": "pitted_surface",
-        "confidence": 0.269,
-        "weight": 0.49,
-        "reason": "many small round pits, high regions count and small avg area"
+        "confidence": 0.8,
+        "weight": 0.784,
+        "reason": "many small regions (138), high total defect percentage (30.93%), small average area (89.64), and low average aspect ratio (1.404) with high regions count"
       },
       {
         "provider": "groq",
@@ -131,7 +131,7 @@
         "label": "pitted_surface",
         "confidence": 0.269,
         "weight": 0.49,
-        "reason": "The image has a high total defect percentage (30.93%) and a large number of regions (138), with many round pits indicated by a low average circularity (0.557) a"
+        "reason": "The image has a high total defect percentage (30.93%) and a large number of regions (138), with many round pits indicated by low circularity (0.083) and high ed"
       },
       {
         "provider": "groq",
@@ -199,7 +199,7 @@
         "label": "pitted_surface",
         "confidence": 0.269,
         "weight": 0.49,
-        "reason": "many small round pits, high regions count and small area"
+        "reason": "many small regions (134), small average area (91.85), and high regions count with relatively low aspect ratio"
       },
       {
         "provider": "groq",
@@ -226,7 +226,7 @@
         "label": "pitted_surface",
         "confidence": 0.7,
         "weight": 0.686,
-        "reason": "The visual features of the image, such as high total_defect_pct (30.77), high edge_density (37.28), and high glcm_contrast (0.533), combined with the rule-based"
+        "reason": "The visual features of the image, such as high total_defect_pct (30.77), high edge_density (37.28), and high glcm_contrast (0.533), combined with the rule prior"
       },
       {
         "provider": "groq",
@@ -259,15 +259,15 @@
   },
   "crazing/crazing_101.jpg/1c220b9a248e4155754f6e2e910f0874": {
     "pred_label": "pitted_surface",
-    "confidence": 0.7718,
-    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.34)",
+    "confidence": 0.7489,
+    "method": "Claude+GroqWeighted(4/8LLM,best_w=2.25)",
     "weighted_scores": {
       "crazing": 1.7481,
       "inclusion": 0.0995,
       "patches": 0.1777,
-      "pitted_surface": 2.3443,
+      "pitted_surface": 2.2463,
       "rolled-in_scale": 0.0356,
-      "scratches": 0.1279
+      "scratches": 0.6869
     },
     "votes": [
       {
@@ -285,7 +285,7 @@
         "label": "pitted_surface",
         "confidence": 0.269,
         "weight": 0.49,
-        "reason": "many small round pits suggested by high regions_count and small avg_area"
+        "reason": "many small round pits indicated by high regions_count and small avg_area"
       },
       {
         "provider": "groq",
@@ -303,16 +303,16 @@
         "label": "pitted_surface",
         "confidence": 0.269,
         "weight": 0.49,
-        "reason": "The image has a high total defect percentage (24.93%) and a large number of regions (143), with many round pits indicated by low circularity (0.032) and high ed"
+        "reason": "The image has a high total defect percentage (24.93%) and a large number of regions (143), with many round pits indicated by a low average circularity (0.524) a"
       },
       {
         "provider": "groq",
         "model": "llama-3.3-70b-versatile",
         "prompt": 4,
         "label": "pitted_surface",
-        "confidence": 0.7,
-        "weight": 0.686,
-        "reason": "The visual features such as high total_defect_pct (24.93), high entropy (6.638), and high edge_density (38.16) along with the rule prior probability (0.269) sug"
+        "confidence": 0.6,
+        "weight": 0.588,
+        "reason": "The visual features such as high total_defect_pct (24.93), high edge_density (38.16), and high glcm_contrast (0.581) along with the rule prior probability (0.26"
       },
       {
         "provider": "groq",
@@ -326,11 +326,20 @@
       {
         "provider": "groq",
         "model": "qwen/qwen3-32b",
+        "prompt": 2,
+        "label": "scratches",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
         "prompt": 3,
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the most likely d"
       },
       {
         "provider": "groq",
@@ -389,7 +398,7 @@
         "label": "pitted_surface",
         "confidence": 0.269,
         "weight": 0.49,
-        "reason": "The image has a high total defect percentage (29.78%) and a large number of regions (136), with many round pits indicated by low circularity (0.1) and high edge"
+        "reason": "The image has a high total defect percentage (29.78%) and a large number of regions (136), with many round pits indicated by a low average circularity (0.605) a"
       },
       {
         "provider": "groq",
@@ -398,7 +407,7 @@
         "label": "pitted_surface",
         "confidence": 0.7,
         "weight": 0.686,
-        "reason": "The high total defect percentage (29.78%) and the presence of a large number of regions (136) with a high average area (87.6) and a significant max area (6478.0"
+        "reason": "High total defect percentage (29.78%) and high edge density (33.2) suggest a pitted surface, which is also the highest rule-based prior probability (0.269)"
       },
       {
         "provider": "groq",
@@ -416,7 +425,7 @@
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the most likely c"
       },
       {
         "provider": "groq",
@@ -457,7 +466,7 @@
         "label": "pitted_surface",
         "confidence": 0.269,
         "weight": 0.49,
-        "reason": "many small round pits indicated by high regions_count and small avg_area"
+        "reason": "many small round pits, high regions count and small average area"
       },
       {
         "provider": "groq",
@@ -517,10 +526,10 @@
   },
   "crazing/crazing_104.jpg/b348da2f63e90f76490bb56c468956a8": {
     "pred_label": "pitted_surface",
-    "confidence": 0.7718,
-    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.34)",
+    "confidence": 0.7966,
+    "method": "Claude+GroqWeighted(4/6LLM,best_w=2.34)",
     "weighted_scores": {
-      "crazing": 1.7836,
+      "crazing": 1.2246,
       "inclusion": 0.0995,
       "patches": 0.1777,
       "pitted_surface": 2.3443,
@@ -543,7 +552,7 @@
         "label": "pitted_surface",
         "confidence": 0.269,
         "weight": 0.49,
-        "reason": "many small regions (134), small average area (85.69), and high total defect percentage (28.71) with low aspect ratio and circularity"
+        "reason": "many small regions (134), small average area (85.69), and high number of regions with small area"
       },
       {
         "provider": "groq",
@@ -561,7 +570,7 @@
         "label": "pitted_surface",
         "confidence": 0.269,
         "weight": 0.49,
-        "reason": "The image has a high total defect percentage (28.71%) and a large number of regions (134), with many round pits indicated by low circularity (0.084) and high ed"
+        "reason": "The image has a high total defect percentage (28.71%) and a large number of regions (134), with many round pits indicated by a low average circularity (0.595) a"
       },
       {
         "provider": "groq",
@@ -571,15 +580,6 @@
         "confidence": 0.7,
         "weight": 0.686,
         "reason": "The visual features of the image, such as high total_defect_pct (28.71), high edge_density (31.55), and high glcm_contrast (0.352), combined with the rule prior"
-      },
-      {
-        "provider": "groq",
-        "model": "qwen/qwen3-32b",
-        "prompt": 1,
-        "label": "crazing",
-        "confidence": 0.65,
-        "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
       },
       {
         "provider": "groq",
@@ -606,12 +606,12 @@
     "confidence": 0.7719,
     "method": "Claude+GroqWeighted(4/7LLM,best_w=2.29)",
     "weighted_scores": {
-      "crazing": 1.2072,
+      "crazing": 1.7662,
       "inclusion": 0.1248,
       "patches": 0.0892,
       "pitted_surface": 2.2943,
       "rolled-in_scale": 0.0,
-      "scratches": 0.7195
+      "scratches": 0.1605
     },
     "votes": [
       {
@@ -629,7 +629,7 @@
         "label": "pitted_surface",
         "confidence": 0.338,
         "weight": 0.49,
-        "reason": "many small regions (157), high total defect percentage (25.04%), and small average area (63.8) with many regions and small area"
+        "reason": "many small round pits indicated by high regions_count and small avg_area"
       },
       {
         "provider": "groq",
@@ -647,7 +647,7 @@
         "label": "pitted_surface",
         "confidence": 0.338,
         "weight": 0.49,
-        "reason": "The image has a high total defect percentage (25.04%) and a large number of regions (157), with many round pits indicated by low circularity (0.083) and high ed"
+        "reason": "The image has a high total defect percentage (25.04%) and a large number of regions (157), with many round pits indicated by a low average circularity (0.556) a"
       },
       {
         "provider": "groq",
@@ -656,16 +656,16 @@
         "label": "pitted_surface",
         "confidence": 0.6,
         "weight": 0.588,
-        "reason": "The visual features such as high total_defect_pct (25.04), high edge_density (37.41), and high glcm_contrast (0.493) along with the rule prior probability (0.33"
+        "reason": "High total defect percentage (25.04%), high edge density (37.41), and high contrast (0.493) in the GLCM features, along with the rule prior probability, suggest"
       },
       {
         "provider": "groq",
         "model": "qwen/qwen3-32b",
         "prompt": 1,
-        "label": "scratches",
+        "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The features provided are a bit complex, but I'll go through them step by step.\n\nFirst, loo"
+        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
       },
       {
         "provider": "groq",
@@ -674,7 +674,7 @@
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the most likely c"
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class label b"
       },
       {
         "provider": "groq",
@@ -689,15 +689,15 @@
   },
   "crazing/crazing_106.jpg/b6bd9e9298b3c6848efbda3acc21e949": {
     "pred_label": "pitted_surface",
-    "confidence": 0.7525,
-    "method": "Claude+GroqWeighted(4/8LLM,best_w=2.34)",
+    "confidence": 0.7682,
+    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.25)",
     "weighted_scores": {
       "crazing": 1.7836,
       "inclusion": 0.0995,
       "patches": 0.1777,
-      "pitted_surface": 2.3443,
+      "pitted_surface": 2.2463,
       "rolled-in_scale": 0.0,
-      "scratches": 0.6869
+      "scratches": 0.1279
     },
     "votes": [
       {
@@ -715,7 +715,7 @@
         "label": "pitted_surface",
         "confidence": 0.269,
         "weight": 0.49,
-        "reason": "many small round pits, high regions count and small average area"
+        "reason": "many small round pits indicated by high regions_count and small avg_area"
       },
       {
         "provider": "groq",
@@ -740,8 +740,8 @@
         "model": "llama-3.3-70b-versatile",
         "prompt": 4,
         "label": "pitted_surface",
-        "confidence": 0.7,
-        "weight": 0.686,
+        "confidence": 0.6,
+        "weight": 0.588,
         "reason": "The visual features of the image, such as high total_defect_pct (28.23), high edge_density (30.75), and high glcm_contrast (0.34), combined with the rule-based "
       },
       {
@@ -751,16 +751,7 @@
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this classification problem. The goal is to determine which of the six possible steel surface defects is present based on the given f"
-      },
-      {
-        "provider": "groq",
-        "model": "qwen/qwen3-32b",
-        "prompt": 2,
-        "label": "scratches",
-        "confidence": 0.65,
-        "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
       },
       {
         "provider": "groq",
@@ -778,7 +769,7 @@
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to select the most appropriate label from the given list based on the provided visual features"
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
       }
     ]
   },
@@ -810,7 +801,7 @@
         "label": "pitted_surface",
         "confidence": 0.283,
         "weight": 0.49,
-        "reason": "many small round pits indicated by high regions_count and small avg_area"
+        "reason": "many small regions (regions_count=142), small average area (avg_area=75.68), and high number of regions suggest a pitted surface"
       },
       {
         "provider": "groq",
@@ -828,7 +819,7 @@
         "label": "pitted_surface",
         "confidence": 0.283,
         "weight": 0.49,
-        "reason": "The image has a high total defect percentage (26.87%) and a large number of regions (142), with many round pits indicated by low circularity (0.049) and high ed"
+        "reason": "The image has a high total defect percentage (26.87%) and a large number of regions (142), with many round pits indicated by a low average circularity (0.55) an"
       },
       {
         "provider": "groq",
@@ -837,7 +828,7 @@
         "label": "pitted_surface",
         "confidence": 0.6,
         "weight": 0.588,
-        "reason": "The high total defect percentage (26.87%) and the presence of a large number of edges (edge_density=37.4) along with a significant amount of dark and bright pix"
+        "reason": "High total defect percentage (26.87%) and high edge density (37.4) suggest a pitted surface, which is also the top rule-based prior probability (0.2834)"
       },
       {
         "provider": "groq",
@@ -846,7 +837,7 @@
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
       },
       {
         "provider": "groq",
@@ -879,13 +870,13 @@
   },
   "crazing/crazing_108.jpg/423d5dddf0987ad7ca2caa99fc3b8cf0": {
     "pred_label": "pitted_surface",
-    "confidence": 0.7786,
-    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.54)",
+    "confidence": 0.7818,
+    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.64)",
     "weighted_scores": {
       "crazing": 1.7836,
       "inclusion": 0.0995,
       "patches": 0.1777,
-      "pitted_surface": 2.5403,
+      "pitted_surface": 2.6383,
       "rolled-in_scale": 0.0,
       "scratches": 0.1279
     },
@@ -905,7 +896,7 @@
         "label": "pitted_surface",
         "confidence": 0.8,
         "weight": 0.784,
-        "reason": "many small regions (regions_count=130), high total defect percentage (total_defect_pct=29.96), and low average aspect ratio (avg_aspect_ratio=1.439) with relati"
+        "reason": "many small regions (regions_count=130), high total defect percentage (total_defect_pct=29.96), and low average aspect ratio (avg_aspect_ratio=1.439) with small "
       },
       {
         "provider": "groq",
@@ -930,9 +921,9 @@
         "model": "llama-3.3-70b-versatile",
         "prompt": 4,
         "label": "pitted_surface",
-        "confidence": 0.6,
-        "weight": 0.588,
-        "reason": "The high total defect percentage (29.96%) and the presence of a large number of regions (130) with a high average area (92.2) and a significant max area (4619.0"
+        "confidence": 0.7,
+        "weight": 0.686,
+        "reason": "The image has a high total defect percentage (29.96%) and a high edge density (36.14), which are consistent with the characteristics of a pitted surface. Additi"
       },
       {
         "provider": "groq",
@@ -950,7 +941,7 @@
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the most likely c"
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
       },
       {
         "provider": "groq",
@@ -965,14 +956,14 @@
   },
   "crazing/crazing_109.jpg/1a1fba4ac065745f34d90502227196a5": {
     "pred_label": "pitted_surface",
-    "confidence": 0.7811,
-    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.57)",
+    "confidence": 0.7708,
+    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.28)",
     "weighted_scores": {
-      "crazing": 1.7609,
+      "crazing": 1.2019,
       "inclusion": 0.1174,
       "patches": 0.0839,
-      "pitted_surface": 2.5742,
-      "rolled-in_scale": 0.0419,
+      "pitted_surface": 2.2802,
+      "rolled-in_scale": 0.6009,
       "scratches": 0.1509
     },
     "votes": [
@@ -989,9 +980,9 @@
         "model": "llama-3.3-70b-versatile",
         "prompt": 1,
         "label": "pitted_surface",
-        "confidence": 0.8,
-        "weight": 0.784,
-        "reason": "many small regions (158), high total defect percentage (24.95%), small average area (63.16), and low average aspect ratio (1.401) with high entropy (6.484)"
+        "confidence": 0.317,
+        "weight": 0.49,
+        "reason": "many small round pits indicated by high regions_count and small avg_area"
       },
       {
         "provider": "groq",
@@ -1009,7 +1000,7 @@
         "label": "pitted_surface",
         "confidence": 0.317,
         "weight": 0.49,
-        "reason": "The image has a high total defect percentage (24.95%) and a large number of regions (158), with many round pits indicated by low circularity (0.53) and high edg"
+        "reason": "The image has a high total defect percentage (24.95%) and a large number of regions (158), with many round pits indicated by a low average circularity (0.53) an"
       },
       {
         "provider": "groq",
@@ -1018,16 +1009,16 @@
         "label": "pitted_surface",
         "confidence": 0.6,
         "weight": 0.588,
-        "reason": "The high total defect percentage (24.95%) and the presence of a large number of edges (edge_density=38.1) and lines (hough_line_count=80) suggest a pitted surfa"
+        "reason": "High total defect percentage (24.95%), high edge density (38.1), and high glcm_contrast (0.506) are consistent with the characteristics of a pitted surface, whi"
       },
       {
         "provider": "groq",
         "model": "qwen/qwen3-32b",
-        "prompt": 1,
-        "label": "crazing",
+        "prompt": 2,
+        "label": "rolled-in_scale",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
+        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
       },
       {
         "provider": "groq",
@@ -1036,7 +1027,7 @@
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the most likely c"
       },
       {
         "provider": "groq",
@@ -1095,7 +1086,7 @@
         "label": "pitted_surface",
         "confidence": 0.283,
         "weight": 0.49,
-        "reason": "The image has a high total defect percentage (26.61%) and a large number of regions (159), with many round pits indicated by low circularity (0.54) and high edg"
+        "reason": "The image has a high total defect percentage (26.61%) and a large number of regions (159), with many round pits indicated by a low average circularity (0.54) an"
       },
       {
         "provider": "groq",
@@ -1137,13 +1128,13 @@
   },
   "crazing/crazing_110.jpg/19b94c0b3e3b71a87f91fec3f5d68e6c": {
     "pred_label": "pitted_surface",
-    "confidence": 0.7718,
-    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.34)",
+    "confidence": 0.7682,
+    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.25)",
     "weighted_scores": {
       "crazing": 1.7836,
       "inclusion": 0.0995,
       "patches": 0.1777,
-      "pitted_surface": 2.3443,
+      "pitted_surface": 2.2463,
       "rolled-in_scale": 0.0,
       "scratches": 0.1279
     },
@@ -1188,9 +1179,9 @@
         "model": "llama-3.3-70b-versatile",
         "prompt": 4,
         "label": "pitted_surface",
-        "confidence": 0.7,
-        "weight": 0.686,
-        "reason": "The high total defect percentage (30.64%) and the presence of a large number of regions (131) with a high average area (93.57) and a significant max area (6836."
+        "confidence": 0.6,
+        "weight": 0.588,
+        "reason": "The high total defect percentage (30.64%) and the presence of a large number of regions (131) with a high average area (93.57) and a significant amount of edge "
       },
       {
         "provider": "groq",
@@ -1222,16 +1213,16 @@
     ]
   },
   "crazing/crazing_111.jpg/a4dc159dc37bd3f662b920bc04a8af11": {
-    "pred_label": "crazing",
-    "confidence": 0.7058,
-    "method": "Claude+GroqWeighted(3/8LLM,best_w=1.77)",
+    "pred_label": "scratches",
+    "confidence": 0.7458,
+    "method": "Claude+GroqWeighted(4/8LLM,best_w=2.33)",
     "weighted_scores": {
       "crazing": 1.7695,
       "inclusion": 0.0863,
       "patches": 0.1542,
-      "pitted_surface": 1.4375,
-      "rolled-in_scale": 0.559,
-      "scratches": 1.2815
+      "pitted_surface": 0.9475,
+      "rolled-in_scale": 0.0,
+      "scratches": 2.3305
     },
     "votes": [
       {
@@ -1249,16 +1240,16 @@
         "label": "pitted_surface",
         "confidence": 0.8,
         "weight": 0.784,
-        "reason": "many small regions (regions_count=128), high total defect percentage (total_defect_pct=28.47), and small average area (avg_area=88.97) with many circular edges "
+        "reason": "many small regions (128), small average area (88.97), and high number of regions with small area and circularity (avg_circularity=0.556) suggest pitted surface"
       },
       {
         "provider": "groq",
         "model": "llama-3.3-70b-versatile",
         "prompt": 2,
-        "label": "pitted_surface",
-        "confidence": 0.234,
+        "label": "scratches",
+        "confidence": 0.291,
         "weight": 0.49,
-        "reason": "many tiny circular pits"
+        "reason": "The defect has an average aspect ratio of 1.404 and a max aspect ratio of 6.0, indicating that some lines are extremely elongated, which is a strong indicator o"
       },
       {
         "provider": "groq",
@@ -1267,7 +1258,7 @@
         "label": "scratches",
         "confidence": 0.291,
         "weight": 0.49,
-        "reason": "The model predicts scratches as the most likely class due to the high rule prior probability of 0.2907, which is the highest among all classes, and the presence"
+        "reason": "The model predicts scratches as the most likely class due to the high rule prior probability and the presence of features such as high edge density, hough line "
       },
       {
         "provider": "groq",
@@ -1276,7 +1267,7 @@
         "label": "scratches",
         "confidence": 0.6,
         "weight": 0.588,
-        "reason": "The high edge density (33.12) and presence of horizontal and vertical edges (horizontal_edge_ratio=0.344, vertical_edge_ratio=0.327) along with the top rule pri"
+        "reason": "High edge density and horizontal/vertical edge ratios, along with a high rule prior probability, suggest the presence of scratches."
       },
       {
         "provider": "groq",
@@ -1285,13 +1276,13 @@
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
       },
       {
         "provider": "groq",
         "model": "qwen/qwen3-32b",
         "prompt": 2,
-        "label": "rolled-in_scale",
+        "label": "scratches",
         "confidence": 0.65,
         "weight": 0.559,
         "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
@@ -1312,20 +1303,20 @@
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to determine the correct label from the given list based on the provided visual features and r"
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to determine the correct label from the given list based on the provided visual features and rule-based pri"
       }
     ]
   },
   "crazing/crazing_112.jpg/969fc964da6b59f0c452a04aadabd77a": {
     "pred_label": "pitted_surface",
-    "confidence": 0.7682,
-    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.25)",
+    "confidence": 0.7489,
+    "method": "Claude+GroqWeighted(4/8LLM,best_w=2.25)",
     "weighted_scores": {
       "crazing": 1.7836,
       "inclusion": 0.0995,
       "patches": 0.1777,
       "pitted_surface": 2.2463,
-      "rolled-in_scale": 0.0,
+      "rolled-in_scale": 0.559,
       "scratches": 0.1279
     },
     "votes": [
@@ -1344,7 +1335,7 @@
         "label": "pitted_surface",
         "confidence": 0.269,
         "weight": 0.49,
-        "reason": "many small round pits, high regions count and small area"
+        "reason": "many small round pits indicated by high regions_count and small avg_area"
       },
       {
         "provider": "groq",
@@ -1371,7 +1362,7 @@
         "label": "pitted_surface",
         "confidence": 0.6,
         "weight": 0.588,
-        "reason": "The high total defect percentage (28.76%) and the presence of a significant number of edges (edge_density=32.1) and lines (hough_line_count=80) suggest a pitted"
+        "reason": "The high total defect percentage (28.76%) and the presence of a large number of regions (137) with a high average area (83.97) and a significant amount of edge "
       },
       {
         "provider": "groq",
@@ -1381,6 +1372,15 @@
         "confidence": 0.65,
         "weight": 0.559,
         "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 2,
+        "label": "rolled-in_scale",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
       },
       {
         "provider": "groq",
@@ -1430,7 +1430,7 @@
         "label": "pitted_surface",
         "confidence": 0.283,
         "weight": 0.49,
-        "reason": "many small round pits suggested by high regions_count and small avg_area"
+        "reason": "many small round pits indicated by high regions_count and small avg_area"
       },
       {
         "provider": "groq",
@@ -1448,7 +1448,7 @@
         "label": "pitted_surface",
         "confidence": 0.283,
         "weight": 0.49,
-        "reason": "The image has a high total defect percentage (28.43%) and a large number of regions (147), with many round pits indicated by low circularity (0.552) and high ed"
+        "reason": "The image has a high total defect percentage (28.43%) and a large number of regions (147), with many round pits indicated by a low average circularity (0.552) a"
       },
       {
         "provider": "groq",
@@ -1457,7 +1457,7 @@
         "label": "pitted_surface",
         "confidence": 0.6,
         "weight": 0.588,
-        "reason": "High total defect percentage (28.43%), high edge density (38.13), and high contrast (0.189) suggest a pitted surface, which is also the top rule-based prior pro"
+        "reason": "High total defect percentage (28.43%), high edge density (38.13), and high contrast (0.539) in the GLCM features, along with the top rule prior probability, sug"
       },
       {
         "provider": "groq",
@@ -1466,7 +1466,7 @@
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
       },
       {
         "provider": "groq",
@@ -1484,7 +1484,7 @@
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+        "reason": "<think>\nOkay, let's tackle this problem. The user wants me to determine the correct label based on the given visual features and rule-based prior probabilities."
       }
     ]
   },
@@ -1516,7 +1516,7 @@
         "label": "pitted_surface",
         "confidence": 0.283,
         "weight": 0.49,
-        "reason": "many small regions (regions_count=152), small average area (avg_area=71.44), and high number of regions suggest a pitted surface"
+        "reason": "many small round pits indicated by high regions_count and small avg_area"
       },
       {
         "provider": "groq",
@@ -1543,7 +1543,7 @@
         "label": "pitted_surface",
         "confidence": 0.6,
         "weight": 0.588,
-        "reason": "The visual features such as high total_defect_pct (27.15), high edge_density (37.77), and high glcm_contrast (0.511) along with the top rule prior probability ("
+        "reason": "The image has a high total defect percentage (27.15%) and a high edge density (37.77), which are consistent with the characteristics of a pitted surface. Additi"
       },
       {
         "provider": "groq",
@@ -1576,15 +1576,15 @@
   },
   "crazing/crazing_115.jpg/5bd5fb4f12c14017c2d883542c1ace18": {
     "pred_label": "pitted_surface",
-    "confidence": 0.769,
-    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.26)",
+    "confidence": 0.7496,
+    "method": "Claude+GroqWeighted(4/8LLM,best_w=2.26)",
     "weighted_scores": {
-      "crazing": 1.7519,
+      "crazing": 1.1929,
       "inclusion": 0.1048,
-      "patches": 0.1872,
+      "patches": 0.7462,
       "pitted_surface": 2.2564,
       "rolled-in_scale": 0.0,
-      "scratches": 0.1347
+      "scratches": 0.6938
     },
     "votes": [
       {
@@ -1602,7 +1602,7 @@
         "label": "pitted_surface",
         "confidence": 0.283,
         "weight": 0.49,
-        "reason": "many small regions (149), small average area (67.76), and high total defect percentage (25.24) with low aspect ratio and circularity"
+        "reason": "many small regions (149), small average area (67.76), and high number of regions with small area"
       },
       {
         "provider": "groq",
@@ -1629,7 +1629,7 @@
         "label": "pitted_surface",
         "confidence": 0.6,
         "weight": 0.588,
-        "reason": "The visual features such as high total_defect_pct (25.24), high edge_density (37.43), and high glcm_contrast (0.512) along with the rule prior probability (0.28"
+        "reason": "High total defect percentage (25.24%), high edge density (37.43), and high contrast (0.157) suggest a pitted surface, which is also the top rule-based prior pro"
       },
       {
         "provider": "groq",
@@ -1639,264 +1639,6 @@
         "confidence": 0.65,
         "weight": 0.559,
         "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
-      },
-      {
-        "provider": "groq",
-        "model": "qwen/qwen3-32b",
-        "prompt": 3,
-        "label": "crazing",
-        "confidence": 0.65,
-        "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
-      },
-      {
-        "provider": "groq",
-        "model": "qwen/qwen3-32b",
-        "prompt": 4,
-        "label": "crazing",
-        "confidence": 0.65,
-        "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this problem. The user wants me to determine the correct label based on the given visual features and rule-based prior probabilities."
-      }
-    ]
-  },
-  "crazing/crazing_116.jpg/1dca4bcc2885854eb7c6a2934583daf3": {
-    "pred_label": "pitted_surface",
-    "confidence": 0.7818,
-    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.64)",
-    "weighted_scores": {
-      "crazing": 1.7836,
-      "inclusion": 0.0995,
-      "patches": 0.1777,
-      "pitted_surface": 2.6383,
-      "rolled-in_scale": 0.0,
-      "scratches": 0.1279
-    },
-    "votes": [
-      {
-        "provider": "rule_prior",
-        "model": "rule_prior",
-        "label": "pitted_surface",
-        "confidence": 0.269,
-        "weight": 0.7,
-        "reason": "handcrafted feature prior"
-      },
-      {
-        "provider": "groq",
-        "model": "llama-3.3-70b-versatile",
-        "prompt": 1,
-        "label": "pitted_surface",
-        "confidence": 0.8,
-        "weight": 0.784,
-        "reason": "many small regions (regions_count=132), high total defect percentage (total_defect_pct=29.79), and low average aspect ratio (avg_aspect_ratio=1.444) with small "
-      },
-      {
-        "provider": "groq",
-        "model": "llama-3.3-70b-versatile",
-        "prompt": 2,
-        "label": "pitted_surface",
-        "confidence": 0.269,
-        "weight": 0.49,
-        "reason": "many tiny circular pits"
-      },
-      {
-        "provider": "groq",
-        "model": "llama-3.3-70b-versatile",
-        "prompt": 3,
-        "label": "pitted_surface",
-        "confidence": 0.269,
-        "weight": 0.49,
-        "reason": "The image has a high total defect percentage (29.79%) and a large number of regions (132), with many round pits indicated by low circularity (0.06) and high edg"
-      },
-      {
-        "provider": "groq",
-        "model": "llama-3.3-70b-versatile",
-        "prompt": 4,
-        "label": "pitted_surface",
-        "confidence": 0.7,
-        "weight": 0.686,
-        "reason": "The image has a high total defect percentage (29.79%) and a high edge density (32.66), which are consistent with the characteristics of a pitted surface. Additi"
-      },
-      {
-        "provider": "groq",
-        "model": "qwen/qwen3-32b",
-        "prompt": 1,
-        "label": "crazing",
-        "confidence": 0.65,
-        "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The features provided give a bunch of numerical data and some prior probabilities. The allo"
-      },
-      {
-        "provider": "groq",
-        "model": "qwen/qwen3-32b",
-        "prompt": 3,
-        "label": "crazing",
-        "confidence": 0.65,
-        "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class label b"
-      },
-      {
-        "provider": "groq",
-        "model": "qwen/qwen3-32b",
-        "prompt": 4,
-        "label": "crazing",
-        "confidence": 0.65,
-        "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to select the most appropriate label from the given list based on the provided visual features"
-      }
-    ]
-  },
-  "crazing/crazing_117.jpg/12aa6e64986cfaa089e41b0f161c6171": {
-    "pred_label": "pitted_surface",
-    "confidence": 0.7719,
-    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.29)",
-    "weighted_scores": {
-      "crazing": 1.7662,
-      "inclusion": 0.1248,
-      "patches": 0.0892,
-      "pitted_surface": 2.2943,
-      "rolled-in_scale": 0.0,
-      "scratches": 0.1605
-    },
-    "votes": [
-      {
-        "provider": "rule_prior",
-        "model": "rule_prior",
-        "label": "pitted_surface",
-        "confidence": 0.3376,
-        "weight": 0.7,
-        "reason": "handcrafted feature prior"
-      },
-      {
-        "provider": "groq",
-        "model": "llama-3.3-70b-versatile",
-        "prompt": 1,
-        "label": "pitted_surface",
-        "confidence": 0.338,
-        "weight": 0.49,
-        "reason": "many small round pits indicated by high regions_count and small avg_area"
-      },
-      {
-        "provider": "groq",
-        "model": "llama-3.3-70b-versatile",
-        "prompt": 2,
-        "label": "pitted_surface",
-        "confidence": 0.338,
-        "weight": 0.49,
-        "reason": "many tiny circular pits"
-      },
-      {
-        "provider": "groq",
-        "model": "llama-3.3-70b-versatile",
-        "prompt": 3,
-        "label": "pitted_surface",
-        "confidence": 0.338,
-        "weight": 0.49,
-        "reason": "The image has a high total defect percentage (25.42%) and a large number of regions (154), with many round pits indicated by a low average circularity (0.552) a"
-      },
-      {
-        "provider": "groq",
-        "model": "llama-3.3-70b-versatile",
-        "prompt": 4,
-        "label": "pitted_surface",
-        "confidence": 0.6,
-        "weight": 0.588,
-        "reason": "High total defect percentage and edge density, along with the top rule prior probability, suggest a pitted surface."
-      },
-      {
-        "provider": "groq",
-        "model": "qwen/qwen3-32b",
-        "prompt": 1,
-        "label": "crazing",
-        "confidence": 0.65,
-        "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
-      },
-      {
-        "provider": "groq",
-        "model": "qwen/qwen3-32b",
-        "prompt": 3,
-        "label": "crazing",
-        "confidence": 0.65,
-        "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
-      },
-      {
-        "provider": "groq",
-        "model": "qwen/qwen3-32b",
-        "prompt": 4,
-        "label": "crazing",
-        "confidence": 0.65,
-        "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
-      }
-    ]
-  },
-  "crazing/crazing_118.jpg/e88304beed22ceebfed7fd3ada2b975c": {
-    "pred_label": "pitted_surface",
-    "confidence": 0.7496,
-    "method": "Claude+GroqWeighted(4/8LLM,best_w=2.26)",
-    "weighted_scores": {
-      "crazing": 1.7519,
-      "inclusion": 0.1048,
-      "patches": 0.1872,
-      "pitted_surface": 2.2564,
-      "rolled-in_scale": 0.0,
-      "scratches": 0.6938
-    },
-    "votes": [
-      {
-        "provider": "rule_prior",
-        "model": "rule_prior",
-        "label": "pitted_surface",
-        "confidence": 0.2834,
-        "weight": 0.7,
-        "reason": "handcrafted feature prior"
-      },
-      {
-        "provider": "groq",
-        "model": "llama-3.3-70b-versatile",
-        "prompt": 1,
-        "label": "pitted_surface",
-        "confidence": 0.283,
-        "weight": 0.49,
-        "reason": "many small round pits suggested by high regions_count and small avg_area"
-      },
-      {
-        "provider": "groq",
-        "model": "llama-3.3-70b-versatile",
-        "prompt": 2,
-        "label": "pitted_surface",
-        "confidence": 0.283,
-        "weight": 0.49,
-        "reason": "many tiny circular pits"
-      },
-      {
-        "provider": "groq",
-        "model": "llama-3.3-70b-versatile",
-        "prompt": 3,
-        "label": "pitted_surface",
-        "confidence": 0.283,
-        "weight": 0.49,
-        "reason": "The image has a high total defect percentage (25.75%) and a large number of regions (165), with many round pits indicated by a low average circularity (0.574) a"
-      },
-      {
-        "provider": "groq",
-        "model": "llama-3.3-70b-versatile",
-        "prompt": 4,
-        "label": "pitted_surface",
-        "confidence": 0.6,
-        "weight": 0.588,
-        "reason": "The visual features such as high total_defect_pct (25.75), high edge_density (37.26), and high glcm_contrast (0.515) along with the top rule prior probability s"
-      },
-      {
-        "provider": "groq",
-        "model": "qwen/qwen3-32b",
-        "prompt": 1,
-        "label": "crazing",
-        "confidence": 0.65,
-        "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
       },
       {
         "provider": "groq",
@@ -1911,10 +1653,10 @@
         "provider": "groq",
         "model": "qwen/qwen3-32b",
         "prompt": 3,
-        "label": "crazing",
+        "label": "patches",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and some prior probabilities. I need to fig"
       },
       {
         "provider": "groq",
@@ -1923,11 +1665,11 @@
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+        "reason": "<think>\nOkay, let's tackle this problem. The user wants me to determine the correct label based on the given visual features and rule-based prior probabilities."
       }
     ]
   },
-  "crazing/crazing_119.jpg/b82df2bd76e88d394a84c8122158ed42": {
+  "crazing/crazing_116.jpg/1dca4bcc2885854eb7c6a2934583daf3": {
     "pred_label": "pitted_surface",
     "confidence": 0.7682,
     "method": "Claude+GroqWeighted(4/7LLM,best_w=2.25)",
@@ -1955,7 +1697,7 @@
         "label": "pitted_surface",
         "confidence": 0.269,
         "weight": 0.49,
-        "reason": "many small round pits suggested by high regions_count and small avg_area"
+        "reason": "many small regions (regions_count=132), high total defect percentage (total_defect_pct=29.79), and low average aspect ratio (avg_aspect_ratio=1.444) with many s"
       },
       {
         "provider": "groq",
@@ -1973,7 +1715,7 @@
         "label": "pitted_surface",
         "confidence": 0.269,
         "weight": 0.49,
-        "reason": "The image has a high total defect percentage (30.36%) and a large number of regions (145), with many round pits indicated by a low average circularity (0.565) a"
+        "reason": "The image has a high total defect percentage (29.79%) and a large number of regions (132), with many round pits indicated by low circularity (0.06) and high edg"
       },
       {
         "provider": "groq",
@@ -1982,7 +1724,188 @@
         "label": "pitted_surface",
         "confidence": 0.6,
         "weight": 0.588,
-        "reason": "The visual features such as high total_defect_pct (30.36), high edge_density (36.73), and high glcm_contrast (0.451) along with the top rule prior probability s"
+        "reason": "The image has a high total defect percentage (29.79%) and a high edge density (32.66), which are consistent with the characteristics of a pitted surface. Additi"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The features provided give a bunch of numerical data and some prior probabilities. The allo"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to select the most appropriate label from the given list based on the provided visual features"
+      }
+    ]
+  },
+  "crazing/crazing_117.jpg/12aa6e64986cfaa089e41b0f161c6171": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.7522,
+    "method": "Claude+GroqWeighted(4/8LLM,best_w=2.29)",
+    "weighted_scores": {
+      "crazing": 1.7662,
+      "inclusion": 0.1248,
+      "patches": 0.0892,
+      "pitted_surface": 2.2943,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.7195
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "pitted_surface",
+        "confidence": 0.338,
+        "weight": 0.49,
+        "reason": "many small regions (154), small average area (66.04), and high regions count with relatively small area and circularity"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 2,
+        "label": "pitted_surface",
+        "confidence": 0.338,
+        "weight": 0.49,
+        "reason": "many tiny circular pits"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 3,
+        "label": "pitted_surface",
+        "confidence": 0.338,
+        "weight": 0.49,
+        "reason": "The image has a high total defect percentage (25.42%) and a large number of regions (154), with many round pits indicated by low circularity (0.077) and high ed"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 4,
+        "label": "pitted_surface",
+        "confidence": 0.6,
+        "weight": 0.588,
+        "reason": "The visual features such as high total_defect_pct (25.42), high edge_density (38.09), and high glcm_contrast (0.542) along with the rule prior probability (0.33"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 2,
+        "label": "scratches",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_118.jpg/e88304beed22ceebfed7fd3ada2b975c": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.769,
+    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.26)",
+    "weighted_scores": {
+      "crazing": 1.7519,
+      "inclusion": 0.1048,
+      "patches": 0.1872,
+      "pitted_surface": 2.2564,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1347
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.2834,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "pitted_surface",
+        "confidence": 0.283,
+        "weight": 0.49,
+        "reason": "many small round pits indicated by high regions_count and small avg_area"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 2,
+        "label": "pitted_surface",
+        "confidence": 0.283,
+        "weight": 0.49,
+        "reason": "many tiny circular pits"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 3,
+        "label": "pitted_surface",
+        "confidence": 0.283,
+        "weight": 0.49,
+        "reason": "The image has a high total defect percentage (25.75%) and a significant number of regions (165), with many round pits indicated by a low average circularity (0."
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 4,
+        "label": "pitted_surface",
+        "confidence": 0.6,
+        "weight": 0.588,
+        "reason": "High total defect percentage (25.75%), high edge density (37.26), and high contrast (0.163) along with the top rule prior probability (0.2834) suggest the prese"
       },
       {
         "provider": "groq",
@@ -2013,17 +1936,112 @@
       }
     ]
   },
+  "crazing/crazing_119.jpg/b82df2bd76e88d394a84c8122158ed42": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.7525,
+    "method": "Claude+GroqWeighted(4/8LLM,best_w=2.34)",
+    "weighted_scores": {
+      "crazing": 1.7836,
+      "inclusion": 0.0995,
+      "patches": 0.1777,
+      "pitted_surface": 2.3443,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.6869
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.49,
+        "reason": "many small round pits, high regions count and small average area"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 2,
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.49,
+        "reason": "many tiny circular pits"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 3,
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.49,
+        "reason": "The image has a high total defect percentage (30.36%) and a large number of regions (145), with many round pits indicated by a low average circularity (0.565) a"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 4,
+        "label": "pitted_surface",
+        "confidence": 0.7,
+        "weight": 0.686,
+        "reason": "High total defect percentage (30.36%), high edge density (36.73), and high contrast in GLCM (0.451) support the presence of a pitted surface, which is also the "
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 2,
+        "label": "scratches",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the most likely c"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
   "crazing/crazing_12.jpg/77dea389fb7bf744198094f73ede02f7": {
     "pred_label": "pitted_surface",
-    "confidence": 0.837,
-    "method": "Claude+GroqWeighted(4/5LLM,best_w=2.49)",
+    "confidence": 0.7591,
+    "method": "Claude+GroqWeighted(4/8LLM,best_w=2.49)",
     "weighted_scores": {
-      "crazing": 0.6482,
+      "crazing": 1.7662,
       "inclusion": 0.1248,
       "patches": 0.0892,
       "pitted_surface": 2.4903,
       "rolled-in_scale": 0.0,
-      "scratches": 0.1605
+      "scratches": 0.7195
     },
     "votes": [
       {
@@ -2059,7 +2077,7 @@
         "label": "pitted_surface",
         "confidence": 0.338,
         "weight": 0.49,
-        "reason": "The image has a high total defect percentage (28.23%) and a large number of regions (161), with many round pits indicated by low circularity (0.544) and high ed"
+        "reason": "The image has a high total defect percentage (28.23%) and a large number of regions (161), with many round pits indicated by a low average circularity (0.544) a"
       },
       {
         "provider": "groq",
@@ -2068,7 +2086,7 @@
         "label": "pitted_surface",
         "confidence": 0.8,
         "weight": 0.784,
-        "reason": "The high total defect percentage (28.23%) and the presence of a large number of regions (161) with a high average area (70.15) and a high max area (1329.0) sugg"
+        "reason": "The visual features such as high total_defect_pct (28.23), high edge_density (37.91), and high glcm_contrast (0.631) along with the rule prior probability (0.33"
       },
       {
         "provider": "groq",
@@ -2078,18 +2096,45 @@
         "confidence": 0.65,
         "weight": 0.559,
         "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 2,
+        "label": "scratches",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
       }
     ]
   },
   "crazing/crazing_120.jpg/e61d904fbf6df429cbc31790f25a1b27": {
     "pred_label": "pitted_surface",
-    "confidence": 0.6764,
-    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.20)",
+    "confidence": 0.769,
+    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.26)",
     "weighted_scores": {
-      "crazing": 0.0749,
+      "crazing": 1.7519,
       "inclusion": 0.1048,
       "patches": 0.1872,
-      "pitted_surface": 0.1984,
+      "pitted_surface": 2.2564,
       "rolled-in_scale": 0.0,
       "scratches": 0.1347
     },
@@ -2101,20 +2146,83 @@
         "confidence": 0.2834,
         "weight": 0.7,
         "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "pitted_surface",
+        "confidence": 0.283,
+        "weight": 0.49,
+        "reason": "many small round pits indicated by high regions_count and small avg_area"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 2,
+        "label": "pitted_surface",
+        "confidence": 0.283,
+        "weight": 0.49,
+        "reason": "many tiny circular pits"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 3,
+        "label": "pitted_surface",
+        "confidence": 0.283,
+        "weight": 0.49,
+        "reason": "The image has a high total defect percentage (26.55%) and a large number of regions (153), with many round pits indicated by low circularity (0.54) and high edg"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 4,
+        "label": "pitted_surface",
+        "confidence": 0.6,
+        "weight": 0.588,
+        "reason": "High total defect percentage (26.55%) and high edge density (38.31) suggest a pitted surface, which is also the top rule-based prior probability"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
       }
     ]
   },
   "crazing/crazing_121.jpg/2db80c7ee84cbd295636ceb6bbba8dc9": {
-    "pred_label": "crazing",
-    "confidence": 0.7612,
-    "method": "Claude+GroqWeighted(2/3LLM,best_w=1.21)",
+    "pred_label": "scratches",
+    "confidence": 0.7194,
+    "method": "Claude+GroqWeighted(3/7LLM,best_w=1.77)",
     "weighted_scores": {
-      "crazing": 1.2105,
+      "crazing": 1.7695,
       "inclusion": 0.0863,
       "patches": 0.1542,
-      "pitted_surface": 0.1635,
+      "pitted_surface": 0.9475,
       "rolled-in_scale": 0.0,
-      "scratches": 0.7625
+      "scratches": 1.7715
     },
     "votes": [
       {
@@ -2127,12 +2235,48 @@
       },
       {
         "provider": "groq",
-        "model": "qwen/qwen3-32b",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "pitted_surface",
+        "confidence": 0.8,
+        "weight": 0.784,
+        "reason": "many small regions (regions_count=145), high total defect percentage (total_defect_pct=29.89), and small average area (avg_area=82.46) with low aspect ratio (av"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
         "prompt": 2,
         "label": "scratches",
+        "confidence": 0.291,
+        "weight": 0.49,
+        "reason": "The defect has a high average aspect ratio (1.475) and max aspect ratio (6.0), indicating that the lines are extremely elongated, which is a characteristic of s"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 3,
+        "label": "scratches",
+        "confidence": 0.291,
+        "weight": 0.49,
+        "reason": "The model predicts 'scratches' as the most likely class due to the high rule prior probability and the presence of features such as high edge density and low ci"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 4,
+        "label": "scratches",
+        "confidence": 0.6,
+        "weight": 0.588,
+        "reason": "High edge density and high contrast, along with a significant number of regions and a relatively high horizontal edge ratio, suggest the presence of scratches. "
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
+        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
       },
       {
         "provider": "groq",
@@ -2182,7 +2326,7 @@
         "label": "pitted_surface",
         "confidence": 0.283,
         "weight": 0.49,
-        "reason": "many small regions, high regions_count and small avg_area"
+        "reason": "many small round pits indicated by high regions_count and small avg_area"
       },
       {
         "provider": "groq",
@@ -2209,7 +2353,7 @@
         "label": "pitted_surface",
         "confidence": 0.6,
         "weight": 0.588,
-        "reason": "The visual features such as high total_defect_pct (27.76), high edge_density (38.37), and high glcm_contrast (0.589) along with the top rule prior probability s"
+        "reason": "The high total defect percentage (27.76%) and the presence of a significant number of edges (edge_density=38.37) and lines (hough_line_count=80) suggest a pitte"
       },
       {
         "provider": "groq",
@@ -2277,7 +2421,7 @@
         "label": "pitted_surface",
         "confidence": 0.269,
         "weight": 0.49,
-        "reason": "many small round pits, high regions count and small average area"
+        "reason": "many small regions (regions_count=120), small average area (avg_area=99.39), and low aspect ratio (avg_aspect_ratio=1.47) with high rule prior probability"
       },
       {
         "provider": "groq",
@@ -2295,7 +2439,7 @@
         "label": "pitted_surface",
         "confidence": 0.269,
         "weight": 0.49,
-        "reason": "The image has a high total defect percentage (29.82%) and a large number of regions (120), with many round pits indicated by low circularity (0.545) and high ed"
+        "reason": "The image has a high total defect percentage (29.82%) and a large number of regions (120), with many round pits indicated by a low average circularity (0.545) a"
       },
       {
         "provider": "groq",
@@ -2337,15 +2481,15 @@
   },
   "crazing/crazing_124.jpg/415c6af1d72347b92297e07aa1aedca3": {
     "pred_label": "pitted_surface",
-    "confidence": 0.7496,
-    "method": "Claude+GroqWeighted(4/8LLM,best_w=2.26)",
+    "confidence": 0.769,
+    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.26)",
     "weighted_scores": {
       "crazing": 1.7519,
       "inclusion": 0.1048,
       "patches": 0.1872,
       "pitted_surface": 2.2564,
       "rolled-in_scale": 0.0,
-      "scratches": 0.6938
+      "scratches": 0.1347
     },
     "votes": [
       {
@@ -2363,7 +2507,7 @@
         "label": "pitted_surface",
         "confidence": 0.283,
         "weight": 0.49,
-        "reason": "many small regions (regions_count=146), small average area (avg_area=77.98), and high number of regions suggest a pitted surface"
+        "reason": "many small round pits indicated by high regions_count and small avg_area"
       },
       {
         "provider": "groq",
@@ -2381,7 +2525,7 @@
         "label": "pitted_surface",
         "confidence": 0.283,
         "weight": 0.49,
-        "reason": "The image has a high total defect percentage (28.46%) and a large number of regions (146), with many round pits indicated by low circularity (0.548) and high ed"
+        "reason": "The image has a high total defect percentage (28.46%) and a large number of regions (146), with many round pits indicated by a low average circularity (0.548) a"
       },
       {
         "provider": "groq",
@@ -2390,7 +2534,7 @@
         "label": "pitted_surface",
         "confidence": 0.6,
         "weight": 0.588,
-        "reason": "The visual features of the image, such as high total_defect_pct (28.46), high edge_density (37.7), and high glcm_contrast (0.554), combined with the rule prior "
+        "reason": "The visual features such as high total_defect_pct (28.46), high edge_density (37.7), and high glcm_contrast (0.554) along with the rule prior probability (0.283"
       },
       {
         "provider": "groq",
@@ -2400,15 +2544,6 @@
         "confidence": 0.65,
         "weight": 0.559,
         "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
-      },
-      {
-        "provider": "groq",
-        "model": "qwen/qwen3-32b",
-        "prompt": 2,
-        "label": "scratches",
-        "confidence": 0.65,
-        "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and wants me to classify the defect into one of the given c"
       },
       {
         "provider": "groq",
@@ -2426,19 +2561,19 @@
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this problem. The user wants me to determine the correct label based on the given visual features and rule-based prior probabilities."
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
       }
     ]
   },
   "crazing/crazing_125.jpg/c3aa90e9495504a2bf844f01b9d75169": {
     "pred_label": "pitted_surface",
-    "confidence": 0.7718,
-    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.34)",
+    "confidence": 0.7682,
+    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.25)",
     "weighted_scores": {
       "crazing": 1.7836,
       "inclusion": 0.0995,
       "patches": 0.1777,
-      "pitted_surface": 2.3443,
+      "pitted_surface": 2.2463,
       "rolled-in_scale": 0.0,
       "scratches": 0.1279
     },
@@ -2458,7 +2593,7 @@
         "label": "pitted_surface",
         "confidence": 0.269,
         "weight": 0.49,
-        "reason": "many small round pits indicated by high regions_count and small avg_area"
+        "reason": "many small regions (133), high total defect percentage (29.85%), small average area (89.77), and low average aspect ratio (1.47) with many small circular region"
       },
       {
         "provider": "groq",
@@ -2483,9 +2618,9 @@
         "model": "llama-3.3-70b-versatile",
         "prompt": 4,
         "label": "pitted_surface",
-        "confidence": 0.7,
-        "weight": 0.686,
-        "reason": "The visual features of the image, such as high total_defect_pct (29.85), high edge_density (32.75), and high glcm_contrast (0.369), combined with the rule-based"
+        "confidence": 0.6,
+        "weight": 0.588,
+        "reason": "The high total defect percentage (29.85%) and the presence of a large number of regions (133) with a high average area (89.77) and a high max area (6453.0) sugg"
       },
       {
         "provider": "groq",
@@ -2518,13 +2653,13 @@
   },
   "crazing/crazing_126.jpg/d5d8ac5f603eead2c388a067f7000058": {
     "pred_label": "pitted_surface",
-    "confidence": 0.7719,
-    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.29)",
+    "confidence": 0.7788,
+    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.49)",
     "weighted_scores": {
       "crazing": 1.7662,
       "inclusion": 0.1248,
       "patches": 0.0892,
-      "pitted_surface": 2.2943,
+      "pitted_surface": 2.4903,
       "rolled-in_scale": 0.0,
       "scratches": 0.1605
     },
@@ -2562,16 +2697,16 @@
         "label": "pitted_surface",
         "confidence": 0.338,
         "weight": 0.49,
-        "reason": "The classification is based on the provided numerical descriptors, where the total defect percentage, average area, and circularity of the regions, along with t"
+        "reason": "The image has a high total defect percentage (27.06%) and a large number of regions (151), with many round pits indicated by a low average circularity (0.535) a"
       },
       {
         "provider": "groq",
         "model": "llama-3.3-70b-versatile",
         "prompt": 4,
         "label": "pitted_surface",
-        "confidence": 0.6,
-        "weight": 0.588,
-        "reason": "The high total defect percentage (27.06%) and the presence of a large number of edges (edge_density=37.65) along with a significant amount of dark and bright pi"
+        "confidence": 0.8,
+        "weight": 0.784,
+        "reason": "High total defect percentage (27.06%), high edge density (37.65), and high contrast (0.625) in the GLCM features, along with the rule-based prior probability, s"
       },
       {
         "provider": "groq",
@@ -2598,21 +2733,21 @@
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+        "reason": "<think>\nOkay, let's tackle this problem. The user wants me to determine the correct label based on the given visual features and rule-based prior probabilities."
       }
     ]
   },
   "crazing/crazing_127.jpg/27e2f92f6a34e39a7896257cd34f15cd": {
     "pred_label": "pitted_surface",
-    "confidence": 0.7718,
-    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.34)",
+    "confidence": 0.7525,
+    "method": "Claude+GroqWeighted(4/8LLM,best_w=2.34)",
     "weighted_scores": {
       "crazing": 1.7836,
       "inclusion": 0.0995,
       "patches": 0.1777,
       "pitted_surface": 2.3443,
       "rolled-in_scale": 0.0,
-      "scratches": 0.1279
+      "scratches": 0.6869
     },
     "votes": [
       {
@@ -2630,7 +2765,7 @@
         "label": "pitted_surface",
         "confidence": 0.269,
         "weight": 0.49,
-        "reason": "many small round pits, high regions count and small average area"
+        "reason": "many small round pits indicated by high regions_count and small avg_area"
       },
       {
         "provider": "groq",
@@ -2648,7 +2783,7 @@
         "label": "pitted_surface",
         "confidence": 0.269,
         "weight": 0.49,
-        "reason": "The image has a high total defect percentage (26.42%) and a large number of regions (154), with many round pits indicated by low circularity (0.578) and high ed"
+        "reason": "The image has a high total defect percentage (26.42%) and a large number of regions (154), with many round pits indicated by a low average circularity (0.578) a"
       },
       {
         "provider": "groq",
@@ -2657,7 +2792,7 @@
         "label": "pitted_surface",
         "confidence": 0.7,
         "weight": 0.686,
-        "reason": "The visual features of the image, such as high total_defect_pct (26.42), high edge_density (36.55), and high glcm_contrast (0.439), combined with the rule-based"
+        "reason": "The image has a high total defect percentage (26.42%) and a high edge density (36.55), which are consistent with the characteristics of a pitted surface. Additi"
       },
       {
         "provider": "groq",
@@ -2667,6 +2802,15 @@
         "confidence": 0.65,
         "weight": 0.559,
         "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 2,
+        "label": "scratches",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
       },
       {
         "provider": "groq",
@@ -2716,7 +2860,7 @@
         "label": "pitted_surface",
         "confidence": 0.283,
         "weight": 0.49,
-        "reason": "many small regions (155), small average area (70.67), and high number of regions with small area and circularity (avg_circularity=0.585)"
+        "reason": "many small round pits indicated by high regions_count and small avg_area"
       },
       {
         "provider": "groq",
@@ -2734,7 +2878,7 @@
         "label": "pitted_surface",
         "confidence": 0.283,
         "weight": 0.49,
-        "reason": "The image has a high total defect percentage (27.38%) and a large number of regions (155), with many round pits indicated by a low average circularity (0.585) a"
+        "reason": "The image has a high total defect percentage (27.38%) and a large number of regions (155), with many round pits indicated by low circularity (0.052) and high ed"
       },
       {
         "provider": "groq",
@@ -2743,7 +2887,7 @@
         "label": "pitted_surface",
         "confidence": 0.6,
         "weight": 0.588,
-        "reason": "The visual features such as high total_defect_pct (27.38), high edge_density (36.85), and high glcm_contrast (0.479) along with the top rule prior probability s"
+        "reason": "The visual features such as high total_defect_pct (27.38), high edge_density (36.85), and high glcm_contrast (0.479) along with the top rule prior probability o"
       },
       {
         "provider": "groq",
@@ -2820,7 +2964,7 @@
         "label": "pitted_surface",
         "confidence": 0.283,
         "weight": 0.49,
-        "reason": "The image has a high total defect percentage (27.96%) and a large number of regions (145), with many round pits indicated by low circularity (0.069) and high ed"
+        "reason": "The image has a high total defect percentage (27.96%) and a large number of regions (145), with many round pits indicated by a low average circularity (0.574) a"
       },
       {
         "provider": "groq",
@@ -2829,7 +2973,7 @@
         "label": "pitted_surface",
         "confidence": 0.6,
         "weight": 0.588,
-        "reason": "The image has a high total defect percentage (27.96%) and a high edge density (36.42), which are consistent with the characteristics of a pitted surface. Additi"
+        "reason": "High total defect percentage (27.96%), high edge density (36.42), and high contrast (0.196) suggest a pitted surface, which is also the top rule-based prior pro"
       },
       {
         "provider": "groq",
@@ -2838,7 +2982,7 @@
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
       },
       {
         "provider": "groq",
@@ -2856,7 +3000,7 @@
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this problem. The user wants me to determine the correct label based on the given visual features and rule-based prior probabilities."
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
       }
     ]
   },
@@ -2906,7 +3050,7 @@
         "label": "pitted_surface",
         "confidence": 0.338,
         "weight": 0.49,
-        "reason": "The image has a high total defect percentage (27.05%) and a large number of regions (158), with many round pits indicated by low circularity (0.089) and high ed"
+        "reason": "The image has a high total defect percentage (27.05%) and a large number of regions (158), with many round pits indicated by a low average circularity (0.548) a"
       },
       {
         "provider": "groq",
@@ -2915,7 +3059,7 @@
         "label": "pitted_surface",
         "confidence": 0.8,
         "weight": 0.784,
-        "reason": "High total defect percentage (27.05%), high edge density (38.45), and high GLCM contrast (0.654) are indicative of a pitted surface, which is also the highest r"
+        "reason": "High total defect percentage (27.05%), high edge density (38.45), and high GLCM contrast (0.654) suggest a pitted surface, which is also the highest rule-based "
       },
       {
         "provider": "groq",
@@ -2974,7 +3118,7 @@
         "label": "pitted_surface",
         "confidence": 0.8,
         "weight": 0.784,
-        "reason": "many small regions (regions_count=156), high total defect percentage (total_defect_pct=24.54), and low average aspect ratio (avg_aspect_ratio=1.448) with many s"
+        "reason": "many small regions (regions_count=156), high total_defect_pct (24.54), small avg_area (62.91), and low max_aspect_ratio (4.4) indicate a pitted surface"
       },
       {
         "provider": "groq",
@@ -2992,7 +3136,7 @@
         "label": "pitted_surface",
         "confidence": 0.317,
         "weight": 0.49,
-        "reason": "The image has a high total defect percentage (24.54%) and a significant number of regions (156), with many round pits suggested by the low average circularity ("
+        "reason": "The image has a high total defect percentage (24.54%) and a significant number of regions (156), with many round pits indicated by a low average circularity (0."
       },
       {
         "provider": "groq",
@@ -3001,7 +3145,7 @@
         "label": "pitted_surface",
         "confidence": 0.6,
         "weight": 0.588,
-        "reason": "The high total defect percentage (24.54%) and the presence of a large number of edges (edge_density=38.16) along with a significant amount of dark and bright pi"
+        "reason": "The high total defect percentage (24.54%) and the presence of a significant number of edges (edge_density=38.16) along with a notable horizontal edge ratio (0.3"
       },
       {
         "provider": "groq",
@@ -3028,7 +3172,7 @@
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the most likely c"
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
       },
       {
         "provider": "groq",
@@ -3042,15 +3186,15 @@
     ]
   },
   "crazing/crazing_131.jpg/24b5234ba45b34003d76abc963c1c658": {
-    "pred_label": "crazing",
-    "confidence": 0.7949,
-    "method": "Claude+GroqWeighted(3/4LLM,best_w=1.75)",
+    "pred_label": "pitted_surface",
+    "confidence": 0.769,
+    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.26)",
     "weighted_scores": {
       "crazing": 1.7519,
       "inclusion": 0.1048,
       "patches": 0.1872,
-      "pitted_surface": 0.1984,
-      "rolled-in_scale": 0.559,
+      "pitted_surface": 2.2564,
+      "rolled-in_scale": 0.0,
       "scratches": 0.1347
     },
     "votes": [
@@ -3064,21 +3208,48 @@
       },
       {
         "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "pitted_surface",
+        "confidence": 0.283,
+        "weight": 0.49,
+        "reason": "many small round pits indicated by high regions_count and small avg_area"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 2,
+        "label": "pitted_surface",
+        "confidence": 0.283,
+        "weight": 0.49,
+        "reason": "many tiny circular pits"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 3,
+        "label": "pitted_surface",
+        "confidence": 0.283,
+        "weight": 0.49,
+        "reason": "The image has a high total defect percentage (27.04%) and a large number of regions (158), with many round pits indicated by a low average circularity (0.557) a"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 4,
+        "label": "pitted_surface",
+        "confidence": 0.6,
+        "weight": 0.588,
+        "reason": "The image has a high total defect percentage (27.04%) and a high edge density (37.4), which are consistent with the characteristics of a pitted surface. Additio"
+      },
+      {
+        "provider": "groq",
         "model": "qwen/qwen3-32b",
         "prompt": 1,
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
         "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
-      },
-      {
-        "provider": "groq",
-        "model": "qwen/qwen3-32b",
-        "prompt": 2,
-        "label": "rolled-in_scale",
-        "confidence": 0.65,
-        "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
       },
       {
         "provider": "groq",
@@ -3102,15 +3273,15 @@
   },
   "crazing/crazing_132.jpg/17d224fc73c8f28d2f55a4824eabf1d7": {
     "pred_label": "scratches",
-    "confidence": 0.7576,
-    "method": "Claude+GroqWeighted(4/8LLM,best_w=2.37)",
+    "confidence": 0.7311,
+    "method": "Claude+GroqWeighted(3/7LLM,best_w=1.82)",
     "weighted_scores": {
       "crazing": 1.7519,
       "inclusion": 0.1048,
       "patches": 0.0749,
       "pitted_surface": 0.6884,
       "rolled-in_scale": 0.0,
-      "scratches": 2.374
+      "scratches": 1.815
     },
     "votes": [
       {
@@ -3128,7 +3299,7 @@
         "label": "pitted_surface",
         "confidence": 0.283,
         "weight": 0.49,
-        "reason": "many small round pits, high regions count and small average area"
+        "reason": "many small round pits indicated by high regions_count and small avg_area"
       },
       {
         "provider": "groq",
@@ -3137,7 +3308,7 @@
         "label": "scratches",
         "confidence": 0.353,
         "weight": 0.49,
-        "reason": "The defect has a high aspect ratio (max_aspect_ratio=6.667) and a significant number of lines (hough_line_count=80), with some lines being extremely elongated ("
+        "reason": "The defect has a high average aspect ratio of 1.5 and a max aspect ratio of 6.667, indicating that the lines are extremely elongated, which is a strong indicato"
       },
       {
         "provider": "groq",
@@ -3146,7 +3317,7 @@
         "label": "scratches",
         "confidence": 0.353,
         "weight": 0.49,
-        "reason": "The model predicts scratches as the most likely defect due to the high rule prior probability and the presence of thin scratch lines indicated by the low min_ci"
+        "reason": "The model predicts scratches as the most likely class due to the high rule prior probability and the presence of features such as high edge density, low circula"
       },
       {
         "provider": "groq",
@@ -3155,7 +3326,7 @@
         "label": "scratches",
         "confidence": 0.6,
         "weight": 0.588,
-        "reason": "High edge density and horizontal/vertical edge ratios, along with a high rule prior probability, suggest the presence of scratches."
+        "reason": "High edge density and horizontal/vertical edge ratios, along with a significant number of hough lines, support the presence of scratches. The rule prior also in"
       },
       {
         "provider": "groq",
@@ -3164,16 +3335,7 @@
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this steel surface defect classification problem. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale"
-      },
-      {
-        "provider": "groq",
-        "model": "qwen/qwen3-32b",
-        "prompt": 2,
-        "label": "scratches",
-        "confidence": 0.65,
-        "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
       },
       {
         "provider": "groq",
@@ -3196,6 +3358,92 @@
     ]
   },
   "crazing/crazing_133.jpg/4877b74feeb84e931ae7e794d28618d5": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.7788,
+    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.49)",
+    "weighted_scores": {
+      "crazing": 1.7662,
+      "inclusion": 0.1248,
+      "patches": 0.0892,
+      "pitted_surface": 2.4903,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1605
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "pitted_surface",
+        "confidence": 0.338,
+        "weight": 0.49,
+        "reason": "many small round pits indicated by high regions_count and small avg_area"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 2,
+        "label": "pitted_surface",
+        "confidence": 0.338,
+        "weight": 0.49,
+        "reason": "many tiny circular pits"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 3,
+        "label": "pitted_surface",
+        "confidence": 0.338,
+        "weight": 0.49,
+        "reason": "The image has a high total defect percentage (26.93%) and a large number of regions (137), with many round pits indicated by a low average circularity (0.546) a"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 4,
+        "label": "pitted_surface",
+        "confidence": 0.8,
+        "weight": 0.784,
+        "reason": "High total defect percentage (26.93%), high edge density (37.95), and high contrast (0.161) suggest a pitted surface, which is also the highest rule prior proba"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_134.jpg/ec78bf2e6a6f08925b0c5193b5ac9193": {
     "pred_label": "pitted_surface",
     "confidence": 0.7719,
     "method": "Claude+GroqWeighted(4/7LLM,best_w=2.29)",
@@ -3241,7 +3489,7 @@
         "label": "pitted_surface",
         "confidence": 0.338,
         "weight": 0.49,
-        "reason": "The image has a high total defect percentage (26.93%) and a large number of regions (137), with many round pits indicated by low circularity (0.067) and high ed"
+        "reason": "The image has a high total defect percentage (25.58%) and a large number of regions (148), with many round pits indicated by a low average circularity (0.554) a"
       },
       {
         "provider": "groq",
@@ -3250,93 +3498,7 @@
         "label": "pitted_surface",
         "confidence": 0.6,
         "weight": 0.588,
-        "reason": "The high total defect percentage (26.93%) and the presence of a large number of edges (edge_density=37.95) along with a significant amount of dark and bright pi"
-      },
-      {
-        "provider": "groq",
-        "model": "qwen/qwen3-32b",
-        "prompt": 1,
-        "label": "crazing",
-        "confidence": 0.65,
-        "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The features provided are a bit complex, but I'll go through them step by step.\n\nFirst, loo"
-      },
-      {
-        "provider": "groq",
-        "model": "qwen/qwen3-32b",
-        "prompt": 3,
-        "label": "crazing",
-        "confidence": 0.65,
-        "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
-      },
-      {
-        "provider": "groq",
-        "model": "qwen/qwen3-32b",
-        "prompt": 4,
-        "label": "crazing",
-        "confidence": 0.65,
-        "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
-      }
-    ]
-  },
-  "crazing/crazing_134.jpg/ec78bf2e6a6f08925b0c5193b5ac9193": {
-    "pred_label": "pitted_surface",
-    "confidence": 0.7788,
-    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.49)",
-    "weighted_scores": {
-      "crazing": 1.7662,
-      "inclusion": 0.1248,
-      "patches": 0.0892,
-      "pitted_surface": 2.4903,
-      "rolled-in_scale": 0.0,
-      "scratches": 0.1605
-    },
-    "votes": [
-      {
-        "provider": "rule_prior",
-        "model": "rule_prior",
-        "label": "pitted_surface",
-        "confidence": 0.3376,
-        "weight": 0.7,
-        "reason": "handcrafted feature prior"
-      },
-      {
-        "provider": "groq",
-        "model": "llama-3.3-70b-versatile",
-        "prompt": 1,
-        "label": "pitted_surface",
-        "confidence": 0.338,
-        "weight": 0.49,
-        "reason": "many small round pits, high regions count and small average area"
-      },
-      {
-        "provider": "groq",
-        "model": "llama-3.3-70b-versatile",
-        "prompt": 2,
-        "label": "pitted_surface",
-        "confidence": 0.338,
-        "weight": 0.49,
-        "reason": "many tiny circular pits"
-      },
-      {
-        "provider": "groq",
-        "model": "llama-3.3-70b-versatile",
-        "prompt": 3,
-        "label": "pitted_surface",
-        "confidence": 0.338,
-        "weight": 0.49,
-        "reason": "The image has a high total defect percentage (25.58%) and a large number of regions (148), with many round pits indicated by a low average circularity (0.554) a"
-      },
-      {
-        "provider": "groq",
-        "model": "llama-3.3-70b-versatile",
-        "prompt": 4,
-        "label": "pitted_surface",
-        "confidence": 0.8,
-        "weight": 0.784,
-        "reason": "High total defect percentage (25.58%), high edge density (37.85), and high contrast (0.151) suggest a pitted surface, which is also the highest rule prior proba"
+        "reason": "High total defect percentage (25.58%), high edge density (37.85), and high contrast (0.151) suggest a pitted surface, which is also the highest rule-based prior"
       },
       {
         "provider": "groq",
@@ -3369,15 +3531,15 @@
   },
   "crazing/crazing_135.jpg/276b221478d70156d70f8a92b9608bff": {
     "pred_label": "scratches",
-    "confidence": 0.7486,
-    "method": "Claude+GroqWeighted(4/8LLM,best_w=2.37)",
+    "confidence": 0.7311,
+    "method": "Claude+GroqWeighted(3/7LLM,best_w=1.82)",
     "weighted_scores": {
       "crazing": 1.7519,
       "inclusion": 0.1048,
       "patches": 0.0749,
-      "pitted_surface": 0.9824,
+      "pitted_surface": 0.6884,
       "rolled-in_scale": 0.0,
-      "scratches": 2.374
+      "scratches": 1.815
     },
     "votes": [
       {
@@ -3393,9 +3555,9 @@
         "model": "llama-3.3-70b-versatile",
         "prompt": 1,
         "label": "pitted_surface",
-        "confidence": 0.8,
-        "weight": 0.784,
-        "reason": "many small regions (141), high total defect percentage (26.8%), small average area (76.02), and low average aspect ratio (1.469) with moderate circularity (0.55"
+        "confidence": 0.283,
+        "weight": 0.49,
+        "reason": "many small round pits indicated by high regions_count and small avg_area"
       },
       {
         "provider": "groq",
@@ -3404,7 +3566,7 @@
         "label": "scratches",
         "confidence": 0.353,
         "weight": 0.49,
-        "reason": "The defect has an average aspect ratio of 1.469 and a max aspect ratio of 6.0, indicating that some lines are extremely elongated, which is a strong tie-breaker"
+        "reason": "high aspect ratio and line count"
       },
       {
         "provider": "groq",
@@ -3422,7 +3584,7 @@
         "label": "scratches",
         "confidence": 0.6,
         "weight": 0.588,
-        "reason": "High edge density and horizontal/vertical edge ratios, along with a significant number of hough lines, suggest the presence of scratches. The rule prior also in"
+        "reason": "High edge density and horizontal/vertical edge ratios, along with a high rule prior probability, suggest the presence of scratches."
       },
       {
         "provider": "groq",
@@ -3432,15 +3594,6 @@
         "confidence": 0.65,
         "weight": 0.559,
         "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
-      },
-      {
-        "provider": "groq",
-        "model": "qwen/qwen3-32b",
-        "prompt": 2,
-        "label": "scratches",
-        "confidence": 0.65,
-        "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some tie-breaker rules. I need to figure out which defe"
       },
       {
         "provider": "groq",
@@ -3458,20 +3611,20 @@
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to determine the correct label from the given options based on the provided visual features and rule-based "
       }
     ]
   },
   "crazing/crazing_136.jpg/6303393511cd46f298202038ad2cc5f9": {
     "pred_label": "pitted_surface",
-    "confidence": 0.7525,
-    "method": "Claude+GroqWeighted(4/8LLM,best_w=2.34)",
+    "confidence": 0.7718,
+    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.34)",
     "weighted_scores": {
       "crazing": 1.7836,
       "inclusion": 0.0995,
       "patches": 0.1777,
       "pitted_surface": 2.3443,
-      "rolled-in_scale": 0.559,
+      "rolled-in_scale": 0.0,
       "scratches": 0.1279
     },
     "votes": [
@@ -3490,7 +3643,7 @@
         "label": "pitted_surface",
         "confidence": 0.269,
         "weight": 0.49,
-        "reason": "many small regions (150), high total defect percentage (29.19), small average area (77.84), and low average aspect ratio (1.484) with many circular regions"
+        "reason": "many small regions (regions_count=150), small average area (avg_area=77.84), and high number of regions suggest a pitted surface"
       },
       {
         "provider": "groq",
@@ -3517,7 +3670,7 @@
         "label": "pitted_surface",
         "confidence": 0.7,
         "weight": 0.686,
-        "reason": "The visual features such as high total_defect_pct (29.19), high edge_density (36.35), and high glcm_contrast (0.445) along with the top rule prior probability s"
+        "reason": "High total defect percentage (29.19%), high edge density (36.35), and high contrast (0.445) in the GLCM features, along with the rule-based prior probability, s"
       },
       {
         "provider": "groq",
@@ -3527,15 +3680,6 @@
         "confidence": 0.65,
         "weight": 0.559,
         "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
-      },
-      {
-        "provider": "groq",
-        "model": "qwen/qwen3-32b",
-        "prompt": 2,
-        "label": "rolled-in_scale",
-        "confidence": 0.65,
-        "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
       },
       {
         "provider": "groq",
@@ -3559,10 +3703,10 @@
   },
   "crazing/crazing_137.jpg/5d201d453b6baf88a049a9e0524a9dd1": {
     "pred_label": "pitted_surface",
-    "confidence": 0.7811,
-    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.57)",
+    "confidence": 0.7615,
+    "method": "Claude+GroqWeighted(4/8LLM,best_w=2.57)",
     "weighted_scores": {
-      "crazing": 1.2019,
+      "crazing": 1.7609,
       "inclusion": 0.1174,
       "patches": 0.0839,
       "pitted_surface": 2.5742,
@@ -3585,7 +3729,7 @@
         "label": "pitted_surface",
         "confidence": 0.8,
         "weight": 0.784,
-        "reason": "many small regions (regions_count=156), high total_defect_pct (24.32), small avg_area (62.35), and low max_aspect_ratio (4.778) indicate a pitted surface"
+        "reason": "many small regions (regions_count=156), high total defect percentage (total_defect_pct=24.32), and low average aspect ratio (avg_aspect_ratio=1.474) with many s"
       },
       {
         "provider": "groq",
@@ -3603,7 +3747,7 @@
         "label": "pitted_surface",
         "confidence": 0.317,
         "weight": 0.49,
-        "reason": "The image has a high total defect percentage (24.32%) and a significant number of regions (156), with many round pits suggested by the low average circularity ("
+        "reason": "The image has a high total defect percentage (24.32%) and a large number of regions (156), with many round pits indicated by a low average circularity (0.553) a"
       },
       {
         "provider": "groq",
@@ -3612,7 +3756,16 @@
         "label": "pitted_surface",
         "confidence": 0.6,
         "weight": 0.588,
-        "reason": "The high total defect percentage (24.32%) and the presence of a large number of regions (156) with a high average area (62.35) and a high max area (662.0) sugge"
+        "reason": "The visual features such as high total_defect_pct (24.32), high edge_density (37.71), and high glcm_contrast (0.519) along with the rule prior probability (0.31"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
       },
       {
         "provider": "groq",
@@ -3644,14 +3797,14 @@
     ]
   },
   "crazing/crazing_138.jpg/31c662593c3c80f7395ae4f4fa36b4dd": {
-    "pred_label": "crazing",
-    "confidence": 0.7581,
-    "method": "Claude+GroqWeighted(3/5LLM,best_w=1.78)",
+    "pred_label": "pitted_surface",
+    "confidence": 0.7682,
+    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.25)",
     "weighted_scores": {
       "crazing": 1.7836,
       "inclusion": 0.0995,
       "patches": 0.1777,
-      "pitted_surface": 1.4623,
+      "pitted_surface": 2.2463,
       "rolled-in_scale": 0.0,
       "scratches": 0.1279
     },
@@ -3669,9 +3822,9 @@
         "model": "llama-3.3-70b-versatile",
         "prompt": 1,
         "label": "pitted_surface",
-        "confidence": 0.8,
-        "weight": 0.784,
-        "reason": "many small regions (161), high total defect percentage (27.5%), small average area (68.31), and low average aspect ratio (1.405) with low max aspect ratio (4.33"
+        "confidence": 0.269,
+        "weight": 0.49,
+        "reason": "many small round pits, high regions count and small average area"
       },
       {
         "provider": "groq",
@@ -3681,6 +3834,24 @@
         "confidence": 0.269,
         "weight": 0.49,
         "reason": "many tiny circular pits"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 3,
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.49,
+        "reason": "The image has a high total defect percentage (27.5%) and a large number of regions (161), with many round pits indicated by low circularity (0.573) and high edg"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 4,
+        "label": "pitted_surface",
+        "confidence": 0.6,
+        "weight": 0.588,
+        "reason": "The high total defect percentage (27.5%) and the presence of a large number of regions (161) with a high average area (68.31) and a significant max area (4123.0"
       },
       {
         "provider": "groq",
@@ -3712,14 +3883,14 @@
     ]
   },
   "crazing/crazing_139.jpg/9c7bf0ad35d7d16a5c55ca4781ae1b4f": {
-    "pred_label": "crazing",
-    "confidence": 0.8426,
-    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.75)",
+    "pred_label": "pitted_surface",
+    "confidence": 0.769,
+    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.26)",
     "weighted_scores": {
       "crazing": 1.7519,
       "inclusion": 0.1048,
       "patches": 0.1872,
-      "pitted_surface": 0.1984,
+      "pitted_surface": 2.2564,
       "rolled-in_scale": 0.0,
       "scratches": 0.1347
     },
@@ -3731,6 +3902,42 @@
         "confidence": 0.2834,
         "weight": 0.7,
         "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "pitted_surface",
+        "confidence": 0.283,
+        "weight": 0.49,
+        "reason": "many small round pits indicated by high regions_count and small avg_area"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 2,
+        "label": "pitted_surface",
+        "confidence": 0.283,
+        "weight": 0.49,
+        "reason": "many tiny circular pits"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 3,
+        "label": "pitted_surface",
+        "confidence": 0.283,
+        "weight": 0.49,
+        "reason": "The image has a high total defect percentage (28.52%) and a large number of regions (145), with many round pits indicated by a low average circularity (0.556) a"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 4,
+        "label": "pitted_surface",
+        "confidence": 0.6,
+        "weight": 0.588,
+        "reason": "High total defect percentage (28.52%), high edge density (36.91), and high contrast in GLCM (0.478) are indicative of a pitted surface, which aligns with the to"
       },
       {
         "provider": "groq",
@@ -3762,14 +3969,14 @@
     ]
   },
   "crazing/crazing_14.jpg/cc9b867c89382747e9ea6eaf583037df": {
-    "pred_label": "crazing",
-    "confidence": 0.7986,
-    "method": "Claude+GroqWeighted(3/4LLM,best_w=1.78)",
+    "pred_label": "pitted_surface",
+    "confidence": 0.7593,
+    "method": "Claude+GroqWeighted(4/8LLM,best_w=2.54)",
     "weighted_scores": {
       "crazing": 1.7836,
       "inclusion": 0.0995,
       "patches": 0.1777,
-      "pitted_surface": 0.1883,
+      "pitted_surface": 2.5403,
       "rolled-in_scale": 0.559,
       "scratches": 0.1279
     },
@@ -3784,12 +3991,48 @@
       },
       {
         "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "pitted_surface",
+        "confidence": 0.8,
+        "weight": 0.784,
+        "reason": "many small regions, high regions_count and small avg_area"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 2,
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.49,
+        "reason": "many tiny circular pits, high regions count and low aspect ratio"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 3,
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.49,
+        "reason": "The image has a high total defect percentage (33.67%) and a large number of regions (158), with many round pits indicated by low circularity (0.562) and high ed"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 4,
+        "label": "pitted_surface",
+        "confidence": 0.6,
+        "weight": 0.588,
+        "reason": "The image has a high total defect percentage (33.67%) and a high edge density (38.1), which are consistent with the characteristics of a pitted surface. Additio"
+      },
+      {
+        "provider": "groq",
         "model": "qwen/qwen3-32b",
         "prompt": 1,
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
       },
       {
         "provider": "groq",
@@ -3821,16 +4064,16 @@
     ]
   },
   "crazing/crazing_140.jpg/dae760185ae359023082e56da4167883": {
-    "pred_label": "crazing",
-    "confidence": 0.7986,
-    "method": "Claude+GroqWeighted(3/4LLM,best_w=1.78)",
+    "pred_label": "pitted_surface",
+    "confidence": 0.7718,
+    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.34)",
     "weighted_scores": {
       "crazing": 1.7836,
       "inclusion": 0.0995,
       "patches": 0.1777,
-      "pitted_surface": 0.1883,
+      "pitted_surface": 2.3443,
       "rolled-in_scale": 0.0,
-      "scratches": 0.6869
+      "scratches": 0.1279
     },
     "votes": [
       {
@@ -3840,6 +4083,128 @@
         "confidence": 0.269,
         "weight": 0.7,
         "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.49,
+        "reason": "many small regions (140), high total defect percentage (30.95%), small average area (88.42), and low average aspect ratio (1.385) with many small circular regio"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 2,
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.49,
+        "reason": "many tiny circular pits, high regions count and low aspect ratio"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 3,
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.49,
+        "reason": "The classification is based on the provided numerical descriptors, where the top rule prior indicates the highest probability for 'pitted_surface' with a confid"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 4,
+        "label": "pitted_surface",
+        "confidence": 0.7,
+        "weight": 0.686,
+        "reason": "The image has a high total defect percentage (30.95%) and a high edge density (32.91), which are consistent with the characteristics of a pitted surface. Additi"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_141.jpg/3ecb396bcbb0859a416778fddd4722f2": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.7512,
+    "method": "Claude+GroqWeighted(4/8LLM,best_w=2.28)",
+    "weighted_scores": {
+      "crazing": 1.7609,
+      "inclusion": 0.1174,
+      "patches": 0.0839,
+      "pitted_surface": 2.2802,
+      "rolled-in_scale": 0.0419,
+      "scratches": 0.7099
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3174,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "pitted_surface",
+        "confidence": 0.317,
+        "weight": 0.49,
+        "reason": "many small regions (151), small average area (65.86), and high regions count with relatively small area and circularity"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 2,
+        "label": "pitted_surface",
+        "confidence": 0.317,
+        "weight": 0.49,
+        "reason": "many tiny circular pits"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 3,
+        "label": "pitted_surface",
+        "confidence": 0.317,
+        "weight": 0.49,
+        "reason": "The defect has many round pits, high total defect percentage, and high edge density, which are characteristic of pitted surface defects."
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 4,
+        "label": "pitted_surface",
+        "confidence": 0.6,
+        "weight": 0.588,
+        "reason": "The visual features such as high total_defect_pct (24.86), high edge_density (37.82), and high glcm_contrast (0.499) along with the rule prior probability (0.31"
       },
       {
         "provider": "groq",
@@ -3879,67 +4244,17 @@
       }
     ]
   },
-  "crazing/crazing_141.jpg/3ecb396bcbb0859a416778fddd4722f2": {
-    "pred_label": "crazing",
-    "confidence": 0.8439,
-    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.76)",
-    "weighted_scores": {
-      "crazing": 1.7609,
-      "inclusion": 0.1174,
-      "patches": 0.0839,
-      "pitted_surface": 0.2222,
-      "rolled-in_scale": 0.0419,
-      "scratches": 0.1509
-    },
-    "votes": [
-      {
-        "provider": "rule_prior",
-        "model": "rule_prior",
-        "label": "pitted_surface",
-        "confidence": 0.3174,
-        "weight": 0.7,
-        "reason": "handcrafted feature prior"
-      },
-      {
-        "provider": "groq",
-        "model": "qwen/qwen3-32b",
-        "prompt": 1,
-        "label": "crazing",
-        "confidence": 0.65,
-        "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The features provided are a bit complex, but I'll go through them step by step.\n\nFirst, loo"
-      },
-      {
-        "provider": "groq",
-        "model": "qwen/qwen3-32b",
-        "prompt": 3,
-        "label": "crazing",
-        "confidence": 0.65,
-        "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
-      },
-      {
-        "provider": "groq",
-        "model": "qwen/qwen3-32b",
-        "prompt": 4,
-        "label": "crazing",
-        "confidence": 0.65,
-        "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
-      }
-    ]
-  },
   "crazing/crazing_142.jpg/057f012aae15b8b7efea1d29b7041c3d": {
-    "pred_label": "crazing",
-    "confidence": 0.8035,
-    "method": "Claude+GroqWeighted(3/4LLM,best_w=1.78)",
+    "pred_label": "pitted_surface",
+    "confidence": 0.7525,
+    "method": "Claude+GroqWeighted(4/8LLM,best_w=2.34)",
     "weighted_scores": {
       "crazing": 1.7836,
       "inclusion": 0.0995,
       "patches": 0.1777,
-      "pitted_surface": 0.6783,
+      "pitted_surface": 2.3443,
       "rolled-in_scale": 0.0,
-      "scratches": 0.1279
+      "scratches": 0.6869
     },
     "votes": [
       {
@@ -3953,11 +4268,38 @@
       {
         "provider": "groq",
         "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.49,
+        "reason": "many small round pits indicated by high regions_count and small avg_area"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 2,
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.49,
+        "reason": "many tiny circular pits"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
         "prompt": 3,
         "label": "pitted_surface",
         "confidence": 0.269,
         "weight": 0.49,
         "reason": "The image has a high total defect percentage (28.54%) and a large number of regions (165), with many round pits indicated by a low average circularity (0.59) an"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 4,
+        "label": "pitted_surface",
+        "confidence": 0.7,
+        "weight": 0.686,
+        "reason": "The visual features of the image, such as high total_defect_pct (28.54), high edge_density (34.73), and high glcm_contrast (0.393), combined with the rule-based"
       },
       {
         "provider": "groq",
@@ -3967,6 +4309,15 @@
         "confidence": 0.65,
         "weight": 0.559,
         "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 2,
+        "label": "scratches",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
       },
       {
         "provider": "groq",
@@ -3989,14 +4340,14 @@
     ]
   },
   "crazing/crazing_143.jpg/0a389fd7368a49f83f47c50d76bf3490": {
-    "pred_label": "crazing",
-    "confidence": 0.8439,
-    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.76)",
+    "pred_label": "pitted_surface",
+    "confidence": 0.796,
+    "method": "Claude+GroqWeighted(4/6LLM,best_w=2.28)",
     "weighted_scores": {
-      "crazing": 1.7609,
+      "crazing": 1.2019,
       "inclusion": 0.1174,
       "patches": 0.0839,
-      "pitted_surface": 0.2222,
+      "pitted_surface": 2.2802,
       "rolled-in_scale": 0.0419,
       "scratches": 0.1509
     },
@@ -4011,12 +4362,39 @@
       },
       {
         "provider": "groq",
-        "model": "qwen/qwen3-32b",
+        "model": "llama-3.3-70b-versatile",
         "prompt": 1,
-        "label": "crazing",
-        "confidence": 0.65,
-        "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The features provided are a bit complex, but I'll go through them step by step.\n\nFirst, loo"
+        "label": "pitted_surface",
+        "confidence": 0.317,
+        "weight": 0.49,
+        "reason": "many small round pits indicated by high regions_count and small avg_area"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 2,
+        "label": "pitted_surface",
+        "confidence": 0.317,
+        "weight": 0.49,
+        "reason": "many tiny circular pits"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 3,
+        "label": "pitted_surface",
+        "confidence": 0.317,
+        "weight": 0.49,
+        "reason": "The image has a high total defect percentage (24.36%) and a large number of regions (170), with many round pits indicated by a low average circularity (0.572) a"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 4,
+        "label": "pitted_surface",
+        "confidence": 0.6,
+        "weight": 0.588,
+        "reason": "High total defect percentage (24.36%), high edge density (37.48), and high rule prior probability (0.3174) suggest a pitted surface."
       },
       {
         "provider": "groq",
@@ -4039,14 +4417,14 @@
     ]
   },
   "crazing/crazing_144.jpg/830e1bb2853cfbe8f84d682f108e4aaa": {
-    "pred_label": "crazing",
-    "confidence": 0.8446,
-    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.77)",
+    "pred_label": "pitted_surface",
+    "confidence": 0.7719,
+    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.29)",
     "weighted_scores": {
       "crazing": 1.7662,
       "inclusion": 0.1248,
       "patches": 0.0892,
-      "pitted_surface": 0.2363,
+      "pitted_surface": 2.2943,
       "rolled-in_scale": 0.0,
       "scratches": 0.1605
     },
@@ -4058,6 +4436,42 @@
         "confidence": 0.3376,
         "weight": 0.7,
         "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "pitted_surface",
+        "confidence": 0.338,
+        "weight": 0.49,
+        "reason": "many small round pits indicated by high regions_count and small avg_area"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 2,
+        "label": "pitted_surface",
+        "confidence": 0.338,
+        "weight": 0.49,
+        "reason": "many tiny circular pits"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 3,
+        "label": "pitted_surface",
+        "confidence": 0.338,
+        "weight": 0.49,
+        "reason": "The image has a high total defect percentage (25.72%) and a large number of regions (165), with many round pits indicated by a low average circularity (0.576) a"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 4,
+        "label": "pitted_surface",
+        "confidence": 0.6,
+        "weight": 0.588,
+        "reason": "High total defect percentage (25.72%), high edge density (37.45), and high glcm_contrast (0.542) suggest a pitted surface, which is also the highest rule prior "
       },
       {
         "provider": "groq",
@@ -4084,21 +4498,21 @@
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+        "reason": "<think>\nOkay, let's tackle this problem. So, I need to determine which defect label to assign based on the given visual features and the rule-based prior probab"
       }
     ]
   },
   "crazing/crazing_145.jpg/80fc52f8a8eff8dd7566cc3a235ca960": {
     "pred_label": "crazing",
-    "confidence": 0.8426,
-    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.75)",
+    "confidence": 0.7441,
+    "method": "Claude+GroqWeighted(3/6LLM,best_w=1.75)",
     "weighted_scores": {
       "crazing": 1.7519,
       "inclusion": 0.1048,
       "patches": 0.1872,
-      "pitted_surface": 0.1984,
+      "pitted_surface": 1.1784,
       "rolled-in_scale": 0.0,
-      "scratches": 0.1347
+      "scratches": 0.6938
     },
     "votes": [
       {
@@ -4111,12 +4525,39 @@
       },
       {
         "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "pitted_surface",
+        "confidence": 0.283,
+        "weight": 0.49,
+        "reason": "many small regions (164), small average area (61.26), and high number of regions with small area and circularity (avg_circularity=0.564)"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 2,
+        "label": "pitted_surface",
+        "confidence": 0.283,
+        "weight": 0.49,
+        "reason": "many tiny circular pits"
+      },
+      {
+        "provider": "groq",
         "model": "qwen/qwen3-32b",
         "prompt": 1,
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
         "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 2,
+        "label": "scratches",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
       },
       {
         "provider": "groq",
@@ -4140,10 +4581,10 @@
   },
   "crazing/crazing_146.jpg/1fc7c2e9dc1c8d7da71ea211c6700514": {
     "pred_label": "crazing",
-    "confidence": 0.8446,
-    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.77)",
+    "confidence": 0.8138,
+    "method": "Claude+GroqWeighted(2/2LLM,best_w=1.21)",
     "weighted_scores": {
-      "crazing": 1.7662,
+      "crazing": 1.2072,
       "inclusion": 0.1248,
       "patches": 0.0892,
       "pitted_surface": 0.2363,
@@ -4162,15 +4603,6 @@
       {
         "provider": "groq",
         "model": "qwen/qwen3-32b",
-        "prompt": 1,
-        "label": "crazing",
-        "confidence": 0.65,
-        "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
-      },
-      {
-        "provider": "groq",
-        "model": "qwen/qwen3-32b",
         "prompt": 3,
         "label": "crazing",
         "confidence": 0.65,
@@ -4184,7 +4616,7 @@
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+        "reason": "<think>\nOkay, let's tackle this problem. So, I need to determine which defect label to assign based on the given visual features and the rule-based prior probab"
       }
     ]
   },
@@ -4240,13 +4672,13 @@
   },
   "crazing/crazing_148.jpg/00c16e0a08a468394e78c97c7c803986": {
     "pred_label": "crazing",
-    "confidence": 0.8426,
-    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.75)",
+    "confidence": 0.7998,
+    "method": "Claude+GroqWeighted(3/4LLM,best_w=1.75)",
     "weighted_scores": {
       "crazing": 1.7519,
       "inclusion": 0.1048,
       "patches": 0.1872,
-      "pitted_surface": 0.1984,
+      "pitted_surface": 0.6884,
       "rolled-in_scale": 0.0,
       "scratches": 0.1347
     },
@@ -4258,6 +4690,15 @@
         "confidence": 0.2834,
         "weight": 0.7,
         "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 3,
+        "label": "pitted_surface",
+        "confidence": 0.283,
+        "weight": 0.49,
+        "reason": "The image has a high total defect percentage (25.92%) and a large number of regions (156), with many round pits indicated by a low average circularity (0.581) a"
       },
       {
         "provider": "groq",
@@ -4290,13 +4731,13 @@
   },
   "crazing/crazing_149.jpg/ce3e8708ffda5920dbd842a52b8b77cd": {
     "pred_label": "crazing",
-    "confidence": 0.8035,
-    "method": "Claude+GroqWeighted(3/4LLM,best_w=1.78)",
+    "confidence": 0.8471,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.78)",
     "weighted_scores": {
       "crazing": 1.7836,
       "inclusion": 0.0995,
       "patches": 0.1777,
-      "pitted_surface": 0.6783,
+      "pitted_surface": 0.1883,
       "rolled-in_scale": 0.0,
       "scratches": 0.1279
     },
@@ -4308,15 +4749,6 @@
         "confidence": 0.269,
         "weight": 0.7,
         "reason": "handcrafted feature prior"
-      },
-      {
-        "provider": "groq",
-        "model": "llama-3.3-70b-versatile",
-        "prompt": 3,
-        "label": "pitted_surface",
-        "confidence": 0.269,
-        "weight": 0.49,
-        "reason": "The image has a high total defect percentage (28.64%) and a large number of regions (149), with many round pits indicated by a low average circularity (0.556) a"
       },
       {
         "provider": "groq",
@@ -4375,7 +4807,7 @@
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this classification problem. The goal is to determine which of the six possible steel surface defects is present based on the given f"
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
       },
       {
         "provider": "groq",
@@ -4399,14 +4831,14 @@
   },
   "crazing/crazing_150.jpg/733388454ff824a2d2db0bdd2e21a176": {
     "pred_label": "crazing",
-    "confidence": 0.7261,
-    "method": "Claude+GroqWeighted(2/4LLM,best_w=1.19)",
+    "confidence": 0.7586,
+    "method": "Claude+GroqWeighted(2/3LLM,best_w=1.19)",
     "weighted_scores": {
       "crazing": 1.1929,
       "inclusion": 0.1048,
       "patches": 0.1872,
       "pitted_surface": 0.7574,
-      "rolled-in_scale": 0.559,
+      "rolled-in_scale": 0.0,
       "scratches": 0.1347
     },
     "votes": [
@@ -4430,15 +4862,6 @@
       {
         "provider": "groq",
         "model": "qwen/qwen3-32b",
-        "prompt": 2,
-        "label": "rolled-in_scale",
-        "confidence": 0.65,
-        "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
-      },
-      {
-        "provider": "groq",
-        "model": "qwen/qwen3-32b",
         "prompt": 3,
         "label": "crazing",
         "confidence": 0.65,
@@ -4458,15 +4881,15 @@
   },
   "crazing/crazing_151.jpg/e93a6b870e3cf4ebc1953fcb2b9eaab9": {
     "pred_label": "crazing",
-    "confidence": 0.7624,
-    "method": "Claude+GroqWeighted(2/3LLM,best_w=1.22)",
+    "confidence": 0.8667,
+    "method": "Claude+GroqWeighted(4/4LLM,best_w=2.34)",
     "weighted_scores": {
-      "crazing": 1.2194,
+      "crazing": 2.3374,
       "inclusion": 0.0947,
       "patches": 0.169,
       "pitted_surface": 0.1792,
       "rolled-in_scale": 0.0338,
-      "scratches": 0.6807
+      "scratches": 0.1217
     },
     "votes": [
       {
@@ -4481,10 +4904,19 @@
         "provider": "groq",
         "model": "qwen/qwen3-32b",
         "prompt": 1,
-        "label": "scratches",
+        "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The features provided are a bit complex, but I'll go through them step by step.\n\nFirst, loo"
+        "reason": "<think>\nOkay, let's tackle this classification problem. The goal is to determine which of the six possible steel surface defects is present based on the given f"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 2,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and wants me to classify the defect into one of the six cat"
       },
       {
         "provider": "groq",
@@ -4502,7 +4934,7 @@
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this problem. The task is to determine the correct label from the given options based on the provided visual features and rule-based "
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
       }
     ]
   },
@@ -4534,7 +4966,7 @@
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
       },
       {
         "provider": "groq",
@@ -4558,15 +4990,15 @@
   },
   "crazing/crazing_153.jpg/b1659e0081d6740d65ddcfa4b2367282": {
     "pred_label": "crazing",
-    "confidence": 0.7986,
-    "method": "Claude+GroqWeighted(3/4LLM,best_w=1.78)",
+    "confidence": 0.8471,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.78)",
     "weighted_scores": {
       "crazing": 1.7836,
       "inclusion": 0.0995,
       "patches": 0.1777,
       "pitted_surface": 0.1883,
       "rolled-in_scale": 0.0,
-      "scratches": 0.6869
+      "scratches": 0.1279
     },
     "votes": [
       {
@@ -4584,16 +5016,7 @@
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
-      },
-      {
-        "provider": "groq",
-        "model": "qwen/qwen3-32b",
-        "prompt": 2,
-        "label": "scratches",
-        "confidence": 0.65,
-        "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
       },
       {
         "provider": "groq",
@@ -4617,13 +5040,13 @@
   },
   "crazing/crazing_154.jpg/064fed418fb9422f6bc31216f7e51c0d": {
     "pred_label": "crazing",
-    "confidence": 0.7986,
-    "method": "Claude+GroqWeighted(3/4LLM,best_w=1.78)",
+    "confidence": 0.769,
+    "method": "Claude+GroqWeighted(3/5LLM,best_w=1.78)",
     "weighted_scores": {
       "crazing": 1.7836,
       "inclusion": 0.0995,
       "patches": 0.1777,
-      "pitted_surface": 0.1883,
+      "pitted_surface": 0.6783,
       "rolled-in_scale": 0.559,
       "scratches": 0.1279
     },
@@ -4635,6 +5058,15 @@
         "confidence": 0.269,
         "weight": 0.7,
         "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 3,
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.49,
+        "reason": "The image has a high total defect percentage (31.04%) and a large number of regions (131), with many round pits indicated by a low average circularity (0.535) a"
       },
       {
         "provider": "groq",
@@ -4702,7 +5134,7 @@
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The features provided are a bit complex, but I'll go through them step by step.\n\nFirst, loo"
       },
       {
         "provider": "groq",
@@ -4720,19 +5152,19 @@
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+        "reason": "<think>\nOkay, let's tackle this problem. The user wants me to determine the correct label based on the given visual features and rule-based prior probabilities."
       }
     ]
   },
   "crazing/crazing_156.jpg/391cfad3cf0ec8d9f3414f21808a0cd1": {
     "pred_label": "crazing",
-    "confidence": 0.7998,
-    "method": "Claude+GroqWeighted(3/4LLM,best_w=1.75)",
+    "confidence": 0.8426,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.75)",
     "weighted_scores": {
       "crazing": 1.7519,
       "inclusion": 0.1048,
       "patches": 0.1872,
-      "pitted_surface": 0.6884,
+      "pitted_surface": 0.1984,
       "rolled-in_scale": 0.0,
       "scratches": 0.1347
     },
@@ -4747,21 +5179,12 @@
       },
       {
         "provider": "groq",
-        "model": "llama-3.3-70b-versatile",
-        "prompt": 3,
-        "label": "pitted_surface",
-        "confidence": 0.283,
-        "weight": 0.49,
-        "reason": "The image has a high total defect percentage (28.9%) and a large number of regions (146), with many round pits indicated by a low average circularity (0.551) an"
-      },
-      {
-        "provider": "groq",
         "model": "qwen/qwen3-32b",
         "prompt": 1,
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
       },
       {
         "provider": "groq",
@@ -4779,7 +5202,7 @@
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+        "reason": "<think>\nOkay, let's tackle this problem. The user wants me to determine the correct label based on the given visual features and rule-based prior probabilities."
       }
     ]
   },
@@ -4861,7 +5284,7 @@
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
+        "reason": "<think>\nOkay, let's tackle this classification problem. The goal is to determine which of the six possible steel surface defects this image has based on the giv"
       },
       {
         "provider": "groq",
@@ -4920,7 +5343,7 @@
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class label b"
       },
       {
         "provider": "groq",
@@ -4935,15 +5358,15 @@
   },
   "crazing/crazing_16.jpg/602f9fa0a5cb94191a5d9a20d6ce1c89": {
     "pred_label": "crazing",
-    "confidence": 0.8471,
-    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.78)",
+    "confidence": 0.7298,
+    "method": "Claude+GroqWeighted(2/4LLM,best_w=1.22)",
     "weighted_scores": {
-      "crazing": 1.7836,
+      "crazing": 1.2246,
       "inclusion": 0.0995,
       "patches": 0.1777,
       "pitted_surface": 0.1883,
-      "rolled-in_scale": 0.0,
-      "scratches": 0.1279
+      "rolled-in_scale": 0.559,
+      "scratches": 0.6869
     },
     "votes": [
       {
@@ -4958,10 +5381,19 @@
         "provider": "groq",
         "model": "qwen/qwen3-32b",
         "prompt": 1,
-        "label": "crazing",
+        "label": "scratches",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The features provided are a bit complex, but I'll go through them step by step.\n\nFirst, loo"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 2,
+        "label": "rolled-in_scale",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
       },
       {
         "provider": "groq",
@@ -5011,7 +5443,7 @@
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this classification problem. The goal is to determine which of the six possible steel surface defects is present based on the given f"
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
       },
       {
         "provider": "groq",
@@ -5085,15 +5517,15 @@
   },
   "crazing/crazing_162.jpg/44da1757334162a5048424d31e9c8a69": {
     "pred_label": "crazing",
-    "confidence": 0.8446,
-    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.77)",
+    "confidence": 0.7673,
+    "method": "Claude+GroqWeighted(3/5LLM,best_w=1.77)",
     "weighted_scores": {
       "crazing": 1.7662,
       "inclusion": 0.1248,
       "patches": 0.0892,
-      "pitted_surface": 0.2363,
+      "pitted_surface": 0.7263,
       "rolled-in_scale": 0.0,
-      "scratches": 0.1605
+      "scratches": 0.7195
     },
     "votes": [
       {
@@ -5106,12 +5538,30 @@
       },
       {
         "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 2,
+        "label": "pitted_surface",
+        "confidence": 0.338,
+        "weight": 0.49,
+        "reason": "many tiny circular pits, high regions count and low aspect ratio"
+      },
+      {
+        "provider": "groq",
         "model": "qwen/qwen3-32b",
         "prompt": 1,
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 2,
+        "label": "scratches",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and wants me to classify the defect into one of the six cat"
       },
       {
         "provider": "groq",
@@ -5135,15 +5585,15 @@
   },
   "crazing/crazing_163.jpg/5e7e2145fd1db12cd4735c94e21a7399": {
     "pred_label": "crazing",
-    "confidence": 0.7949,
-    "method": "Claude+GroqWeighted(3/4LLM,best_w=1.75)",
+    "confidence": 0.8426,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.75)",
     "weighted_scores": {
       "crazing": 1.7519,
       "inclusion": 0.1048,
       "patches": 0.1872,
       "pitted_surface": 0.1984,
       "rolled-in_scale": 0.0,
-      "scratches": 0.6938
+      "scratches": 0.1347
     },
     "votes": [
       {
@@ -5162,15 +5612,6 @@
         "confidence": 0.65,
         "weight": 0.559,
         "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
-      },
-      {
-        "provider": "groq",
-        "model": "qwen/qwen3-32b",
-        "prompt": 2,
-        "label": "scratches",
-        "confidence": 0.65,
-        "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
       },
       {
         "provider": "groq",
@@ -5194,13 +5635,13 @@
   },
   "crazing/crazing_164.jpg/78f7ae67a36e22af5026192771007148": {
     "pred_label": "crazing",
-    "confidence": 0.7998,
-    "method": "Claude+GroqWeighted(3/4LLM,best_w=1.75)",
+    "confidence": 0.8426,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.75)",
     "weighted_scores": {
       "crazing": 1.7519,
       "inclusion": 0.1048,
       "patches": 0.1872,
-      "pitted_surface": 0.6884,
+      "pitted_surface": 0.1984,
       "rolled-in_scale": 0.0,
       "scratches": 0.1347
     },
@@ -5212,15 +5653,6 @@
         "confidence": 0.2834,
         "weight": 0.7,
         "reason": "handcrafted feature prior"
-      },
-      {
-        "provider": "groq",
-        "model": "llama-3.3-70b-versatile",
-        "prompt": 3,
-        "label": "pitted_surface",
-        "confidence": 0.283,
-        "weight": 0.49,
-        "reason": "The image has a high total defect percentage (27.66%) and a large number of regions (160), with many round pits indicated by a low average circularity (0.549) a"
       },
       {
         "provider": "groq",
@@ -5247,7 +5679,7 @@
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+        "reason": "<think>\nOkay, let's tackle this problem. The user wants me to determine the correct label based on the given visual features and rule-based prior probabilities."
       }
     ]
   },
@@ -5279,7 +5711,7 @@
         "label": "crazing",
         "confidence": 0.65,
         "weight": 0.559,
-        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
       },
       {
         "provider": "groq",
@@ -5339,6 +5771,1337 @@
         "confidence": 0.65,
         "weight": 0.559,
         "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_167.jpg/762b117ae6db20aac1bd1918275f0037": {
+    "pred_label": "crazing",
+    "confidence": 0.7949,
+    "method": "Claude+GroqWeighted(3/4LLM,best_w=1.75)",
+    "weighted_scores": {
+      "crazing": 1.7519,
+      "inclusion": 0.1048,
+      "patches": 0.1872,
+      "pitted_surface": 0.1984,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.6938
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.2834,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 2,
+        "label": "scratches",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The user wants me to determine the correct label based on the given visual features and rule-based prior probabilities."
+      }
+    ]
+  },
+  "crazing/crazing_168.jpg/0124e605c5dee6d5a33dd9359fbaf4d3": {
+    "pred_label": "crazing",
+    "confidence": 0.8446,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.77)",
+    "weighted_scores": {
+      "crazing": 1.7662,
+      "inclusion": 0.1248,
+      "patches": 0.0892,
+      "pitted_surface": 0.2363,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1605
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification problem. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. So, I need to determine which defect label to assign based on the given visual features and the rule-based prior probab"
+      }
+    ]
+  },
+  "crazing/crazing_169.jpg/3c86b1c3e32ff242a00741779a3b462b": {
+    "pred_label": "crazing",
+    "confidence": 0.8426,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.75)",
+    "weighted_scores": {
+      "crazing": 1.7519,
+      "inclusion": 0.1048,
+      "patches": 0.1872,
+      "pitted_surface": 0.1984,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1347
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.2834,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to select the most appropriate label from the given list based on the provided visual features"
+      }
+    ]
+  },
+  "crazing/crazing_17.jpg/b8672be95a19085fbc3d0c253ebf14a8": {
+    "pred_label": "crazing",
+    "confidence": 0.7998,
+    "method": "Claude+GroqWeighted(3/4LLM,best_w=1.75)",
+    "weighted_scores": {
+      "crazing": 1.7519,
+      "inclusion": 0.1048,
+      "patches": 0.1872,
+      "pitted_surface": 0.6884,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1347
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.2834,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 3,
+        "label": "pitted_surface",
+        "confidence": 0.283,
+        "weight": 0.49,
+        "reason": "The image has many round pits, which is a characteristic of pitted_surface defects, and it has the highest prior probability among all classes."
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The user wants me to determine the correct label based on the given visual features and rule-based prior probabilities."
+      }
+    ]
+  },
+  "crazing/crazing_170.jpg/c102016205ceae8c0aab812f67eb05d2": {
+    "pred_label": "crazing",
+    "confidence": 0.7965,
+    "method": "Claude+GroqWeighted(3/4LLM,best_w=1.77)",
+    "weighted_scores": {
+      "crazing": 1.7662,
+      "inclusion": 0.1248,
+      "patches": 0.0892,
+      "pitted_surface": 0.2363,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.7195
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this classification problem. The goal is to determine which of the six possible steel surface defects is present based on the given f"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 2,
+        "label": "scratches",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some tie-breakers. I need to figure out which defect ty"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_171.jpg/072d6194e3f3fc259db3a04714ab3cea": {
+    "pred_label": "crazing",
+    "confidence": 0.8161,
+    "method": "Claude+GroqWeighted(2/2LLM,best_w=1.22)",
+    "weighted_scores": {
+      "crazing": 1.2194,
+      "inclusion": 0.0947,
+      "patches": 0.169,
+      "pitted_surface": 0.1792,
+      "rolled-in_scale": 0.0338,
+      "scratches": 0.1217
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.256,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to determine the correct label from the given options based on the provided visual features and rule-based "
+      }
+    ]
+  },
+  "crazing/crazing_172.jpg/71beed7c2d479623a7541e1727aabc30": {
+    "pred_label": "crazing",
+    "confidence": 0.7986,
+    "method": "Claude+GroqWeighted(3/4LLM,best_w=1.78)",
+    "weighted_scores": {
+      "crazing": 1.7836,
+      "inclusion": 0.0995,
+      "patches": 0.1777,
+      "pitted_surface": 0.1883,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.6869
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 2,
+        "label": "scratches",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_173.jpg/80a41c19409739dcde55ed5ae63a3e14": {
+    "pred_label": "crazing",
+    "confidence": 0.8451,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.77)",
+    "weighted_scores": {
+      "crazing": 1.7695,
+      "inclusion": 0.0863,
+      "patches": 0.1542,
+      "pitted_surface": 0.1635,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.2035
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "scratches",
+        "confidence": 0.2907,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_174.jpg/372115474d1af6228be23c9e0a8de0dc": {
+    "pred_label": "crazing",
+    "confidence": 0.7986,
+    "method": "Claude+GroqWeighted(3/4LLM,best_w=1.78)",
+    "weighted_scores": {
+      "crazing": 1.7836,
+      "inclusion": 0.0995,
+      "patches": 0.1777,
+      "pitted_surface": 0.1883,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.6869
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 2,
+        "label": "scratches",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_175.jpg/57c068eb00bc4b2ef60529190cf31c1c": {
+    "pred_label": "crazing",
+    "confidence": 0.8446,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.77)",
+    "weighted_scores": {
+      "crazing": 1.7662,
+      "inclusion": 0.1248,
+      "patches": 0.0892,
+      "pitted_surface": 0.2363,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1605
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification problem. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_176.jpg/3dc559db2d5e8b137cbff85d72f27cc8": {
+    "pred_label": "crazing",
+    "confidence": 0.8029,
+    "method": "Claude+GroqWeighted(3/4LLM,best_w=1.78)",
+    "weighted_scores": {
+      "crazing": 1.7784,
+      "inclusion": 0.0947,
+      "patches": 0.169,
+      "pitted_surface": 0.6692,
+      "rolled-in_scale": 0.0338,
+      "scratches": 0.1217
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.256,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 3,
+        "label": "pitted_surface",
+        "confidence": 0.256,
+        "weight": 0.49,
+        "reason": "The image has a high total defect percentage (24.72%) and a large number of regions (153), with many round pits indicated by a low average circularity (0.578) a"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The features provided are a bit complex, but I'll go through them step by step.\n\nFirst, loo"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to determine the correct label from the given options based on the provided visual features and rule-based "
+      }
+    ]
+  },
+  "crazing/crazing_177.jpg/a1fd2e3997ec2b9679833d6a83610c18": {
+    "pred_label": "crazing",
+    "confidence": 0.8426,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.75)",
+    "weighted_scores": {
+      "crazing": 1.7519,
+      "inclusion": 0.1048,
+      "patches": 0.1872,
+      "pitted_surface": 0.1984,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1347
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.2834,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The user wants me to determine the correct label based on the given visual features and rule-based prior probabilities."
+      }
+    ]
+  },
+  "crazing/crazing_178.jpg/32ec677dfb1f3ac05ed7f42cd1c41e10": {
+    "pred_label": "crazing",
+    "confidence": 0.7965,
+    "method": "Claude+GroqWeighted(3/4LLM,best_w=1.77)",
+    "weighted_scores": {
+      "crazing": 1.7662,
+      "inclusion": 0.1248,
+      "patches": 0.0892,
+      "pitted_surface": 0.2363,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.7195
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 2,
+        "label": "scratches",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_179.jpg/3ed2904d4aceef30141d6b83ecff51a0": {
+    "pred_label": "crazing",
+    "confidence": 0.8426,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.75)",
+    "weighted_scores": {
+      "crazing": 1.7519,
+      "inclusion": 0.1048,
+      "patches": 0.1872,
+      "pitted_surface": 0.1984,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1347
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.2834,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The user wants me to determine the correct label based on the given visual features and rule-based prior probabilities."
+      }
+    ]
+  },
+  "crazing/crazing_18.jpg/96981904068654d95f1484442a8db45f": {
+    "pred_label": "crazing",
+    "confidence": 0.7949,
+    "method": "Claude+GroqWeighted(3/4LLM,best_w=1.75)",
+    "weighted_scores": {
+      "crazing": 1.7519,
+      "inclusion": 0.1048,
+      "patches": 0.1872,
+      "pitted_surface": 0.1984,
+      "rolled-in_scale": 0.559,
+      "scratches": 0.1347
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.2834,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 2,
+        "label": "rolled-in_scale",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The user wants me to determine the correct label based on the given visual features and rule-based prior probabilities."
+      }
+    ]
+  },
+  "crazing/crazing_180.jpg/7c004d8782b58de977c628df6353321c": {
+    "pred_label": "crazing",
+    "confidence": 0.7969,
+    "method": "Claude+GroqWeighted(3/4LLM,best_w=1.77)",
+    "weighted_scores": {
+      "crazing": 1.7695,
+      "inclusion": 0.0863,
+      "patches": 0.1542,
+      "pitted_surface": 0.1635,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.7625
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "scratches",
+        "confidence": 0.2907,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this classification problem. The goal is to determine which of the six possible labels best fits the given image features. The allowe"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 2,
+        "label": "scratches",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_181.jpg/4f3bfc34bf1e1aeb693c4439096af131": {
+    "pred_label": "crazing",
+    "confidence": 0.8498,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.80)",
+    "weighted_scores": {
+      "crazing": 1.8027,
+      "inclusion": 0.1174,
+      "patches": 0.0839,
+      "pitted_surface": 0.2222,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1509
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3174,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class label b"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_182.jpg/87caea3629fb06873a6c54bac54a2681": {
+    "pred_label": "crazing",
+    "confidence": 0.8471,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.78)",
+    "weighted_scores": {
+      "crazing": 1.7836,
+      "inclusion": 0.0995,
+      "patches": 0.1777,
+      "pitted_surface": 0.1883,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1279
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_183.jpg/2eaa7749c6b98bc0183de99cf36f4515": {
+    "pred_label": "crazing",
+    "confidence": 0.8035,
+    "method": "Claude+GroqWeighted(3/4LLM,best_w=1.78)",
+    "weighted_scores": {
+      "crazing": 1.7836,
+      "inclusion": 0.0995,
+      "patches": 0.1777,
+      "pitted_surface": 0.6783,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1279
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 3,
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.49,
+        "reason": "The image has a high total defect percentage (27.35%) and a large number of regions (146), with many round pits indicated by low circularity (0.58) and high edg"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the most likely c"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_184.jpg/be62f6f868f728403ba3596c25cdba99": {
+    "pred_label": "crazing",
+    "confidence": 0.8498,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.80)",
+    "weighted_scores": {
+      "crazing": 1.8027,
+      "inclusion": 0.1174,
+      "patches": 0.0839,
+      "pitted_surface": 0.2222,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1509
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3174,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this classification problem. The goal is to determine which of the six possible steel surface defects this image belongs to based on "
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_185.jpg/eb7368ef3781a7e5c105197e4ca3bd06": {
+    "pred_label": "crazing",
+    "confidence": 0.8446,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.77)",
+    "weighted_scores": {
+      "crazing": 1.7662,
+      "inclusion": 0.1248,
+      "patches": 0.0892,
+      "pitted_surface": 0.2363,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1605
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_186.jpg/9eb41792eb09dc99667232d9a21ae5b3": {
+    "pred_label": "crazing",
+    "confidence": 0.8446,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.77)",
+    "weighted_scores": {
+      "crazing": 1.7662,
+      "inclusion": 0.1248,
+      "patches": 0.0892,
+      "pitted_surface": 0.2363,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1605
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_187.jpg/859928a36cb420550d5096442672a404": {
+    "pred_label": "crazing",
+    "confidence": 0.8471,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.78)",
+    "weighted_scores": {
+      "crazing": 1.7836,
+      "inclusion": 0.0995,
+      "patches": 0.1777,
+      "pitted_surface": 0.1883,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1279
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.269,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class label b"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_188.jpg/721400b4c17de1995ceb76f5da83e1a9": {
+    "pred_label": "crazing",
+    "confidence": 0.8446,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.77)",
+    "weighted_scores": {
+      "crazing": 1.7662,
+      "inclusion": 0.1248,
+      "patches": 0.0892,
+      "pitted_surface": 0.2363,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1605
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The features provided are a bit complex, but I'll go through them step by step.\n\nFirst, loo"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "crazing/crazing_189.jpg/917f0426832311c5f8d5810abbafa4c5": {
+    "pred_label": "crazing",
+    "confidence": 0.8446,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.77)",
+    "weighted_scores": {
+      "crazing": 1.7662,
+      "inclusion": 0.1248,
+      "patches": 0.0892,
+      "pitted_surface": 0.2363,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1605
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3376,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
       },
       {
         "provider": "groq",
