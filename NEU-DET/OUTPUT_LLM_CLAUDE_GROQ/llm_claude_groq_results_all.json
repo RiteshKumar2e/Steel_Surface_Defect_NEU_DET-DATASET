@@ -91493,5 +91493,6798 @@
         ]
       ]
     }
+  },
+  {
+    "filename": "inclusion_121.jpg",
+    "true_label": "inclusion",
+    "pred_label": "patches",
+    "confidence": 0.7014261424407782,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.25)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.3571,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          136,
+          20,
+          67,
+          233
+        ],
+        "label": "inclusion",
+        "area": 15611,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          99,
+          208,
+          18,
+          45
+        ],
+        "label": "inclusion",
+        "area": 810,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          101,
+          6,
+          51,
+          165
+        ],
+        "label": "inclusion",
+        "area": 8415,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 120.94,
+      "std_intensity": 11.37,
+      "contrast": 0.094,
+      "dark_pixel_pct": 17.6,
+      "bright_pixel_pct": 19.24,
+      "entropy": 5.462,
+      "edge_density": 0.0,
+      "sobel_magnitude": 16.258,
+      "horizontal_edge_ratio": 0.446,
+      "vertical_edge_ratio": 0.25,
+      "diagonal_edge_ratio": 0.305,
+      "hough_line_count": 0,
+      "avg_line_length": 0.0,
+      "max_line_length": 0.0,
+      "line_horizontal_pct": 0.0,
+      "quadrant_std": {
+        "top_left": 11.4,
+        "top_right": 9.78,
+        "bottom_left": 10.98,
+        "bottom_right": 10.6
+      },
+      "quadrant_edge_density": {
+        "top_left": 0.0,
+        "top_right": 0.0,
+        "bottom_left": 0.0,
+        "bottom_right": 0.0
+      },
+      "glcm_contrast": 0.052,
+      "glcm_homogeneity": 0.974,
+      "glcm_energy": 0.729,
+      "glcm_correlation": 0.877,
+      "lbp_uniformity": 0.2185,
+      "lbp_entropy": 3.88,
+      "num_regions": 65,
+      "avg_area": 206.03,
+      "max_area": 4109.5,
+      "total_defect_pct": 20.43,
+      "avg_aspect_ratio": 2.039,
+      "max_aspect_ratio": 6.933,
+      "avg_circularity": 0.568,
+      "min_circularity": 0.071,
+      "regions_raw": [
+        [
+          48,
+          252,
+          9,
+          4,
+          22.0,
+          2.25,
+          0.6372643088067408
+        ],
+        [
+          7,
+          249,
+          8,
+          7,
+          37.0,
+          1.1428571428571428,
+          0.7542462735080538
+        ],
+        [
+          143,
+          247,
+          6,
+          9,
+          29.0,
+          1.5,
+          0.651169238821401
+        ],
+        [
+          227,
+          243,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          135,
+          243,
+          5,
+          7,
+          20.0,
+          1.4,
+          0.7089437484009192
+        ],
+        [
+          126,
+          238,
+          3,
+          5,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          54,
+          233,
+          4,
+          7,
+          14.0,
+          1.75,
+          0.621227750942985
+        ],
+        [
+          198,
+          228,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          18,
+          228,
+          32,
+          28,
+          551.0,
+          1.1428571428571428,
+          0.5398187597975713
+        ],
+        [
+          138,
+          219,
+          6,
+          7,
+          21.0,
+          1.1666666666666667,
+          0.6829692129966961
+        ],
+        [
+          208,
+          217,
+          5,
+          4,
+          10.0,
+          1.25,
+          0.7635949399760016
+        ],
+        [
+          66,
+          215,
+          5,
+          24,
+          61.5,
+          4.8,
+          0.27439066348065255
+        ],
+        [
+          105,
+          213,
+          7,
+          43,
+          169.5,
+          6.142857142857143,
+          0.24335094477309208
+        ],
+        [
+          136,
+          203,
+          6,
+          8,
+          17.5,
+          1.3333333333333333,
+          0.44450353819124294
+        ],
+        [
+          215,
+          201,
+          5,
+          5,
+          13.5,
+          1.0,
+          0.8363009664865618
+        ],
+        [
+          101,
+          200,
+          5,
+          7,
+          17.5,
+          1.4,
+          0.6608037614618838
+        ],
+        [
+          229,
+          187,
+          3,
+          5,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          118,
+          187,
+          8,
+          13,
+          37.5,
+          1.625,
+          0.4100668670442512
+        ],
+        [
+          220,
+          173,
+          4,
+          6,
+          10.0,
+          1.5,
+          0.5715045476590606
+        ],
+        [
+          18,
+          173,
+          20,
+          45,
+          470.5,
+          2.25,
+          0.323675314256088
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "inclusion_122.jpg",
+    "true_label": "inclusion",
+    "pred_label": "patches",
+    "confidence": 0.6876099998462715,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.22)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.3165,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          23,
+          1,
+          67,
+          252
+        ],
+        "label": "inclusion",
+        "area": 16884,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          140,
+          96,
+          37,
+          158
+        ],
+        "label": "inclusion",
+        "area": 5846,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          171,
+          1,
+          31,
+          120
+        ],
+        "label": "inclusion",
+        "area": 3720,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          212,
+          1,
+          17,
+          32
+        ],
+        "label": "inclusion",
+        "area": 544,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 117.97,
+      "std_intensity": 12.06,
+      "contrast": 0.102,
+      "dark_pixel_pct": 19.94,
+      "bright_pixel_pct": 18.96,
+      "entropy": 5.586,
+      "edge_density": 0.0,
+      "sobel_magnitude": 18.688,
+      "horizontal_edge_ratio": 0.435,
+      "vertical_edge_ratio": 0.261,
+      "diagonal_edge_ratio": 0.304,
+      "hough_line_count": 0,
+      "avg_line_length": 0.0,
+      "max_line_length": 0.0,
+      "line_horizontal_pct": 0.0,
+      "quadrant_std": {
+        "top_left": 11.36,
+        "top_right": 11.48,
+        "bottom_left": 9.89,
+        "bottom_right": 9.27
+      },
+      "quadrant_edge_density": {
+        "top_left": 0.0,
+        "top_right": 0.0,
+        "bottom_left": 0.0,
+        "bottom_right": 0.0
+      },
+      "glcm_contrast": 0.071,
+      "glcm_homogeneity": 0.964,
+      "glcm_energy": 0.743,
+      "glcm_correlation": 0.834,
+      "lbp_uniformity": 0.2135,
+      "lbp_entropy": 3.89,
+      "num_regions": 69,
+      "avg_area": 201.96,
+      "max_area": 6152.0,
+      "total_defect_pct": 21.26,
+      "avg_aspect_ratio": 2.087,
+      "max_aspect_ratio": 8.857,
+      "avg_circularity": 0.608,
+      "min_circularity": 0.054,
+      "regions_raw": [
+        [
+          112,
+          239,
+          6,
+          8,
+          24.5,
+          1.3333333333333333,
+          0.6223049534677401
+        ],
+        [
+          184,
+          223,
+          4,
+          6,
+          11.0,
+          1.5,
+          0.6286550024249665
+        ],
+        [
+          113,
+          219,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          3,
+          218,
+          5,
+          4,
+          11.0,
+          1.25,
+          0.8399544339736016
+        ],
+        [
+          156,
+          215,
+          4,
+          12,
+          25.0,
+          3.0,
+          0.43647507648480205
+        ],
+        [
+          27,
+          215,
+          11,
+          41,
+          315.5,
+          3.727272727272727,
+          0.41952584691661515
+        ],
+        [
+          125,
+          214,
+          6,
+          11,
+          35.5,
+          1.8333333333333333,
+          0.5731199669624001
+        ],
+        [
+          19,
+          208,
+          5,
+          4,
+          11.0,
+          1.25,
+          0.8399544339736016
+        ],
+        [
+          144,
+          204,
+          12,
+          52,
+          325.5,
+          4.333333333333333,
+          0.2901717470552849
+        ],
+        [
+          11,
+          203,
+          5,
+          5,
+          13.5,
+          1.0,
+          0.8363009664865618
+        ],
+        [
+          110,
+          193,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          167,
+          192,
+          7,
+          62,
+          249.5,
+          8.857142857142858,
+          0.18115769655370967
+        ],
+        [
+          35,
+          191,
+          6,
+          6,
+          21.0,
+          1.0,
+          0.8464523166247897
+        ],
+        [
+          8,
+          186,
+          9,
+          10,
+          55.5,
+          1.1111111111111112,
+          0.637685312635239
+        ],
+        [
+          125,
+          185,
+          8,
+          7,
+          22.5,
+          1.1428571428571428,
+          0.5311986889554543
+        ],
+        [
+          158,
+          184,
+          6,
+          20,
+          63.0,
+          3.3333333333333335,
+          0.40005318497858444
+        ],
+        [
+          140,
+          182,
+          6,
+          5,
+          18.0,
+          1.2,
+          0.7987213940695521
+        ],
+        [
+          72,
+          181,
+          4,
+          15,
+          28.0,
+          3.75,
+          0.3264883925069707
+        ],
+        [
+          175,
+          176,
+          3,
+          5,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          146,
+          166,
+          7,
+          11,
+          38.0,
+          1.5714285714285714,
+          0.6400768640916794
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "inclusion_123.jpg",
+    "true_label": "inclusion",
+    "pred_label": "patches",
+    "confidence": 0.7872999998291597,
+    "cls_method": "Claude+GroqWeighted(1/1LLM,best_w=0.71)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.3165,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "patches",
+        "confidence": 0.317,
+        "weight": 0.49,
+        "reason": "high max area, broad irregular damaged area and high total defect percentage"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          57,
+          71,
+          40,
+          182
+        ],
+        "label": "inclusion",
+        "area": 7280,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          92,
+          1,
+          30,
+          98
+        ],
+        "label": "inclusion",
+        "area": 2940,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 111.34,
+      "std_intensity": 11.17,
+      "contrast": 0.1,
+      "dark_pixel_pct": 18.03,
+      "bright_pixel_pct": 18.82,
+      "entropy": 5.406,
+      "edge_density": 0.0,
+      "sobel_magnitude": 16.19,
+      "horizontal_edge_ratio": 0.372,
+      "vertical_edge_ratio": 0.31,
+      "diagonal_edge_ratio": 0.318,
+      "hough_line_count": 0,
+      "avg_line_length": 0.0,
+      "max_line_length": 0.0,
+      "line_horizontal_pct": 0.0,
+      "quadrant_std": {
+        "top_left": 12.87,
+        "top_right": 5.09,
+        "bottom_left": 9.48,
+        "bottom_right": 4.19
+      },
+      "quadrant_edge_density": {
+        "top_left": 0.0,
+        "top_right": 0.0,
+        "bottom_left": 0.0,
+        "bottom_right": 0.0
+      },
+      "glcm_contrast": 0.051,
+      "glcm_homogeneity": 0.974,
+      "glcm_energy": 0.863,
+      "glcm_correlation": 0.772,
+      "lbp_uniformity": 0.2366,
+      "lbp_entropy": 3.874,
+      "num_regions": 67,
+      "avg_area": 194.16,
+      "max_area": 4310.0,
+      "total_defect_pct": 19.85,
+      "avg_aspect_ratio": 1.903,
+      "max_aspect_ratio": 8.857,
+      "avg_circularity": 0.601,
+      "min_circularity": 0.053,
+      "regions_raw": [
+        [
+          141,
+          251,
+          4,
+          5,
+          11.5,
+          1.25,
+          0.8031141373846319
+        ],
+        [
+          111,
+          248,
+          4,
+          5,
+          11.5,
+          1.25,
+          0.8031141373846319
+        ],
+        [
+          48,
+          248,
+          3,
+          5,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          140,
+          240,
+          5,
+          8,
+          24.5,
+          1.6,
+          0.7513488357717422
+        ],
+        [
+          126,
+          227,
+          4,
+          5,
+          10.5,
+          1.25,
+          0.7332781254381423
+        ],
+        [
+          33,
+          217,
+          6,
+          9,
+          28.5,
+          1.5,
+          0.60938937334658
+        ],
+        [
+          204,
+          209,
+          11,
+          10,
+          55.0,
+          1.1,
+          0.5542247324566515
+        ],
+        [
+          143,
+          198,
+          9,
+          10,
+          53.0,
+          1.1111111111111112,
+          0.6645845269733881
+        ],
+        [
+          34,
+          197,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          77,
+          194,
+          3,
+          12,
+          22.0,
+          4.0,
+          0.40896472353097196
+        ],
+        [
+          46,
+          193,
+          5,
+          10,
+          27.5,
+          2.0,
+          0.5497900783999331
+        ],
+        [
+          238,
+          184,
+          4,
+          5,
+          10.0,
+          1.25,
+          0.7635949399760016
+        ],
+        [
+          64,
+          182,
+          12,
+          74,
+          497.0,
+          6.166666666666667,
+          0.23375739000673634
+        ],
+        [
+          88,
+          171,
+          7,
+          62,
+          239.0,
+          8.857142857142858,
+          0.17508961175755222
+        ],
+        [
+          178,
+          167,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          45,
+          163,
+          9,
+          7,
+          25.5,
+          1.2857142857142858,
+          0.5098053454253925
+        ],
+        [
+          150,
+          160,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          79,
+          160,
+          6,
+          21,
+          65.5,
+          3.5,
+          0.37148652504230784
+        ],
+        [
+          61,
+          160,
+          6,
+          6,
+          19.0,
+          1.0,
+          0.7658378102795715
+        ],
+        [
+          114,
+          157,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "inclusion_124.jpg",
+    "true_label": "inclusion",
+    "pred_label": "patches",
+    "confidence": 0.6836659998519057,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.21)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.3049,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          144,
+          1,
+          41,
+          110
+        ],
+        "label": "inclusion",
+        "area": 4510,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          49,
+          1,
+          25,
+          79
+        ],
+        "label": "inclusion",
+        "area": 1975,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          16,
+          115,
+          23,
+          78
+        ],
+        "label": "inclusion",
+        "area": 1794,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          49,
+          135,
+          41,
+          117
+        ],
+        "label": "inclusion",
+        "area": 4797,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          21,
+          23,
+          28,
+          73
+        ],
+        "label": "inclusion",
+        "area": 2044,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 116.09,
+      "std_intensity": 10.93,
+      "contrast": 0.094,
+      "dark_pixel_pct": 17.65,
+      "bright_pixel_pct": 19.57,
+      "entropy": 5.448,
+      "edge_density": 0.07,
+      "sobel_magnitude": 16.468,
+      "horizontal_edge_ratio": 0.423,
+      "vertical_edge_ratio": 0.269,
+      "diagonal_edge_ratio": 0.308,
+      "hough_line_count": 0,
+      "avg_line_length": 0.0,
+      "max_line_length": 0.0,
+      "line_horizontal_pct": 0.0,
+      "quadrant_std": {
+        "top_left": 10.54,
+        "top_right": 10.29,
+        "bottom_left": 7.91,
+        "bottom_right": 4.94
+      },
+      "quadrant_edge_density": {
+        "top_left": 0.24,
+        "top_right": 0.0,
+        "bottom_left": 0.02,
+        "bottom_right": 0.0
+      },
+      "glcm_contrast": 0.053,
+      "glcm_homogeneity": 0.973,
+      "glcm_energy": 0.82,
+      "glcm_correlation": 0.816,
+      "lbp_uniformity": 0.2287,
+      "lbp_entropy": 3.877,
+      "num_regions": 58,
+      "avg_area": 238.88,
+      "max_area": 7724.5,
+      "total_defect_pct": 21.14,
+      "avg_aspect_ratio": 2.614,
+      "max_aspect_ratio": 11.333,
+      "avg_circularity": 0.56,
+      "min_circularity": 0.061,
+      "regions_raw": [
+        [
+          147,
+          230,
+          14,
+          26,
+          204.5,
+          1.8571428571428572,
+          0.5364450948079156
+        ],
+        [
+          115,
+          223,
+          5,
+          4,
+          11.0,
+          1.25,
+          0.8399544339736016
+        ],
+        [
+          152,
+          218,
+          8,
+          11,
+          43.0,
+          1.375,
+          0.5230327305740321
+        ],
+        [
+          62,
+          217,
+          6,
+          25,
+          73.5,
+          4.166666666666667,
+          0.30454411390156444
+        ],
+        [
+          127,
+          189,
+          8,
+          6,
+          24.5,
+          1.3333333333333333,
+          0.6934303770736426
+        ],
+        [
+          150,
+          183,
+          5,
+          6,
+          16.5,
+          1.2,
+          0.7859239729348965
+        ],
+        [
+          53,
+          179,
+          6,
+          29,
+          102.0,
+          4.833333333333333,
+          0.3197529306202131
+        ],
+        [
+          72,
+          174,
+          7,
+          33,
+          96.0,
+          4.714285714285714,
+          0.2372111267256864
+        ],
+        [
+          83,
+          165,
+          6,
+          28,
+          105.5,
+          4.666666666666667,
+          0.32820443270662286
+        ],
+        [
+          252,
+          150,
+          4,
+          20,
+          42.5,
+          5.0,
+          0.2878906223509444
+        ],
+        [
+          247,
+          147,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          149,
+          145,
+          13,
+          36,
+          192.0,
+          2.769230769230769,
+          0.26400592328817396
+        ],
+        [
+          211,
+          144,
+          7,
+          8,
+          29.5,
+          1.1428571428571428,
+          0.6964605032971511
+        ],
+        [
+          171,
+          140,
+          10,
+          5,
+          24.5,
+          2.0,
+          0.4898129789381222
+        ],
+        [
+          53,
+          139,
+          5,
+          16,
+          44.5,
+          3.2,
+          0.40691123948774416
+        ],
+        [
+          206,
+          134,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          110,
+          133,
+          7,
+          4,
+          17.0,
+          1.75,
+          0.7543479832879103
+        ],
+        [
+          167,
+          125,
+          89,
+          131,
+          7724.5,
+          1.4719101123595506,
+          0.13618553576778983
+        ],
+        [
+          184,
+          118,
+          5,
+          4,
+          10.0,
+          1.25,
+          0.7635949399760016
+        ],
+        [
+          23,
+          118,
+          11,
+          71,
+          337.0,
+          6.454545454545454,
+          0.142675205560732
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "inclusion_125.jpg",
+    "true_label": "inclusion",
+    "pred_label": "patches",
+    "confidence": 0.6733979998665742,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.19)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2747,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          136,
+          19,
+          21,
+          79
+        ],
+        "label": "inclusion",
+        "area": 1659,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          112,
+          1,
+          17,
+          33
+        ],
+        "label": "inclusion",
+        "area": 561,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          166,
+          39,
+          47,
+          106
+        ],
+        "label": "inclusion",
+        "area": 4982,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          119,
+          160,
+          43,
+          79
+        ],
+        "label": "inclusion",
+        "area": 3397,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          72,
+          39,
+          21,
+          57
+        ],
+        "label": "inclusion",
+        "area": 1197,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          42,
+          79,
+          14,
+          31
+        ],
+        "label": "inclusion",
+        "area": 434,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          174,
+          115,
+          23,
+          66
+        ],
+        "label": "inclusion",
+        "area": 1518,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          42,
+          115,
+          16,
+          33
+        ],
+        "label": "inclusion",
+        "area": 528,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          44,
+          185,
+          16,
+          36
+        ],
+        "label": "inclusion",
+        "area": 576,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 118.37,
+      "std_intensity": 8.75,
+      "contrast": 0.074,
+      "dark_pixel_pct": 18.89,
+      "bright_pixel_pct": 19.84,
+      "entropy": 5.158,
+      "edge_density": 0.0,
+      "sobel_magnitude": 13.552,
+      "horizontal_edge_ratio": 0.422,
+      "vertical_edge_ratio": 0.264,
+      "diagonal_edge_ratio": 0.314,
+      "hough_line_count": 0,
+      "avg_line_length": 0.0,
+      "max_line_length": 0.0,
+      "line_horizontal_pct": 0.0,
+      "quadrant_std": {
+        "top_left": 7.79,
+        "top_right": 8.0,
+        "bottom_left": 6.4,
+        "bottom_right": 6.15
+      },
+      "quadrant_edge_density": {
+        "top_left": 0.0,
+        "top_right": 0.0,
+        "bottom_left": 0.0,
+        "bottom_right": 0.0
+      },
+      "glcm_contrast": 0.042,
+      "glcm_homogeneity": 0.979,
+      "glcm_energy": 0.838,
+      "glcm_correlation": 0.838,
+      "lbp_uniformity": 0.2497,
+      "lbp_entropy": 3.836,
+      "num_regions": 47,
+      "avg_area": 252.67,
+      "max_area": 7576.5,
+      "total_defect_pct": 18.12,
+      "avg_aspect_ratio": 2.419,
+      "max_aspect_ratio": 6.714,
+      "avg_circularity": 0.557,
+      "min_circularity": 0.113,
+      "regions_raw": [
+        [
+          113,
+          221,
+          3,
+          5,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          90,
+          216,
+          5,
+          5,
+          15.0,
+          1.0,
+          0.8572568214885907
+        ],
+        [
+          0,
+          214,
+          74,
+          42,
+          1806.0,
+          1.7619047619047619,
+          0.24553351010314997
+        ],
+        [
+          0,
+          213,
+          15,
+          14,
+          91.0,
+          1.0714285714285714,
+          0.3784346505911663
+        ],
+        [
+          65,
+          205,
+          5,
+          7,
+          17.5,
+          1.4,
+          0.6608037614618838
+        ],
+        [
+          86,
+          202,
+          5,
+          6,
+          18.0,
+          1.2,
+          0.7987213940695521
+        ],
+        [
+          152,
+          194,
+          4,
+          7,
+          16.0,
+          1.75,
+          0.7099745725062685
+        ],
+        [
+          49,
+          191,
+          6,
+          17,
+          59.0,
+          2.8333333333333335,
+          0.4797045672026119
+        ],
+        [
+          87,
+          189,
+          4,
+          7,
+          15.0,
+          1.75,
+          0.6656011617246267
+        ],
+        [
+          63,
+          186,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          123,
+          177,
+          17,
+          66,
+          404.5,
+          3.8823529411764706,
+          0.21710824314077593
+        ],
+        [
+          86,
+          173,
+          7,
+          6,
+          23.0,
+          1.1666666666666667,
+          0.7480138999487623
+        ],
+        [
+          143,
+          171,
+          4,
+          9,
+          19.5,
+          2.25,
+          0.5343677210528828
+        ],
+        [
+          98,
+          167,
+          5,
+          8,
+          23.5,
+          1.6,
+          0.7206815363524874
+        ],
+        [
+          248,
+          152,
+          5,
+          6,
+          16.5,
+          1.2,
+          0.7859239729348965
+        ],
+        [
+          85,
+          151,
+          6,
+          16,
+          50.5,
+          2.6666666666666665,
+          0.44180883958462824
+        ],
+        [
+          85,
+          144,
+          5,
+          4,
+          11.0,
+          1.25,
+          0.8399544339736016
+        ],
+        [
+          191,
+          143,
+          4,
+          16,
+          38.5,
+          4.0,
+          0.36832477148104203
+        ],
+        [
+          150,
+          135,
+          5,
+          6,
+          16.0,
+          1.2,
+          0.8202020167791964
+        ],
+        [
+          115,
+          131,
+          4,
+          6,
+          14.5,
+          1.5,
+          0.7668936154590991
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "inclusion_126.jpg",
+    "true_label": "inclusion",
+    "pred_label": "patches",
+    "confidence": 0.6876099998462715,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.22)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.3165,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          2,
+          112,
+          49,
+          92
+        ],
+        "label": "inclusion",
+        "area": 4508,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          30,
+          1,
+          25,
+          52
+        ],
+        "label": "inclusion",
+        "area": 1300,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          64,
+          1,
+          44,
+          109
+        ],
+        "label": "inclusion",
+        "area": 4796,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          120,
+          224,
+          15,
+          29
+        ],
+        "label": "inclusion",
+        "area": 435,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          71,
+          72,
+          23,
+          58
+        ],
+        "label": "inclusion",
+        "area": 1334,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 109.38,
+      "std_intensity": 10.4,
+      "contrast": 0.095,
+      "dark_pixel_pct": 18.43,
+      "bright_pixel_pct": 19.45,
+      "entropy": 5.363,
+      "edge_density": 0.0,
+      "sobel_magnitude": 12.47,
+      "horizontal_edge_ratio": 0.408,
+      "vertical_edge_ratio": 0.274,
+      "diagonal_edge_ratio": 0.317,
+      "hough_line_count": 0,
+      "avg_line_length": 0.0,
+      "max_line_length": 0.0,
+      "line_horizontal_pct": 0.0,
+      "quadrant_std": {
+        "top_left": 8.05,
+        "top_right": 5.37,
+        "bottom_left": 6.7,
+        "bottom_right": 5.96
+      },
+      "quadrant_edge_density": {
+        "top_left": 0.0,
+        "top_right": 0.0,
+        "bottom_left": 0.0,
+        "bottom_right": 0.0
+      },
+      "glcm_contrast": 0.04,
+      "glcm_homogeneity": 0.98,
+      "glcm_energy": 0.846,
+      "glcm_correlation": 0.857,
+      "lbp_uniformity": 0.2534,
+      "lbp_entropy": 3.83,
+      "num_regions": 45,
+      "avg_area": 295.69,
+      "max_area": 10346.0,
+      "total_defect_pct": 20.3,
+      "avg_aspect_ratio": 2.175,
+      "max_aspect_ratio": 7.143,
+      "avg_circularity": 0.578,
+      "min_circularity": 0.162,
+      "regions_raw": [
+        [
+          23,
+          250,
+          5,
+          6,
+          19.5,
+          1.2,
+          0.8080472242575696
+        ],
+        [
+          73,
+          243,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          83,
+          240,
+          29,
+          16,
+          193.5,
+          1.8125,
+          0.35116106267953495
+        ],
+        [
+          36,
+          236,
+          23,
+          20,
+          323.0,
+          1.15,
+          0.5827722767690114
+        ],
+        [
+          59,
+          234,
+          3,
+          6,
+          10.0,
+          2.0,
+          0.6411413546043386
+        ],
+        [
+          125,
+          229,
+          8,
+          27,
+          129.0,
+          3.375,
+          0.4151873535581264
+        ],
+        [
+          43,
+          227,
+          7,
+          7,
+          25.5,
+          1.0,
+          0.7217336659369236
+        ],
+        [
+          150,
+          224,
+          4,
+          7,
+          16.5,
+          1.75,
+          0.6837322666794821
+        ],
+        [
+          115,
+          222,
+          6,
+          3,
+          10.0,
+          2.0,
+          0.6411413546043386
+        ],
+        [
+          45,
+          214,
+          6,
+          9,
+          32.0,
+          1.5,
+          0.7185315738718907
+        ],
+        [
+          84,
+          209,
+          8,
+          35,
+          134.5,
+          4.375,
+          0.23930028395398778
+        ],
+        [
+          124,
+          205,
+          6,
+          12,
+          38.0,
+          2.0,
+          0.5885080897034491
+        ],
+        [
+          84,
+          199,
+          6,
+          7,
+          22.0,
+          1.1666666666666667,
+          0.7154915564727291
+        ],
+        [
+          161,
+          191,
+          5,
+          8,
+          25.0,
+          1.6,
+          0.8130585869008287
+        ],
+        [
+          102,
+          191,
+          16,
+          33,
+          221.0,
+          2.0625,
+          0.2570557436773803
+        ],
+        [
+          119,
+          177,
+          7,
+          8,
+          34.0,
+          1.1428571428571428,
+          0.8450689261925524
+        ],
+        [
+          43,
+          176,
+          4,
+          5,
+          11.5,
+          1.25,
+          0.8031141373846319
+        ],
+        [
+          175,
+          153,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          74,
+          140,
+          4,
+          9,
+          18.0,
+          2.25,
+          0.521398070841879
+        ],
+        [
+          209,
+          135,
+          4,
+          5,
+          10.0,
+          1.25,
+          0.7635949399760016
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "inclusion_127.jpg",
+    "true_label": "inclusion",
+    "pred_label": "patches",
+    "confidence": 0.7789514675695617,
+    "cls_method": "Claude+GroqWeighted(1/1LLM,best_w=0.68)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2747,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "patches",
+        "confidence": 0.275,
+        "weight": 0.49,
+        "reason": "high max area, total defect percentage and rule prior probability"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          43,
+          51,
+          18,
+          46
+        ],
+        "label": "inclusion",
+        "area": 828,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          87,
+          115,
+          62,
+          139
+        ],
+        "label": "inclusion",
+        "area": 8618,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          128,
+          108,
+          25,
+          52
+        ],
+        "label": "inclusion",
+        "area": 1300,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 87.6,
+      "std_intensity": 9.87,
+      "contrast": 0.113,
+      "dark_pixel_pct": 19.47,
+      "bright_pixel_pct": 19.09,
+      "entropy": 5.315,
+      "edge_density": 0.0,
+      "sobel_magnitude": 8.954,
+      "horizontal_edge_ratio": 0.386,
+      "vertical_edge_ratio": 0.292,
+      "diagonal_edge_ratio": 0.323,
+      "hough_line_count": 0,
+      "avg_line_length": 0.0,
+      "max_line_length": 0.0,
+      "line_horizontal_pct": 0.0,
+      "quadrant_std": {
+        "top_left": 5.08,
+        "top_right": 4.97,
+        "bottom_left": 6.78,
+        "bottom_right": 5.13
+      },
+      "quadrant_edge_density": {
+        "top_left": 0.0,
+        "top_right": 0.0,
+        "bottom_left": 0.0,
+        "bottom_right": 0.0
+      },
+      "glcm_contrast": 0.042,
+      "glcm_homogeneity": 0.979,
+      "glcm_energy": 0.783,
+      "glcm_correlation": 0.881,
+      "lbp_uniformity": 0.2673,
+      "lbp_entropy": 3.777,
+      "num_regions": 12,
+      "avg_area": 1011.67,
+      "max_area": 9706.0,
+      "total_defect_pct": 18.52,
+      "avg_aspect_ratio": 2.459,
+      "max_aspect_ratio": 5.833,
+      "avg_circularity": 0.48,
+      "min_circularity": 0.197,
+      "regions_raw": [
+        [
+          142,
+          186,
+          9,
+          24,
+          124.0,
+          2.6666666666666665,
+          0.4943718057783448
+        ],
+        [
+          185,
+          173,
+          7,
+          8,
+          29.0,
+          1.1428571428571428,
+          0.7207940841054122
+        ],
+        [
+          98,
+          153,
+          35,
+          103,
+          1678.5,
+          2.942857142857143,
+          0.19673039488860772
+        ],
+        [
+          109,
+          139,
+          6,
+          24,
+          90.5,
+          4.0,
+          0.39146149872304115
+        ],
+        [
+          131,
+          134,
+          125,
+          122,
+          9706.0,
+          1.0245901639344261,
+          0.2718303431167335
+        ],
+        [
+          200,
+          120,
+          4,
+          5,
+          9.0,
+          1.25,
+          0.6872354459784014
+        ],
+        [
+          135,
+          120,
+          12,
+          33,
+          234.5,
+          2.75,
+          0.49427605670274616
+        ],
+        [
+          91,
+          118,
+          6,
+          17,
+          59.0,
+          2.8333333333333335,
+          0.5005789077991702
+        ],
+        [
+          206,
+          116,
+          11,
+          19,
+          88.5,
+          1.7272727272727273,
+          0.3877316112518487
+        ],
+        [
+          49,
+          57,
+          6,
+          35,
+          97.0,
+          5.833333333333333,
+          0.21970537127860876
+        ],
+        [
+          132,
+          39,
+          3,
+          7,
+          12.0,
+          2.3333333333333335,
+          0.589048620247115
+        ],
+        [
+          146,
+          19,
+          5,
+          5,
+          12.0,
+          1.0,
+          0.8085181338070881
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "inclusion_128.jpg",
+    "true_label": "inclusion",
+    "pred_label": "rolled-in_scale",
+    "confidence": 0.6710271025802192,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.19)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "rolled-in_scale",
+        "confidence": 0.2677,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          39,
+          1,
+          14,
+          31
+        ],
+        "label": "inclusion",
+        "area": 434,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          87,
+          55,
+          62,
+          166
+        ],
+        "label": "inclusion",
+        "area": 10292,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          122,
+          51,
+          23,
+          51
+        ],
+        "label": "inclusion",
+        "area": 1173,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 81.34,
+      "std_intensity": 10.0,
+      "contrast": 0.123,
+      "dark_pixel_pct": 18.36,
+      "bright_pixel_pct": 19.92,
+      "entropy": 5.328,
+      "edge_density": 0.0,
+      "sobel_magnitude": 8.155,
+      "horizontal_edge_ratio": 0.39,
+      "vertical_edge_ratio": 0.29,
+      "diagonal_edge_ratio": 0.32,
+      "hough_line_count": 0,
+      "avg_line_length": 0.0,
+      "max_line_length": 0.0,
+      "line_horizontal_pct": 0.0,
+      "quadrant_std": {
+        "top_left": 6.15,
+        "top_right": 5.12,
+        "bottom_left": 5.9,
+        "bottom_right": 4.66
+      },
+      "quadrant_edge_density": {
+        "top_left": 0.0,
+        "top_right": 0.0,
+        "bottom_left": 0.0,
+        "bottom_right": 0.0
+      },
+      "glcm_contrast": 0.034,
+      "glcm_homogeneity": 0.983,
+      "glcm_energy": 0.881,
+      "glcm_correlation": 0.834,
+      "lbp_uniformity": 0.2703,
+      "lbp_entropy": 3.754,
+      "num_regions": 9,
+      "avg_area": 1301.83,
+      "max_area": 10171.5,
+      "total_defect_pct": 17.88,
+      "avg_aspect_ratio": 3.883,
+      "max_aspect_ratio": 7.625,
+      "avg_circularity": 0.371,
+      "min_circularity": 0.187,
+      "regions_raw": [
+        [
+          87,
+          152,
+          169,
+          104,
+          10171.5,
+          1.625,
+          0.19256636848697178
+        ],
+        [
+          94,
+          136,
+          18,
+          83,
+          818.0,
+          4.611111111111111,
+          0.30609222118163865
+        ],
+        [
+          138,
+          129,
+          4,
+          16,
+          42.5,
+          4.0,
+          0.42583719302279854
+        ],
+        [
+          105,
+          123,
+          4,
+          6,
+          14.5,
+          1.5,
+          0.7668936154590991
+        ],
+        [
+          116,
+          93,
+          8,
+          61,
+          248.0,
+          7.625,
+          0.18736150105286778
+        ],
+        [
+          102,
+          80,
+          7,
+          23,
+          87.5,
+          3.2857142857142856,
+          0.39549100198847353
+        ],
+        [
+          129,
+          62,
+          10,
+          32,
+          188.5,
+          3.2,
+          0.41493425678121215
+        ],
+        [
+          85,
+          58,
+          5,
+          18,
+          53.0,
+          3.6,
+          0.42349590295261413
+        ],
+        [
+          43,
+          0,
+          6,
+          33,
+          93.0,
+          5.5,
+          0.22455091352942366
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "inclusion_129.jpg",
+    "true_label": "inclusion",
+    "pred_label": "patches",
+    "confidence": 0.6663006299397073,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.18)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2538,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          208,
+          138,
+          35,
+          66
+        ],
+        "label": "inclusion",
+        "area": 2310,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          29,
+          183,
+          23,
+          71
+        ],
+        "label": "inclusion",
+        "area": 1633,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          56,
+          1,
+          61,
+          150
+        ],
+        "label": "inclusion",
+        "area": 9150,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          102,
+          122,
+          24,
+          41
+        ],
+        "label": "inclusion",
+        "area": 984,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 71.97,
+      "std_intensity": 9.59,
+      "contrast": 0.133,
+      "dark_pixel_pct": 19.8,
+      "bright_pixel_pct": 17.96,
+      "entropy": 5.263,
+      "edge_density": 0.0,
+      "sobel_magnitude": 7.087,
+      "horizontal_edge_ratio": 0.39,
+      "vertical_edge_ratio": 0.29,
+      "diagonal_edge_ratio": 0.319,
+      "hough_line_count": 0,
+      "avg_line_length": 0.0,
+      "max_line_length": 0.0,
+      "line_horizontal_pct": 0.0,
+      "quadrant_std": {
+        "top_left": 7.17,
+        "top_right": 5.29,
+        "bottom_left": 4.93,
+        "bottom_right": 4.34
+      },
+      "quadrant_edge_density": {
+        "top_left": 0.0,
+        "top_right": 0.0,
+        "bottom_left": 0.0,
+        "bottom_right": 0.0
+      },
+      "glcm_contrast": 0.03,
+      "glcm_homogeneity": 0.985,
+      "glcm_energy": 0.806,
+      "glcm_correlation": 0.906,
+      "lbp_uniformity": 0.2754,
+      "lbp_entropy": 3.708,
+      "num_regions": 20,
+      "avg_area": 636.25,
+      "max_area": 11587.5,
+      "total_defect_pct": 19.42,
+      "avg_aspect_ratio": 2.415,
+      "max_aspect_ratio": 6.667,
+      "avg_circularity": 0.516,
+      "min_circularity": 0.17,
+      "regions_raw": [
+        [
+          77,
+          252,
+          5,
+          4,
+          10.5,
+          1.25,
+          0.7332781254381423
+        ],
+        [
+          38,
+          231,
+          5,
+          20,
+          62.5,
+          4.0,
+          0.3866287886059367
+        ],
+        [
+          107,
+          229,
+          10,
+          5,
+          29.5,
+          2.0,
+          0.6307714566218987
+        ],
+        [
+          99,
+          228,
+          5,
+          10,
+          26.0,
+          2.0,
+          0.5449705304285687
+        ],
+        [
+          39,
+          225,
+          3,
+          5,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          38,
+          210,
+          4,
+          9,
+          21.0,
+          2.25,
+          0.6082977493155254
+        ],
+        [
+          38,
+          201,
+          4,
+          8,
+          16.0,
+          2.0,
+          0.5671549987207354
+        ],
+        [
+          141,
+          196,
+          6,
+          5,
+          16.5,
+          1.2,
+          0.7859239729348965
+        ],
+        [
+          209,
+          160,
+          7,
+          6,
+          23.0,
+          1.1666666666666667,
+          0.7480138999487623
+        ],
+        [
+          202,
+          160,
+          6,
+          5,
+          15.5,
+          1.2,
+          0.7382922169994482
+        ],
+        [
+          207,
+          145,
+          8,
+          10,
+          26.5,
+          1.25,
+          0.3940340683388615
+        ],
+        [
+          64,
+          98,
+          14,
+          45,
+          232.0,
+          3.2142857142857144,
+          0.22786369159617156
+        ],
+        [
+          72,
+          67,
+          6,
+          30,
+          112.0,
+          5.0,
+          0.3061832609262022
+        ],
+        [
+          94,
+          64,
+          162,
+          192,
+          11587.5,
+          1.1851851851851851,
+          0.16950065311315796
+        ],
+        [
+          105,
+          60,
+          5,
+          17,
+          48.0,
+          3.4,
+          0.4253662499404555
+        ],
+        [
+          73,
+          54,
+          4,
+          6,
+          13.5,
+          1.5,
+          0.7140044005998508
+        ],
+        [
+          83,
+          24,
+          9,
+          60,
+          231.0,
+          6.666666666666667,
+          0.17773256307156604
+        ],
+        [
+          70,
+          12,
+          7,
+          23,
+          87.5,
+          3.2857142857142856,
+          0.36711320179271284
+        ],
+        [
+          98,
+          0,
+          9,
+          26,
+          138.0,
+          2.888888888888889,
+          0.4612897275936206
+        ],
+        [
+          53,
+          0,
+          6,
+          7,
+          20.5,
+          1.1666666666666667,
+          0.628679638094723
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "inclusion_13.jpg",
+    "true_label": "inclusion",
+    "pred_label": "patches",
+    "confidence": 0.6876099998462715,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.22)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.3165,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          76,
+          1,
+          49,
+          252
+        ],
+        "label": "inclusion",
+        "area": 12348,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          135,
+          2,
+          60,
+          91
+        ],
+        "label": "inclusion",
+        "area": 5460,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          204,
+          46,
+          44,
+          193
+        ],
+        "label": "inclusion",
+        "area": 8492,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          142,
+          98,
+          32,
+          53
+        ],
+        "label": "inclusion",
+        "area": 1696,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          143,
+          161,
+          34,
+          95
+        ],
+        "label": "inclusion",
+        "area": 3230,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 97.57,
+      "std_intensity": 10.11,
+      "contrast": 0.104,
+      "dark_pixel_pct": 19.32,
+      "bright_pixel_pct": 19.94,
+      "entropy": 5.325,
+      "edge_density": 0.0,
+      "sobel_magnitude": 10.689,
+      "horizontal_edge_ratio": 0.44,
+      "vertical_edge_ratio": 0.253,
+      "diagonal_edge_ratio": 0.307,
+      "hough_line_count": 0,
+      "avg_line_length": 0.0,
+      "max_line_length": 0.0,
+      "line_horizontal_pct": 0.0,
+      "quadrant_std": {
+        "top_left": 6.81,
+        "top_right": 5.58,
+        "bottom_left": 8.41,
+        "bottom_right": 7.74
+      },
+      "quadrant_edge_density": {
+        "top_left": 0.0,
+        "top_right": 0.0,
+        "bottom_left": 0.0,
+        "bottom_right": 0.0
+      },
+      "glcm_contrast": 0.056,
+      "glcm_homogeneity": 0.972,
+      "glcm_energy": 0.669,
+      "glcm_correlation": 0.89,
+      "lbp_uniformity": 0.2624,
+      "lbp_entropy": 3.788,
+      "num_regions": 37,
+      "avg_area": 342.36,
+      "max_area": 6663.5,
+      "total_defect_pct": 19.33,
+      "avg_aspect_ratio": 2.361,
+      "max_aspect_ratio": 5.75,
+      "avg_circularity": 0.485,
+      "min_circularity": 0.101,
+      "regions_raw": [
+        [
+          97,
+          254,
+          10,
+          2,
+          9.0,
+          5.0,
+          0.28274333811622304
+        ],
+        [
+          164,
+          247,
+          6,
+          9,
+          30.5,
+          1.5,
+          0.5934120395548387
+        ],
+        [
+          145,
+          245,
+          10,
+          11,
+          57.5,
+          1.1,
+          0.6287691961345185
+        ],
+        [
+          101,
+          243,
+          6,
+          5,
+          14.0,
+          1.2,
+          0.621227750942985
+        ],
+        [
+          158,
+          233,
+          3,
+          6,
+          10.0,
+          2.0,
+          0.6411413546043386
+        ],
+        [
+          168,
+          224,
+          5,
+          8,
+          22.5,
+          1.6,
+          0.6900142369332327
+        ],
+        [
+          87,
+          217,
+          6,
+          7,
+          22.0,
+          1.1666666666666667,
+          0.6372643088067408
+        ],
+        [
+          210,
+          214,
+          9,
+          27,
+          108.5,
+          3.0,
+          0.35982712321968374
+        ],
+        [
+          101,
+          208,
+          8,
+          34,
+          112.0,
+          4.25,
+          0.2345954090739451
+        ],
+        [
+          168,
+          201,
+          7,
+          20,
+          70.0,
+          2.857142857142857,
+          0.3617200481297394
+        ],
+        [
+          87,
+          198,
+          9,
+          18,
+          73.5,
+          2.0,
+          0.4868489823130387
+        ],
+        [
+          98,
+          196,
+          7,
+          9,
+          30.0,
+          1.2857142857142858,
+          0.6288121504945022
+        ],
+        [
+          220,
+          191,
+          11,
+          31,
+          116.0,
+          2.8181818181818183,
+          0.2922275873666458
+        ],
+        [
+          168,
+          190,
+          7,
+          9,
+          37.5,
+          1.2857142857142858,
+          0.7497137432726361
+        ],
+        [
+          30,
+          189,
+          5,
+          4,
+          10.0,
+          1.25,
+          0.7635949399760016
+        ],
+        [
+          90,
+          182,
+          7,
+          11,
+          54.5,
+          1.5714285714285714,
+          0.7488019188392444
+        ],
+        [
+          167,
+          171,
+          10,
+          16,
+          71.5,
+          1.6,
+          0.36586199950104875
+        ],
+        [
+          147,
+          165,
+          12,
+          69,
+          334.0,
+          5.75,
+          0.1672249943123198
+        ],
+        [
+          229,
+          161,
+          6,
+          26,
+          81.0,
+          4.333333333333333,
+          0.30986881026732327
+        ],
+        [
+          94,
+          160,
+          13,
+          33,
+          152.0,
+          2.5384615384615383,
+          0.19444413871886285
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "inclusion_130.jpg",
+    "true_label": "inclusion",
+    "pred_label": "patches",
+    "confidence": 0.7872999998291597,
+    "cls_method": "Claude+GroqWeighted(1/1LLM,best_w=0.71)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.3165,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 3,
+        "label": "patches",
+        "confidence": 0.317,
+        "weight": 0.49,
+        "reason": "The classification is based on the provided numerical descriptors, where the 'patches' class has the highest prior probability of 0.3165, indicating a large irr"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          111,
+          170,
+          28,
+          74
+        ],
+        "label": "inclusion",
+        "area": 2072,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          176,
+          121,
+          22,
+          40
+        ],
+        "label": "inclusion",
+        "area": 880,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          206,
+          145,
+          21,
+          79
+        ],
+        "label": "inclusion",
+        "area": 1659,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          215,
+          49,
+          24,
+          79
+        ],
+        "label": "inclusion",
+        "area": 1896,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          224,
+          126,
+          28,
+          63
+        ],
+        "label": "inclusion",
+        "area": 1764,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          19,
+          8,
+          34,
+          81
+        ],
+        "label": "inclusion",
+        "area": 2754,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          113,
+          5,
+          34,
+          82
+        ],
+        "label": "inclusion",
+        "area": 2788,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          143,
+          168,
+          20,
+          56
+        ],
+        "label": "inclusion",
+        "area": 1120,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          235,
+          200,
+          18,
+          45
+        ],
+        "label": "inclusion",
+        "area": 810,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 123.16,
+      "std_intensity": 9.65,
+      "contrast": 0.078,
+      "dark_pixel_pct": 18.62,
+      "bright_pixel_pct": 19.18,
+      "entropy": 5.29,
+      "edge_density": 0.0,
+      "sobel_magnitude": 15.319,
+      "horizontal_edge_ratio": 0.427,
+      "vertical_edge_ratio": 0.259,
+      "diagonal_edge_ratio": 0.314,
+      "hough_line_count": 0,
+      "avg_line_length": 0.0,
+      "max_line_length": 0.0,
+      "line_horizontal_pct": 0.0,
+      "quadrant_std": {
+        "top_left": 7.51,
+        "top_right": 12.8,
+        "bottom_left": 4.11,
+        "bottom_right": 7.78
+      },
+      "quadrant_edge_density": {
+        "top_left": 0.0,
+        "top_right": 0.0,
+        "bottom_left": 0.0,
+        "bottom_right": 0.0
+      },
+      "glcm_contrast": 0.069,
+      "glcm_homogeneity": 0.965,
+      "glcm_energy": 0.716,
+      "glcm_correlation": 0.839,
+      "lbp_uniformity": 0.2428,
+      "lbp_entropy": 3.853,
+      "num_regions": 51,
+      "avg_area": 254.52,
+      "max_area": 6080.0,
+      "total_defect_pct": 19.81,
+      "avg_aspect_ratio": 2.183,
+      "max_aspect_ratio": 7.429,
+      "avg_circularity": 0.587,
+      "min_circularity": 0.169,
+      "regions_raw": [
+        [
+          252,
+          247,
+          4,
+          9,
+          17.0,
+          2.25,
+          0.49243151135066343
+        ],
+        [
+          43,
+          235,
+          4,
+          7,
+          15.0,
+          1.75,
+          0.6656011617246267
+        ],
+        [
+          35,
+          233,
+          4,
+          5,
+          11.0,
+          1.25,
+          0.8399544339736016
+        ],
+        [
+          157,
+          226,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          49,
+          226,
+          21,
+          13,
+          124.0,
+          1.6153846153846154,
+          0.3911992908932733
+        ],
+        [
+          180,
+          215,
+          5,
+          11,
+          31.5,
+          2.2,
+          0.574784901208698
+        ],
+        [
+          116,
+          212,
+          5,
+          24,
+          71.0,
+          4.8,
+          0.3238867303988986
+        ],
+        [
+          243,
+          211,
+          5,
+          28,
+          100.5,
+          5.6,
+          0.3479909307281059
+        ],
+        [
+          112,
+          206,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          21,
+          199,
+          5,
+          5,
+          13.5,
+          1.0,
+          0.8363009664865618
+        ],
+        [
+          131,
+          189,
+          4,
+          6,
+          12.5,
+          1.5,
+          0.6611151857406026
+        ],
+        [
+          119,
+          179,
+          4,
+          9,
+          21.0,
+          2.25,
+          0.6082977493155254
+        ],
+        [
+          51,
+          179,
+          76,
+          77,
+          1782.5,
+          1.013157894736842,
+          0.17073515970960362
+        ],
+        [
+          182,
+          172,
+          5,
+          3,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          150,
+          171,
+          7,
+          48,
+          159.0,
+          6.857142857142857,
+          0.1884433509152432
+        ],
+        [
+          242,
+          169,
+          5,
+          17,
+          47.5,
+          3.4,
+          0.40813865495876134
+        ],
+        [
+          80,
+          167,
+          4,
+          6,
+          12.0,
+          1.5,
+          0.6858054571908726
+        ],
+        [
+          118,
+          158,
+          4,
+          5,
+          11.5,
+          1.25,
+          0.8031141373846319
+        ],
+        [
+          87,
+          155,
+          5,
+          5,
+          12.0,
+          1.0,
+          0.8085181338070881
+        ],
+        [
+          136,
+          152,
+          4,
+          6,
+          13.5,
+          1.5,
+          0.7140044005998508
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "inclusion_131.jpg",
+    "true_label": "inclusion",
+    "pred_label": "patches",
+    "confidence": 0.6840739998513228,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.21)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.3061,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          49,
+          1,
+          68,
+          251
+        ],
+        "label": "inclusion",
+        "area": 17068,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 71.47,
+      "std_intensity": 8.66,
+      "contrast": 0.121,
+      "dark_pixel_pct": 18.65,
+      "bright_pixel_pct": 18.91,
+      "entropy": 5.125,
+      "edge_density": 0.0,
+      "sobel_magnitude": 7.027,
+      "horizontal_edge_ratio": 0.396,
+      "vertical_edge_ratio": 0.287,
+      "diagonal_edge_ratio": 0.317,
+      "hough_line_count": 0,
+      "avg_line_length": 0.0,
+      "max_line_length": 0.0,
+      "line_horizontal_pct": 0.0,
+      "quadrant_std": {
+        "top_left": 5.92,
+        "top_right": 5.39,
+        "bottom_left": 4.83,
+        "bottom_right": 4.4
+      },
+      "quadrant_edge_density": {
+        "top_left": 0.0,
+        "top_right": 0.0,
+        "bottom_left": 0.0,
+        "bottom_right": 0.0
+      },
+      "glcm_contrast": 0.028,
+      "glcm_homogeneity": 0.986,
+      "glcm_energy": 0.818,
+      "glcm_correlation": 0.906,
+      "lbp_uniformity": 0.2764,
+      "lbp_entropy": 3.714,
+      "num_regions": 11,
+      "avg_area": 1048.5,
+      "max_area": 11270.5,
+      "total_defect_pct": 17.6,
+      "avg_aspect_ratio": 1.55,
+      "max_aspect_ratio": 2.6,
+      "avg_circularity": 0.624,
+      "min_circularity": 0.14,
+      "regions_raw": [
+        [
+          99,
+          160,
+          14,
+          24,
+          136.0,
+          1.7142857142857142,
+          0.3592702340597968
+        ],
+        [
+          101,
+          150,
+          4,
+          6,
+          13.5,
+          1.5,
+          0.7140044005998508
+        ],
+        [
+          17,
+          130,
+          5,
+          4,
+          11.5,
+          1.25,
+          0.8031141373846319
+        ],
+        [
+          24,
+          123,
+          4,
+          7,
+          16.0,
+          1.75,
+          0.7099745725062685
+        ],
+        [
+          0,
+          61,
+          152,
+          195,
+          11270.5,
+          1.2828947368421053,
+          0.13954831192599676
+        ],
+        [
+          98,
+          58,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          100,
+          49,
+          5,
+          6,
+          15.5,
+          1.2,
+          0.7382922169994482
+        ],
+        [
+          65,
+          31,
+          4,
+          5,
+          11.5,
+          1.25,
+          0.8031141373846319
+        ],
+        [
+          65,
+          20,
+          4,
+          6,
+          12.0,
+          1.5,
+          0.6858054571908726
+        ],
+        [
+          79,
+          8,
+          5,
+          13,
+          29.0,
+          2.6,
+          0.4143407984661008
+        ],
+        [
+          103,
+          3,
+          3,
+          6,
+          10.0,
+          2.0,
+          0.6411413546043386
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "inclusion_132.jpg",
+    "true_label": "inclusion",
+    "pred_label": "patches",
+    "confidence": 0.7014261424407782,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.25)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.3571,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          88,
+          2,
+          59,
+          250
+        ],
+        "label": "inclusion",
+        "area": 14750,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 89.35,
+      "std_intensity": 10.56,
+      "contrast": 0.118,
+      "dark_pixel_pct": 17.95,
+      "bright_pixel_pct": 19.39,
+      "entropy": 5.386,
+      "edge_density": 0.0,
+      "sobel_magnitude": 12.411,
+      "horizontal_edge_ratio": 0.383,
+      "vertical_edge_ratio": 0.293,
+      "diagonal_edge_ratio": 0.324,
+      "hough_line_count": 0,
+      "avg_line_length": 0.0,
+      "max_line_length": 0.0,
+      "line_horizontal_pct": 0.0,
+      "quadrant_std": {
+        "top_left": 6.48,
+        "top_right": 7.0,
+        "bottom_left": 7.28,
+        "bottom_right": 7.92
+      },
+      "quadrant_edge_density": {
+        "top_left": 0.0,
+        "top_right": 0.0,
+        "bottom_left": 0.0,
+        "bottom_right": 0.0
+      },
+      "glcm_contrast": 0.068,
+      "glcm_homogeneity": 0.966,
+      "glcm_energy": 0.726,
+      "glcm_correlation": 0.835,
+      "lbp_uniformity": 0.2614,
+      "lbp_entropy": 3.808,
+      "num_regions": 44,
+      "avg_area": 302.64,
+      "max_area": 9590.5,
+      "total_defect_pct": 20.32,
+      "avg_aspect_ratio": 1.866,
+      "max_aspect_ratio": 5.789,
+      "avg_circularity": 0.633,
+      "min_circularity": 0.152,
+      "regions_raw": [
+        [
+          135,
+          253,
+          5,
+          3,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          227,
+          245,
+          5,
+          6,
+          15.5,
+          1.2,
+          0.7382922169994482
+        ],
+        [
+          241,
+          231,
+          3,
+          6,
+          10.0,
+          2.0,
+          0.6411413546043386
+        ],
+        [
+          253,
+          214,
+          3,
+          6,
+          10.0,
+          2.0,
+          0.6411413546043386
+        ],
+        [
+          127,
+          202,
+          4,
+          5,
+          11.5,
+          1.25,
+          0.8031141373846319
+        ],
+        [
+          208,
+          193,
+          3,
+          5,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          147,
+          186,
+          4,
+          21,
+          51.5,
+          5.25,
+          0.3026438417157108
+        ],
+        [
+          161,
+          168,
+          6,
+          5,
+          18.0,
+          1.2,
+          0.7987213940695521
+        ],
+        [
+          209,
+          156,
+          4,
+          5,
+          11.5,
+          1.25,
+          0.8031141373846319
+        ],
+        [
+          132,
+          151,
+          6,
+          7,
+          24.5,
+          1.1666666666666667,
+          0.7513488357717422
+        ],
+        [
+          208,
+          149,
+          4,
+          6,
+          12.0,
+          1.5,
+          0.6858054571908726
+        ],
+        [
+          240,
+          148,
+          6,
+          10,
+          36.0,
+          1.6666666666666667,
+          0.6872354491103887
+        ],
+        [
+          228,
+          147,
+          5,
+          5,
+          14.5,
+          1.0,
+          0.8982491862263072
+        ],
+        [
+          95,
+          146,
+          19,
+          110,
+          842.5,
+          5.7894736842105265,
+          0.16243895123429464
+        ],
+        [
+          161,
+          144,
+          6,
+          6,
+          16.0,
+          1.0,
+          0.6449160507617445
+        ],
+        [
+          208,
+          141,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          140,
+          137,
+          5,
+          7,
+          17.5,
+          1.4,
+          0.6608037614618838
+        ],
+        [
+          209,
+          127,
+          6,
+          4,
+          12.5,
+          1.5,
+          0.6611151857406026
+        ],
+        [
+          132,
+          121,
+          7,
+          6,
+          18.5,
+          1.1666666666666667,
+          0.6391923608236724
+        ],
+        [
+          211,
+          118,
+          3,
+          5,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "inclusion_133.jpg",
+    "true_label": "inclusion",
+    "pred_label": "patches",
+    "confidence": 0.674442555609521,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.19)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2778,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          88,
+          1,
+          91,
+          255
+        ],
+        "label": "inclusion",
+        "area": 23205,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 75.73,
+      "std_intensity": 9.29,
+      "contrast": 0.123,
+      "dark_pixel_pct": 18.34,
+      "bright_pixel_pct": 18.08,
+      "entropy": 5.191,
+      "edge_density": 0.0,
+      "sobel_magnitude": 9.073,
+      "horizontal_edge_ratio": 0.413,
+      "vertical_edge_ratio": 0.27,
+      "diagonal_edge_ratio": 0.317,
+      "hough_line_count": 0,
+      "avg_line_length": 0.0,
+      "max_line_length": 0.0,
+      "line_horizontal_pct": 0.0,
+      "quadrant_std": {
+        "top_left": 4.47,
+        "top_right": 6.5,
+        "bottom_left": 4.57,
+        "bottom_right": 7.63
+      },
+      "quadrant_edge_density": {
+        "top_left": 0.0,
+        "top_right": 0.0,
+        "bottom_left": 0.0,
+        "bottom_right": 0.0
+      },
+      "glcm_contrast": 0.042,
+      "glcm_homogeneity": 0.979,
+      "glcm_energy": 0.868,
+      "glcm_correlation": 0.812,
+      "lbp_uniformity": 0.2605,
+      "lbp_entropy": 3.786,
+      "num_regions": 27,
+      "avg_area": 419.35,
+      "max_area": 7704.0,
+      "total_defect_pct": 17.28,
+      "avg_aspect_ratio": 2.024,
+      "max_aspect_ratio": 5.154,
+      "avg_circularity": 0.587,
+      "min_circularity": 0.165,
+      "regions_raw": [
+        [
+          93,
+          244,
+          5,
+          8,
+          25.0,
+          1.6,
+          0.8130585869008287
+        ],
+        [
+          139,
+          236,
+          6,
+          12,
+          37.0,
+          2.0,
+          0.5410906926513185
+        ],
+        [
+          139,
+          227,
+          5,
+          4,
+          11.5,
+          1.25,
+          0.8031141373846319
+        ],
+        [
+          88,
+          225,
+          5,
+          12,
+          36.5,
+          2.4,
+          0.5427261695988093
+        ],
+        [
+          199,
+          224,
+          5,
+          7,
+          20.5,
+          1.4,
+          0.6834773385574946
+        ],
+        [
+          97,
+          216,
+          4,
+          4,
+          9.0,
+          1.0,
+          0.7853981579432944
+        ],
+        [
+          161,
+          200,
+          7,
+          28,
+          93.5,
+          4.0,
+          0.28343605631936275
+        ],
+        [
+          200,
+          183,
+          5,
+          6,
+          16.0,
+          1.2,
+          0.8202020167791964
+        ],
+        [
+          134,
+          178,
+          4,
+          9,
+          20.5,
+          2.25,
+          0.5617711939273896
+        ],
+        [
+          0,
+          174,
+          6,
+          5,
+          18.0,
+          1.2,
+          0.7987213940695521
+        ],
+        [
+          135,
+          169,
+          3,
+          5,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          135,
+          150,
+          4,
+          7,
+          14.0,
+          1.75,
+          0.621227750942985
+        ],
+        [
+          90,
+          148,
+          9,
+          21,
+          79.5,
+          2.3333333333333335,
+          0.337770957045883
+        ],
+        [
+          165,
+          135,
+          3,
+          6,
+          10.0,
+          2.0,
+          0.6411413546043386
+        ],
+        [
+          144,
+          130,
+          4,
+          11,
+          25.5,
+          2.75,
+          0.4653020628832316
+        ],
+        [
+          143,
+          121,
+          4,
+          6,
+          13.0,
+          1.5,
+          0.7429559119567787
+        ],
+        [
+          121,
+          118,
+          4,
+          5,
+          9.0,
+          1.25,
+          0.6872354459784014
+        ],
+        [
+          143,
+          110,
+          4,
+          9,
+          21.0,
+          2.25,
+          0.6082977493155254
+        ],
+        [
+          140,
+          89,
+          6,
+          19,
+          57.0,
+          3.1666666666666665,
+          0.39683294924909013
+        ],
+        [
+          119,
+          77,
+          5,
+          3,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "inclusion_134.jpg",
+    "true_label": "inclusion",
+    "pred_label": "patches",
+    "confidence": 0.6876099998462715,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.22)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.3165,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          67,
+          1,
+          59,
+          253
+        ],
+        "label": "inclusion",
+        "area": 14927,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          70,
+          1,
+          37,
+          130
+        ],
+        "label": "inclusion",
+        "area": 4810,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 93.22,
+      "std_intensity": 10.18,
+      "contrast": 0.109,
+      "dark_pixel_pct": 19.52,
+      "bright_pixel_pct": 19.24,
+      "entropy": 5.357,
+      "edge_density": 0.0,
+      "sobel_magnitude": 14.089,
+      "horizontal_edge_ratio": 0.381,
+      "vertical_edge_ratio": 0.299,
+      "diagonal_edge_ratio": 0.32,
+      "hough_line_count": 0,
+      "avg_line_length": 0.0,
+      "max_line_length": 0.0,
+      "line_horizontal_pct": 0.0,
+      "quadrant_std": {
+        "top_left": 6.78,
+        "top_right": 8.2,
+        "bottom_left": 7.12,
+        "bottom_right": 7.49
+      },
+      "quadrant_edge_density": {
+        "top_left": 0.0,
+        "top_right": 0.0,
+        "bottom_left": 0.0,
+        "bottom_right": 0.0
+      },
+      "glcm_contrast": 0.075,
+      "glcm_homogeneity": 0.962,
+      "glcm_energy": 0.67,
+      "glcm_correlation": 0.844,
+      "lbp_uniformity": 0.2573,
+      "lbp_entropy": 3.821,
+      "num_regions": 48,
+      "avg_area": 262.59,
+      "max_area": 7427.0,
+      "total_defect_pct": 19.23,
+      "avg_aspect_ratio": 2.019,
+      "max_aspect_ratio": 8.353,
+      "avg_circularity": 0.608,
+      "min_circularity": 0.093,
+      "regions_raw": [
+        [
+          163,
+          237,
+          5,
+          7,
+          19.0,
+          1.4,
+          0.6734965609808732
+        ],
+        [
+          104,
+          232,
+          5,
+          8,
+          20.5,
+          1.6,
+          0.5802172542861092
+        ],
+        [
+          148,
+          224,
+          4,
+          7,
+          17.0,
+          1.75,
+          0.7543479832879103
+        ],
+        [
+          243,
+          222,
+          5,
+          4,
+          10.0,
+          1.25,
+          0.7635949399760016
+        ],
+        [
+          41,
+          217,
+          6,
+          15,
+          43.0,
+          2.5,
+          0.4136668340982716
+        ],
+        [
+          149,
+          211,
+          5,
+          6,
+          13.5,
+          1.2,
+          0.6430287051285517
+        ],
+        [
+          138,
+          200,
+          5,
+          7,
+          20.0,
+          1.4,
+          0.7089437484009192
+        ],
+        [
+          96,
+          197,
+          5,
+          13,
+          30.0,
+          2.6,
+          0.4286284122063111
+        ],
+        [
+          248,
+          188,
+          3,
+          6,
+          10.0,
+          2.0,
+          0.6411413546043386
+        ],
+        [
+          99,
+          184,
+          4,
+          5,
+          9.0,
+          1.25,
+          0.6872354459784014
+        ],
+        [
+          137,
+          176,
+          4,
+          6,
+          13.0,
+          1.5,
+          0.7429559119567787
+        ],
+        [
+          206,
+          173,
+          6,
+          6,
+          18.5,
+          1.0,
+          0.6985639764025628
+        ],
+        [
+          105,
+          171,
+          3,
+          5,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          139,
+          165,
+          5,
+          8,
+          24.0,
+          1.6,
+          0.6951974277891719
+        ],
+        [
+          208,
+          160,
+          10,
+          7,
+          27.0,
+          1.4285714285714286,
+          0.4836870432873407
+        ],
+        [
+          207,
+          144,
+          5,
+          6,
+          16.0,
+          1.2,
+          0.8202020167791964
+        ],
+        [
+          144,
+          135,
+          5,
+          7,
+          23.0,
+          1.4,
+          0.815285310661057
+        ],
+        [
+          95,
+          132,
+          5,
+          4,
+          10.0,
+          1.25,
+          0.7635949399760016
+        ],
+        [
+          68,
+          132,
+          26,
+          124,
+          2135.5,
+          4.769230769230769,
+          0.2775358250185225
+        ],
+        [
+          248,
+          122,
+          4,
+          7,
+          14.0,
+          1.75,
+          0.621227750942985
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "inclusion_135.jpg",
+    "true_label": "inclusion",
+    "pred_label": "patches",
+    "confidence": 0.7954324370245036,
+    "cls_method": "Claude+GroqWeighted(1/1LLM,best_w=0.74)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.3571,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "patches",
+        "confidence": 0.357,
+        "weight": 0.49,
+        "reason": "high max area and coverage, with broad irregular damaged area"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          52,
+          1,
+          42,
+          226
+        ],
+        "label": "inclusion",
+        "area": 9492,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          76,
+          7,
+          49,
+          246
+        ],
+        "label": "inclusion",
+        "area": 12054,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 95.88,
+      "std_intensity": 10.67,
+      "contrast": 0.111,
+      "dark_pixel_pct": 17.46,
+      "bright_pixel_pct": 18.52,
+      "entropy": 5.403,
+      "edge_density": 0.0,
+      "sobel_magnitude": 14.242,
+      "horizontal_edge_ratio": 0.374,
+      "vertical_edge_ratio": 0.301,
+      "diagonal_edge_ratio": 0.325,
+      "hough_line_count": 0,
+      "avg_line_length": 0.0,
+      "max_line_length": 0.0,
+      "line_horizontal_pct": 0.0,
+      "quadrant_std": {
+        "top_left": 7.4,
+        "top_right": 9.42,
+        "bottom_left": 6.42,
+        "bottom_right": 9.17
+      },
+      "quadrant_edge_density": {
+        "top_left": 0.0,
+        "top_right": 0.0,
+        "bottom_left": 0.0,
+        "bottom_right": 0.0
+      },
+      "glcm_contrast": 0.075,
+      "glcm_homogeneity": 0.963,
+      "glcm_energy": 0.657,
+      "glcm_correlation": 0.851,
+      "lbp_uniformity": 0.2595,
+      "lbp_entropy": 3.82,
+      "num_regions": 56,
+      "avg_area": 235.5,
+      "max_area": 7505.5,
+      "total_defect_pct": 20.12,
+      "avg_aspect_ratio": 1.819,
+      "max_aspect_ratio": 6.244,
+      "avg_circularity": 0.64,
+      "min_circularity": 0.105,
+      "regions_raw": [
+        [
+          127,
+          249,
+          5,
+          7,
+          24.0,
+          1.4,
+          0.7539822349765948
+        ],
+        [
+          77,
+          246,
+          6,
+          5,
+          15.5,
+          1.2,
+          0.7382922169994482
+        ],
+        [
+          231,
+          236,
+          5,
+          7,
+          20.5,
+          1.4,
+          0.774084406283921
+        ],
+        [
+          79,
+          232,
+          5,
+          8,
+          23.0,
+          1.6,
+          0.7480138999487623
+        ],
+        [
+          56,
+          230,
+          19,
+          26,
+          218.0,
+          1.368421052631579,
+          0.3275242317220574
+        ],
+        [
+          101,
+          227,
+          8,
+          29,
+          125.0,
+          3.625,
+          0.31186266276611846
+        ],
+        [
+          126,
+          225,
+          7,
+          16,
+          61.0,
+          2.2857142857142856,
+          0.495965738972192
+        ],
+        [
+          232,
+          224,
+          5,
+          7,
+          20.5,
+          1.4,
+          0.6834773385574946
+        ],
+        [
+          147,
+          221,
+          8,
+          15,
+          41.0,
+          1.875,
+          0.37004700714045374
+        ],
+        [
+          124,
+          215,
+          8,
+          9,
+          41.5,
+          1.125,
+          0.7116184354018877
+        ],
+        [
+          148,
+          208,
+          7,
+          11,
+          37.5,
+          1.5714285714285714,
+          0.557595379724804
+        ],
+        [
+          130,
+          208,
+          3,
+          5,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          86,
+          201,
+          3,
+          7,
+          12.0,
+          2.3333333333333335,
+          0.589048620247115
+        ],
+        [
+          150,
+          200,
+          3,
+          5,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          126,
+          191,
+          6,
+          7,
+          22.0,
+          1.1666666666666667,
+          0.6372643088067408
+        ],
+        [
+          150,
+          181,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          126,
+          177,
+          5,
+          12,
+          31.0,
+          2.4,
+          0.509290996247487
+        ],
+        [
+          102,
+          173,
+          5,
+          15,
+          42.0,
+          3.0,
+          0.46592081444115674
+        ],
+        [
+          24,
+          172,
+          10,
+          4,
+          20.0,
+          2.5,
+          0.4822673728461776
+        ],
+        [
+          233,
+          171,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "inclusion_136.jpg",
+    "true_label": "inclusion",
+    "pred_label": "patches",
+    "confidence": 0.7345299997792428,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.32)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.4545,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          17,
+          134,
+          15,
+          36
+        ],
+        "label": "inclusion",
+        "area": 540,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          212,
+          89,
+          28,
+          60
+        ],
+        "label": "inclusion",
+        "area": 1680,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 107.05,
+      "std_intensity": 9.84,
+      "contrast": 0.092,
+      "dark_pixel_pct": 17.67,
+      "bright_pixel_pct": 19.4,
+      "entropy": 5.271,
+      "edge_density": 0.0,
+      "sobel_magnitude": 12.262,
+      "horizontal_edge_ratio": 0.417,
+      "vertical_edge_ratio": 0.26,
+      "diagonal_edge_ratio": 0.323,
+      "hough_line_count": 0,
+      "avg_line_length": 0.0,
+      "max_line_length": 0.0,
+      "line_horizontal_pct": 0.0,
+      "quadrant_std": {
+        "top_left": 5.03,
+        "top_right": 5.77,
+        "bottom_left": 7.61,
+        "bottom_right": 7.52
+      },
+      "quadrant_edge_density": {
+        "top_left": 0.0,
+        "top_right": 0.0,
+        "bottom_left": 0.0,
+        "bottom_right": 0.0
+      },
+      "glcm_contrast": 0.053,
+      "glcm_homogeneity": 0.974,
+      "glcm_energy": 0.85,
+      "glcm_correlation": 0.784,
+      "lbp_uniformity": 0.2692,
+      "lbp_entropy": 3.794,
+      "num_regions": 31,
+      "avg_area": 407.26,
+      "max_area": 11462.5,
+      "total_defect_pct": 19.26,
+      "avg_aspect_ratio": 1.565,
+      "max_aspect_ratio": 3.417,
+      "avg_circularity": 0.663,
+      "min_circularity": 0.055,
+      "regions_raw": [
+        [
+          36,
+          249,
+          5,
+          4,
+          11.5,
+          1.25,
+          0.8031141373846319
+        ],
+        [
+          5,
+          244,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          6,
+          233,
+          3,
+          7,
+          12.0,
+          2.3333333333333335,
+          0.589048620247115
+        ],
+        [
+          146,
+          230,
+          7,
+          6,
+          23.0,
+          1.1666666666666667,
+          0.7480138999487623
+        ],
+        [
+          117,
+          226,
+          4,
+          6,
+          13.5,
+          1.5,
+          0.7140044005998508
+        ],
+        [
+          27,
+          223,
+          5,
+          7,
+          19.0,
+          1.4,
+          0.7658378102795715
+        ],
+        [
+          219,
+          220,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          98,
+          218,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          66,
+          212,
+          4,
+          5,
+          11.0,
+          1.25,
+          0.8399544339736016
+        ],
+        [
+          153,
+          196,
+          5,
+          9,
+          23.0,
+          1.8,
+          0.6162358434367698
+        ],
+        [
+          194,
+          193,
+          4,
+          6,
+          14.0,
+          1.5,
+          0.8001063667226848
+        ],
+        [
+          26,
+          191,
+          6,
+          6,
+          19.0,
+          1.0,
+          0.7658378102795715
+        ],
+        [
+          18,
+          131,
+          14,
+          30,
+          182.0,
+          2.142857142857143,
+          0.401694138426843
+        ],
+        [
+          248,
+          130,
+          4,
+          4,
+          9.0,
+          1.0,
+          0.7853981579432944
+        ],
+        [
+          215,
+          109,
+          12,
+          41,
+          305.5,
+          3.4166666666666665,
+          0.4531609472827034
+        ],
+        [
+          30,
+          102,
+          3,
+          6,
+          10.0,
+          2.0,
+          0.6411413546043386
+        ],
+        [
+          242,
+          90,
+          6,
+          7,
+          26.0,
+          1.1666666666666667,
+          0.753130546771603
+        ],
+        [
+          55,
+          88,
+          5,
+          6,
+          18.5,
+          1.2,
+          0.7666089050648738
+        ],
+        [
+          232,
+          85,
+          7,
+          20,
+          83.0,
+          2.857142857142857,
+          0.48267747343063716
+        ],
+        [
+          0,
+          82,
+          8,
+          8,
+          35.5,
+          1.0,
+          0.647773460092342
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "inclusion_137.jpg",
+    "true_label": "inclusion",
+    "pred_label": "patches",
+    "confidence": 0.7345299997792428,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.32)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.4545,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          64,
+          1,
+          30,
+          59
+        ],
+        "label": "inclusion",
+        "area": 1770,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          122,
+          153,
+          18,
+          32
+        ],
+        "label": "inclusion",
+        "area": 576,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 122.07,
+      "std_intensity": 11.24,
+      "contrast": 0.092,
+      "dark_pixel_pct": 17.62,
+      "bright_pixel_pct": 19.08,
+      "entropy": 5.492,
+      "edge_density": 0.0,
+      "sobel_magnitude": 14.664,
+      "horizontal_edge_ratio": 0.42,
+      "vertical_edge_ratio": 0.26,
+      "diagonal_edge_ratio": 0.321,
+      "hough_line_count": 0,
+      "avg_line_length": 0.0,
+      "max_line_length": 0.0,
+      "line_horizontal_pct": 0.0,
+      "quadrant_std": {
+        "top_left": 7.41,
+        "top_right": 6.66,
+        "bottom_left": 6.29,
+        "bottom_right": 7.24
+      },
+      "quadrant_edge_density": {
+        "top_left": 0.0,
+        "top_right": 0.0,
+        "bottom_left": 0.0,
+        "bottom_right": 0.0
+      },
+      "glcm_contrast": 0.066,
+      "glcm_homogeneity": 0.967,
+      "glcm_energy": 0.709,
+      "glcm_correlation": 0.854,
+      "lbp_uniformity": 0.2632,
+      "lbp_entropy": 3.813,
+      "num_regions": 54,
+      "avg_area": 231.69,
+      "max_area": 11523.0,
+      "total_defect_pct": 19.09,
+      "avg_aspect_ratio": 1.527,
+      "max_aspect_ratio": 5.0,
+      "avg_circularity": 0.682,
+      "min_circularity": 0.071,
+      "regions_raw": [
+        [
+          127,
+          249,
+          6,
+          6,
+          19.0,
+          1.0,
+          0.7658378102795715
+        ],
+        [
+          147,
+          246,
+          9,
+          9,
+          35.5,
+          1.0,
+          0.5731199669624001
+        ],
+        [
+          236,
+          245,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          111,
+          244,
+          3,
+          5,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          15,
+          240,
+          3,
+          5,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          227,
+          239,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          189,
+          239,
+          8,
+          6,
+          23.5,
+          1.3333333333333333,
+          0.6651271039026551
+        ],
+        [
+          113,
+          238,
+          6,
+          5,
+          18.0,
+          1.2,
+          0.7987213940695521
+        ],
+        [
+          64,
+          237,
+          6,
+          5,
+          16.0,
+          1.2,
+          0.8202020167791964
+        ],
+        [
+          239,
+          236,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          92,
+          231,
+          4,
+          9,
+          21.0,
+          2.25,
+          0.6082977493155254
+        ],
+        [
+          59,
+          231,
+          5,
+          5,
+          13.5,
+          1.0,
+          0.8363009664865618
+        ],
+        [
+          16,
+          225,
+          4,
+          5,
+          10.5,
+          1.25,
+          0.7332781254381423
+        ],
+        [
+          235,
+          220,
+          5,
+          4,
+          11.0,
+          1.25,
+          0.8399544339736016
+        ],
+        [
+          103,
+          219,
+          5,
+          4,
+          10.5,
+          1.25,
+          0.7332781254381423
+        ],
+        [
+          223,
+          213,
+          3,
+          6,
+          10.0,
+          2.0,
+          0.6411413546043386
+        ],
+        [
+          107,
+          212,
+          5,
+          6,
+          11.0,
+          1.2,
+          0.48810751859805956
+        ],
+        [
+          75,
+          211,
+          3,
+          6,
+          10.0,
+          2.0,
+          0.6411413546043386
+        ],
+        [
+          159,
+          208,
+          5,
+          5,
+          14.5,
+          1.0,
+          0.8982491862263072
+        ],
+        [
+          195,
+          202,
+          7,
+          8,
+          33.0,
+          1.1428571428571428,
+          0.8202139577751243
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "inclusion_138.jpg",
+    "true_label": "inclusion",
+    "pred_label": "scratches",
+    "confidence": 0.6799939998571514,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.21)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "scratches",
+        "confidence": 0.2941,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          176,
+          160,
+          31,
+          70
+        ],
+        "label": "inclusion",
+        "area": 2170,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          221,
+          21,
+          18,
+          28
+        ],
+        "label": "inclusion",
+        "area": 504,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 80.66,
+      "std_intensity": 12.49,
+      "contrast": 0.155,
+      "dark_pixel_pct": 18.62,
+      "bright_pixel_pct": 19.2,
+      "entropy": 5.548,
+      "edge_density": 0.0,
+      "sobel_magnitude": 9.895,
+      "horizontal_edge_ratio": 0.359,
+      "vertical_edge_ratio": 0.312,
+      "diagonal_edge_ratio": 0.329,
+      "hough_line_count": 0,
+      "avg_line_length": 0.0,
+      "max_line_length": 0.0,
+      "line_horizontal_pct": 0.0,
+      "quadrant_std": {
+        "top_left": 8.9,
+        "top_right": 4.19,
+        "bottom_left": 11.4,
+        "bottom_right": 4.77
+      },
+      "quadrant_edge_density": {
+        "top_left": 0.0,
+        "top_right": 0.0,
+        "bottom_left": 0.0,
+        "bottom_right": 0.0
+      },
+      "glcm_contrast": 0.036,
+      "glcm_homogeneity": 0.982,
+      "glcm_energy": 0.814,
+      "glcm_correlation": 0.895,
+      "lbp_uniformity": 0.2444,
+      "lbp_entropy": 3.845,
+      "num_regions": 18,
+      "avg_area": 648.69,
+      "max_area": 11025.0,
+      "total_defect_pct": 17.82,
+      "avg_aspect_ratio": 1.569,
+      "max_aspect_ratio": 5.556,
+      "avg_circularity": 0.64,
+      "min_circularity": 0.104,
+      "regions_raw": [
+        [
+          167,
+          251,
+          6,
+          5,
+          16.0,
+          1.2,
+          0.7099745725062685
+        ],
+        [
+          60,
+          247,
+          5,
+          5,
+          15.0,
+          1.0,
+          0.8572568214885907
+        ],
+        [
+          196,
+          210,
+          6,
+          16,
+          67.0,
+          2.6666666666666665,
+          0.5937403905418859
+        ],
+        [
+          182,
+          164,
+          9,
+          50,
+          251.5,
+          5.555555555555555,
+          0.2649705238083264
+        ],
+        [
+          63,
+          146,
+          4,
+          5,
+          11.0,
+          1.25,
+          0.8399544339736016
+        ],
+        [
+          181,
+          144,
+          9,
+          12,
+          50.5,
+          1.3333333333333333,
+          0.526191288692696
+        ],
+        [
+          86,
+          136,
+          5,
+          5,
+          15.5,
+          1.0,
+          0.8197828303183472
+        ],
+        [
+          200,
+          133,
+          4,
+          5,
+          11.5,
+          1.25,
+          0.8031141373846319
+        ],
+        [
+          245,
+          113,
+          11,
+          6,
+          43.0,
+          1.8333333333333333,
+          0.6659433702383
+        ],
+        [
+          13,
+          102,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          226,
+          95,
+          9,
+          6,
+          25.5,
+          1.5,
+          0.5240525094235996
+        ],
+        [
+          226,
+          89,
+          6,
+          5,
+          12.0,
+          1.2,
+          0.5324809293797014
+        ],
+        [
+          130,
+          87,
+          11,
+          7,
+          42.5,
+          1.5714285714285714,
+          0.5839281018471172
+        ],
+        [
+          132,
+          73,
+          6,
+          7,
+          25.5,
+          1.1666666666666667,
+          0.8810489297839807
+        ],
+        [
+          133,
+          64,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          96,
+          41,
+          8,
+          9,
+          33.0,
+          1.125,
+          0.3929619875845649
+        ],
+        [
+          80,
+          0,
+          176,
+          127,
+          11025.0,
+          1.3858267716535433,
+          0.10448759179441185
+        ],
+        [
+          81,
+          0,
+          6,
+          5,
+          15.5,
+          1.2,
+          0.7382922169994482
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "inclusion_139.jpg",
+    "true_label": "inclusion",
+    "pred_label": "patches",
+    "confidence": 0.6629259998815342,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.17)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2439,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          74,
+          179,
+          30,
+          59
+        ],
+        "label": "inclusion",
+        "area": 1770,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          85,
+          92,
+          32,
+          68
+        ],
+        "label": "inclusion",
+        "area": 2176,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          209,
+          131,
+          20,
+          30
+        ],
+        "label": "inclusion",
+        "area": 600,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 74.75,
+      "std_intensity": 8.66,
+      "contrast": 0.116,
+      "dark_pixel_pct": 19.62,
+      "bright_pixel_pct": 19.7,
+      "entropy": 5.138,
+      "edge_density": 0.0,
+      "sobel_magnitude": 9.7,
+      "horizontal_edge_ratio": 0.35,
+      "vertical_edge_ratio": 0.322,
+      "diagonal_edge_ratio": 0.328,
+      "hough_line_count": 0,
+      "avg_line_length": 0.0,
+      "max_line_length": 0.0,
+      "line_horizontal_pct": 0.0,
+      "quadrant_std": {
+        "top_left": 4.89,
+        "top_right": 6.23,
+        "bottom_left": 7.44,
+        "bottom_right": 6.88
+      },
+      "quadrant_edge_density": {
+        "top_left": 0.0,
+        "top_right": 0.0,
+        "bottom_left": 0.0,
+        "bottom_right": 0.0
+      },
+      "glcm_contrast": 0.024,
+      "glcm_homogeneity": 0.988,
+      "glcm_energy": 0.876,
+      "glcm_correlation": 0.89,
+      "lbp_uniformity": 0.2433,
+      "lbp_entropy": 3.842,
+      "num_regions": 27,
+      "avg_area": 429.69,
+      "max_area": 10337.0,
+      "total_defect_pct": 17.7,
+      "avg_aspect_ratio": 1.727,
+      "max_aspect_ratio": 6.125,
+      "avg_circularity": 0.632,
+      "min_circularity": 0.205,
+      "regions_raw": [
+        [
+          82,
+          242,
+          5,
+          5,
+          12.5,
+          1.0,
+          0.7743527467468166
+        ],
+        [
+          7,
+          231,
+          4,
+          6,
+          13.0,
+          1.5,
+          0.7429559119567787
+        ],
+        [
+          145,
+          229,
+          5,
+          8,
+          25.5,
+          1.6,
+          0.782016135190997
+        ],
+        [
+          211,
+          208,
+          9,
+          9,
+          25.0,
+          1.0,
+          0.3871763748049008
+        ],
+        [
+          248,
+          198,
+          8,
+          18,
+          70.0,
+          2.25,
+          0.4688750990168768
+        ],
+        [
+          234,
+          197,
+          7,
+          10,
+          32.0,
+          1.4285714285714286,
+          0.5732587179701816
+        ],
+        [
+          96,
+          193,
+          6,
+          21,
+          77.5,
+          3.5,
+          0.4395451250500589
+        ],
+        [
+          245,
+          188,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          250,
+          184,
+          6,
+          6,
+          21.5,
+          1.0,
+          0.8118446212246
+        ],
+        [
+          234,
+          183,
+          8,
+          13,
+          41.0,
+          1.625,
+          0.38704220401421685
+        ],
+        [
+          79,
+          181,
+          12,
+          53,
+          348.5,
+          4.416666666666667,
+          0.30565770296143246
+        ],
+        [
+          232,
+          173,
+          7,
+          4,
+          17.5,
+          1.75,
+          0.7251705858721779
+        ],
+        [
+          207,
+          172,
+          5,
+          5,
+          13.5,
+          1.0,
+          0.8363009664865618
+        ],
+        [
+          249,
+          167,
+          7,
+          6,
+          26.0,
+          1.1666666666666667,
+          0.753130546771603
+        ],
+        [
+          202,
+          162,
+          5,
+          5,
+          15.0,
+          1.0,
+          0.8572568214885907
+        ],
+        [
+          219,
+          161,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          234,
+          155,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          109,
+          141,
+          6,
+          16,
+          64.5,
+          2.6666666666666665,
+          0.5897926954372921
+        ],
+        [
+          96,
+          96,
+          8,
+          49,
+          208.5,
+          6.125,
+          0.22445726549595796
+        ],
+        [
+          187,
+          71,
+          5,
+          6,
+          16.5,
+          1.2,
+          0.7859239729348965
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "inclusion_14.jpg",
+    "true_label": "inclusion",
+    "pred_label": "patches",
+    "confidence": 0.8043368081915341,
+    "cls_method": "Claude+GroqWeighted(1/1LLM,best_w=0.96)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2538,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "patches",
+        "confidence": 0.8,
+        "weight": 0.784,
+        "reason": "high max area, high total defect percentage and broad irregular damaged area"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          2,
+          11,
+          51,
+          229
+        ],
+        "label": "inclusion",
+        "area": 11679,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          116,
+          192,
+          31,
+          56
+        ],
+        "label": "inclusion",
+        "area": 1736,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 86.87,
+      "std_intensity": 9.32,
+      "contrast": 0.107,
+      "dark_pixel_pct": 18.22,
+      "bright_pixel_pct": 18.81,
+      "entropy": 5.154,
+      "edge_density": 0.0,
+      "sobel_magnitude": 8.279,
+      "horizontal_edge_ratio": 0.396,
+      "vertical_edge_ratio": 0.285,
+      "diagonal_edge_ratio": 0.319,
+      "hough_line_count": 0,
+      "avg_line_length": 0.0,
+      "max_line_length": 0.0,
+      "line_horizontal_pct": 0.0,
+      "quadrant_std": {
+        "top_left": 4.85,
+        "top_right": 3.87,
+        "bottom_left": 7.37,
+        "bottom_right": 5.61
+      },
+      "quadrant_edge_density": {
+        "top_left": 0.0,
+        "top_right": 0.0,
+        "bottom_left": 0.0,
+        "bottom_right": 0.0
+      },
+      "glcm_contrast": 0.034,
+      "glcm_homogeneity": 0.983,
+      "glcm_energy": 0.797,
+      "glcm_correlation": 0.899,
+      "lbp_uniformity": 0.2826,
+      "lbp_entropy": 3.72,
+      "num_regions": 19,
+      "avg_area": 626.42,
+      "max_area": 10590.5,
+      "total_defect_pct": 18.16,
+      "avg_aspect_ratio": 2.555,
+      "max_aspect_ratio": 6.333,
+      "avg_circularity": 0.533,
+      "min_circularity": 0.097,
+      "regions_raw": [
+        [
+          10,
+          240,
+          4,
+          5,
+          10.0,
+          1.25,
+          0.7635949399760016
+        ],
+        [
+          15,
+          208,
+          5,
+          17,
+          44.0,
+          3.4,
+          0.3899190624454175
+        ],
+        [
+          123,
+          200,
+          8,
+          30,
+          134.0,
+          3.75,
+          0.3663264014652776
+        ],
+        [
+          24,
+          172,
+          6,
+          38,
+          88.0,
+          6.333333333333333,
+          0.16389305807072171
+        ],
+        [
+          37,
+          145,
+          13,
+          78,
+          423.5,
+          6.0,
+          0.14874100576310645
+        ],
+        [
+          11,
+          135,
+          6,
+          30,
+          117.5,
+          5.0,
+          0.32353062023697315
+        ],
+        [
+          44,
+          133,
+          4,
+          11,
+          22.0,
+          2.75,
+          0.44847075722100493
+        ],
+        [
+          251,
+          124,
+          5,
+          3,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          250,
+          108,
+          5,
+          4,
+          9.0,
+          1.25,
+          0.6872354459784014
+        ],
+        [
+          12,
+          108,
+          12,
+          26,
+          197.0,
+          2.1666666666666665,
+          0.5717914295737754
+        ],
+        [
+          229,
+          85,
+          6,
+          6,
+          22.0,
+          1.0,
+          0.779838123241011
+        ],
+        [
+          41,
+          55,
+          6,
+          6,
+          20.5,
+          1.0,
+          0.774084406283921
+        ],
+        [
+          109,
+          54,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          42,
+          50,
+          5,
+          4,
+          11.5,
+          1.25,
+          0.8031141373846319
+        ],
+        [
+          114,
+          45,
+          6,
+          6,
+          15.5,
+          1.0,
+          0.5852833315805256
+        ],
+        [
+          0,
+          30,
+          8,
+          32,
+          143.5,
+          4.0,
+          0.3727247312057006
+        ],
+        [
+          1,
+          15,
+          5,
+          11,
+          28.5,
+          2.2,
+          0.5200434820459647
+        ],
+        [
+          3,
+          9,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          0,
+          0,
+          256,
+          101,
+          10590.5,
+          2.5346534653465347,
+          0.09708273706940042
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "inclusion_140.jpg",
+    "true_label": "inclusion",
+    "pred_label": "patches",
+    "confidence": 0.7128172815384148,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.27)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.3906,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          28,
+          136,
+          15,
+          34
+        ],
+        "label": "inclusion",
+        "area": 510,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          135,
+          93,
+          30,
+          58
+        ],
+        "label": "inclusion",
+        "area": 1740,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          151,
+          7,
+          28,
+          69
+        ],
+        "label": "inclusion",
+        "area": 1932,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 88.78,
+      "std_intensity": 12.92,
+      "contrast": 0.146,
+      "dark_pixel_pct": 19.85,
+      "bright_pixel_pct": 19.47,
+      "entropy": 5.589,
+      "edge_density": 0.09,
+      "sobel_magnitude": 11.683,
+      "horizontal_edge_ratio": 0.351,
+      "vertical_edge_ratio": 0.324,
+      "diagonal_edge_ratio": 0.325,
+      "hough_line_count": 0,
+      "avg_line_length": 0.0,
+      "max_line_length": 0.0,
+      "line_horizontal_pct": 0.0,
+      "quadrant_std": {
+        "top_left": 10.99,
+        "top_right": 6.21,
+        "bottom_left": 13.65,
+        "bottom_right": 6.19
+      },
+      "quadrant_edge_density": {
+        "top_left": 0.0,
+        "top_right": 0.0,
+        "bottom_left": 0.34,
+        "bottom_right": 0.0
+      },
+      "glcm_contrast": 0.039,
+      "glcm_homogeneity": 0.981,
+      "glcm_energy": 0.763,
+      "glcm_correlation": 0.91,
+      "lbp_uniformity": 0.234,
+      "lbp_entropy": 3.87,
+      "num_regions": 31,
+      "avg_area": 402.13,
+      "max_area": 11127.0,
+      "total_defect_pct": 19.02,
+      "avg_aspect_ratio": 1.399,
+      "max_aspect_ratio": 3.056,
+      "avg_circularity": 0.697,
+      "min_circularity": 0.066,
+      "regions_raw": [
+        [
+          56,
+          249,
+          7,
+          7,
+          23.5,
+          1.0,
+          0.6651270963767594
+        ],
+        [
+          129,
+          247,
+          6,
+          6,
+          21.0,
+          1.0,
+          0.8464523166247897
+        ],
+        [
+          20,
+          241,
+          5,
+          4,
+          10.0,
+          1.25,
+          0.7635949399760016
+        ],
+        [
+          251,
+          233,
+          5,
+          9,
+          20.0,
+          1.8,
+          0.4822673728461776
+        ],
+        [
+          55,
+          230,
+          5,
+          5,
+          12.5,
+          1.0,
+          0.7743527467468166
+        ],
+        [
+          6,
+          216,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          246,
+          209,
+          7,
+          11,
+          35.5,
+          1.5714285714285714,
+          0.4620892469673356
+        ],
+        [
+          56,
+          204,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          33,
+          195,
+          5,
+          5,
+          15.0,
+          1.0,
+          0.8572568214885907
+        ],
+        [
+          14,
+          195,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          160,
+          191,
+          7,
+          5,
+          17.5,
+          1.4,
+          0.6608037614618838
+        ],
+        [
+          52,
+          190,
+          5,
+          5,
+          14.5,
+          1.0,
+          0.7668936154590991
+        ],
+        [
+          7,
+          177,
+          8,
+          6,
+          25.0,
+          1.3333333333333333,
+          0.6698215689530107
+        ],
+        [
+          25,
+          174,
+          4,
+          9,
+          19.0,
+          2.25,
+          0.5503646303330944
+        ],
+        [
+          55,
+          162,
+          5,
+          5,
+          13.5,
+          1.0,
+          0.8363009664865618
+        ],
+        [
+          144,
+          158,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          69,
+          147,
+          3,
+          5,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          206,
+          145,
+          5,
+          8,
+          23.5,
+          1.6,
+          0.7206815363524874
+        ],
+        [
+          33,
+          144,
+          8,
+          22,
+          128.5,
+          2.75,
+          0.6075033611324948
+        ],
+        [
+          22,
+          129,
+          7,
+          11,
+          33.0,
+          1.5714285714285714,
+          0.5558562240796164
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "inclusion_141.jpg",
+    "true_label": "inclusion",
+    "pred_label": "patches",
+    "confidence": 0.6933219998381114,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.23)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.3333,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          25,
+          49,
+          15,
+          29
+        ],
+        "label": "inclusion",
+        "area": 435,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          133,
+          3,
+          29,
+          57
+        ],
+        "label": "inclusion",
+        "area": 1653,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          126,
+          195,
+          28,
+          39
+        ],
+        "label": "inclusion",
+        "area": 1092,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 93.44,
+      "std_intensity": 13.02,
+      "contrast": 0.139,
+      "dark_pixel_pct": 16.3,
+      "bright_pixel_pct": 19.11,
+      "entropy": 5.568,
+      "edge_density": 0.09,
+      "sobel_magnitude": 12.736,
+      "horizontal_edge_ratio": 0.343,
+      "vertical_edge_ratio": 0.328,
+      "diagonal_edge_ratio": 0.329,
+      "hough_line_count": 0,
+      "avg_line_length": 0.0,
+      "max_line_length": 0.0,
+      "line_horizontal_pct": 0.0,
+      "quadrant_std": {
+        "top_left": 12.33,
+        "top_right": 7.72,
+        "bottom_left": 13.2,
+        "bottom_right": 6.75
+      },
+      "quadrant_edge_density": {
+        "top_left": 0.34,
+        "top_right": 0.0,
+        "bottom_left": 0.0,
+        "bottom_right": 0.0
+      },
+      "glcm_contrast": 0.058,
+      "glcm_homogeneity": 0.971,
+      "glcm_energy": 0.697,
+      "glcm_correlation": 0.89,
+      "lbp_uniformity": 0.2243,
+      "lbp_entropy": 3.89,
+      "num_regions": 59,
+      "avg_area": 198.08,
+      "max_area": 6664.5,
+      "total_defect_pct": 17.83,
+      "avg_aspect_ratio": 1.374,
+      "max_aspect_ratio": 3.606,
+      "avg_circularity": 0.645,
+      "min_circularity": 0.072,
+      "regions_raw": [
+        [
+          28,
+          240,
+          5,
+          3,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          15,
+          234,
+          6,
+          4,
+          14.5,
+          1.5,
+          0.7668936154590991
+        ],
+        [
+          31,
+          231,
+          4,
+          5,
+          11.0,
+          1.25,
+          0.8399544339736016
+        ],
+        [
+          6,
+          231,
+          5,
+          6,
+          15.0,
+          1.2,
+          0.7689393907304966
+        ],
+        [
+          228,
+          230,
+          6,
+          5,
+          15.5,
+          1.2,
+          0.7382922169994482
+        ],
+        [
+          18,
+          224,
+          5,
+          3,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          44,
+          220,
+          5,
+          5,
+          14.0,
+          1.0,
+          0.8001063667226848
+        ],
+        [
+          92,
+          218,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          145,
+          213,
+          6,
+          13,
+          48.0,
+          2.1666666666666665,
+          0.6490388438926549
+        ],
+        [
+          18,
+          211,
+          7,
+          8,
+          28.0,
+          1.1428571428571428,
+          0.6287151271379045
+        ],
+        [
+          53,
+          201,
+          6,
+          3,
+          10.0,
+          2.0,
+          0.6411413546043386
+        ],
+        [
+          119,
+          198,
+          25,
+          33,
+          428.0,
+          1.32,
+          0.44776334865813244
+        ],
+        [
+          190,
+          193,
+          4,
+          5,
+          11.0,
+          1.25,
+          0.8399544339736016
+        ],
+        [
+          215,
+          191,
+          11,
+          9,
+          59.5,
+          1.2222222222222223,
+          0.7918819616214698
+        ],
+        [
+          239,
+          188,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          233,
+          188,
+          5,
+          7,
+          22.5,
+          1.4,
+          0.8496048361652792
+        ],
+        [
+          52,
+          186,
+          4,
+          5,
+          11.0,
+          1.25,
+          0.8399544339736016
+        ],
+        [
+          138,
+          178,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          52,
+          174,
+          4,
+          4,
+          9.0,
+          1.0,
+          0.7853981579432944
+        ],
+        [
+          39,
+          165,
+          7,
+          6,
+          15.5,
+          1.1666666666666667,
+          0.47534314099844915
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "inclusion_142.jpg",
+    "true_label": "inclusion",
+    "pred_label": "patches",
+    "confidence": 0.674442555609521,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.19)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2778,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          181,
+          166,
+          22,
+          51
+        ],
+        "label": "inclusion",
+        "area": 1122,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          71,
+          43,
+          18,
+          28
+        ],
+        "label": "inclusion",
+        "area": 504,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 101.68,
+      "std_intensity": 8.74,
+      "contrast": 0.086,
+      "dark_pixel_pct": 18.73,
+      "bright_pixel_pct": 19.14,
+      "entropy": 5.136,
+      "edge_density": 0.0,
+      "sobel_magnitude": 9.476,
+      "horizontal_edge_ratio": 0.389,
+      "vertical_edge_ratio": 0.282,
+      "diagonal_edge_ratio": 0.329,
+      "hough_line_count": 0,
+      "avg_line_length": 0.0,
+      "max_line_length": 0.0,
+      "line_horizontal_pct": 0.0,
+      "quadrant_std": {
+        "top_left": 6.03,
+        "top_right": 6.04,
+        "bottom_left": 4.41,
+        "bottom_right": 5.53
+      },
+      "quadrant_edge_density": {
+        "top_left": 0.0,
+        "top_right": 0.0,
+        "bottom_left": 0.0,
+        "bottom_right": 0.0
+      },
+      "glcm_contrast": 0.054,
+      "glcm_homogeneity": 0.973,
+      "glcm_energy": 0.748,
+      "glcm_correlation": 0.863,
+      "lbp_uniformity": 0.2761,
+      "lbp_entropy": 3.763,
+      "num_regions": 27,
+      "avg_area": 409.22,
+      "max_area": 10070.0,
+      "total_defect_pct": 16.86,
+      "avg_aspect_ratio": 1.507,
+      "max_aspect_ratio": 3.385,
+      "avg_circularity": 0.643,
+      "min_circularity": 0.124,
+      "regions_raw": [
+        [
+          218,
+          251,
+          3,
+          5,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          170,
+          250,
+          4,
+          6,
+          13.5,
+          1.5,
+          0.7140044005998508
+        ],
+        [
+          180,
+          247,
+          12,
+          9,
+          49.5,
+          1.3333333333333333,
+          0.5412882644984116
+        ],
+        [
+          253,
+          245,
+          3,
+          6,
+          9.5,
+          2.0,
+          0.6634421134916525
+        ],
+        [
+          172,
+          235,
+          9,
+          7,
+          28.5,
+          1.2857142857142858,
+          0.5697824448872034
+        ],
+        [
+          251,
+          227,
+          5,
+          5,
+          14.0,
+          1.0,
+          0.8001063667226848
+        ],
+        [
+          96,
+          226,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          78,
+          209,
+          4,
+          5,
+          11.0,
+          1.25,
+          0.8399544339736016
+        ],
+        [
+          88,
+          203,
+          4,
+          5,
+          10.0,
+          1.25,
+          0.7635949399760016
+        ],
+        [
+          127,
+          197,
+          6,
+          9,
+          25.5,
+          1.5,
+          0.6020251808161815
+        ],
+        [
+          74,
+          196,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          184,
+          195,
+          3,
+          10,
+          18.0,
+          3.3333333333333335,
+          0.4673443607254561
+        ],
+        [
+          62,
+          191,
+          10,
+          12,
+          67.0,
+          1.2,
+          0.6324836016817691
+        ],
+        [
+          66,
+          183,
+          7,
+          6,
+          25.0,
+          1.1666666666666667,
+          0.9193857054333475
+        ],
+        [
+          63,
+          176,
+          8,
+          6,
+          25.0,
+          1.3333333333333333,
+          0.602834216057722
+        ],
+        [
+          186,
+          172,
+          13,
+          44,
+          271.5,
+          3.3846153846153846,
+          0.3432437089910371
+        ],
+        [
+          59,
+          169,
+          4,
+          5,
+          11.0,
+          1.25,
+          0.8399544339736016
+        ],
+        [
+          193,
+          155,
+          4,
+          5,
+          11.5,
+          1.25,
+          0.8031141373846319
+        ],
+        [
+          42,
+          141,
+          3,
+          5,
+          8.0,
+          1.6666666666666667,
+          0.698131695949595
+        ],
+        [
+          46,
+          125,
+          6,
+          11,
+          38.5,
+          1.8333333333333333,
+          0.6601761388668115
+        ]
+      ]
+    }
+  },
+  {
+    "filename": "inclusion_143.jpg",
+    "true_label": "inclusion",
+    "pred_label": "patches",
+    "confidence": 0.7159999998057143,
+    "cls_method": "Claude+GroqWeighted(0/1LLM,best_w=0.28)",
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.4,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ],
+    "regions": [
+      {
+        "bbox": [
+          53,
+          19,
+          22,
+          30
+        ],
+        "label": "inclusion",
+        "area": 660,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          37,
+          88,
+          27,
+          66
+        ],
+        "label": "inclusion",
+        "area": 1782,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          39,
+          158,
+          21,
+          35
+        ],
+        "label": "inclusion",
+        "area": 735,
+        "source": "xml_annotation"
+      },
+      {
+        "bbox": [
+          43,
+          218,
+          14,
+          35
+        ],
+        "label": "inclusion",
+        "area": 490,
+        "source": "xml_annotation"
+      }
+    ],
+    "area_method": "xml_annotation",
+    "features": {
+      "mean_intensity": 78.09,
+      "std_intensity": 10.25,
+      "contrast": 0.131,
+      "dark_pixel_pct": 17.99,
+      "bright_pixel_pct": 18.05,
+      "entropy": 5.32,
+      "edge_density": 0.0,
+      "sobel_magnitude": 8.294,
+      "horizontal_edge_ratio": 0.36,
+      "vertical_edge_ratio": 0.316,
+      "diagonal_edge_ratio": 0.325,
+      "hough_line_count": 0,
+      "avg_line_length": 0.0,
+      "max_line_length": 0.0,
+      "line_horizontal_pct": 0.0,
+      "quadrant_std": {
+        "top_left": 9.35,
+        "top_right": 3.98,
+        "bottom_left": 7.34,
+        "bottom_right": 3.26
+      },
+      "quadrant_edge_density": {
+        "top_left": 0.0,
+        "top_right": 0.0,
+        "bottom_left": 0.0,
+        "bottom_right": 0.0
+      },
+      "glcm_contrast": 0.029,
+      "glcm_homogeneity": 0.985,
+      "glcm_energy": 0.885,
+      "glcm_correlation": 0.857,
+      "lbp_uniformity": 0.2636,
+      "lbp_entropy": 3.771,
+      "num_regions": 24,
+      "avg_area": 567.08,
+      "max_area": 12140.5,
+      "total_defect_pct": 20.77,
+      "avg_aspect_ratio": 1.981,
+      "max_aspect_ratio": 4.5,
+      "avg_circularity": 0.571,
+      "min_circularity": 0.147,
+      "regions_raw": [
+        [
+          80,
+          254,
+          9,
+          2,
+          8.0,
+          4.5,
+          0.3102807549524464
+        ],
+        [
+          97,
+          244,
+          8,
+          12,
+          45.0,
+          1.5,
+          0.42480241903999416
+        ],
+        [
+          112,
+          223,
+          4,
+          5,
+          11.5,
+          1.25,
+          0.8031141373846319
+        ],
+        [
+          47,
+          223,
+          7,
+          28,
+          136.0,
+          4.0,
+          0.4546043692226986
+        ],
+        [
+          129,
+          200,
+          13,
+          7,
+          46.5,
+          1.8571428571428572,
+          0.5342768835592542
+        ],
+        [
+          169,
+          171,
+          5,
+          4,
+          11.5,
+          1.25,
+          0.8031141373846319
+        ],
+        [
+          162,
+          170,
+          4,
+          7,
+          17.5,
+          1.75,
+          0.7251705858721779
+        ],
+        [
+          149,
+          164,
+          6,
+          8,
+          23.5,
+          1.3333333333333333,
+          0.5969047512853835
+        ],
+        [
+          138,
+          164,
+          8,
+          10,
+          38.5,
+          1.25,
+          0.5123942144366284
+        ],
+        [
+          47,
+          162,
+          8,
+          28,
+          147.0,
+          3.5,
+          0.4783599954716123
+        ],
+        [
+          179,
+          160,
+          4,
+          7,
+          17.5,
+          1.75,
+          0.7251705858721779
+        ],
+        [
+          193,
+          157,
+          9,
+          11,
+          32.5,
+          1.2222222222222223,
+          0.4013521728780247
+        ],
+        [
+          155,
+          156,
+          8,
+          9,
+          34.0,
+          1.125,
+          0.6667718151038479
+        ],
+        [
+          165,
+          147,
+          15,
+          22,
+          149.0,
+          1.4666666666666666,
+          0.35027610959519795
+        ],
+        [
+          209,
+          146,
+          4,
+          4,
+          8.5,
+          1.0,
+          0.8198545291188924
+        ],
+        [
+          183,
+          143,
+          9,
+          22,
+          101.5,
+          2.4444444444444446,
+          0.35960007603051025
+        ],
+        [
+          139,
+          142,
+          4,
+          4,
+          8.0,
+          1.0,
+          0.8573716027758265
+        ],
+        [
+          190,
+          135,
+          4,
+          5,
+          11.0,
+          1.25,
+          0.8399544339736016
+        ],
+        [
+          229,
+          97,
+          4,
+          5,
+          11.0,
+          1.25,
+          0.8399544339736016
+        ],
+        [
+          43,
+          91,
+          15,
+          62,
+          447.5,
+          4.133333333333334,
+          0.2781652536901069
+        ]
+      ]
+    }
   }
 ]
