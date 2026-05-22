@@ -36755,5 +36755,1884 @@
         "reason": "handcrafted feature prior"
       }
     ]
+  },
+  "rolled-in_scale/rolled-in_scale_211.jpg/b2c1024cdc2a6940feb9545a5e38f571": {
+    "pred_label": "patches",
+    "confidence": 0.6806,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.21)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.116,
+      "patches": 0.2071,
+      "pitted_surface": 0.1864,
+      "rolled-in_scale": 0.0414,
+      "scratches": 0.1491
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2959,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_212.jpg/805822ad02c593d9675fe0b747173ccb": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.6818,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.21)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.1107,
+      "patches": 0.1977,
+      "pitted_surface": 0.2096,
+      "rolled-in_scale": 0.0396,
+      "scratches": 0.1424
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.2994,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_213.jpg/af0f46b9ab536446dc0b78c68c0362c8": {
+    "pred_label": "patches",
+    "confidence": 0.6719,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.19)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.106,
+      "patches": 0.1892,
+      "pitted_surface": 0.1702,
+      "rolled-in_scale": 0.0984,
+      "scratches": 0.1362
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2703,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_214.jpg/7beeaf62f30721151cd2aad40e48a555": {
+    "pred_label": "patches",
+    "confidence": 0.6806,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.21)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.116,
+      "patches": 0.2071,
+      "pitted_surface": 0.1864,
+      "rolled-in_scale": 0.0414,
+      "scratches": 0.1491
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2959,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_215.jpg/11d40c361ba77d03e47de4d5ac23adfc": {
+    "pred_label": "patches",
+    "confidence": 0.6806,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.21)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.116,
+      "patches": 0.2071,
+      "pitted_surface": 0.1864,
+      "rolled-in_scale": 0.0414,
+      "scratches": 0.1491
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2959,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_216.jpg/c6caac0f6ad5e6b396930341b5bb4da2": {
+    "pred_label": "patches",
+    "confidence": 0.6806,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.21)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.116,
+      "patches": 0.2071,
+      "pitted_surface": 0.1864,
+      "rolled-in_scale": 0.0414,
+      "scratches": 0.1491
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2959,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_217.jpg/afcb18cec2222a9b38e3a8ba1a0ba870": {
+    "pred_label": "patches",
+    "confidence": 0.6948,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.1324,
+      "patches": 0.2365,
+      "pitted_surface": 0.2129,
+      "rolled-in_scale": 0.0473,
+      "scratches": 0.071
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.3378,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_218.jpg/dd251d6064b2f2744f994ff81ef2930b": {
+    "pred_label": "crazing",
+    "confidence": 0.7862,
+    "method": "Claude+GroqWeighted(3/4LLM,best_w=1.68)",
+    "weighted_scores": {
+      "crazing": 1.677,
+      "inclusion": 0.0985,
+      "patches": 0.7349,
+      "pitted_surface": 0.1583,
+      "rolled-in_scale": 0.0352,
+      "scratches": 0.2322
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "scratches",
+        "confidence": 0.3317,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 2,
+        "label": "patches",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some tie-breaker rules. I need to figure out which defe"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this. The user wants me to determine the correct label based on the given features and rule-based prior probabilities. The options ar"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_219.jpg/ed1b4d3d3259792e90a629a3ac413036": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.7711,
+    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.28)",
+    "weighted_scores": {
+      "crazing": 1.677,
+      "inclusion": 0.141,
+      "patches": 0.1007,
+      "pitted_surface": 2.2846,
+      "rolled-in_scale": 0.0503,
+      "scratches": 0.1813
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3237,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "pitted_surface",
+        "confidence": 0.324,
+        "weight": 0.49,
+        "reason": "many small regions (regions_count=177), small average area (avg_area=80.76), and high number of regions with small area and circularity (avg_circularity=0.612)"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 2,
+        "label": "pitted_surface",
+        "confidence": 0.324,
+        "weight": 0.49,
+        "reason": "many tiny circular pits"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 3,
+        "label": "pitted_surface",
+        "confidence": 0.324,
+        "weight": 0.49,
+        "reason": "The image has a high total defect percentage (21.81%) and a significant number of regions (177), with many round pits indicated by a low average circularity (0."
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 4,
+        "label": "pitted_surface",
+        "confidence": 0.6,
+        "weight": 0.588,
+        "reason": "High total defect percentage and high edge density, along with the top rule prior probability, suggest a pitted surface."
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to determine the correct label from the given options based on the provided visual features an"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_22.jpg/05b2e52adb00c9871ca6274ee15c540e": {
+    "pred_label": "patches",
+    "confidence": 0.7696,
+    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.27)",
+    "weighted_scores": {
+      "crazing": 1.677,
+      "inclusion": 0.116,
+      "patches": 2.2651,
+      "pitted_surface": 0.1864,
+      "rolled-in_scale": 0.0414,
+      "scratches": 0.1491
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2959,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "patches",
+        "confidence": 0.296,
+        "weight": 0.49,
+        "reason": "high total_defect_pct and max_area, broad irregular damaged area"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 2,
+        "label": "patches",
+        "confidence": 0.296,
+        "weight": 0.49,
+        "reason": "one or few large regions dominate"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 3,
+        "label": "patches",
+        "confidence": 0.296,
+        "weight": 0.49,
+        "reason": "The model predicts 'patches' as the most likely class due to the high total defect percentage (22.5%) and the presence of large irregular regions, which aligns "
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 4,
+        "label": "patches",
+        "confidence": 0.6,
+        "weight": 0.588,
+        "reason": "The image has a high total defect percentage (22.5%) and a large number of regions (130), which, combined with the rule-based prior, suggests the presence of pa"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the most likely c"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The user wants me to determine the correct label based on the given visual features and rule-based prior probabilities."
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_220.jpg/493091258f90a81fce2cf3234e5c86be": {
+    "pred_label": "patches",
+    "confidence": 0.7,
+    "method": "Claude+GroqWeighted(3/8LLM,best_w=1.68)",
+    "weighted_scores": {
+      "crazing": 1.677,
+      "inclusion": 0.1195,
+      "patches": 1.6834,
+      "pitted_surface": 0.1921,
+      "rolled-in_scale": 0.1109,
+      "scratches": 1.5149
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.3049,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "patches",
+        "confidence": 0.305,
+        "weight": 0.49,
+        "reason": "high total_defect_pct and max_area, broad irregular damaged area"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 2,
+        "label": "scratches",
+        "confidence": 0.91,
+        "weight": 0.892,
+        "reason": "The defect is classified as scratches due to the presence of extremely elongated lines, as indicated by the high max_line_length (42.76) and the fact that all l"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 3,
+        "label": "patches",
+        "confidence": 0.305,
+        "weight": 0.49,
+        "reason": "The model predicts 'patches' due to the high total defect percentage (19.77%) and the presence of large irregular regions, which aligns with the top rule prior "
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 4,
+        "label": "patches",
+        "confidence": 0.305,
+        "weight": 0.49,
+        "reason": "The visual features of the image, such as the high total defect percentage and the presence of horizontal and vertical edges, combined with the rule-based prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 2,
+        "label": "scratches",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The user wants me to determine the correct label based on the given visual features and rule-based prior probabilities."
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_221.jpg/ca99c9fc9bc78cbc7f85ac7f13993110": {
+    "pred_label": "patches",
+    "confidence": 0.7485,
+    "method": "Claude+GroqWeighted(4/8LLM,best_w=2.20)",
+    "weighted_scores": {
+      "crazing": 1.677,
+      "inclusion": 0.1324,
+      "patches": 2.1965,
+      "pitted_surface": 0.2129,
+      "rolled-in_scale": 0.0473,
+      "scratches": 0.63
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.3378,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "patches",
+        "confidence": 0.338,
+        "weight": 0.49,
+        "reason": "high total_defect_pct and max_area, broad irregular damaged area"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 2,
+        "label": "patches",
+        "confidence": 0.338,
+        "weight": 0.49,
+        "reason": "one or few large regions dominate"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 3,
+        "label": "patches",
+        "confidence": 0.338,
+        "weight": 0.49,
+        "reason": "The image has a high total defect percentage and a large average area, which are characteristic of patches. Additionally, the rule prior and top rule prior both"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 4,
+        "label": "patches",
+        "confidence": 0.338,
+        "weight": 0.49,
+        "reason": "The visual features of the image, such as the high total defect percentage and the presence of multiple regions, are consistent with the characteristics of patc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 2,
+        "label": "scratches",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to determine the correct label from the given options based on the provided visual features an"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_222.jpg/d06ddc2bc3471c782f32485118cb5bf7": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.752,
+    "method": "Claude+GroqWeighted(4/8LLM,best_w=2.29)",
+    "weighted_scores": {
+      "crazing": 1.677,
+      "inclusion": 0.1452,
+      "patches": 0.0,
+      "pitted_surface": 2.2913,
+      "rolled-in_scale": 0.6938,
+      "scratches": 0.1867
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3333,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "pitted_surface",
+        "confidence": 0.333,
+        "weight": 0.49,
+        "reason": "many small regions (regions_count=173), small average area (avg_area=67.24), and high circularity (avg_circularity=0.6) with low aspect ratio (avg_aspect_ratio="
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 2,
+        "label": "pitted_surface",
+        "confidence": 0.333,
+        "weight": 0.49,
+        "reason": "many tiny circular pits"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 3,
+        "label": "pitted_surface",
+        "confidence": 0.333,
+        "weight": 0.49,
+        "reason": "High total defect percentage and presence of many round pits indicated by low circularity and high edge density"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 4,
+        "label": "pitted_surface",
+        "confidence": 0.6,
+        "weight": 0.588,
+        "reason": "High total defect percentage and high edge density, along with the rule-based prior probability, suggest a pitted surface."
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 2,
+        "label": "rolled-in_scale",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_223.jpg/f4753d7c19179e3f08d50f98ce64fef3": {
+    "pred_label": "patches",
+    "confidence": 0.7698,
+    "method": "Claude+GroqWeighted(4/7LLM,best_w=2.29)",
+    "weighted_scores": {
+      "crazing": 1.677,
+      "inclusion": 0.106,
+      "patches": 2.2874,
+      "pitted_surface": 0.1702,
+      "rolled-in_scale": 0.0984,
+      "scratches": 0.1362
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2703,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "patches",
+        "confidence": 0.541,
+        "weight": 0.53,
+        "reason": "high total_defect_pct and max_area, broad irregular damaged area"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 2,
+        "label": "patches",
+        "confidence": 0.27,
+        "weight": 0.49,
+        "reason": "one or few large regions dominate"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 3,
+        "label": "patches",
+        "confidence": 0.27,
+        "weight": 0.49,
+        "reason": "The image has a high total defect percentage and a large average area, which are characteristic of patches. Additionally, the rule prior and top rule prior both"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 4,
+        "label": "patches",
+        "confidence": 0.6,
+        "weight": 0.588,
+        "reason": "The visual features such as high regions_count, avg_area, and total_defect_pct, along with the top rule prior probabilities, suggest that the defect is likely '"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The user wants me to determine the correct label based on the given visual features and rule-based prior probabilities."
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_224.jpg/21935526da1f308fabf805b818dfe50b": {
+    "pred_label": "crazing",
+    "confidence": 0.7376,
+    "method": "Claude+GroqWeighted(3/6LLM,best_w=1.68)",
+    "weighted_scores": {
+      "crazing": 1.677,
+      "inclusion": 0.116,
+      "patches": 1.1871,
+      "pitted_surface": 0.1864,
+      "rolled-in_scale": 0.6004,
+      "scratches": 0.1491
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2959,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "patches",
+        "confidence": 0.296,
+        "weight": 0.49,
+        "reason": "high max area and coverage, with broad irregular damaged area"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 2,
+        "label": "patches",
+        "confidence": 0.296,
+        "weight": 0.49,
+        "reason": "one or few large regions dominate"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 2,
+        "label": "rolled-in_scale",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The user wants me to determine the correct label based on the given visual features and rule-based prior probabilities."
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_225.jpg/b99ae59bc7bb70f6eaa57b7f3cdc6ec7": {
+    "pred_label": "crazing",
+    "confidence": 0.8319,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.68)",
+    "weighted_scores": {
+      "crazing": 1.677,
+      "inclusion": 0.106,
+      "patches": 0.1892,
+      "pitted_surface": 0.1702,
+      "rolled-in_scale": 0.0984,
+      "scratches": 0.1362
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2703,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to determine the correct label from the given options based on the provided visual features an"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_226.jpg/e59b6a7875f477af8890a65d8738cd56": {
+    "pred_label": "crazing",
+    "confidence": 0.8319,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.68)",
+    "weighted_scores": {
+      "crazing": 1.677,
+      "inclusion": 0.114,
+      "patches": 0.2035,
+      "pitted_surface": 0.1831,
+      "rolled-in_scale": 0.1058,
+      "scratches": 0.0936
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2907,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The user wants me to determine the correct label based on the given visual features and rule-based prior probabilities."
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_227.jpg/f8ec97787616a074cce1cf87c25cd457": {
+    "pred_label": "crazing",
+    "confidence": 0.7862,
+    "method": "Claude+GroqWeighted(3/4LLM,best_w=1.68)",
+    "weighted_scores": {
+      "crazing": 1.677,
+      "inclusion": 0.116,
+      "patches": 0.2071,
+      "pitted_surface": 0.1864,
+      "rolled-in_scale": 0.0414,
+      "scratches": 0.7081
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2959,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 2,
+        "label": "scratches",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_228.jpg/cb9482a9f8fad2ec7e5de3e6f200812d": {
+    "pred_label": "crazing",
+    "confidence": 0.7862,
+    "method": "Claude+GroqWeighted(3/4LLM,best_w=1.68)",
+    "weighted_scores": {
+      "crazing": 1.677,
+      "inclusion": 0.116,
+      "patches": 0.2071,
+      "pitted_surface": 0.1864,
+      "rolled-in_scale": 0.6004,
+      "scratches": 0.1491
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2959,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 2,
+        "label": "rolled-in_scale",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this defect classification problem. The user provided a bunch of features and some rules to follow. First, I need to go through each "
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the most likely c"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The user wants me to determine the correct label based on the given visual features and rule-based prior probabilities."
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_229.jpg/6459889da435877159a9d07fbbceeb24": {
+    "pred_label": "crazing",
+    "confidence": 0.8319,
+    "method": "Claude+GroqWeighted(3/3LLM,best_w=1.68)",
+    "weighted_scores": {
+      "crazing": 1.677,
+      "inclusion": 0.1233,
+      "patches": 0.2201,
+      "pitted_surface": 0.1981,
+      "rolled-in_scale": 0.0,
+      "scratches": 0.1585
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.3145,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the correct label from the given list based on the provided visual features and rule-based prior "
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_23.jpg/278c7dd0a2a282e1c269f16816d3c05e": {
+    "pred_label": "crazing",
+    "confidence": 0.7909,
+    "method": "Claude+GroqWeighted(3/4LLM,best_w=1.68)",
+    "weighted_scores": {
+      "crazing": 1.677,
+      "inclusion": 0.116,
+      "patches": 0.6971,
+      "pitted_surface": 0.1864,
+      "rolled-in_scale": 0.0414,
+      "scratches": 0.1491
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2959,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 3,
+        "label": "patches",
+        "confidence": 0.296,
+        "weight": 0.49,
+        "reason": "The classification is based on the provided numerical descriptors, where the 'patches' class has the highest prior probability of 0.2959, indicating a large irr"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class label b"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 4,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem. The task is to select the most appropriate label from the given list based on the provided visual features and rule-bas"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_230.jpg/96c2b4335be3a63c8eba9657ba6b24cf": {
+    "pred_label": "crazing",
+    "confidence": 0.7971,
+    "method": "Claude+GroqWeighted(2/2LLM,best_w=1.12)",
+    "weighted_scores": {
+      "crazing": 1.118,
+      "inclusion": 0.116,
+      "patches": 0.2071,
+      "pitted_surface": 0.1864,
+      "rolled-in_scale": 0.0414,
+      "scratches": 0.1491
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2959,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this problem step by step. The task is to classify a steel surface defect based on the given image-derived features. The allowed labe"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 3,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel defect classification problem. The user provided a bunch of numerical features and wants me to determine the class based o"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_231.jpg/a43598c40df86a6c5fd1852070c29560": {
+    "pred_label": "patches",
+    "confidence": 0.6788,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.20)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.114,
+      "patches": 0.2035,
+      "pitted_surface": 0.1831,
+      "rolled-in_scale": 0.1058,
+      "scratches": 0.0936
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2907,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_232.jpg/9af993eef41b6cd1110e61bf5896ae53": {
+    "pred_label": "patches",
+    "confidence": 0.6964,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.0479,
+      "patches": 0.2397,
+      "pitted_surface": 0.2157,
+      "rolled-in_scale": 0.1247,
+      "scratches": 0.0719
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.3425,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_233.jpg/f979a37a3d4f4e69f72aa3bedc65618b": {
+    "pred_label": "patches",
+    "confidence": 0.6948,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.1324,
+      "patches": 0.2365,
+      "pitted_surface": 0.2129,
+      "rolled-in_scale": 0.0473,
+      "scratches": 0.071
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.3378,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_234.jpg/8ebaa5c20e1119e74eea410436f3d679": {
+    "pred_label": "patches",
+    "confidence": 0.7207,
+    "method": "Claude+GroqWeighted(1/2LLM,best_w=0.70)",
+    "weighted_scores": {
+      "crazing": 0.559,
+      "inclusion": 0.1195,
+      "patches": 0.7034,
+      "pitted_surface": 0.1921,
+      "rolled-in_scale": 0.1109,
+      "scratches": 0.064
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.3049,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "patches",
+        "confidence": 0.305,
+        "weight": 0.49,
+        "reason": "high max area, broad irregular damaged area and high total defect percentage"
+      },
+      {
+        "provider": "groq",
+        "model": "qwen/qwen3-32b",
+        "prompt": 1,
+        "label": "crazing",
+        "confidence": 0.65,
+        "weight": 0.559,
+        "reason": "<think>\nOkay, let's tackle this steel surface defect classification. The allowed labels are crazing, inclusion, patches, pitted_surface, rolled-in_scale, and sc"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_235.jpg/ff5d97a584059f8b6265ee0644317a7d": {
+    "pred_label": "patches",
+    "confidence": 0.6806,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.21)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.116,
+      "patches": 0.2071,
+      "pitted_surface": 0.1864,
+      "rolled-in_scale": 0.0414,
+      "scratches": 0.1491
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2959,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_236.jpg/879fb2f97454be2b8558eaaf92223ff5": {
+    "pred_label": "patches",
+    "confidence": 0.6948,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.1324,
+      "patches": 0.2365,
+      "pitted_surface": 0.2129,
+      "rolled-in_scale": 0.0473,
+      "scratches": 0.071
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.3378,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_237.jpg/ccb9bded03536b0b10fbd7b822dfc782": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.7142,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.28)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.1719,
+      "patches": 0.0,
+      "pitted_surface": 0.2763,
+      "rolled-in_scale": 0.1597,
+      "scratches": 0.0921
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3947,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_238.jpg/281b788af8675add2a0b7d108c5da959": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.7763,
+    "method": "Claude+GroqWeighted(1/1LLM,best_w=0.67)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.114,
+      "patches": 0.0814,
+      "pitted_surface": 0.6731,
+      "rolled-in_scale": 0.1058,
+      "scratches": 0.2157
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "scratches",
+        "confidence": 0.3081,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      },
+      {
+        "provider": "groq",
+        "model": "llama-3.3-70b-versatile",
+        "prompt": 1,
+        "label": "pitted_surface",
+        "confidence": 0.262,
+        "weight": 0.49,
+        "reason": "many small regions (188), high total defect percentage (18.99), and small average area (66.2) with low aspect ratio (1.509) and moderate circularity (0.609)"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_239.jpg/b5be51a834cd4467776b577cc10fd786": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.6942,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.1463,
+      "patches": 0.1045,
+      "pitted_surface": 0.2351,
+      "rolled-in_scale": 0.1358,
+      "scratches": 0.0783
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3358,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_24.jpg/eef688ee2352a4639b7808680affee0b": {
+    "pred_label": "scratches",
+    "confidence": 0.6844,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.21)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.0911,
+      "patches": 0.1628,
+      "pitted_surface": 0.1465,
+      "rolled-in_scale": 0.0846,
+      "scratches": 0.2149
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "scratches",
+        "confidence": 0.307,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_240.jpg/fb3939f8ea7523cfc2d958c334623a22": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.7394,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.33)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.0729,
+      "patches": 0.0,
+      "pitted_surface": 0.3281,
+      "rolled-in_scale": 0.1896,
+      "scratches": 0.1093
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.4687,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_241.jpg/f395fd6ebd0d85b3bad901eb2abe243f": {
+    "pred_label": "patches",
+    "confidence": 0.6837,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.21)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.1195,
+      "patches": 0.2134,
+      "pitted_surface": 0.1921,
+      "rolled-in_scale": 0.1109,
+      "scratches": 0.064
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.3049,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_242.jpg/6a5e4223a9a92e59f6705d4cde5e6cc4": {
+    "pred_label": "patches",
+    "confidence": 0.6788,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.20)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.114,
+      "patches": 0.2035,
+      "pitted_surface": 0.1831,
+      "rolled-in_scale": 0.1058,
+      "scratches": 0.0936
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2907,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_243.jpg/1292efad030f2fe0d4a2a830cca2ca10": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.6995,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.25)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.1531,
+      "patches": 0.1641,
+      "pitted_surface": 0.2461,
+      "rolled-in_scale": 0.0547,
+      "scratches": 0.082
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3516,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_244.jpg/21535cdfd0aab807c5d37f2bb52feaf1": {
+    "pred_label": "patches",
+    "confidence": 0.6788,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.20)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.114,
+      "patches": 0.2035,
+      "pitted_surface": 0.1831,
+      "rolled-in_scale": 0.1058,
+      "scratches": 0.0936
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2907,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_245.jpg/942678f13904a8bebd412db70d965d81": {
+    "pred_label": "patches",
+    "confidence": 0.7108,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.27)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.0538,
+      "patches": 0.2692,
+      "pitted_surface": 0.2423,
+      "rolled-in_scale": 0.0538,
+      "scratches": 0.0808
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.3846,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_246.jpg/4dd87646d2473fd9a23a3a7fd767ebc8": {
+    "pred_label": "patches",
+    "confidence": 0.6904,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.23)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.0454,
+      "patches": 0.2273,
+      "pitted_surface": 0.2045,
+      "rolled-in_scale": 0.1182,
+      "scratches": 0.1046
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.3247,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_247.jpg/b1362e4b5fd37eba91dee07ae041b187": {
+    "pred_label": "patches",
+    "confidence": 0.6837,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.21)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.1195,
+      "patches": 0.2134,
+      "pitted_surface": 0.1921,
+      "rolled-in_scale": 0.1109,
+      "scratches": 0.064
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.3049,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_248.jpg/20c1600b1b9a18600493098d34a374bd": {
+    "pred_label": "patches",
+    "confidence": 0.6948,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.1324,
+      "patches": 0.2365,
+      "pitted_surface": 0.2129,
+      "rolled-in_scale": 0.0473,
+      "scratches": 0.071
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.3378,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_249.jpg/75e9cafc694538435eb05968fa64b332": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.7119,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.27)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.0603,
+      "patches": 0.1207,
+      "pitted_surface": 0.2715,
+      "rolled-in_scale": 0.1569,
+      "scratches": 0.0905
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3879,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_25.jpg/31f18e6d31f287d81af899c23a1b689d": {
+    "pred_label": "patches",
+    "confidence": 0.6806,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.21)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.116,
+      "patches": 0.2071,
+      "pitted_surface": 0.1864,
+      "rolled-in_scale": 0.0414,
+      "scratches": 0.1491
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2959,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_250.jpg/91c7d1e632919abbabe488d7bdc94ead": {
+    "pred_label": "patches",
+    "confidence": 0.6948,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.1324,
+      "patches": 0.2365,
+      "pitted_surface": 0.2129,
+      "rolled-in_scale": 0.0473,
+      "scratches": 0.071
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.3378,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_251.jpg/0d227f263389acc916afca18213f1264": {
+    "pred_label": "patches",
+    "confidence": 0.6788,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.20)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.114,
+      "patches": 0.2035,
+      "pitted_surface": 0.1831,
+      "rolled-in_scale": 0.1058,
+      "scratches": 0.0936
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.2907,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_252.jpg/e51155198e88658921cd2e832971227f": {
+    "pred_label": "pitted_surface",
+    "confidence": 0.7097,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.27)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.1661,
+      "patches": 0.1187,
+      "pitted_surface": 0.267,
+      "rolled-in_scale": 0.0593,
+      "scratches": 0.089
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "pitted_surface",
+        "confidence": 0.3814,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_253.jpg/0b65fb6d4655ee10295310abb661a8d4": {
+    "pred_label": "patches",
+    "confidence": 0.6904,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.23)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.0454,
+      "patches": 0.2273,
+      "pitted_surface": 0.2045,
+      "rolled-in_scale": 0.1182,
+      "scratches": 0.1046
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.3247,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_254.jpg/c2c9e7e0d25a8520f5b0a22f4acb81e2": {
+    "pred_label": "patches",
+    "confidence": 0.6948,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.1324,
+      "patches": 0.2365,
+      "pitted_surface": 0.2129,
+      "rolled-in_scale": 0.0473,
+      "scratches": 0.071
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.3378,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_255.jpg/f0c6e7502dd8eb2f6e02ec7bb8d9d2a7": {
+    "pred_label": "patches",
+    "confidence": 0.7032,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.25)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.0507,
+      "patches": 0.2536,
+      "pitted_surface": 0.2283,
+      "rolled-in_scale": 0.0507,
+      "scratches": 0.1167
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.3623,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
+  },
+  "rolled-in_scale/rolled-in_scale_256.jpg/43c1efff22daabeb582fd3426da400b3": {
+    "pred_label": "patches",
+    "confidence": 0.6948,
+    "method": "Claude+GroqWeighted(0/1LLM,best_w=0.24)",
+    "weighted_scores": {
+      "crazing": 0.0,
+      "inclusion": 0.1324,
+      "patches": 0.2365,
+      "pitted_surface": 0.2129,
+      "rolled-in_scale": 0.0473,
+      "scratches": 0.071
+    },
+    "votes": [
+      {
+        "provider": "rule_prior",
+        "model": "rule_prior",
+        "label": "patches",
+        "confidence": 0.3378,
+        "weight": 0.7,
+        "reason": "handcrafted feature prior"
+      }
+    ]
   }
 }
