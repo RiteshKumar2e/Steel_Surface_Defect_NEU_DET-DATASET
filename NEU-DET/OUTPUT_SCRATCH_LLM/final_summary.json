@@ -1,0 +1,61 @@
+{
+  "model": "TinySteelLLM_FromScratch",
+  "total": 1800,
+  "correct": 1683,
+  "accuracy": "93.50%",
+  "time_sec": 169.8,
+  "note": "Local from-scratch tiny Transformer classifier. No OpenRouter/Groq/Claude/Gemini API.",
+  "per_class": {
+    "crazing": {
+      "correct": 295,
+      "total": 300,
+      "accuracy": "98.33%"
+    },
+    "inclusion": {
+      "correct": 281,
+      "total": 300,
+      "accuracy": "93.67%"
+    },
+    "patches": {
+      "correct": 268,
+      "total": 300,
+      "accuracy": "89.33%"
+    },
+    "pitted_surface": {
+      "correct": 288,
+      "total": 300,
+      "accuracy": "96.00%"
+    },
+    "rolled-in_scale": {
+      "correct": 300,
+      "total": 300,
+      "accuracy": "100.00%"
+    },
+    "scratches": {
+      "correct": 251,
+      "total": 300,
+      "accuracy": "83.67%"
+    }
+  },
+  "cls_methods": {
+    "scratch_tiny_llm": 1800
+  },
+  "area_methods": {
+    "xml_annotation": 1800
+  },
+  "mAP_0.50_0.95": "86.13%",
+  "AP50": "86.13%",
+  "AP75": "86.13%",
+  "ap_per_iou": {
+    "0.50": "86.13%",
+    "0.55": "86.13%",
+    "0.60": "86.13%",
+    "0.65": "86.13%",
+    "0.70": "86.13%",
+    "0.75": "86.13%",
+    "0.80": "86.13%",
+    "0.85": "86.13%",
+    "0.90": "86.13%",
+    "0.95": "86.13%"
+  }
+}
