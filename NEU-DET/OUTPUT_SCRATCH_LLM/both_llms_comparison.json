@@ -1,0 +1,12 @@
+{
+  "TinySteelLLM_FromScratch": {
+    "accuracy": "93.50%",
+    "correct": 1683,
+    "total": 1800
+  },
+  "TinyScratchLLM_BiLSTM": {
+    "accuracy": "99.89%",
+    "correct": 1798,
+    "total": 1800
+  }
+}

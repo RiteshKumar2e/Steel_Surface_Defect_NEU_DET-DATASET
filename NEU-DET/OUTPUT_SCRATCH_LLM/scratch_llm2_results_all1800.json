@@ -1,0 +1,46 @@
+{
+  "model": "TinyScratchLLM_BiLSTM",
+  "total": 1800,
+  "correct": 1798,
+  "accuracy": "99.89%",
+  "time_sec": 304.4,
+  "note": "Second local from-scratch LLM (BiLSTM + attention pooling). No OpenRouter/Groq/Claude/Gemini API.",
+  "per_class": {
+    "crazing": {
+      "correct": 300,
+      "total": 300,
+      "accuracy": "100.00%"
+    },
+    "inclusion": {
+      "correct": 299,
+      "total": 300,
+      "accuracy": "99.67%"
+    },
+    "patches": {
+      "correct": 300,
+      "total": 300,
+      "accuracy": "100.00%"
+    },
+    "pitted_surface": {
+      "correct": 300,
+      "total": 300,
+      "accuracy": "100.00%"
+    },
+    "rolled-in_scale": {
+      "correct": 300,
+      "total": 300,
+      "accuracy": "100.00%"
+    },
+    "scratches": {
+      "correct": 299,
+      "total": 300,
+      "accuracy": "99.67%"
+    }
+  },
+  "cls_methods": {
+    "scratch_lstm_llm_ensemble": 1800
+  },
+  "area_methods": {
+    "xml_annotation": 1800
+  }
+}
