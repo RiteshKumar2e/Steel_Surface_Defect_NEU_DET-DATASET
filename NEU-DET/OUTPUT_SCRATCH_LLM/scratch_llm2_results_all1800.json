@@ -3,7 +3,7 @@
   "total": 1800,
   "correct": 1798,
   "accuracy": "99.89%",
-  "time_sec": 304.4,
+  "time_sec": 275.7,
   "note": "Second local from-scratch LLM (BiLSTM + attention pooling). No OpenRouter/Groq/Claude/Gemini API.",
   "per_class": {
     "crazing": {

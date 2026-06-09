@@ -131,3 +131,7 @@ ENSEMBLE_SIZE_2  = 5       # top-5 snapshot models average honge
 ## 9. Pehli baar run karne ka note
 
 Architecture/checkpoint-format pehle wale single-model version se badal gaya hai (ab list-of-snapshots save hoti hai), isliye **Cell 7B me `force_retrain=True`** rakha gaya hai — pehli baar fresh training hogi. Uske baad agar dobara run karna ho to `force_retrain=False` kar sakte ho taaki saved ensemble seedha load ho jaye (training dobara na karni pade).
+
+
+
+
