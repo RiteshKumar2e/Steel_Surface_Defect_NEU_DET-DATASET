@@ -18,3 +18,4 @@ Cell 8B OK — process_image_llm2() defined
 Scoring 1800 images with LLM2 + honest contour detector...
   [300/1800]  38s
   [600/1800]  81s
+  [900/1800]  148s
