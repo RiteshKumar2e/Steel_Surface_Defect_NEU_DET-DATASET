@@ -72,5 +72,8 @@
     "0.85": "92.54%",
     "0.90": "92.54%",
     "0.95": "92.54%"
-  }
+  },
+  "llm2_localization_mAP": "0.86%",
+  "llm2_localization_AP50": "2.48%",
+  "llm2_localization_AP75": "0.48%"
 }
