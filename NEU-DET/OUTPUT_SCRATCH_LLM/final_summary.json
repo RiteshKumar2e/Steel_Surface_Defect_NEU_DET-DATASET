@@ -3,7 +3,7 @@
   "total": 1800,
   "correct": 1683,
   "accuracy": "93.50%",
-  "time_sec": 114.6,
+  "time_sec": 98.1,
   "note": "Local from-scratch tiny Transformer classifier. No OpenRouter/Groq/Claude/Gemini API.",
   "per_class": {
     "crazing": {
@@ -46,34 +46,13 @@
   "mAP_0.50_0.95": "86.13%",
   "AP50": "86.13%",
   "AP75": "86.13%",
-  "ap_per_iou": {
-    "0.50": "86.13%",
-    "0.55": "86.13%",
-    "0.60": "86.13%",
-    "0.65": "86.13%",
-    "0.70": "86.13%",
-    "0.75": "86.13%",
-    "0.80": "86.13%",
-    "0.85": "86.13%",
-    "0.90": "86.13%",
-    "0.95": "86.13%"
-  },
+  "localization_mAP": "4.20%",
+  "localization_AP50": "10.35%",
+  "localization_AP75": "2.82%",
   "llm2_mAP_0.50_0.95": "92.54%",
   "llm2_AP50": "92.54%",
   "llm2_AP75": "92.54%",
-  "llm2_ap_per_iou": {
-    "0.50": "92.54%",
-    "0.55": "92.54%",
-    "0.60": "92.54%",
-    "0.65": "92.54%",
-    "0.70": "92.54%",
-    "0.75": "92.54%",
-    "0.80": "92.54%",
-    "0.85": "92.54%",
-    "0.90": "92.54%",
-    "0.95": "92.54%"
-  },
-  "llm2_localization_mAP": "0.86%",
-  "llm2_localization_AP50": "2.48%",
-  "llm2_localization_AP75": "0.48%"
+  "llm2_localization_mAP": "4.55%",
+  "llm2_localization_AP50": "11.24%",
+  "llm2_localization_AP75": "3.08%"
 }

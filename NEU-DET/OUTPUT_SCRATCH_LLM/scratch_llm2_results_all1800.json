@@ -1,9 +1,9 @@
 {
-  "model": "TinyScratchLLM_BiLSTM",
+  "model": "SteelSense-BiLSTM",
   "total": 1800,
   "correct": 1798,
   "accuracy": "99.89%",
-  "time_sec": 275.7,
+  "time_sec": 316.4,
   "note": "Second local from-scratch LLM (BiLSTM + attention pooling). No OpenRouter/Groq/Claude/Gemini API.",
   "per_class": {
     "crazing": {

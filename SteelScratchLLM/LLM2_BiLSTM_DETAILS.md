@@ -1,4 +1,4 @@
-# 2nd LLM (TinyScratchLLM_BiLSTM) — Kaise Bana Hai aur Kya-Kya Use Hua Hai
+# 2nd LLM (SteelSense-BiLSTM) — Kaise Bana Hai aur Kya-Kya Use Hua Hai
 
 Ye file batati hai ki notebook (`LLM_STEEL_SCRATCH_LOCAL.ipynb`) me jo **doosra from-scratch LLM** banaya gaya hai, woh kaise design kiya gaya hai, kaun-kaun se techniques use hue hain, aur woh pehle wale LLM (Transformer) se kaise alag hai.
 
@@ -10,7 +10,7 @@ Ye file batati hai ki notebook (`LLM_STEEL_SCRATCH_LOCAL.ipynb`) me jo **doosra 
 
 | | **LLM 1** (pehle wala) | **LLM 2** (naya wala) |
 |---|---|---|
-| Naam | `TinySteelLLM_FromScratch` | `TinyScratchLLM_BiLSTM` |
+| Naam | `TinySteelLLM_FromScratch` | `SteelSense-BiLSTM` |
 | Architecture family | Transformer (self-attention) | BiLSTM (recurrent + attention pooling) |
 | Defined kaha hai | Cell 5 | Cell 5B |
 | Train/Load | Cell 7 | Cell 7B |
@@ -23,7 +23,7 @@ Dono ka result alag-alag JSON me save hota hai aur Cell 17 me side-by-side compa
 
 ---
 
-## 2. LLM 2 ka Architecture — `TinyScratchLLM_BiLSTM` (Cell 5B)
+## 2. LLM 2 ka Architecture — `SteelSense-BiLSTM` (Cell 5B)
 
 Layer-by-layer flow:
 
@@ -101,7 +101,7 @@ Ye ek well-known technique hai jisse ek single training-run ke "luck/variance" k
 ## 7. Config / Hyperparameters (Cell 2 me defined)
 
 ```python
-MODEL_NAME_2     = 'TinyScratchLLM_BiLSTM'
+MODEL_NAME_2     = 'SteelSense-BiLSTM'
 HIDDEN_DIM_2     = 192     # BiLSTM hidden size
 NUM_LAYERS_2     = 2       # LSTM layers
 DROPOUT_2        = 0.30    # regularization
@@ -122,8 +122,8 @@ ENSEMBLE_SIZE_2  = 5       # top-5 snapshot models average honge
 | `tiny_steel_llm2_bilstm_from_scratch.pt` | Trained model — isme **5 snapshot state-dicts ki list** save hoti hai (single model nahi) |
 | `tiny_steel_llm2_tokenizer.json` | LLM 2 ka apna vocabulary/tokenizer (rich-prompt ke tokens se bana) |
 | `scratch_llm2_results_all1800.json` | Saare 1800 images ka final accuracy/per-class result |
-| `TinyScratchLLM_BiLSTM_batch_*.png` | Detection visualizations (50 images/class) |
-| `TinyScratchLLM_BiLSTM_area_analysis.png` | Area-wise analysis chart |
+| `SteelSense-BiLSTM_batch_*.png` | Detection visualizations (50 images/class) |
+| `SteelSense-BiLSTM_area_analysis.png` | Area-wise analysis chart |
 | `both_llms_comparison.png` / `.json` | Dono LLMs ka side-by-side accuracy comparison |
 
 ---
