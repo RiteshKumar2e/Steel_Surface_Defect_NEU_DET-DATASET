@@ -28,6 +28,7 @@
 - [📊 Dataset](#-dataset)
 - [🧠 Model Architecture](#-model-architecture)
 - [📈 Results](#-results)
+- [🤖 From-Scratch Tiny LLMs (Alternative Approach)](#-from-scratch-tiny-llms-alternative-approach)
 - [🎮 Usage Examples](#-usage-examples)
 - [📚 API Reference](#-api-reference)
 - [🤝 Contributing](#-contributing)
@@ -444,6 +445,82 @@ The training process shows consistent improvement with AMFF-CNN:
 - **Faster Convergence**: AMFF-CNN reaches high accuracy earlier
 - **Better Stability**: Less overfitting compared to base CNN
 - **Higher Final Accuracy**: 92.7% vs 85.4% validation accuracy
+
+---
+
+## 🤖 From-Scratch Tiny LLMs (Alternative Approach)
+
+Besides the **AMFF-CNN** (which classifies raw image pixels), this repository also
+contains a **second, completely independent approach** in the
+[`SteelScratchLLM/`](SteelScratchLLM/) folder: two **LLM-style models trained from
+scratch** that classify steel defects from **handcrafted visual descriptors converted
+into a text prompt** — no raw-pixel CNN, no pretrained weights, and **no external API**
+(OpenRouter / Groq / Claude / Gemini are not used).
+
+> 📖 Full details: [`SteelScratchLLM/README.md`](SteelScratchLLM/README.md) ·
+> [`SteelScratchLLM/LLM2_BiLSTM_DETAILS.md`](SteelScratchLLM/LLM2_BiLSTM_DETAILS.md)
+
+### 🧩 The Two From-Scratch Models
+
+| | **LLM 1** | **LLM 2** |
+|---|---|---|
+| Name | `TinySteelLLM_FromScratch` | `SteelSense-BiLSTM` |
+| Architecture | Transformer encoder (self-attention) | BiLSTM + multi-view attention pooling |
+| Config | embed 96, 2 layers, 4 heads, 18 epochs, lr 3e-4 | embed 96, hidden 192×2, dropout 0.30, 30 epochs, lr 8e-4 (OneCycle) |
+| Prompt | coarse (~18 tokens, 4-level bins) | rich (~40 tokens, 7-level bins + GLCM + per-quadrant) |
+| Extras | — | label smoothing 0.06, +2 jittered copies, top-5 snapshot ensemble |
+| Weights | `tiny_steel_llm_from_scratch.pt` | `tiny_steel_llm2_bilstm_from_scratch.pt` |
+
+### 🔄 How the LLM Pipeline Works
+
+```mermaid
+flowchart LR
+    A[Steel Image 200x200] --> B[OpenCV preprocessing<br/>BGR→RGB · resize · grayscale]
+    B --> C[Handcrafted features<br/>~30 descriptors]
+    C --> D[Feature → text prompt]
+    D --> E{From-scratch model}
+    E --> F[LLM 1: Transformer]
+    E --> G[LLM 2: BiLSTM]
+    F --> H[Defect class + confidence]
+    G --> H
+    H --> I[Localization:<br/>XML box else contour detector]
+    I --> J[Metrics: classification + localization]
+
+style A fill:#37474f,stroke:#cfd8dc,color:#eceff1
+style B fill:#4527a0,stroke:#d1c4e9,color:#ffffff
+style C fill:#ff8f00,stroke:#ffe0b2,color:#ffffff
+style D fill:#ff8f00,stroke:#ffe0b2,color:#ffffff
+style E fill:#4527a0,stroke:#d1c4e9,color:#ffffff
+style F fill:#2e7d32,stroke:#a5d6a7,color:#ffffff
+style G fill:#2e7d32,stroke:#a5d6a7,color:#ffffff
+style H fill:#2e7d32,stroke:#a5d6a7,color:#ffffff
+style I fill:#2e7d32,stroke:#a5d6a7,color:#ffffff
+style J fill:#ff8f00,stroke:#ffe0b2,color:#ffffff
+```
+
+**Handcrafted features** (`extract_rich_features`): intensity stats + entropy, Canny/Sobel/
+Laplacian edges, morphological region stats, 4-quadrant stats, FFT center energy, and GLCM
+texture (contrast/homogeneity/energy/correlation). *(No median filter, no normalization, no
+LBP — only these operations.)*
+
+### 📊 Honest Metrics (important)
+
+The LLM metrics cells report **two separate, clearly-labelled scores** — they measure
+different things and must not be conflated:
+
+- **[A] Classification-quality score** — uses the XML ground-truth boxes relabelled with the
+  predicted class (IoU ≡ 1.0, threshold-invariant). This effectively measures
+  **classification accuracy** (~99.9% on the 1800-image set).
+- **[B] Localization score** — uses the **class-aware contour detector** (no ground-truth
+  leakage), scored with genuine IoU → real `mAP / AP50 / AP75`. Classical contour
+  localization on NEU-DET genuinely lands in the **low tens of percent AP50**, not 90%+.
+
+### 🖼️ Architecture Figures
+- `SteelScratchLLM/SteelSense_BiLSTM_architecture.png/.pdf` — LLM 2 model diagram
+- `SteelScratchLLM/SteelSense_BiLSTM_pipeline.png/.pdf` — LLM 2 full 8-stage pipeline
+
+> Both LLMs target the **same six defect classes** as the AMFF-CNN
+> (crazing, inclusion, patches, pitted_surface, rolled-in_scale, scratches).
 
 ---
 
