@@ -1,0 +1,6 @@
+Now use Knowledge graph, GCN AND GNN for detecting graph that shows
+  how llm detects defects that is of 6 class type that  shows defect in
+   nodes in index.html use fast api for show in web light themed ui in 
+   html and proper knowledge graph, GNN,GCN.KNN and llm + mobile net v2 
+   also new model_code. ipynb also use that make a combination of alll
+    in new folder
