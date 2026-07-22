@@ -3,7 +3,7 @@
   "total": 1800,
   "correct": 1683,
   "accuracy": "93.50%",
-  "time_sec": 98.1,
+  "time_sec": 628.9,
   "note": "Local from-scratch tiny Transformer classifier. No OpenRouter/Groq/Claude/Gemini API.",
   "per_class": {
     "crazing": {
