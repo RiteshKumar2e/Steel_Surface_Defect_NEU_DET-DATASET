@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# Environment
+.env
+
+# Model checkpoints (keep .gitkeep, ignore weights)
+backend/saved_models/*
+!backend/saved_models/.gitkeep
+*.pt
+*.pth
+*.joblib
+*.onnx
+
+# Uploads / generated graph data
+backend/uploads/*
+!backend/uploads/.gitkeep
+data/graph_data/*
+!data/graph_data/.gitkeep
+data/processed/*
+!data/processed/.gitkeep
+
+# Datasets (large; keep out of git)
+data/raw/*
+!data/raw/.gitkeep
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/

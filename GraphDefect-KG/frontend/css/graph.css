@@ -1,0 +1,82 @@
+/* GraphDefect-KG — interactive graph view styles */
+.graph-section { margin-top: 30px; }
+.graph-shell {
+  display: grid; grid-template-columns: 1fr 300px; gap: 0;
+  border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden;
+  background: var(--surface); box-shadow: var(--shadow-sm);
+}
+@media (max-width: 900px) { .graph-shell { grid-template-columns: 1fr; } }
+
+.graph-toolbar {
+  grid-column: 1 / -1; display: flex; flex-wrap: wrap; gap: 8px; align-items: center;
+  padding: 10px 14px; border-bottom: 1px solid var(--border); background: #fbfcfe;
+}
+.graph-toolbar .tool {
+  font-size: 12.5px; padding: 6px 11px; border: 1px solid var(--border-strong);
+  background: #fff; border-radius: 6px; cursor: pointer; color: var(--text-muted);
+}
+.graph-toolbar .tool:hover { border-color: var(--accent); color: var(--accent); }
+.graph-toolbar .tool.active { background: var(--accent-soft); color: var(--accent); border-color: var(--accent); }
+.graph-toolbar select, .graph-toolbar input {
+  font-size: 12.5px; padding: 6px 8px; border: 1px solid var(--border-strong);
+  border-radius: 6px; color: var(--text); background: #fff; font-family: var(--font);
+}
+.graph-toolbar .spacer { flex: 1; }
+
+.cy-wrap { position: relative; }
+#cy {
+  width: 100%; height: 580px;
+  /* Neo4j-style light radial canvas */
+  background: radial-gradient(ellipse at 50% 42%, #eef3fb 0%, #e2eaf6 100%);
+}
+
+/* Neo4j Cypher query caption bar */
+.neo4j-cypher-bar {
+  position: absolute; top: 12px; left: 50%; transform: translateX(-50%);
+  z-index: 8; max-width: 88%;
+  background: rgba(255, 255, 255, 0.94); border: 1px solid #bfd0ea;
+  border-radius: 8px; padding: 7px 15px;
+  font-family: var(--mono); font-size: 11.5px; color: #374151;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  box-shadow: 0 4px 16px rgba(29, 78, 216, 0.10);
+  backdrop-filter: blur(6px); pointer-events: none;
+}
+.neo4j-cypher-bar .kw   { color: #7c3aed; font-weight: 700; }
+.neo4j-cypher-bar .nd   { color: #059669; }
+.neo4j-cypher-bar .rel  { color: #d97706; }
+.neo4j-cypher-bar .prop { color: #1d4ed8; }
+.neo4j-cypher-bar .num  { color: #c2410c; }
+
+.graph-side {
+  border-left: 1px solid var(--border); background: var(--surface);
+  display: flex; flex-direction: column; max-height: 610px;
+}
+.graph-side .side-head {
+  padding: 12px 14px; border-bottom: 1px solid var(--border);
+  font-size: 13px; font-weight: 700; color: var(--text); display: flex;
+  justify-content: space-between; align-items: center;
+}
+.graph-side .side-head .close { cursor: pointer; color: var(--text-soft); font-size: 16px; }
+.side-body { padding: 14px; overflow-y: auto; font-size: 13px; }
+.side-empty { color: var(--text-soft); font-size: 13px; padding: 24px 14px; text-align: center; }
+
+.detail-type {
+  display: inline-block; font-size: 11px; text-transform: uppercase; letter-spacing: .5px;
+  padding: 3px 9px; border-radius: 999px; color: #fff; margin-bottom: 10px; font-weight: 600;
+}
+.detail-row { display: flex; justify-content: space-between; gap: 10px; padding: 5px 0; border-bottom: 1px dashed var(--border); }
+.detail-row .k { color: var(--text-soft); }
+.detail-row .v { font-weight: 600; text-align: right; word-break: break-word; }
+.detail-row .v.mono { font-family: var(--mono); font-size: 12px; }
+.support-yes { color: var(--success); font-weight: 600; }
+.support-no { color: var(--danger); font-weight: 600; }
+.detail-list { margin: 6px 0 0; padding-left: 16px; color: var(--text-muted); }
+.detail-list li { padding: 2px 0; }
+
+/* legends */
+.legend-box { margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+@media (max-width: 700px){ .legend-box { grid-template-columns: 1fr; } }
+.legend-box h4 { font-size: 12px; text-transform: uppercase; letter-spacing: .5px; color: var(--text-soft); margin: 0 0 8px; }
+.legend-item { display: flex; align-items: center; gap: 8px; font-size: 12.5px; padding: 3px 0; color: var(--text-muted); }
+.legend-swatch { width: 16px; height: 16px; border-radius: 50%; flex-shrink: 0; border: 2px solid rgba(255,255,255,.7); }
+.legend-line { width: 20px; height: 0; border-top-width: 2px; border-top-style: solid; flex-shrink: 0; }

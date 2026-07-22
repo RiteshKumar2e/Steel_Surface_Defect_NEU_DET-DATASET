@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GraphDefect-KG — Explainable Steel Surface Defect Detection</title>
+  <link rel="stylesheet" href="/css/index.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="logo">GD</div>
+        <div>
+          <h1>GraphDefect-KG</h1>
+          <div class="sub">Knowledge-Guided Graph Neural Learning for Defect Detection</div>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="/">Analyse</a>
+        <a href="/batch.html">Batch / Folder</a>
+        <a href="/docs" target="_blank">API</a>
+        <a href="#architecture">Architecture</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <span class="badge">Research Prototype · NEU-DET · 6 classes</span>
+      <h2>Explainable Steel Surface Defect Detection</h2>
+      <p>
+        A hybrid framework that fuses MobileNetV2 deep features, handcrafted visual
+        descriptors, a KNN region graph, GCN / GNN learning and a domain knowledge
+        graph — then explains every prediction through an interactive, clickable graph.
+      </p>
+    </section>
+
+    <div class="grid-2">
+      <!-- Upload card -->
+      <div class="card">
+        <h3>Analyse a surface image</h3>
+        <p class="hint">Upload a grayscale steel surface image (JPG / PNG / BMP).</p>
+
+        <div class="dropzone" id="dropzone">
+          <div class="icon">⬆️</div>
+          <div class="big">Drag &amp; drop an image here</div>
+          <div class="small">or click to browse — max 10 MB</div>
+        </div>
+        <input type="file" id="fileInput" accept=".jpg,.jpeg,.png,.bmp" />
+
+        <div class="preview-wrap" id="previewWrap">
+          <img id="previewImg" alt="preview" />
+          <div class="preview-meta" id="previewMeta"></div>
+        </div>
+
+        <button class="btn btn-block" id="analyseBtn" disabled>Analyse defect</button>
+        <a class="btn btn-ghost btn-block" href="/batch.html" style="margin-top:10px">Analyse a whole folder →</a>
+
+        <div class="loading" id="loading">
+          <div class="spinner"></div>
+          Running pipeline: preprocessing → features → graph → GNN → knowledge reasoning…
+        </div>
+        <div class="error-box" id="errorBox"></div>
+        <div class="notice" id="modelNotice" style="display:none"></div>
+      </div>
+
+      <!-- Info column -->
+      <div style="display:flex; flex-direction:column; gap:24px;">
+        <div class="card">
+          <h3>Supported defect classes</h3>
+          <p class="hint">Six NEU-DET surface defect categories.</p>
+          <div class="class-grid" id="classGrid"><!-- filled by JS --></div>
+        </div>
+
+        <div class="card">
+          <h3>Model pipeline</h3>
+          <p class="hint">How an image becomes an explained prediction.</p>
+          <ol class="pipeline">
+            <li><b>Preprocess</b> — resize, CLAHE, edges, patches, regions</li>
+            <li><b>Extract</b> — MobileNetV2 + 32 handcrafted descriptors</li>
+            <li><b>Graph</b> — KNN region graph over patch nodes</li>
+            <li><b>Learn</b> — GCN + GAT message passing, gated fusion</li>
+            <li><b>Reason</b> — knowledge graph + evidence explanation</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <!-- Architecture strip -->
+    <section class="card arch" id="architecture">
+      <h3>Research architecture</h3>
+      <p class="hint">End-to-end hybrid pipeline (graph-grounded and explainable).</p>
+      <div class="arch-flow">
+        <div class="arch-node">Steel Image</div><span class="arch-arrow">→</span>
+        <div class="arch-node">Preprocess</div><span class="arch-arrow">→</span>
+        <div class="arch-node accent">MobileNetV2</div><span class="arch-arrow">+</span>
+        <div class="arch-node">Handcrafted</div><span class="arch-arrow">→</span>
+        <div class="arch-node accent">KNN Graph</div><span class="arch-arrow">→</span>
+        <div class="arch-node">GCN / GAT</div><span class="arch-arrow">→</span>
+        <div class="arch-node accent">Hybrid Fusion</div><span class="arch-arrow">→</span>
+        <div class="arch-node">6-class</div><span class="arch-arrow">→</span>
+        <div class="arch-node accent">Knowledge Graph</div><span class="arch-arrow">→</span>
+        <div class="arch-node">Explanation</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    GraphDefect-KG · research prototype for explainable industrial inspection ·
+    predictions are model outputs, not certified inspection results.
+  </footer>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>

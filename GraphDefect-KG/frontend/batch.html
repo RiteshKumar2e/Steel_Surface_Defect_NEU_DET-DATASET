@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Batch / Folder Analysis — GraphDefect-KG</title>
+  <link rel="stylesheet" href="/css/index.css" />
+  <link rel="stylesheet" href="/css/batch.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="logo">GD</div>
+        <div>
+          <h1>GraphDefect-KG</h1>
+          <div class="sub">Batch / folder defect analysis with reasons</div>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="/">Single image</a>
+        <a href="/batch.html">Batch</a>
+        <a href="/docs" target="_blank">API</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="hero" style="padding-top:8px">
+      <span class="badge">Whole-folder analysis</span>
+      <h2>Analyse a folder of steel images at once</h2>
+      <p>Select multiple images (or an entire folder). Each image is classified into one of the
+        six defect classes, with the important regions boxed and a knowledge-grounded
+        <b>reason</b> for the prediction.</p>
+    </section>
+
+    <div class="card">
+      <div class="batch-controls">
+        <button class="btn" id="pickFiles">Select images</button>
+        <button class="btn btn-ghost" id="pickFolder">Select a folder</button>
+        <span class="hint" id="pickHint">JPG / PNG / BMP · up to ~60 images per batch recommended.</span>
+      </div>
+      <input type="file" id="fileInput" accept=".jpg,.jpeg,.png,.bmp" multiple style="display:none" />
+      <input type="file" id="folderInput" webkitdirectory directory multiple style="display:none" />
+
+      <div class="error-box" id="errorBox"></div>
+      <div class="notice" id="modelNotice" style="display:none"></div>
+
+      <div class="batch-progress" id="progress">
+        <div class="hint" id="progressText" style="margin-bottom:8px"></div>
+        <div class="bar-track"><div class="bar-fill" id="barFill"></div></div>
+      </div>
+    </div>
+
+    <div class="summary-bar" id="summaryBar"></div>
+    <div class="gallery" id="gallery"></div>
+  </main>
+
+  <footer class="footer">
+    GraphDefect-KG · batch analysis · predictions are model outputs, not certified results.
+  </footer>
+
+  <script src="/js/api.js"></script>
+  <script src="/js/batch.js"></script>
+</body>
+</html>

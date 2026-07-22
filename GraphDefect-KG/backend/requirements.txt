@@ -1,0 +1,40 @@
+# GraphDefect-KG backend dependencies
+# Install with:  pip install -r backend/requirements.txt
+#
+# NOTE on PyTorch: install the build that matches your platform first, e.g.
+#   pip install torch torchvision --index-url https://download.pytorch.org/whl/cpu
+# then run this file. torch/torchvision are listed here for completeness.
+
+# --- Core deep learning ---
+torch>=2.1
+torchvision>=0.16
+
+# --- Graph learning (optional but recommended) ---
+# torch-geometric provides GCN/SAGE/GAT layers. The code falls back to a
+# lightweight built-in message-passing implementation if PyG is unavailable.
+torch-geometric>=2.4
+
+# --- Classical ML / features ---
+scikit-learn>=1.3
+scikit-image>=0.22
+opencv-python>=4.8
+numpy>=1.24
+scipy>=1.10
+xgboost>=2.0        # optional baseline; guarded at import time
+
+# --- Knowledge graph ---
+networkx>=3.1
+
+# --- Web / API ---
+fastapi>=0.110
+uvicorn[standard]>=0.29
+python-multipart>=0.0.9
+pydantic>=2.5
+
+# --- Utilities / notebook ---
+Pillow>=10.0
+joblib>=1.3
+matplotlib>=3.7
+pandas>=2.0
+python-dotenv>=1.0
+jupyter>=1.0

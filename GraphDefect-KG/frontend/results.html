@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prediction Results — GraphDefect-KG</title>
+  <link rel="stylesheet" href="/css/index.css" />
+  <link rel="stylesheet" href="/css/results.css" />
+  <link rel="stylesheet" href="/css/graph.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand">
+        <div class="logo">GD</div>
+        <div>
+          <h1>GraphDefect-KG</h1>
+          <div class="sub">Prediction &amp; graph explanation</div>
+        </div>
+      </div>
+      <nav class="nav-links"><a href="/">← New analysis</a></nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="error-box" id="errorBox"></div>
+    <div class="loading show" id="loading">
+      <div class="spinner"></div> Loading prediction…
+    </div>
+
+    <div id="resultRoot" style="display:none">
+      <div class="results-head">
+        <div>
+          <h2>Defect Analysis Report</h2>
+          <div class="source-tag" id="sourceTag"></div>
+        </div>
+        <div class="actions">
+          <button class="btn btn-ghost" id="downloadBtn">⬇ Download JSON report</button>
+          <a class="btn" href="/">Analyse another</a>
+        </div>
+      </div>
+
+      <div class="notice" id="modelNotice" style="display:none"></div>
+
+      <div class="result-grid">
+        <!-- left: image + regions -->
+        <div>
+          <div class="card image-panel">
+            <div class="section-title" style="margin-top:0">Input image</div>
+            <img id="resultImg" alt="analysed image" />
+            <div class="caption" id="imgCaption"></div>
+          </div>
+          <div class="card" style="margin-top:18px">
+            <div class="section-title" style="margin-top:0">Most influential regions</div>
+            <div id="regionsList"></div>
+          </div>
+          <div class="card" style="margin-top:18px">
+            <div class="section-title" style="margin-top:0">Fusion component weights</div>
+            <div class="gate-bar" id="gateBar"></div>
+            <div class="gate-legend" id="gateLegend"></div>
+          </div>
+        </div>
+
+        <!-- right: verdict + detail -->
+        <div>
+          <div class="card">
+            <div class="verdict">
+              <span class="cls" id="predClass">—</span>
+              <span class="conf" id="predConf"></span>
+            </div>
+
+            <div class="section-title">Class probabilities</div>
+            <div id="probBars"></div>
+
+            <div class="section-title">Model explanation</div>
+            <div class="explanation" id="explanation"></div>
+
+            <div class="section-title">Detected visual evidence</div>
+            <div class="chips" id="evidenceChips"></div>
+
+            <div class="section-title">Knowledge-graph reasoning path</div>
+            <ul class="kg-path" id="kgPath"></ul>
+
+            <div class="section-title">Model comparison</div>
+            <table class="compare">
+              <thead><tr><th>Model</th><th>Prediction</th><th>Conf.</th><th>Status</th></tr></thead>
+              <tbody id="compareBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- interactive graph -->
+      <section class="graph-section">
+        <div class="results-head">
+          <h2 style="font-size:20px">Interactive prediction graph</h2>
+          <div class="source-tag" id="graphCounts"></div>
+        </div>
+        <div class="graph-shell">
+          <div class="graph-toolbar">
+            <button class="tool" data-act="fit">Fit</button>
+            <button class="tool" data-act="reset">Reset</button>
+            <button class="tool" data-act="path">Highlight prediction path</button>
+            <button class="tool" data-act="important">Highlight important</button>
+            <input type="text" id="nodeSearch" placeholder="Search node…" />
+            <select id="nodeTypeFilter"><option value="">All node types</option></select>
+            <select id="edgeTypeFilter"><option value="">All relations</option></select>
+            <span class="spacer"></span>
+            <button class="tool" data-act="expand">Expand neighbours</button>
+          </div>
+          <div class="cy-wrap">
+            <div class="neo4j-cypher-bar" id="cypherBar"></div>
+            <div id="cy"></div>
+          </div>
+          <aside class="graph-side">
+            <div class="side-head">
+              <span id="sideTitle">Details</span>
+              <span class="close" id="sideClose" title="clear">×</span>
+            </div>
+            <div class="side-body" id="sideBody">
+              <div class="side-empty">Click any node or edge to inspect how it
+                contributed to the prediction.</div>
+            </div>
+          </aside>
+        </div>
+
+        <div class="legend-box">
+          <div><h4>Node types</h4><div id="nodeLegend"></div></div>
+          <div><h4>Edge relations</h4><div id="edgeLegend"></div></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    GraphDefect-KG · graph-grounded explanation of a single inference.
+  </footer>
+
+  <script src="/js/vendor/cytoscape.min.js"></script>
+  <script src="/js/api.js"></script>
+  <script src="/js/graph.js"></script>
+  <script src="/js/prediction.js"></script>
+</body>
+</html>
