@@ -1,9 +1,9 @@
 {
   "model": "SteelSense-BiLSTM",
   "total": 600,
-  "correct": 597,
-  "accuracy": "99.50%",
-  "time_sec": 417.4,
+  "correct": 598,
+  "accuracy": "99.67%",
+  "time_sec": 212.5,
   "note": "Second local from-scratch LLM (BiLSTM + attention pooling). No OpenRouter/Groq/Claude/Gemini API.",
   "per_class": {
     "Crazing": {
@@ -12,14 +12,14 @@
       "accuracy": "100.00%"
     },
     "Inclusion": {
+      "correct": 99,
+      "total": 100,
+      "accuracy": "99.00%"
+    },
+    "Dark scratches": {
       "correct": 100,
       "total": 100,
       "accuracy": "100.00%"
-    },
-    "Dark scratches": {
-      "correct": 98,
-      "total": 100,
-      "accuracy": "98.00%"
     },
     "Rolled in scale": {
       "correct": 100,
@@ -27,14 +27,14 @@
       "accuracy": "100.00%"
     },
     "Patches": {
-      "correct": 99,
-      "total": 100,
-      "accuracy": "99.00%"
-    },
-    "Pitted surface": {
       "correct": 100,
       "total": 100,
       "accuracy": "100.00%"
+    },
+    "Pitted surface": {
+      "correct": 99,
+      "total": 100,
+      "accuracy": "99.00%"
     }
   },
   "cls_methods": {
