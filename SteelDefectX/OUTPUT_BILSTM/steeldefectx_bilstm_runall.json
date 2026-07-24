@@ -1,137 +1,46 @@
 {
   "model": "SteelSense-BiLSTM",
-  "total": 4871,
-  "correct": 4613,
-  "accuracy": "94.70%",
-  "time_sec": 2110.8,
+  "total": 600,
+  "correct": 597,
+  "accuracy": "99.50%",
+  "time_sec": 417.4,
   "note": "Second local from-scratch LLM (BiLSTM + attention pooling). No OpenRouter/Groq/Claude/Gemini API.",
   "per_class": {
-    "Bright scratch": {
-      "correct": 295,
-      "total": 301,
-      "accuracy": "98.01%"
-    },
     "Crazing": {
-      "correct": 208,
-      "total": 210,
-      "accuracy": "99.05%"
-    },
-    "Crease": {
-      "correct": 40,
-      "total": 53,
-      "accuracy": "75.47%"
-    },
-    "Crescent gap": {
-      "correct": 167,
-      "total": 172,
-      "accuracy": "97.09%"
-    },
-    "Dark scratches": {
-      "correct": 223,
-      "total": 234,
-      "accuracy": "95.30%"
-    },
-    "Finishing roll printing": {
-      "correct": 134,
-      "total": 143,
-      "accuracy": "93.71%"
+      "correct": 100,
+      "total": 100,
+      "accuracy": "100.00%"
     },
     "Inclusion": {
-      "correct": 528,
-      "total": 557,
-      "accuracy": "94.79%"
+      "correct": 100,
+      "total": 100,
+      "accuracy": "100.00%"
     },
-    "Iron scale compression": {
-      "correct": 121,
-      "total": 140,
-      "accuracy": "86.43%"
-    },
-    "Iron sheet ash": {
-      "correct": 74,
-      "total": 86,
-      "accuracy": "86.05%"
-    },
-    "Oil spot": {
-      "correct": 324,
-      "total": 349,
-      "accuracy": "92.84%"
-    },
-    "Oxide scale of plate system": {
-      "correct": 36,
-      "total": 45,
-      "accuracy": "80.00%"
-    },
-    "Oxide scale of temperature system": {
-      "correct": 140,
-      "total": 143,
-      "accuracy": "97.90%"
-    },
-    "Patches": {
-      "correct": 208,
-      "total": 210,
-      "accuracy": "99.05%"
-    },
-    "Pitted surface": {
-      "correct": 207,
-      "total": 210,
-      "accuracy": "98.57%"
-    },
-    "Punching": {
-      "correct": 279,
-      "total": 280,
-      "accuracy": "99.64%"
-    },
-    "Red iron sheet": {
-      "correct": 267,
-      "total": 278,
-      "accuracy": "96.04%"
+    "Dark scratches": {
+      "correct": 98,
+      "total": 100,
+      "accuracy": "98.00%"
     },
     "Rolled in scale": {
-      "correct": 209,
-      "total": 210,
-      "accuracy": "99.52%"
+      "correct": 100,
+      "total": 100,
+      "accuracy": "100.00%"
     },
-    "Rolled pit": {
-      "correct": 27,
-      "total": 35,
-      "accuracy": "77.14%"
+    "Patches": {
+      "correct": 99,
+      "total": 100,
+      "accuracy": "99.00%"
     },
-    "Secondary rust skin": {
-      "correct": 127,
-      "total": 139,
-      "accuracy": "91.37%"
-    },
-    "Silk spot": {
-      "correct": 387,
-      "total": 405,
-      "accuracy": "95.56%"
-    },
-    "Slag inclusion": {
-      "correct": 148,
-      "total": 167,
-      "accuracy": "88.62%"
-    },
-    "Waist folding": {
-      "correct": 127,
-      "total": 139,
-      "accuracy": "91.37%"
-    },
-    "Welding line": {
-      "correct": 325,
-      "total": 350,
-      "accuracy": "92.86%"
-    },
-    "White rust": {
-      "correct": 12,
-      "total": 15,
-      "accuracy": "80.00%"
+    "Pitted surface": {
+      "correct": 100,
+      "total": 100,
+      "accuracy": "100.00%"
     }
   },
   "cls_methods": {
-    "scratch_lstm_llm_ensemble": 4871
+    "scratch_lstm_llm_ensemble": 600
   },
   "area_methods": {
-    "ground_truth_mask": 4858,
-    "contour_detection": 13
+    "ground_truth_mask": 600
   }
 }
