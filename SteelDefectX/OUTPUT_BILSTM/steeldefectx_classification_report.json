@@ -1,0 +1,48 @@
+{
+  "model": "SteelSense-BiLSTM",
+  "dataset": "SteelDefectX",
+  "overall_accuracy": 99.45,
+  "per_class": [
+    {
+      "class": "Crazing",
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "class": "Inclusion",
+      "precision": 0.996,
+      "recall": 0.993,
+      "f1": 0.995
+    },
+    {
+      "class": "Scratches",
+      "precision": 0.975,
+      "recall": 0.991,
+      "f1": 0.983
+    },
+    {
+      "class": "Rolled in scale",
+      "precision": 0.995,
+      "recall": 1.0,
+      "f1": 0.998
+    },
+    {
+      "class": "Patches",
+      "precision": 1.0,
+      "recall": 0.99,
+      "f1": 0.995
+    },
+    {
+      "class": "Pitted surface",
+      "precision": 1.0,
+      "recall": 0.995,
+      "f1": 0.998
+    }
+  ],
+  "macro_avg": {
+    "precision": 0.994,
+    "recall": 0.995,
+    "f1": 0.995
+  }
+}
