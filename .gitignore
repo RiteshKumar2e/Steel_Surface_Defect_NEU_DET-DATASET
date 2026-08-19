@@ -55,6 +55,10 @@ env/
 *.joblib
 
 # Outputs
+paper_results/
+# ...but keep the frozen split: every reported number depends on it.
+!paper_results/splits/
+!paper_results/splits/**
 OUTPUT/
 Outputs/
 new_Outputs/
