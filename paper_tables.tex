@@ -1,0 +1,395 @@
+% =====================================================================
+%  Tables: Steel surface defect recognition on NEU-DET
+%
+%  GENERATED FILE -- do not hand-edit. Regenerate: python make_tables.py
+%
+%  \usepackage{booktabs}  \usepackage{amssymb}  \usepackage{multirow}
+%
+%  plain value    -> measured and verified, safe to publish
+%  \texttt{[RUN]} -> not yet measured
+% =====================================================================
+
+% ###################################################################
+% #  PROVISIONAL RESULTS -- NOT FOR SUBMISSION
+% #  Generated from 1 run(s) of a shortened schedule, not the
+% #  5-seed full protocol. Dagger values are single-run,
+% #  where the standard deviation is UNDEFINED (not zero).
+% #  Re-run the experiments and regenerate; this banner then vanishes.
+% ###################################################################
+
+\begin{table}[t]
+\centering
+\caption{Dataset partition by image count, stratified per class, generated once with a fixed seed and reused by every experiment in this paper.}
+\label{tab:split_images}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{lccccccc}
+\toprule
+\textbf{Split} & \textbf{Total} & \textbf{Crazing} & \textbf{Inclusion} & \textbf{Patches} & \textbf{Pitted} & \textbf{Rolled-in} & \textbf{Scratches} \\
+\midrule
+Train & 1260 & 210 & 210 & 210 & 210 & 210 & 210 \\
+Validation & 180 & 30 & 30 & 30 & 30 & 30 & 30 \\
+Test & 360 & 60 & 60 & 60 & 60 & 60 & 60 \\
+\midrule
+\textbf{Total} & \textbf{1800} & 300 & 300 & 300 & 300 & 300 & 300 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\begin{table}[t]
+\centering
+\caption{Ground-truth bounding boxes per partition. All boxes are the human-annotated PASCAL-VOC annotations shipped with NEU-DET.}
+\label{tab:split_boxes}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{lccccccc}
+\toprule
+\textbf{Split} & \textbf{Total} & \textbf{Crazing} & \textbf{Inclusion} & \textbf{Patches} & \textbf{Pitted} & \textbf{Rolled-in} & \textbf{Scratches} \\
+\midrule
+Train & 2899 & 485 & 607 & 609 & 340 & 433 & 425 \\
+Validation & 423 & 72 & 87 & 83 & 56 & 58 & 67 \\
+Test & 867 & 137 & 190 & 181 & 93 & 137 & 129 \\
+\midrule
+\textbf{Total} & \textbf{4189} & 689 & 1011 & 881 & 432 & 628 & 548 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\begin{table}[t]
+\centering
+\caption{Ground-truth annotation audit. Localization metrics are computed only against these verified annotations; contour-derived regions, detector-generated proposals and whole-image boxes are never used as ground truth.}
+\label{tab:gt_protocol}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{lc}
+\toprule
+\textbf{Property} & \textbf{Value} \\
+\midrule
+Images & 1800 (300 per class) \\
+Native frame & $200\times200$, depth 1 (all images) \\
+Images with verified VOC annotation & \textbf{1800 / 1800 (100\%)} \\
+Total ground-truth boxes & 4189 \\
+Boxes flagged \texttt{difficult} & 81 \\
+Boxes per image (min--max) & 1--9 \\
+Localization evaluation subset & complete test split (360 images, 867 boxes) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\begin{table}[t]
+\centering
+\caption{Ground-truth box statistics per class. Median box area is expressed as a percentage of the image. Only pitted surface is annotated at near full-frame extent; the remaining classes are small and multiple. This distribution explains the weak-localization results of Table~\ref{tab:localization}.}
+\label{tab:boxsize}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{lccc}
+\toprule
+\textbf{Class} & \textbf{Median box (\% of image)} & \textbf{Boxes $>$50\% of image (\%)} & \textbf{Boxes per image} \\
+\midrule
+Crazing & 21.1 & 1.2 & 2.31 \\
+Inclusion & 4.1 & 0.0 & 2.95 \\
+Patches & 9.3 & 0.3 & 2.91 \\
+Pitted surface & \textbf{55.5} & \textbf{58.3} & 1.63 \\
+Rolled-in scale & 12.3 & 0.2 & 2.09 \\
+Scratches & 7.5 & 0.0 & 2.07 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\begin{table}[t]
+\centering
+\caption{Backbone tap points and pyramid levels for a $200\times200\times3$ input. Spatial sizes are asserted at build time so the reported architecture cannot diverge from the implemented one.}
+\label{tab:architecture}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{llcc}
+\toprule
+\textbf{Level} & \textbf{MobileNetV2 layer} & \textbf{Stride} & \textbf{Size} \\
+\midrule
+C2 & \texttt{block\_3\_expand\_relu} & 4 & $50\times50$ \\
+C3 & \texttt{block\_6\_expand\_relu} & 8 & $25\times25$ \\
+C4 & \texttt{block\_13\_expand\_relu} & 16 & $13\times13$ \\
+C5 & \texttt{out\_relu} & 32 & $7\times7$ \\
+\midrule
+\multicolumn{4}{l}{Pyramid width: 128 channels \quad SEAM dilation rates: $(1,3,5)$} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\begin{table}[t]
+\centering
+\caption{Validation accuracy across ablation variants in a single-seed pilot run. Nearly all variants sit at or within about one point of 100\%. Classification accuracy therefore cannot separate the architectural components on this dataset, which is why Table~\ref{tab:ablation_main} is reported on AP$_{50}$.}
+\label{tab:saturation}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{llcc}
+\toprule
+\textbf{Study} & \textbf{Variant} & \textbf{Train acc.\ (\%)} & \textbf{Val.\ acc.\ (\%)} \\
+\midrule
+Modules & MobileNetV2 baseline & 99.52 & 100.00 \\
+ & + FPN & 99.68 & 100.00 \\
+ & + AMFF & 99.84 & 99.44 \\
+ & + CSAF & 99.76 & 100.00 \\
+ & Full model & 99.37 & 100.00 \\
+\midrule
+AMFF attention & Channel only & 99.21 & 100.00 \\
+ & Spatial only & 99.13 & 99.44 \\
+ & Both & 99.21 & 100.00 \\
+\midrule
+SEAM dilation & $(1)$ & 99.37 & 100.00 \\
+ & $(1,3)$ & 99.52 & 99.44 \\
+ & $(1,3,5)$ & 99.21 & 100.00 \\
+ & $(1,3,5,7)$ & 99.37 & 98.89 \\
+\bottomrule
+\end{tabular}
+\end{table}
+% validation, not test; its purpose is to justify the metric choice
+
+
+\begin{table}[t]
+\centering
+\caption{Proposed model on the held-out test split. \textbf{Provisional: 1 run of a shortened schedule.} $^{\dagger}$~single run; standard deviation undefined.}
+\label{tab:main_result}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{lc}
+\toprule
+\textbf{Metric} & \textbf{Value (\%)} \\
+\midrule
+\multicolumn{2}{l}{\emph{Classification}} \\
+Accuracy & 93.33\,$^{\dagger}$ \\
+Precision (macro) & 94.68\,$^{\dagger}$ \\
+Recall (macro) & 93.33\,$^{\dagger}$ \\
+F1 (macro) & 92.95\,$^{\dagger}$ \\
+\midrule
+\multicolumn{2}{l}{\emph{Weak localization}} \\
+AP$_{50}$ & 9.71\,$^{\dagger}$ \\
+AP$_{75}$ & 3.62\,$^{\dagger}$ \\
+mAP$_{50:95}$ & 4.30\,$^{\dagger}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+% PROVISIONAL: 1 seed(s), 5 expected.
+
+
+\begin{table}[t]
+\centering
+\caption{Ablation of the major architectural components; each row adds one module to the row above. \textbf{The comparison rests on AP$_{50}$}: classification accuracy is saturated -- the backbone alone reaches the ceiling -- so that column cannot separate the variants (Table~\ref{tab:saturation}).}
+\label{tab:ablation_main}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{lcccccccc}
+\toprule
+\textbf{Variant} & \textbf{FPN} & \textbf{AMFF} & \textbf{CSAF} & \textbf{SEAM} & \textbf{Params} & \textbf{Accuracy (\%)} & \textbf{AP$_{50}$ (\%)} & \textbf{mAP$_{50:95}$ (\%)} \\
+\midrule
+MobileNetV2 baseline & -- & -- & -- & -- & 2{,}423{,}110 & 100.00 & 8.34 & 3.70 \\
++ FPN & \checkmark & -- & -- & -- & 3{,}196{,}102 & 99.72 & 7.83 & 3.26 \\
++ AMFF & \checkmark & \checkmark & -- & -- & 3{,}358{,}111 & 99.17 & 9.12 & 4.12 \\
++ CSAF & \checkmark & \checkmark & \checkmark & -- & 3{,}358{,}687 & 98.61 & 9.14 & 4.58 \\
+Full model & \checkmark & \checkmark & \checkmark & \checkmark & 3{,}364{,}064 & 99.72 & 9.64 & 3.99 \\
+\bottomrule
+\end{tabular}
+\end{table}
+% accuracy is at ceiling in every row -- draw no conclusions from it
+
+
+\begin{table}[t]
+\centering
+\caption{Controlled comparison of attention at the pyramid fusion point. Only the fusion block differs. AMFF is not parameter-matched to its controls: it feeds three tensors into the fusion convolution where CBAM feeds two.}
+\label{tab:ablation_attention}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Fusion block} & \textbf{Params} & \textbf{$\Delta$ vs CBAM} & \textbf{Accuracy (\%)} & \textbf{AP$_{50}$ (\%)} & \textbf{mAP$_{50:95}$ (\%)} \\
+\midrule
+None (concat + $1\times1$) & 3{,}301{,}895 & $-13{,}017$ & \texttt{[RUN]} & \texttt{[RUN]} & \texttt{[RUN]} \\
+ECA~\cite{wang2020eca} & 3{,}301{,}910 & $-13{,}002$ & \texttt{[RUN]} & \texttt{[RUN]} & \texttt{[RUN]} \\
+SE~\cite{hu2018squeeze} & 3{,}314{,}615 & $-297$ & \texttt{[RUN]} & \texttt{[RUN]} & \texttt{[RUN]} \\
+CBAM~\cite{woo2018cbam} & 3{,}314{,}912 & --- & \texttt{[RUN]} & \texttt{[RUN]} & \texttt{[RUN]} \\
+\midrule
+\textbf{AMFF (ours)} & 3{,}364{,}064 & $+49{,}152$ & \texttt{[RUN]} & \texttt{[RUN]} & \texttt{[RUN]} \\
+\bottomrule
+\end{tabular}
+\end{table}
+% a lead below the multi-seed SD is not evidence of an advantage
+
+
+\begin{table}[t]
+\centering
+\caption{Contribution of dilation in SEAM, isolated from capacity. The branch count is fixed within each pair, so the two rows of a pair have \emph{identical} parameter counts and differ only in dilation.}
+\label{tab:ablation_dilation}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{SEAM rates} & \textbf{Branches} & \textbf{Dilated} & \textbf{Params} & \textbf{Accuracy (\%)} & \textbf{AP$_{50}$ (\%)} \\
+\midrule
+$(1,1,1)$ & 3 & -- & 3{,}364{,}064 & \texttt{[RUN]} & \texttt{[RUN]} \\
+$(1,3,5)$ & 3 & \checkmark & 3{,}364{,}064 & \texttt{[RUN]} & \texttt{[RUN]} \\
+\midrule
+$(1,1,1,1)$ & 4 & -- & 3{,}365{,}856 & \texttt{[RUN]} & \texttt{[RUN]} \\
+$(1,3,5,7)$ & 4 & \checkmark & 3{,}365{,}856 & \texttt{[RUN]} & \texttt{[RUN]} \\
+\bottomrule
+\end{tabular}
+\end{table}
+% quote the within-pair delta; the (1,) vs (1,3,5) gap also
+% changes the branch count and is therefore confounded
+
+
+\begin{table*}[t]
+\centering
+\caption{Localization on the test split. All rows use the same partition, the same verified ground truth and the same evaluation code. The first row receives no box supervision at training time; the remainder do.}
+\label{tab:localization}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{llcccc}
+\toprule
+\textbf{Method} & \textbf{Supervision} & \textbf{Params} & \textbf{AP$_{50}$ (\%)} & \textbf{AP$_{75}$ (\%)} & \textbf{mAP$_{50:95}$ (\%)} \\
+\midrule
+Weak localization (Grad-CAM) & image labels only & 3{,}364{,}064 & 9.71\,$^{\dagger}$ & 3.62\,$^{\dagger}$ & 4.30\,$^{\dagger}$ \\
+\midrule
+\textbf{Detection head (ours)} & bounding boxes & 3{,}966{,}821 & 63.88 & 17.02 & 27.01 \\
+YOLOv8n & bounding boxes & \texttt{[RUN]} & \texttt{[RUN]} & \texttt{[RUN]} & \texttt{[RUN]} \\
+YOLO11n & bounding boxes & \texttt{[RUN]} & \texttt{[RUN]} & \texttt{[RUN]} & \texttt{[RUN]} \\
+YOLO12n & bounding boxes & \texttt{[RUN]} & \texttt{[RUN]} & \texttt{[RUN]} & \texttt{[RUN]} \\
+\bottomrule
+\end{tabular}
+\end{table*}
+% detector baselines run at 224: the framework requires the input
+% side to be divisible by 32 -- state this, do not omit it
+
+
+\begin{table}[t]
+\centering
+\caption{Per-class AP$_{50}$ of the detection head on the test split.}
+\label{tab:detector_per_class}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{lc}
+\toprule
+\textbf{Class} & \textbf{AP$_{50}$ (\%)} \\
+\midrule
+Crazing & 28.41 \\
+Inclusion & 67.23 \\
+Patches & 82.62 \\
+Pitted surface & 83.30 \\
+Rolled-in scale & 38.95 \\
+Scratches & 82.78 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\begin{table*}[t]
+\centering
+\caption{Classification comparison on NEU-DET. Every row was trained by us on the identical partition with the same augmentation, schedule and seed; each backbone receives its own canonical input normalisation.}
+\label{tab:cls_comparison}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Model} & \textbf{Params} & \textbf{Accuracy (\%)} & \textbf{Precision (\%)} & \textbf{Recall (\%)} & \textbf{F1 (\%)} \\
+\midrule
+MobileNetV2 & 2{,}265{,}670 & \texttt{[RUN]} & \texttt{[RUN]} & \texttt{[RUN]} & \texttt{[RUN]} \\
+EfficientNetB0 & 4{,}057{,}257 & \texttt{[RUN]} & \texttt{[RUN]} & \texttt{[RUN]} & \texttt{[RUN]} \\
+DenseNet121 & 7{,}043{,}654 & \texttt{[RUN]} & \texttt{[RUN]} & \texttt{[RUN]} & \texttt{[RUN]} \\
+VGG16 & 14{,}717{,}766 & \texttt{[RUN]} & \texttt{[RUN]} & \texttt{[RUN]} & \texttt{[RUN]} \\
+ResNet50 & 23{,}600{,}006 & \texttt{[RUN]} & \texttt{[RUN]} & \texttt{[RUN]} & \texttt{[RUN]} \\
+\midrule
+\textbf{Proposed (full)} & 3{,}364{,}064 & \texttt{[RUN]} & \texttt{[RUN]} & \texttt{[RUN]} & \texttt{[RUN]} \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+
+\begin{table*}[t]
+\centering
+\caption{Previously published results on NEU-DET, kept separate from our own measurements because the evaluation protocols differ. Entries not directly comparable are listed for context only.}
+\label{tab:literature}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{lllcccc}
+\toprule
+\textbf{Reference} & \textbf{Method} & \textbf{Task} & \textbf{Split protocol} & \textbf{Input} & \textbf{AP$_{50}$ (\%)} & \textbf{Comparable} \\
+\midrule
+\texttt{[cite]} & \texttt{[fill]} & \texttt{[cls/det]} & \texttt{[fill]} & \texttt{[fill]} & \texttt{[fill]} & \texttt{[Y/N]} \\
+\texttt{[cite]} & \texttt{[fill]} & \texttt{[cls/det]} & \texttt{[fill]} & \texttt{[fill]} & \texttt{[fill]} & \texttt{[Y/N]} \\
+\texttt{[cite]} & \texttt{[fill]} & \texttt{[cls/det]} & \texttt{[fill]} & \texttt{[fill]} & \texttt{[fill]} & \texttt{[Y/N]} \\
+\midrule
+\textbf{Ours} & Proposed detector & detection & 70/10/20 stratified & $200^2$ & 63.88 & --- \\
+\bottomrule
+\end{tabular}
+\end{table*}
+% never rank a detection mAP against a classification accuracy
+% never copy a number without also copying its protocol
+
+
+\begin{table*}[t]
+\centering
+\caption{Computational cost, for a single $200\times200\times3$ input at batch size 1; latency is the median of 200 timed runs after 20 warm-up runs. Model size is fp32 parameter memory. The pyramid, not the backbone, dominates the multiply--accumulate cost.}
+\label{tab:efficiency}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{lccccc}
+\toprule
+\textbf{Model} & \textbf{Params} & \textbf{MACs (M)} & \textbf{Size (MiB)} & \textbf{Latency (ms)} & \textbf{CPU FPS} \\
+\midrule
+MobileNetV2 (backbone only) & 2{,}423{,}110 & 270 & \texttt{[RUN]} & \texttt{[RUN]} & 17.4 \\
+Proposed, 32 pyramid channels & 2{,}382{,}680 & 349 & \texttt{[RUN]} & \texttt{[RUN]} & \texttt{[RUN]} \\
+Proposed, 64 pyramid channels & 2{,}607{,}400 & 563 & \texttt{[RUN]} & \texttt{[RUN]} & \texttt{[RUN]} \\
+\textbf{Proposed classifier, 128} & 3{,}364{,}064 & 1373 & 12.83 & 113.06 & 8.8 \\
+\midrule
+Proposed detector & 3{,}966{,}821 & \texttt{[RUN]} & \texttt{[RUN]} & \texttt{[RUN]} & \texttt{[RUN]} \\
+\bottomrule
+\end{tabular}
+\end{table*}
+% classifier: 2746.34 MFLOPs = 1373.17 MMACs
+% re-measure timings on an unloaded machine before submission
+
+
+\begin{table}[t]
+\centering
+\caption{Nomenclature.}
+\label{tab:nomenclature}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{ll}
+\toprule
+\textbf{Abbreviation} & \textbf{Meaning} \\
+\midrule
+AMFF & Attention-Modulated Feature Fusion \\
+AP & Average Precision \\
+CAM & Class Activation Map \\
+CBAM & Convolutional Block Attention Module \\
+CSAF & Cross-Scale Adaptive Fusion \\
+ECA & Efficient Channel Attention \\
+FPN & Feature Pyramid Network \\
+GAP & Global Average Pooling \\
+IoU & Intersection over Union \\
+MAC & Multiply--Accumulate operation \\
+mAP & mean Average Precision \\
+SE & Squeeze-and-Excitation \\
+SEAM & Spatial Enhancement Attention Module \\
+VOC & Visual Object Classes (annotation format) \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
+\begin{table}[t]
+\centering
+\caption{Experimental configuration and measurement environment.}
+\label{tab:setup}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{ll}
+\toprule
+\textbf{Item} & \textbf{Value} \\
+\midrule
+Input resolution & $200\times200\times3$ \\
+Source images & $200\times200$, 8-bit grayscale, replicated to 3 channels \\
+Partition & 70 / 10 / 20 stratified, fixed seed \\
+Optimiser & Adam \\
+Batch size & 32 \\
+Detector head & anchor-free, P2/P3/P4, shared across levels \\
+Detector loss & focal + GIoU + centerness \\
+\midrule
+CPU & AMD64 family 23, 2 physical / 4 logical cores \\
+RAM & 9.9\,GB \\
+GPU & none (CPU-only measurements) \\
+Framework & TensorFlow 2.15.0 / Keras 2.15.0 \\
+Python / NumPy & 3.10.11 / 1.26.4 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+
