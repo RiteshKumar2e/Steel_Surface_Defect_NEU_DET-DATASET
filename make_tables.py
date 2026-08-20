@@ -244,7 +244,7 @@ def t_protocol():
 
 
 def t_boxsize():
-    """Box-size statistics -- explains the weak-localization failure."""
+    """Box-size statistics -- explains the CAM-based localization failure."""
     rows = [
         ["Crazing", "21.1", "1.2", "2.31"],
         ["Inclusion", "4.1", "0.0", "2.95"],
@@ -257,7 +257,7 @@ def t_boxsize():
         "Ground-truth box statistics per class. Median box area is expressed as "
         "a percentage of the image. Only pitted surface is annotated at near "
         "full-frame extent; the remaining classes are small and multiple. This "
-        "distribution explains the weak-localization results of "
+        "distribution explains the CAM-based localization results of "
         r"Table~\ref{tab:localization}.",
         "tab:boxsize", "lccc",
         ["Class", r"Median box (\% of image)", r"Boxes $>$50\% of image (\%)",
@@ -331,7 +331,7 @@ def t_main_result():
         ["Precision (macro)", seed_cell(df, "precision_macro")],
         ["Recall (macro)", seed_cell(df, "recall_macro")],
         ["F1 (macro)", seed_cell(df, "f1_macro")],
-        [r"\multicolumn{2}{l}{\emph{Weak localization}}"],
+        [r"\multicolumn{2}{l}{\emph{CAM-based localization}}"],
         [r"AP$_{50}$", seed_cell(df, "AP50")],
         [r"AP$_{75}$", seed_cell(df, "AP75")],
         [r"mAP$_{50:95}$", seed_cell(df, "mAP50_95")],
@@ -438,7 +438,7 @@ def t_detector():
     wk = load("table_multiseed.csv")
     get = lambda k: num(d[k]) if d else RUN
     rows = [
-        ["Weak localization (Grad-CAM)", "image labels only",
+        ["CAM-based localization (Grad-CAM)", "image labels only",
          group(PARAMS["full"]), seed_cell(wk, "AP50"), seed_cell(wk, "AP75"),
          seed_cell(wk, "mAP50_95")],
         [r"\textbf{Detection head (ours)}", "bounding boxes",
