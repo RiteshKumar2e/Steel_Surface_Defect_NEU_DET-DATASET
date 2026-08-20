@@ -2,7 +2,8 @@
 
 **Paper:** Steel surface defect recognition on NEU-DET
 **Status:** rejected by *Discover Artificial Intelligence* (18 Aug 2026); rebuilding for resubmission
-**Code:** [`new_model_code.ipynb`](new_model_code.ipynb) · **Tables:** [`paper_tables.tex`](paper_tables.tex) (regenerate with `python make_tables.py`)
+**Code:** [`new_model_code.ipynb`](new_model_code.ipynb) · **Tables:** [`paper_tables.tex`](paper_tables.tex) (`python make_tables.py`)
+**Experiment suite and Section 5 results:** [`EXPERIMENTS.md`](EXPERIMENTS.md)
 
 ---
 
