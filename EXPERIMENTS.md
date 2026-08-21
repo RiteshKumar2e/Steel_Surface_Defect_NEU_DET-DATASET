@@ -225,26 +225,26 @@ same verified VOC ground truth as the detector.
 | Method                          | Supervision       | Params    | AP50            | AP75            | mAP50:95        |
 | ------------------------------- | ----------------- | --------- | --------------- | --------------- | --------------- |
 | CAM-based localization          | image labels only | 3,364,064 | 9.71            | 3.62            | 4.30            |
-| **Detection head (ours)** | bounding boxes    | 3,966,821 | **63.88** | **17.02** | **27.01** |
+| **Detection head (ours)** | bounding boxes    | 3,966,821 | **64.77** | **18.89** | **27.20** |
 
 Per-class AP50:
 
 | Class           | Detection | CAM-based |
 | --------------- | --------- | --------- |
-| Pitted surface  | 83.3      | 57.6      |
-| Scratches       | 82.8      | 0.3       |
-| Patches         | 82.6      | 0.1       |
-| Inclusion       | 67.2      | 0.0       |
-| Rolled-in scale | 39.0      | 0.0       |
-| Crazing         | 28.4      | 0.1       |
+| Pitted surface  | 84.8 | 57.6      |
+| Scratches       | 77.7 | 0.3       |
+| Patches         | 84.8 | 0.1       |
+| Inclusion       | 65.1 | 0.0       |
+| Rolled-in scale | 43.3 | 0.0       |
+| Crazing         | 35.1 | 0.1       |
 
 **Three of the five classes that scored zero without box supervision now exceed 80.**
 
-⚠️ **Report AP75 and mAP alongside AP50.** AP75 (17.0) is far below AP50 (63.9):
+⚠️ **Report AP75 and mAP alongside AP50.** AP75 (18.89) is far below AP50 (64.77):
 boxes are being found but their edges are imprecise — the signature of under-trained
 box regression. Quoting AP50 alone hides it, and a reviewer who asks for AP75 will
-find it. *(A retrained detector with cosine decay and a deeper unfreeze is running;
-these numbers are from the first 12+8-epoch run.)*
+find it. *(18+22 epochs, cosine decay, deeper backbone unfreeze. The earlier 12+8-epoch
+constant-rate run scored AP50 63.88 / AP75 17.02 / mAP 27.01.)*
 
 ⚠️ Precision at the reported operating point is 2.25 % with recall 95.4 %, because
 the score threshold (0.02) was selected **on validation** to maximise AP. That is
@@ -338,7 +338,7 @@ Supported by measurement right now:
    localization metrics. Demonstrated over 12 variants.
 3. An explanation of when CAM-based localization works and when it cannot, quantified
    against ground-truth box statistics.
-4. A lightweight anchor-free detector: **AP50 63.88** at 3.97 M parameters, versus
+4. A lightweight anchor-free detector: **AP50 64.77** at 3.97 M parameters, versus
    9.71 without box supervision.
 
 Not yet supported:

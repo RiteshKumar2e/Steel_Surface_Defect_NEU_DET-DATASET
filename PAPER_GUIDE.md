@@ -245,25 +245,25 @@ background and training stalls — a reproducibility detail reviewers appreciate
 | Method | Supervision | Params | AP50 | AP75 | mAP50:95 |
 |---|---|---|---|---|---|
 | CAM-based localization (Grad-CAM) | image labels only | 3,364,064 | 9.71 | 3.62 | 4.30 |
-| **Detection head** | bounding boxes | 3,966,821 | **63.88** | 17.02 | 27.01 |
+| **Detection head** | bounding boxes | 3,966,821 | **64.77** | 17.02 | 27.01 |
 
 Per-class AP50, with the CAM-based localization value for contrast:
 
 | Class | Detection | CAM-based |
 |---|---|---|
-| Pitted surface | 83.3 | 57.6 |
-| Scratches | 82.8 | 0.3 |
-| Patches | 82.6 | 0.1 |
-| Inclusion | 67.2 | 0.0 |
-| Rolled-in scale | 39.0 | 0.0 |
-| Crazing | 28.4 | 0.1 |
+| Pitted surface | 84.8 | 57.6 |
+| Scratches | 77.7 | 0.3 |
+| Patches | 84.8 | 0.1 |
+| Inclusion | 65.1 | 0.0 |
+| Rolled-in scale | 43.3 | 0.0 |
+| Crazing | 35.1 | 0.1 |
 
 **Three of the five classes that scored zero under CAM-based localization now exceed 80.**
 That is the cleanest possible confirmation of §3.2: the bottleneck was supervision.
 
 ### 4.4 ⚠️ What the numbers still say
 
-- **AP75 (17.0) is far below AP50 (63.9).** Boxes are being *found* but their edges
+- **AP75 (18.89) is far below AP50 (64.77).** Boxes are being *found* but their edges
   are imprecise. This is the signature of under-trained box regression, and it drags
   mAP50:95 down to 27.0.
 - **Validation loss plateaued** at a constant learning rate from roughly epoch 4,
