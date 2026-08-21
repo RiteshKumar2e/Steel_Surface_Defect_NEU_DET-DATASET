@@ -1,0 +1,112 @@
+{
+  "model": "ResNet18",
+  "status": "ok",
+  "params_total": 11189190,
+  "params_trainable": 10193926,
+  "macs_m": 1557.08,
+  "flops_m": 3114.17,
+  "size_mib": 42.68,
+  "latency_ms": 81.33,
+  "fps": 12.3,
+  "init": "scratch",
+  "train_seconds": 3410,
+  "accuracy": 71.38888888888889,
+  "precision_macro": 74.2612254403628,
+  "recall_macro": 71.38888888888889,
+  "f1_macro": 69.73107958358696,
+  "confusion_matrix": [
+    [
+      58,
+      0,
+      0,
+      0,
+      1,
+      1
+    ],
+    [
+      0,
+      55,
+      0,
+      4,
+      0,
+      1
+    ],
+    [
+      6,
+      0,
+      51,
+      0,
+      1,
+      2
+    ],
+    [
+      4,
+      7,
+      1,
+      40,
+      3,
+      5
+    ],
+    [
+      2,
+      17,
+      0,
+      0,
+      41,
+      0
+    ],
+    [
+      0,
+      36,
+      5,
+      0,
+      7,
+      12
+    ]
+  ],
+  "per_class": {
+    "crazing": {
+      "precision": 82.85714285714286,
+      "recall": 96.66666666666667,
+      "f1": 89.23076923076924,
+      "support": 60,
+      "class_accuracy": 96.66666666666667
+    },
+    "inclusion": {
+      "precision": 47.82608695652174,
+      "recall": 91.66666666666666,
+      "f1": 62.857142857142854,
+      "support": 60,
+      "class_accuracy": 91.66666666666666
+    },
+    "patches": {
+      "precision": 89.47368421052632,
+      "recall": 85.0,
+      "f1": 87.17948717948718,
+      "support": 60,
+      "class_accuracy": 85.0
+    },
+    "pitted_surface": {
+      "precision": 90.9090909090909,
+      "recall": 66.66666666666666,
+      "f1": 76.92307692307693,
+      "support": 60,
+      "class_accuracy": 66.66666666666666
+    },
+    "rolled-in_scale": {
+      "precision": 77.35849056603774,
+      "recall": 68.33333333333333,
+      "f1": 72.56637168141593,
+      "support": 60,
+      "class_accuracy": 68.33333333333333
+    },
+    "scratches": {
+      "precision": 57.14285714285714,
+      "recall": 20.0,
+      "f1": 29.629629629629626,
+      "support": 60,
+      "class_accuracy": 20.0
+    }
+  },
+  "wall_seconds": 4145
+}
