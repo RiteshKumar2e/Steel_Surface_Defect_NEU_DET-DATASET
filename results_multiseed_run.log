@@ -1,0 +1,72 @@
+Loading project pipeline from new_model_code.ipynb ...
+WARNING:tensorflow:From C:\Users\anmol\AppData\Local\Programs\Python\Python310\lib\site-packages\keras\src\losses.py:2976: The name tf.losses.sparse_softmax_cross_entropy is deprecated. Please use tf.compat.v1.losses.sparse_softmax_cross_entropy instead.
+
+WARNING:tensorflow:AutoGraph could not transform <function make_dataset.<locals>._load at 0x00000264879A1C60> and will run it as-is.
+Cause: Unable to locate the source code of <function make_dataset.<locals>._load at 0x00000264879A1C60>. Note that functions defined in certain environments, like the interactive Python shell, do not expose their source code. If that is the case, you should define them in a .py source file. If you are certain the code is graph-compatible, wrap the call using @tf.autograph.experimental.do_not_convert. Original error: source code not available
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+WARNING:tensorflow:AutoGraph could not transform <function make_dataset.<locals>.<lambda> at 0x00000264879A1D80> and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: 'NoneType' object has no attribute '__dict__'
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+WARNING:tensorflow:AutoGraph could not transform <function make_dataset.<locals>._load at 0x00000264879A20E0> and will run it as-is.
+Cause: Unable to locate the source code of <function make_dataset.<locals>._load at 0x00000264879A20E0>. Note that functions defined in certain environments, like the interactive Python shell, do not expose their source code. If that is the case, you should define them in a .py source file. If you are certain the code is graph-compatible, wrap the call using @tf.autograph.experimental.do_not_convert. Original error: source code not available
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+WARNING:tensorflow:AutoGraph could not transform <function make_dataset.<locals>.<lambda> at 0x00000264879A24D0> and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: 'NoneType' object has no attribute '__dict__'
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+WARNING:tensorflow:AutoGraph could not transform <function make_dataset.<locals>._load at 0x00000264879A24D0> and will run it as-is.
+Cause: Unable to locate the source code of <function make_dataset.<locals>._load at 0x00000264879A24D0>. Note that functions defined in certain environments, like the interactive Python shell, do not expose their source code. If that is the case, you should define them in a .py source file. If you are certain the code is graph-compatible, wrap the call using @tf.autograph.experimental.do_not_convert. Original error: source code not available
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+WARNING:tensorflow:AutoGraph could not transform <function make_dataset.<locals>.<lambda> at 0x00000264879A20E0> and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: 'NoneType' object has no attribute '__dict__'
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+WARNING:tensorflow:From C:\Users\anmol\AppData\Local\Programs\Python\Python310\lib\site-packages\keras\src\backend.py:1398: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+
+WARNING:tensorflow:`input_shape` is undefined or non-square, or `rows` is not in [96, 128, 160, 192, 224]. Weights for input shape (224, 224) will be loaded as the default.
+WARNING:tensorflow:From C:\Users\anmol\AppData\Local\Programs\Python\Python310\lib\site-packages\keras\src\layers\normalization\batch_normalization.py:979: The name tf.nn.fused_batch_norm is deprecated. Please use tf.compat.v1.nn.fused_batch_norm instead.
+
+WARNING:tensorflow:AutoGraph could not transform <bound method AMFF.call of <AMFF object at 0x0000026489C98F40>> and will run it as-is.
+Cause: Unable to locate the source code of <bound method AMFF.call of <AMFF object at 0x0000026489C98F40>>. Note that functions defined in certain environments, like the interactive Python shell, do not expose their source code. If that is the case, you should define them in a .py source file. If you are certain the code is graph-compatible, wrap the call using @tf.autograph.experimental.do_not_convert. Original error: source code not available
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+WARNING:tensorflow:AutoGraph could not transform <bound method CSAF.call of <CSAF object at 0x0000026489DDF100>> and will run it as-is.
+Cause: Unable to locate the source code of <bound method CSAF.call of <CSAF object at 0x0000026489DDF100>>. Note that functions defined in certain environments, like the interactive Python shell, do not expose their source code. If that is the case, you should define them in a .py source file. If you are certain the code is graph-compatible, wrap the call using @tf.autograph.experimental.do_not_convert. Original error: source code not available
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+WARNING:tensorflow:AutoGraph could not transform <bound method SEAM.call of <SEAM object at 0x0000026489E6F820>> and will run it as-is.
+Cause: Unable to locate the source code of <bound method SEAM.call of <SEAM object at 0x0000026489E6F820>>. Note that functions defined in certain environments, like the interactive Python shell, do not expose their source code. If that is the case, you should define them in a .py source file. If you are certain the code is graph-compatible, wrap the call using @tf.autograph.experimental.do_not_convert. Original error: source code not available
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+WARNING:tensorflow:`input_shape` is undefined or non-square, or `rows` is not in [96, 128, 160, 192, 224]. Weights for input shape (224, 224) will be loaded as the default.
+WARNING:tensorflow:AutoGraph could not transform <bound method DetectionHead.call of <DetectionHead object at 0x0000026489C766B0>> and will run it as-is.
+Cause: Unable to locate the source code of <bound method DetectionHead.call of <DetectionHead object at 0x0000026489C766B0>>. Note that functions defined in certain environments, like the interactive Python shell, do not expose their source code. If that is the case, you should define them in a .py source file. If you are certain the code is graph-compatible, wrap the call using @tf.autograph.experimental.do_not_convert. Original error: source code not available
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+  split: train=1260 val=180 test=360
+  seeds: [42, 1337, 2026]
+  variants: ['fpn_amff', 'full']
+  backbones: (none)
+  schedule: 8 frozen + 8 finetune
+  device: CPU (4 cores)
+  runs to perform: 6
+
+[run ] fpn_amff               seed 42  (1/6) ...WARNING:tensorflow:AutoGraph could not transform <function make_dataset.<locals>._load at 0x00000264F4B7E0E0> and will run it as-is.
+Cause: Unable to locate the source code of <function make_dataset.<locals>._load at 0x00000264F4B7E0E0>. Note that functions defined in certain environments, like the interactive Python shell, do not expose their source code. If that is the case, you should define them in a .py source file. If you are certain the code is graph-compatible, wrap the call using @tf.autograph.experimental.do_not_convert. Original error: source code not available
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+WARNING:tensorflow:AutoGraph could not transform <function make_dataset.<locals>._aug at 0x00000264F4B7E8C0> and will run it as-is.
+Cause: Unable to locate the source code of <function make_dataset.<locals>._aug at 0x00000264F4B7E8C0>. Note that functions defined in certain environments, like the interactive Python shell, do not expose their source code. If that is the case, you should define them in a .py source file. If you are certain the code is graph-compatible, wrap the call using @tf.autograph.experimental.do_not_convert. Original error: source code not available
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+WARNING:tensorflow:AutoGraph could not transform <function make_dataset.<locals>.<lambda> at 0x00000264F4B7ED40> and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: 'NoneType' object has no attribute '__dict__'
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+WARNING:tensorflow:AutoGraph could not transform <function make_dataset.<locals>._load at 0x00000264F4B7ECB0> and will run it as-is.
+Cause: Unable to locate the source code of <function make_dataset.<locals>._load at 0x00000264F4B7ECB0>. Note that functions defined in certain environments, like the interactive Python shell, do not expose their source code. If that is the case, you should define them in a .py source file. If you are certain the code is graph-compatible, wrap the call using @tf.autograph.experimental.do_not_convert. Original error: source code not available
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+WARNING:tensorflow:AutoGraph could not transform <function make_dataset.<locals>.<lambda> at 0x00000264F4B7EDD0> and will run it as-is.
+Please report this to the TensorFlow team. When filing the bug, set the verbosity to 10 (on Linux, `export AUTOGRAPH_VERBOSITY=10`) and attach the full output.
+Cause: 'NoneType' object has no attribute '__dict__'
+To silence this warning, decorate the function with @tf.autograph.experimental.do_not_convert
+WARNING:tensorflow:`input_shape` is undefined or non-square, or `rows` is not in [96, 128, 160, 192, 224]. Weights for input shape (224, 224) will be loaded as the default.
+WARNING:tensorflow:From C:\Users\anmol\AppData\Local\Programs\Python\Python310\lib\site-packages\keras\src\utils\tf_utils.py:492: The name tf.ragged.RaggedTensorValue is deprecated. Please use tf.compat.v1.ragged.RaggedTensorValue instead.
+
+WARNING:tensorflow:From C:\Users\anmol\AppData\Local\Programs\Python\Python310\lib\site-packages\keras\src\engine\base_layer_utils.py:384: The name tf.executing_eagerly_outside_functions is deprecated. Please use tf.compat.v1.executing_eagerly_outside_functions instead.
+

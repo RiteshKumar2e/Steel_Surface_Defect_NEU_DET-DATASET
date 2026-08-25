@@ -200,7 +200,16 @@ def run_keras(arch):
 
 
 def run_proposed():
-    model, hist, _ = NS["train_one"]("full", seed=SEED,
+    # The proposed model is MobileNetV2 + FPN + AMFF, which is ARCH_VARIANTS
+    # entry "fpn_amff". This previously trained "full" (FPN + AMFF + CSAF +
+    # SEAM) while the table labelled the row "MobileNetV2 + FPN + AMFF", so the
+    # row reported a different network from the one it named. Override with
+    # BB_PROPOSED if a different configuration is being claimed as proposed.
+    variant = os.environ.get("BB_PROPOSED", "fpn_amff")
+    assert variant in NS["ARCH_VARIANTS"], (
+        f"unknown proposed variant {variant!r}; "
+        f"choose from {sorted(NS['ARCH_VARIANTS'])}")
+    model, hist, _ = NS["train_one"](variant, seed=SEED,
                                      epochs_frozen=EPOCHS_FROZEN,
                                      epochs_finetune=EPOCHS_FINETUNE,
                                      verbose=0, tag=f"cmp_proposed_s{SEED}")
