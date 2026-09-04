@@ -1,0 +1,421 @@
+{
+  "dataset": "steeldefectx",
+  "n_images_raw": 4871,
+  "cross_dataset": {
+    "reference": "neu_det",
+    "thresholds": {
+      "hamming_max": 6,
+      "corr_min": 0.97
+    },
+    "n_dropped": 1326,
+    "pct_dropped": 27.22,
+    "per_class": {
+      "Bright scratch": {
+        "n": 301,
+        "dropped": 213,
+        "pct": 70.8
+      },
+      "Crazing": {
+        "n": 210,
+        "dropped": 209,
+        "pct": 99.5
+      },
+      "Crease": {
+        "n": 53,
+        "dropped": 1,
+        "pct": 1.9
+      },
+      "Crescent gap": {
+        "n": 172,
+        "dropped": 0,
+        "pct": 0.0
+      },
+      "Finishing roll printing": {
+        "n": 143,
+        "dropped": 0,
+        "pct": 0.0
+      },
+      "Inclusion": {
+        "n": 557,
+        "dropped": 207,
+        "pct": 37.2
+      },
+      "Iron scale compression": {
+        "n": 140,
+        "dropped": 0,
+        "pct": 0.0
+      },
+      "Iron sheet ash": {
+        "n": 86,
+        "dropped": 0,
+        "pct": 0.0
+      },
+      "Oil spot": {
+        "n": 349,
+        "dropped": 0,
+        "pct": 0.0
+      },
+      "Oxide scale of plate system": {
+        "n": 45,
+        "dropped": 0,
+        "pct": 0.0
+      },
+      "Oxide scale of temperature system": {
+        "n": 143,
+        "dropped": 0,
+        "pct": 0.0
+      },
+      "Patches": {
+        "n": 210,
+        "dropped": 210,
+        "pct": 100.0
+      },
+      "Pitted surface": {
+        "n": 210,
+        "dropped": 210,
+        "pct": 100.0
+      },
+      "Punching": {
+        "n": 280,
+        "dropped": 0,
+        "pct": 0.0
+      },
+      "Red iron sheet": {
+        "n": 278,
+        "dropped": 0,
+        "pct": 0.0
+      },
+      "Rolled in scale": {
+        "n": 210,
+        "dropped": 210,
+        "pct": 100.0
+      },
+      "Rolled pit": {
+        "n": 35,
+        "dropped": 0,
+        "pct": 0.0
+      },
+      "Scratches": {
+        "n": 234,
+        "dropped": 0,
+        "pct": 0.0
+      },
+      "Secondary rust skin": {
+        "n": 139,
+        "dropped": 0,
+        "pct": 0.0
+      },
+      "Silk spot": {
+        "n": 405,
+        "dropped": 52,
+        "pct": 12.8
+      },
+      "Slag inclusion": {
+        "n": 167,
+        "dropped": 0,
+        "pct": 0.0
+      },
+      "Waist folding": {
+        "n": 139,
+        "dropped": 14,
+        "pct": 10.1
+      },
+      "Welding line": {
+        "n": 350,
+        "dropped": 0,
+        "pct": 0.0
+      },
+      "White rust": {
+        "n": 15,
+        "dropped": 0,
+        "pct": 0.0
+      }
+    },
+    "examples": [
+      {
+        "query": "bs_130.jpg",
+        "ref": "scratches_1.jpg",
+        "corr": 0.998,
+        "hamming": 0
+      },
+      {
+        "query": "bs_131.jpg",
+        "ref": "scratches_10.jpg",
+        "corr": 0.9995,
+        "hamming": 0
+      },
+      {
+        "query": "bs_132.jpg",
+        "ref": "scratches_100.jpg",
+        "corr": 0.9997,
+        "hamming": 1
+      },
+      {
+        "query": "bs_133.jpg",
+        "ref": "scratches_101.jpg",
+        "corr": 0.9998,
+        "hamming": 1
+      },
+      {
+        "query": "bs_134.jpg",
+        "ref": "scratches_102.jpg",
+        "corr": 0.9997,
+        "hamming": 0
+      },
+      {
+        "query": "bs_136.jpg",
+        "ref": "scratches_104.jpg",
+        "corr": 0.9996,
+        "hamming": 1
+      },
+      {
+        "query": "bs_138.jpg",
+        "ref": "scratches_106.jpg",
+        "corr": 0.9996,
+        "hamming": 0
+      },
+      {
+        "query": "bs_139.jpg",
+        "ref": "scratches_107.jpg",
+        "corr": 0.9998,
+        "hamming": 0
+      },
+      {
+        "query": "bs_140.jpg",
+        "ref": "scratches_108.jpg",
+        "corr": 0.9997,
+        "hamming": 0
+      },
+      {
+        "query": "bs_141.jpg",
+        "ref": "scratches_109.jpg",
+        "corr": 0.9996,
+        "hamming": 1
+      },
+      {
+        "query": "bs_143.jpg",
+        "ref": "scratches_110.jpg",
+        "corr": 0.9998,
+        "hamming": 1
+      },
+      {
+        "query": "bs_144.jpg",
+        "ref": "scratches_111.jpg",
+        "corr": 0.9998,
+        "hamming": 0
+      },
+      {
+        "query": "bs_148.jpg",
+        "ref": "scratches_115.jpg",
+        "corr": 0.9998,
+        "hamming": 0
+      },
+      {
+        "query": "bs_149.jpg",
+        "ref": "scratches_116.jpg",
+        "corr": 0.9998,
+        "hamming": 0
+      },
+      {
+        "query": "bs_150.jpg",
+        "ref": "scratches_117.jpg",
+        "corr": 0.9998,
+        "hamming": 0
+      }
+    ]
+  },
+  "classes_removed_too_small": {
+    "Crazing": 1,
+    "Patches": 0,
+    "Pitted surface": 0,
+    "Rolled in scale": 0,
+    "White rust": 15
+  },
+  "intra_dataset": {
+    "n_images": 3529,
+    "n_groups": 3511,
+    "n_multi_image_groups": 16,
+    "n_images_in_multi_groups": 34,
+    "largest_group": 3,
+    "policy": "group",
+    "thresholds": {
+      "hamming_max": 2,
+      "corr_min": 0.98
+    },
+    "n_cross_class_near_duplicate_pairs": 0,
+    "cross_class_examples": [],
+    "duplicate_group_members": [
+      [
+        "cg_15.jpg",
+        "cg_22.jpg"
+      ],
+      [
+        "cg_19.jpg",
+        "cg_44.jpg"
+      ],
+      [
+        "ris_207.jpg",
+        "ris_212.jpg"
+      ],
+      [
+        "ris_208.jpg",
+        "ris_213.jpg"
+      ],
+      [
+        "ris_209.jpg",
+        "ris_214.jpg"
+      ],
+      [
+        "ris_79.jpg",
+        "ris_83.jpg"
+      ],
+      [
+        "ris_80.jpg",
+        "ris_84.jpg"
+      ],
+      [
+        "ris_81.jpg",
+        "ris_85.jpg"
+      ],
+      [
+        "ss_115.jpg",
+        "ss_77.jpg",
+        "ss_83.jpg"
+      ],
+      [
+        "ss_12.jpg",
+        "ss_23.jpg"
+      ],
+      [
+        "ss_17.jpg",
+        "ss_30.jpg"
+      ],
+      [
+        "ss_44.jpg",
+        "ss_46.jpg"
+      ],
+      [
+        "ss_517.jpg",
+        "ss_518.jpg"
+      ],
+      [
+        "ss_577.jpg",
+        "ss_578.jpg"
+      ],
+      [
+        "ss_74.jpg",
+        "ss_79.jpg",
+        "ss_86.jpg"
+      ],
+      [
+        "wl_475.jpg",
+        "wl_56.jpg"
+      ]
+    ]
+  },
+  "reused_frozen_split": false,
+  "group_violations_final": 0,
+  "counts": {
+    "train": 2466,
+    "test": 709,
+    "val": 354
+  },
+  "per_class_counts": {
+    "Bright scratch": {
+      "test": 18,
+      "train": 61,
+      "val": 9
+    },
+    "Crease": {
+      "test": 11,
+      "train": 36,
+      "val": 5
+    },
+    "Crescent gap": {
+      "test": 35,
+      "train": 120,
+      "val": 17
+    },
+    "Finishing roll printing": {
+      "test": 29,
+      "train": 100,
+      "val": 14
+    },
+    "Inclusion": {
+      "test": 70,
+      "train": 245,
+      "val": 35
+    },
+    "Iron scale compression": {
+      "test": 28,
+      "train": 98,
+      "val": 14
+    },
+    "Iron sheet ash": {
+      "test": 17,
+      "train": 60,
+      "val": 9
+    },
+    "Oil spot": {
+      "test": 70,
+      "train": 244,
+      "val": 35
+    },
+    "Oxide scale of plate system": {
+      "test": 9,
+      "train": 31,
+      "val": 5
+    },
+    "Oxide scale of temperature system": {
+      "test": 29,
+      "train": 100,
+      "val": 14
+    },
+    "Punching": {
+      "test": 56,
+      "train": 196,
+      "val": 28
+    },
+    "Red iron sheet": {
+      "test": 56,
+      "train": 194,
+      "val": 28
+    },
+    "Rolled pit": {
+      "test": 7,
+      "train": 24,
+      "val": 4
+    },
+    "Scratches": {
+      "test": 47,
+      "train": 164,
+      "val": 23
+    },
+    "Secondary rust skin": {
+      "test": 28,
+      "train": 97,
+      "val": 14
+    },
+    "Silk spot": {
+      "test": 71,
+      "train": 247,
+      "val": 35
+    },
+    "Slag inclusion": {
+      "test": 33,
+      "train": 117,
+      "val": 17
+    },
+    "Waist folding": {
+      "test": 25,
+      "train": 87,
+      "val": 13
+    },
+    "Welding line": {
+      "test": 70,
+      "train": 245,
+      "val": 35
+    }
+  },
+  "manifest_sha256": "60b7a4de1622bfe3b574576ba4c6371ee1a0a5e8a668e07d7e18d7c6a133c941"
+}

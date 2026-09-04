@@ -1,0 +1,65 @@
+{
+  "dataset": "steeldefectx_paper",
+  "n_images_raw": 1631,
+  "intra_dataset": {
+    "n_images": 1631,
+    "n_groups": 1629,
+    "n_multi_image_groups": 1,
+    "n_images_in_multi_groups": 3,
+    "largest_group": 3,
+    "policy": "group",
+    "thresholds": {
+      "hamming_max": 2,
+      "corr_min": 0.98
+    },
+    "n_cross_class_near_duplicate_pairs": 0,
+    "cross_class_examples": [],
+    "duplicate_group_members": [
+      [
+        "ps_106.jpg",
+        "ps_207.jpg",
+        "ps_222.jpg"
+      ]
+    ]
+  },
+  "reused_frozen_split": false,
+  "group_violations_final": 0,
+  "counts": {
+    "train": 1142,
+    "test": 326,
+    "val": 163
+  },
+  "per_class_counts": {
+    "Crazing": {
+      "test": 42,
+      "train": 147,
+      "val": 21
+    },
+    "Inclusion": {
+      "test": 111,
+      "train": 390,
+      "val": 56
+    },
+    "Patches": {
+      "test": 42,
+      "train": 147,
+      "val": 21
+    },
+    "Pitted surface": {
+      "test": 42,
+      "train": 147,
+      "val": 21
+    },
+    "Rolled in scale": {
+      "test": 42,
+      "train": 147,
+      "val": 21
+    },
+    "Scratches": {
+      "test": 47,
+      "train": 164,
+      "val": 23
+    }
+  },
+  "manifest_sha256": "4352c5df88860faf18599cf21b5a4c27e995db9d25a58f5e77ccba23df466848"
+}

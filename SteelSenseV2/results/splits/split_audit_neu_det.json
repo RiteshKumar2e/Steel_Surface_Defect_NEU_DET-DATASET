@@ -1,0 +1,71 @@
+{
+  "dataset": "neu_det",
+  "n_images_raw": 1800,
+  "intra_dataset": {
+    "n_images": 1800,
+    "n_groups": 1796,
+    "n_multi_image_groups": 2,
+    "n_images_in_multi_groups": 6,
+    "largest_group": 4,
+    "policy": "group",
+    "thresholds": {
+      "hamming_max": 2,
+      "corr_min": 0.98
+    },
+    "n_cross_class_near_duplicate_pairs": 0,
+    "cross_class_examples": [],
+    "duplicate_group_members": [
+      [
+        "patches_101.jpg",
+        "patches_105.jpg"
+      ],
+      [
+        "pitted_surface_107.jpg",
+        "pitted_surface_194.jpg",
+        "pitted_surface_285.jpg",
+        "pitted_surface_299.jpg"
+      ]
+    ]
+  },
+  "frozen_split_group_violations": 1,
+  "reused_frozen_split": false,
+  "group_violations_final": 0,
+  "counts": {
+    "train": 1260,
+    "test": 360,
+    "val": 180
+  },
+  "per_class_counts": {
+    "crazing": {
+      "test": 60,
+      "train": 210,
+      "val": 30
+    },
+    "inclusion": {
+      "test": 60,
+      "train": 210,
+      "val": 30
+    },
+    "patches": {
+      "test": 60,
+      "train": 210,
+      "val": 30
+    },
+    "pitted_surface": {
+      "test": 60,
+      "train": 210,
+      "val": 30
+    },
+    "rolled-in_scale": {
+      "test": 60,
+      "train": 210,
+      "val": 30
+    },
+    "scratches": {
+      "test": 60,
+      "train": 210,
+      "val": 30
+    }
+  },
+  "manifest_sha256": "0808987a9d103275fe1364479de948a7027dd57b659d7d64cdb458d1f8951e62"
+}

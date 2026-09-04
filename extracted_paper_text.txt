@@ -1,0 +1,1112 @@
+=== PAGE 1 ===
+SteelSense-BiLSTM: A Feature-Prompt Learning
+Framework for Steel Surface Defect Classification
+and Localization
+Ritesh Kumar 1, Sumit Singh 1, Anand Kumar Ohm 1,
+Onkar Singh2*, Koushlendra Kumar Singh 1
+1*Machine Vision and Intelligence Lab, Department of Computer
+Science and Engineering, National Institute of Technology Jamshedpur,
+Jamshedpur, Jharkhand, India .
+2*Department of Computer Science and Engineering, Manipal
+University Jaipur, Jaipur, 303007, Rajasthan, India .
+*Corresponding author(s). E-mail(s): onkar.singh@jaipur.manipal.edu;
+Contributing authors: riteshkumar90359@gmail.com;
+2021rscs009@nitjsr.ac.in; 2022rscs016@nitjsr.ac.in;
+koushlendra.cse@nitjsr.ac.in;
+Abstract
+Steel surface defect detection is a central task in intelligent manufacturing,
+where the objective is to detect and localize defects that may compromise a
+component’s structural integrity, quality, and fitness for service. Conventional
+automated inspection performs unreliably under adverse factory conditions,
+including uneven illumination, irregular surface texture, and cluttered back-
+grounds.This manuscript proposes SteelSense-BiLSTM, a lightweight machine-
+learning framework that classifies and localizes steel surface defects using a
+Bidirectional Long Short-Term Memory (BiLSTM) architecture. The frame-
+work integrates OpenCV-based image preprocessing, handcrafted visual feature
+extraction, a feature-to-prompt sequence transformation, and a custom tokenizer
+that feeds a lightweight recurrent network. The extracted descriptors span sta-
+tistical, edge, morphological, frequency-domain, and texture characteristics.For
+large-scale deployment, the framework incorporates High-Performance Com-
+puting (HPC) techniques: parallelized preprocessing, batch feature extraction,
+optimized data pipelines, and accelerated training and inference. These reduce
+computational overhead and enable the processing of high-resolution industrial
+1
+
+=== PAGE 2 ===
+datasets at scale, rendering the method suitable for smart-manufacturing and
+industry 4.0 environments.
+The framework computes a series of manual visual features for each image of a
+steel surface, namely: average intensity, contrast, entropy, density of edges, mag-
+nitude of Sobel gradient, variance of Laplacian, statistical measures of contours,
+defect area proportion, GLCM features, and local binary pattern (LBP) textures.
+These features, expressed in numeric values, are then converted to structured text
+prompts and embedded using a custom tokenizer that converts the visual features
+into sequences of model inputs. These embeddings are then fed to a light multi-
+layer Bidirectional Long Short-Term Memory (BiLSTM) encoder that adopts a
+hybrid pooling strategy, comprising attention pooling, masked max pooling, and
+masked mean pooling, thereby taking advantage of both fine-grained interactions
+of features and context from global scope, and then predicts the classification
+head of defects. For scale, feature extraction, processing, and execution of model,
+benefit from HPC in order to speed up processing large amounts of industrial
+images in parallel, and shorten the training time and inference time, without
+reducing classification accuracy.
+Keywords:High-Performance Computing (HPC), Machine Learning,
+SteelSense-BiLSTM, Bidirectional Long Short-Term Memory (BiLSTM),
+Feature-Prompt Learning, Handcrafted Feature Extraction, Defect Classification,
+Defect Localization, NEU-DET dataset, SteelDefectX dataset
+1 Introduction
+Steel is widely being used in all important sectors including automotive, railway,
+aerospace and civil and heavy constructions because of its increased strength and
+toughness and extensive usage possibilities. In relation to steels surface appearance it
+is imperative to mention the most prominent and most important feature of quality,
+performance and service life of steel products i.e. Its surface integrity. There exist a
+large variety of defects that often arise on surface appearance of steels due to man-
+ufacturing and subsequent handling in the context of rolling, cooling, cutting and
+post-processing steps in the industrial process that are most commonly related to ther-
+mal stresses, oxidizing processes, residues of raw material ingredients and machining
+wear[1] . This problem not only leads to loss of the aesthetic quality of the material,
+but it negatively affects the overall product performance and consequently creates an
+existential operational risk due to economic consequences of reject materials.In the
+process of hot rolling and manufacturing, steel surfaces can experience various defects
+due to inclusions, mechanical wear, oxidation, and processing anomalies. The defects
+impact the surface finish, negatively affect mechanical properties and may even result
+in the rejection of manufactured products. Accordingly, proper recognition and clas-
+sification of these defects on the steel surface are required for the preservation of the
+quality of manufactured products in the industrial setting. Various defects that are
+present on the surface of rolled steel products can be grouped into classes including
+inclusion, crazing, patch, pitted surface, rolled-in scale, and scratches [2]. Crazing can
+manifest as a series of shallow, crack-like imperfections, while inclusions are localized
+2
+
+=== PAGE 3 ===
+zones or patches on the surface that are composed of inclusions of impurity mate-
+rial [2]. The patches can appear as irregular surface areas that lack a uniform texture
+and are locally discolored. Small localized cavities form during steel sheet production
+resulting in the occurrence of the pitted surface phenomenon. Rolled-in scale is caused
+when oxidised surfaces embed themselves into the material during the rolling process,
+and scratches are the result of contact with tooling or rollers during processing [3].
+Classical image processing techniques such as thresholding, edge detection, contour
+extraction, and morphological operations were previously broadly used to automati-
+cally inspect surface defects of steel. Thresholding aims to differentiate defect regions
+from the background; edge detection aims to enhance the boundary information of
+defect, and contour extraction is used to extract information about the shape and loca-
+tion of defects and morphological operations aim to remove noises and make segmented
+regions smoother, as shown in Fig. 1.
+Fig. 1: Example of classical image processing methods applied to the steel surface
+for the detection of inclusion defects. (a) is the raw image of the steel surface. (b) is
+the resulting image of the thresholding operation on (a) to detect the region of the
+defect. (c) is the image of edges after using the Canny edge detector. (d) is the outline
+obtained from (c). (e) is the result after morphological filtering applied to (d). (f) is
+the outline of the final defect area obtained by further refinement.
+Conventional CNN-based approaches, on the other hand, often require massive
+annotated datasets and intensive training routines. Such reliance makes them imprac-
+tical to deploy in environments with limited computing capacity and inefficient once a
+manufacturing enterprise expands to any meaningful scale. To this end, we present the
+HPC-enabled SteelSense-BiLSTM, a lightweight machine learning paradigm designed
+to avoid both issues. To accomplish this task, it combines image preprocessing,
+3
+
+=== PAGE 4 ===
+handcrafted feature extraction, feature-to-prompt conversion, makeup tokenization,
+attention-based BiLSTM sequence modelling, multi-view pooling, and hybrid defect
+localization into an integrated High-Performance Computing (HPC) architecture. The
+core HPC idea is to optimize the execution speed without sacrificing classification
+precision by means of parallel computing, GPU acceleration, and optimized data
+pipelines. The pipeline begins with OpenCV-based preprocessing and handcrafted fea-
+ture extraction. For each steel surface image, it computes a set of statistical, edge,
+morphological, frequency-domain, and texture descriptors. These operations run under
+HPC-based parallel execution, so large industrial image sets can be handled with-
+out a bottleneck at the feature stage. The numerical descriptors are then converted
+into structured feature prompts and encoded with a custom tokenizer, which repre-
+sents each image’s visual characteristics as a sequence of feature tokens. A lightweight
+BiLSTM network processes the resulting token embeddings, augmented with three
+pooling operations: attention pooling, masked max pooling, and masked mean pooling.
+This hybrid pooling captures both the local detail that distinguishes one defect from
+another and the broader relationships among features across the sequence, while train-
+ing and inference run on GPU-accelerated HPC platforms. The framework is trained
+to classify the six defect categories of the NEU-DET & SteelDefectX datasets: crazing,
+inclusion, patches, pitted surface, rolled-in scale, and scratches. Localization is per-
+formed in two ways. Where XML annotations are available, the framework parses them
+to generate accurate bounding boxes. Where they are absent, a contour-based region
+detector serves as a fallback, estimating the defect regions so that a visual result is
+still produced [4]. High-Performance Computing is what keeps the design from coming
+apart at the seams. It maintains usage of limited resources, models runtime linearly
+against input sizes, reduces training runtime and accelerates inference time – features
+which SteelSense-BiLSTM needs to have to be effective in real time production line
+inspection, as well as in the rapidly expanding smart manufacturing market.
+The primary contributions of this research include the following:
+• In this manuscript, we propose a hybrid model named SteelSense-BiLSTM, a
+lightweight and local model without using huge vision-language models for steel
+surface defect classification and localization.
+• Develop a handcrafted feature extraction framework with various types of
+visual descriptors such as statistical, edge, morphological, frequency domain, and
+texture ones to describe the steel surface defects in multiple perspectives.
+• Introduce a feature-to-prompt transformation approach to encode handcrafted
+visual descriptors into a sequence of discrete text tokens for effective sequential
+modeling.
+• Build a lightweight and customed BiLSTM classifier with an efficient tokenizer
+and a multi-view pooling mechanism to precisely classify six different kinds of
+steel surface defects in the NEU-DET & SteelDefectX datasets.
+4
+
+=== PAGE 5 ===
+2 Literature Review
+Steel surface defect detection has been a long standing active research field since that
+the manufacturing process is prone to the generation of various defects that can prop-
+agate to the final steel product and consequently reduce its mechanical performance,
+structural reliability, corrosion resistance, durability and value. Several defects such
+as crazing, inclusions, patches, pitted surfaces, rolled-in scales, and scratches on the
+steel surface will greatly impair the quality and reliability of steel products, especially
+in demanding applications such as automobiles, aerospace, railways, shipbuilding, and
+building construction. Accordingly, it is critical to detect the defects on the steel sur-
+face effectively and efficiently to ensure product quality, waste reduction, cost saving,
+and improved manufacturing performance. Under the trend of intelligence manufac-
+turing and Industry 4.0, numerous researches have focused on developing automated,
+robust, and efficient inspection systems for the steel surface. The existing defect detec-
+tion techniques on the steel surface can be roughly grouped into four major categories:
+manual inspection, conventional image processing techniques, Machine Learning (ML)-
+based techniques and Deep Learning (DL) based techniques. Each type of detection
+technique has played an important role in advancing the field of automated inspec-
+tion systems for defect detection with varying capabilities and challenges in detection
+accuracy, computation, interpretability and application in practice.
+The manual inspection method has been used for industrial manufacturing for
+many years due to ease to implement and without the need for high-tech machines
+and technician knowledge. It inspects steel surfaces manually by humans and looks
+for any surface defects with their knowledge and experience. For small quantities of
+products, manual inspection is cheaper, but nowadays, in high-speed manufacturing,
+this method is not so effective. The major reason is that it requires a huge number
+of person. This method consumes time and money and can be limited due to human
+fatigue. Human perception of defects is not consistent and subjective. A defect which
+is small and low contrast or very complex in nature might be missed, or the same
+pattern might be identified as different defects by two inspectors. In large-volume
+manufacturing, manual inspection cannot be scaled up easily, repeated exactly and
+make decision immediately, which leads to bad quality, high cost, material wastage
+and defective products. For this reason, more and more research has been made for
+using computer vision with ML and DL methods to realize automation inspection,
+which has high speed, high consistency, high objectivity, and high accuracy to make
+intelligent manufacturing possible.
+Conventional image processing tackles defect inspection with manually designed
+algorithms that read image intensity, texture, edges, and geometry. The approach
+rests on handcrafted rules and predefined feature extraction to find defect regions.
+Song and Yan [5] proposed a noise-robust detection method built on Completed Local
+Binary Patterns (CLBP), which held up well on noisy industrial images. Gonzalez
+and Woods developed the basic thresholding, edge detection, contour extraction, and
+morphological operators used ever since in industrial inspection. Thresholding distin-
+guishes the defect from the background. Edge detection refines boundaries. Contour
+extraction approximates the shape and position of a defect. Morphological operators
+5
+
+=== PAGE 6 ===
+(a) Crazing
+(b) Inclusion
+(c) Patches
+(d) Pitted Surface
+(e) Rolled-in Scale
+(f) Scratches
+Fig. 2: Different types of surface defects in steel images.
+reduce the noise and remove parts of the selected areas. This technique has some ben-
+efits: its computation cost is low, the algorithms are simple, and the process speed is
+sufficient for real-time applications in stable conditions. Nevertheless, in a real envi-
+ronment, illumination variations, irregular shapes and surface textures, noisy images,
+and specific operating processes introduce uncertainties. The need for setting thresh-
+olds manually or rules for edge or contour definition limits adaptability to products or
+6
+
+=== PAGE 7 ===
+manufacturing processes. Those disadvantages prompted the use of learning machines,
+machine learning, and deep learning, whereby distinctive characteristics are extracted
+by themselves from images, not from fixed sets.
+ML raised steel defect detection by combining hand-made visual features with com-
+mon classifiers, while traditional image processing processes the input based solely
+on predetermined rules, ML approaches determine the decision boundaries of clas-
+sifications using the extracted features. ML classification accuracy has accordingly
+improved. Gonget al.[1] used a Multiple Hyperspheres Support Vector Machine
+(MHSVM), an extended Support Vector Machine (SVM) that extracts more valuable
+discriminative information. SVM, Random Forests, k-Nearest Neighbors, and Decision
+Tree algorithms also obtained considerable classification accuracies when applied on
+thoughtfully designed statistical features, textures and shape features, as compared
+to raw image processing. These techniques are typically more robust and more accu-
+rate compared with pure image processing approaches, but rely strongly on features
+hand-crafted from the data. Handmade features typically fail to accurately learn sub-
+tle defect patterns or adapt to changes in scale, lighting, appearance, and texture. In
+recent years, this limits brought the community towards a new deep learning approach
+that automatically learns hierarchical features from raw input data directly. The use
+of machine learning algorithms for steel defect detection has dominated traditional
+methods over the past few years due to its capability to learn effective features directly
+from raw input data, without manual engineering. Most progress relies on shared com-
+mon learning architectures, and especially residual learning [6] which allows learning
+deep networks. In the context of steel surface defect detection, Lvet al.[3] intro-
+duced an end-to-end network to learn defect features and localized them on the image
+while also providing the classification results; also a famous steel surface defect detec-
+tion datasets NEU-DET [2] & SteelDefectX [7] was released, becoming a widely used
+benchmark in the field. An alternative direction is to learn joint local and global fea-
+tures in the detection process to better conform to practical defect detection tasks.
+Further, combining multiple learned deep representations can obtain significant clas-
+sification improvement, especially under non-ideal imaging conditions, as reported by
+Liet al.[8].
+Deep learning object detectors are now extensively deployed for the detection of
+steel surface defects, primarily due to their capability to perform localization and clas-
+sification simultaneously, with high accuracy. Amongst the most popular deep object
+detectors, Ren et al. ’s [9] Faster R-CNN improves localization accuracy with the use
+of a Region Proposal Network (RPN) which proposes regions at a lower computational
+cost. Redmon et al. ’s [10] YOLO transforms object detection into a single-shot regres-
+sion task which provides real-time performance whilst retaining comparable accuracy.
+In order to detect objects at different scales and resolutions Lin et al. [11] devised the
+Feature Pyramid Network (FPN) by integrating shallow spatial resolution with deep
+semantic level information to create multi-scale features which capture small objects
+or objects at multiple resolutions efficiently. To reduce computational and memory
+usage significantly Sandler et al. [12] created MobileNetV2, an efficient mobile-friendly
+CNN with inverted residual blocks and linear bottlenecks which maintains high predic-
+tive accuracy. These attributes ensure MobileNetV2’s suitability for computationally
+7
+
+=== PAGE 8 ===
+efficient edge applications such as real-time inspection.However, current deep learning
+methods, despite their superior performance on standard benchmarks, demand large
+volumes of annotated training data and extensive computational resources as well as
+significant hyperparameter fine-tuning efforts. This drastically hinders their deploy-
+ment in realistic industrial environments with limited computing capabilities and less
+labeled data.
+However, more recently work have begun focusing on developing Machine Learn-
+ing & deep learning models that not only highly accurate at their detections but also
+Computationally Efficient, Lightweight and Interpretable models that suitable to be
+deployed to real industrial applications. It was stated by Huanget al.[13] and Wang
+et al.[14] that a competent surface inspection systems should meet requirements for
+instance; High detection accuracy, Low computational expense, Real time capability
+and model interpretability, Simultaneously, high-resolution industrial image datasets
+continues to increase rapidly and consequently makes inspection system require larger
+computational expenses. For the aim to accelerate Machine Learning workflows, HPC
+is important that helps efficiently process datasets, paralleling feature extraction and
+quicken model training as well as low-latency model inference when large-scale datasets
+is involved.Motivated by these objectives, this paper is presents an HPC-enabled
+steel defect inspection system, named HPC-enabled SteelSense-BiLSTM which is a
+lightweight feature-prompt learning framework that classifies and localize defects on
+steel surfaces. Instead of the typical methods for direct image pixel operating in high-
+dimension, it firstly process the images by OpenCV based Preprocessing and extract
+visual descriptors that represent different features like: Statistical, edge-based, mor-
+phology, frequency domain, and textural, that these handcrafted visual descriptors
+are then converting into structured feature-prompts and finally, these visual prompts
+were encoded by using our customized tokenizer so the information could represent
+as tokens sequence for sequence model to process. The resulting token embedding
+then fed to attention augmented BiLSTM model with multi-view pooling to effec-
+tively capture the Local discriminative pattern and the global context of extracted
+features. The developed model further leverages HPC capabilities for parallel Prepro-
+cessing, computational-efficient feature extraction and for training as well as inference
+via GPU accelerated computation which greatly reduces computational overhead for
+scaled inspecting of the massive industrial data and therefore maintains a healthy
+trade-off between inspection efficiency and detection performance and which can be
+very valuable for steel surface defect inspection in the future.
+3 Materials and Methods
+3.1 Materials
+The proposed framework is evaluated on the public NEU-DET [2] & SteelDefectX
+datasets [7] which has six typical types of defects on steel surface, namely crazing,
+inclusion, patches, pitted surface, rolled-in scale, and scratches. For each image, we
+also provide xml annotation files of ground truth defect bounding box, which can be
+used for defect classification and detection experiment.
+8
+
+=== PAGE 9 ===
+Table 1: Layer-wise architecture of the proposed SteelSense-BiLSTM framework for
+steel surface defect classification on the datasets. The output size is represented as
+sequence length×feature dimension.
+Layer Output Size Configuration No.
+Input Representation
+Input Tokens 160 Integer token sequence –
+Tokenizer 160 SimpleTokenizer (min freq = 1) 1
+Embedding Layer
+Token Embedding 160×96 Embedding(V,96) with padding index = 0 1
+Embedding Dropout 160×96 Dropout (p= 0.15) 1
+BiLSTM Encoder
+BiLSTM Layer 1 160×384 Bidirectional LSTM (96→192) 1
+BiLSTM Layer 2 160×384 Bidirectional LSTM (384→192), Dropout
+(p= 0.30)
+1
+Multi-view Feature Aggregation
+Attention Score 160×1 Linear (384→192) + Tanh + Linear
+(192→1)
+2
+Attention Pool 384 Masked attention-weighted pooling 1
+Max Pool 384 Masked maximum pooling 1
+Mean Pool 384 Masked average pooling 1
+Concatenation +
+LayerNorm
+1152 Concatenation of attention, maximum and
+mean representations followed by Layer-
+Norm
+1
+Classification Head
+Dropout 1152 Dropout (p= 0.30) 1
+Dense Layer 192 Fully Connected + GELU 1
+Dropout 192 Dropout (p= 0.30) 1
+Output Layer 6 Fully Connected + Softmax 1
+Model Summary
+Embedding Dimension:96Hidden Size:192
+Stacked BiLSTM Layers:2Snapshot Ensemble:Top-5 Models
+Total Parameters:1,752,775Trainable Parameters:1,752,775
+Model Size:7.89 MBComputational Complexity:213.74 M MACs
+The proposed HPC-enabled SteelSense-BiLSTM framework was implemented in
+Python. OpenCV was employed for image preprocessing, while NumPy and Scikit-
+image were used for handcrafted feature computation. The sequence learning model
+was implemented using the PyTorch deep learning framework. To improve compu-
+tational efficiency, the preprocessing pipeline, feature extraction stage, and model
+execution were designed to utilize High-Performance Computing (HPC) resources
+through parallel processing and GPU acceleration. The Bidirectional Long Short-Term
+Memory (BiLSTM) network was optimized using the Adam optimizer [15] together
+with the OneCycle learning-rate scheduling strategy [16].
+9
+
+=== PAGE 10 ===
+3.1.1 Datasets Description
+The proposed framework was evaluated on two publicly available steel surface defect
+datasets, namely NEU-DET [2] that has 1800 images and SteelDefectX [7] that has
+1631 images . The NEU-DET dataset consists of six representative steel surface defect
+categories: crazing, inclusion, patches, pitted surface, rolled-in scale, and scratches.
+Although the SteelDefectX dataset contains a broader collection of 24 defect cate-
+gories with diverse industrial surface conditions, only the six defect categories common
+to the NEU-DET dataset (crazing, inclusion, patches, pitted surface, rolled-in scale,
+and scratches) were selected for this study to ensure a fair and consistent comparative
+evaluation across both datasets. These defect categories represent some of the most fre-
+quently encountered surface imperfections in steel manufacturing and pose significant
+challenges for automated industrial inspection systems [8]. Prior to feature extraction
+and model evaluation, all images were resized to a resolution of 200×200 pixels to
+maintain a uniform input representation and reduce computational complexity.
+3.1.2 Surface Defect Categories
+The NEU-DET & SteelDefectX datasets contains six different classes of commonly
+occurring defects on steel surfaces. Each defect represents a different process defect
+that commonly occur in an industrial setting.
+• Crazing (Cr):Crazing is a random pattern of fine-cracked lines found across
+the surface of steel that is produced as a result of thermal stress, extreme cooling
+and fatigue on the material during the rolling process and causes damage to the
+overall properties of the steel.
+• Inclusion(In):Inclusion defects are derived from foreign non-metallic matter,
+such as oxides, sulfides, slag which has been entrained into the steel while being
+made. This type of defect seems like irregularly distributed white and black region
+and might weaken the physical strength.
+• Patches (Pa):Patch defects are regions where local variations in texture or gray
+level appear due to some local disturbance on the surface, such as oxidation, the
+accumulation of a foreign deposit or a coating defect. They are normally irregular
+in shape and therefore difficult to distinguish from the local surface context.
+• Pitted Surface (PS):Pitted surfaces are small holes, pits or pits created by
+such factors as chemical corrosion, oxidation or the damages induced during fab-
+rication and processing. These pits appear randomly over the surfaces in various
+size ranges.
+• Rolled-in Scale (RS):Rolled-in scale is defined as defects created by inclusion
+of the scale which is formed during the high-temperature production process into
+the surface of the steel sheet during hot rolling. The shape of these defects is
+elongated, irregular, and with a rough surface.
+• Scratches (Sc):Scratches are defined as long and narrow channels which can be
+introduced by the friction that exists between tools, rollers or parts of any machin-
+ery involved in the movement and processing of steel product. Such scratches are
+usually of long aspect ratio and have strong directionality.
+10
+
+=== PAGE 11 ===
+Table 2: Materials, software libraries, and computational envi-
+ronment used in this study.
+Item Description
+datasets NEU-DET , SteelDefectX
+Programming Language Python 3.x
+Image Processing Library OpenCV
+Numerical Computing NumPy
+Feature Engineering Scikit-image
+Deep Learning Framework PyTorch
+HPC Support CUDA-enabled GPU / Multi-core CPU
+Optimizer Adam
+Learning Rate Scheduler OneCycleLR
+Table 2 summarizes the datasets, software libraries, implementation tools, and
+computational environment used in this study.
+3.2 Proposed Method
+This manuscript proposes HPC-enabled SteelSense-BiLSTM, a lightweight feature-
+prompt learning framework for steel surface defect classification and localization.
+Unlike conventional Convolutional Neural Network (CNN)-based approaches that
+directly learn feature representations from raw images, the proposed framework first
+extracts handcrafted visual descriptors and transforms them into structured feature
+prompts for sequential representation learning. These prompts are tokenized by a cus-
+tom tokenizer, and then fed into an attention-equipped Bidirectional Long Short-Term
+Memory (BiLSTM) network for defect classification. Afterwards, a hybrid localization
+method including XML annotations and contour-based region detection is applied to
+detect defect regions.
+The HPC techniques are utilized throughout the computational pipeline for effi-
+cient handling of large-scale industrial inspection. Parallel image preprocessing and
+handcrafted feature extraction speed up the processing of high-resolution steel surface
+images. Meanwhile, GPU-based model training and inference further decrease com-
+putational time to an acceptable level for industrial application. By this means, the
+presented HPC-aware design guarantees efficient usage of computation resources and
+scalability and offers good prospects for real-time intelligent manufacturing.
+The overall methodology consists of the following five sequential stages:
+A. Image Preprocessing
+B. Handcrafted feature extraction
+C. Feature-to-prompt transformation
+D. Custom tokenization and HPC-accelerated BiLSTM classification
+E. Hybrid defect localization
+11
+
+=== PAGE 12 ===
+3.2.1 Image Preprocessing
+Preprocessing of the images in parallel is the initial part of the proposed framework.
+Since the images of the steel surface is usually taken from the industrial production
+lines, various lightnings conditions, camera setting, sensor parameters can generate
+image quality and image characteristic disparity that cause differences between the
+extracted features and deteriorate the performance of the latter defect detection stages.
+In order to handle such issue, we have established an image preprocessing pipeline
+that aims to normalize the images and reduce image acquired noise before any feature
+extraction. As the processing of individual images is completely independent from the
+other, the whole preprocessing pipeline is a data-level parallel pipeline. Thus, we set
+this pipeline on the HPC environment to process multiple images in parallel, so that
+the preprocessing step won’t bottleneck when working with large volume of images.
+The processing pipeline comprises four subsequent steps which are presented in
+the next paragraphs: image loading, resizing, gray-level scaling and Gaussian filtering.
+Initially, the loaded images are re-sampled to a standardized dimension of 200×200
+pixels through the bilinear interpolation method. Through this step the dimensions of
+the samples, irrespective to their source, will conform a same format. Afterwards, the
+scaled images of type RGB will be translated into grayscale. This conversion will omit
+the information about color which for this application is irrelevant, and it helps the
+detection process to minimize redundant visual information for the detection process.
+A Gaussian 5×5 filter with a standard deviation ofσ= 1.0 is finally applied for
+the suppression of high frequency sensor noise and minor imaging artifacts without
+considerably affecting the defect edges. All the previously applied preprocessing stages
+like reading, resizing, conversion to grayscale, applying Gaussian filter are run in the
+parallel HPC-pipeline. Since each image is processed separately, an increase in pro-
+cessing cores implies an increase in processing throughput which is of great interest
+for processing industrial datasets.
+We collect the settings in Table 3, it summarizes the image preprocessing
+parameters used in the proposed framework.
+Table 3: Image preprocessing parameters.
+Parameter V alue
+Image Size 200×200 pixels
+Interpolation Method Bilinear
+Color Space Conversion RGB→Grayscale
+Gaussian Kernel Size 5×5
+Gaussian Standard Deviation (σ) 1.0
+Processing Strategy Parallel HPC Pipeline
+For an RGB input imageI, resizing produces
+Iresized =Resize(I,200×200).(1)
+12
+
+=== PAGE 13 ===
+Fig. 3: Workflow architecture of the proposed HPC-enabled SteelSense-BiLSTM
+framework for steel surface defect classification and localization.
+Grayscale conversion then gives
+G=Gray(I resized),(2)
+and the Gaussian filter yields
+Gsmooth =GaussianBlur(G,5×5, σ= 1.0),(3)
+WhereG smooth indicates Gaussian filtered image for extracting hand-crafted fea-
+tures later. Preprocessing has advantage of making boundaries of the defects clearer
+to see, reducing noise in the images and making images as uniform as possible before
+features are extracted from them.
+3.2.2 Handcrafted Feature Extraction
+After preprocessing, features are extracted by hand rather than learned from raw
+pixels. A conventional end-to-end CNN would infer its own representations during
+training; here the descriptors are defined in advance, each one capturing a specific
+statistical, edge, texture, or geometric property of a defect region. Two things follow
+from this choice. The features stay interpretable, since every value corresponds to a
+named measurement, and the input to the later sequence model is far smaller than a
+raw image, which lowers the cost of that stage.
+Feature extraction on one image does not depend on any other, so the computation
+is distributed across multiple cores on a High-Performance Computing (HPC) setup.
+Running the images in parallel raises throughput enough to handle large industrial
+datasets without changing what is computed per image.
+Four groups of descriptors are extracted:
+13
+
+=== PAGE 14 ===
+(a) Statistical features
+(b) Edge-based features
+(c) Texture features
+(d) Geometric features
+(a) Statistical Features.
+The statistical descriptors summarize the intensity distribution of an image: the
+mean, the standard deviation, and the entropy. Entropy measures how random the
+gray-level distribution is and is the most useful of the three for separating heteroge-
+neous defect regions from the largely uniform background of clean steel. It is computed
+as
+Entropy=−
+NX
+i=1
+pi log2(pi) (4)
+wherep i is the normalized probability of thei th gray level. Higher entropy points
+to more complex texture, which tends to coincide with surface defects.
+(b) Edge-based Features.
+Defects such as scratches, crazing, and rolled-in scale produce sharp intensity
+transitions, so edge descriptors are used to quantify these discontinuities.
+EdgeDensity=
+P EdgeP ixels
+H×W (5)
+whereHandWare the image height and width. The Sobel gradient magnitude is
+G=
+q
+G2x +G 2y (6)
+withG x andG y the horizontal and vertical gradients. Both descriptors respond
+strongly to crack and scratch like structures and cost little to compute [17].
+(c) Texture Features.
+Texture is often what distinguishes two defect classes that are otherwise similar in
+appearance. To capture both global and local texture, descriptors are drawn from the
+Gray Level Co-occurrence Matrix (GLCM) and from Local Binary Patterns (LBP).
+The GLCM features — contrast, homogeneity, energy, and correlation — describe how
+neighboring pixel intensities relate across the image [18]. LBP captures fine local pat-
+terns and remains robust under varying illumination, which is relevant on an inspection
+line where lighting is not fixed [19].
+(d) Geometric Features.
+Contour analysis provides shape information. For each detected contour, the frame-
+work computes area, perimeter, aspect ratio, and circularity [17]. These descriptors
+help distinguish elongated defects such as scratches from irregular ones such as patches
+and crazing. Together, the statistical, edge-based, texture, and geometric descriptors
+form an interpretable representation of steel surface defects. The handcrafted features
+are then transformed into structured feature prompts for the proposed BiLSTM-based
+sequence modeling framework.
+14
+
+=== PAGE 15 ===
+3.2.3 Feature-to-Prompt Transformation
+The handcrafted feature extraction stage yields a compact numerical representation of
+the statistical, textural, edge, and geometric characteristics of each steel surface image.
+While these descriptors adequately characterize the visual properties of surface defects,
+they are not inherently amenable to sequence-based learning. The framework therefore
+employs a feature-to-prompt transformation, which maps the numerical feature vector
+onto a structured textual representation while preserving its semantic content.
+Rather than operating on high-dimensional pixel data, the method encodes each
+defect as a sequence of descriptive feature tokens. Continuous-valued descriptors,
+namely entropy, edge density, Sobel gradient magnitude, GLCM texture measures,
+LBP descriptors, and contour-based geometric properties, are discretized into pre-
+defined semantic categories in accordance with their respective threshold ranges.
+Each such descriptor is assigned an interpretable token, such as Low, Medium or
+High, whereas categorical texture and geometric descriptors are mapped directly to
+predefined semantic labels. This procedure transforms heterogeneous numerical mea-
+surements into a unified sequential representation amenable to processing by the
+subsequent BiLSTM model.
+As each feature vector is transformed independently, the conversion stage admits
+parallel execution across images, the HPC pipeline prompt generation is parallelized
+over the datasets, thereby improving throughput at negligible computational cost.
+The representation consequently remains computationally efficient even for large-scale
+industrial inspection tasks.
+Let the handcrafted feature vector extracted from an input image be represented
+as
+F={f 1, f2, f3, . . . , fn}(7)
+wheref i denotes thei th handcrafted feature.
+The feature-to-prompt transformation is defined as
+T= Φ(F) (8)
+where Φ(·) represents the transformation function that converts the numerical
+feature vector into a structured textual prompt.
+The generated prompt is represented as
+T={t 1, t2, t3, . . . , tm}(9)
+wheret i denotes thei th semantic token generated from the corresponding
+handcrafted descriptor.
+By transforming handcrafted descriptors into structured feature prompts, the pro-
+posed framework preserves the discriminative information contained in the extracted
+features while enabling efficient sequence modeling using the BiLSTM architecture. In
+addition, the textual representation improves model interpretability because each gen-
+erated token directly corresponds to a meaningful visual characteristic of the detected
+steel surface defect. Combined with the HPC-enabled parallel transformation pipeline,
+the proposed approach provides a scalable and computationally efficient representation
+for large-scale industrial steel surface inspection.
+15
+
+=== PAGE 16 ===
+3.2.4 Custom tokenization and HPC-accelerated BiLSTM
+classification
+Structured textual prompts created by feature-to-prompt transformation stage are
+converted by our designed tokenization approach so as to enable sequence based
+learning. Because the feature prompts generated are textual feature description of sta-
+tistical, texture, edge, geometric features they need to be represented by numerical
+form for the purpose of being processed by the neural networks. Our designed tok-
+enization represents a prompt into a sequence of tokens such that semantic connections
+of the feature descriptors within a prompt is maintained.
+A regular-expression-based tokenizer is utilized to recognize single tokens in each
+feature prompt and map them to a target vocabulary. The tokens are represented
+by integers to create sequences of indices which maintain their order of occurrence.
+Because prompts usually consist of different number of tokens, the sequences are either
+padded or truncated to a maximum fixed length to maintain uniformity across the
+samples which is a requirement of the batch-wise data input. In the High-Performance
+Computing (HPC) architecture, tokenization and the creation of sequences is per-
+formed in parallel on multiple samples to accelerate the preprocessing time required
+for data preparing.
+Let the generated feature prompt be represented as
+T={t 1, t2, t3, . . . , tn}(10)
+wheret i denotes thei th token in the structured feature prompt.
+The tokenized sequence is transformed into a dense continuous representation
+through an embedding layer,
+Z=E(T) (11)
+whereE(·) denotes the embedding function andZrepresents the embedded
+sequence of feature tokens.
+The embedded representation is then processed by a Bidirectional Long Short-Term
+Memory (BiLSTM) network, which learns contextual dependencies in both forward
+and backward directions. This bidirectional learning enables the model to capture
+relationships among feature descriptors that may not be evident when processing the
+sequence in a single direction. The contextual representation generated by the BiLSTM
+encoder is expressed as
+H=BiLST M(Z) (12)
+where H denotes the contextual hidden representation corresponding to each input
+token.
+H={h 1, h2, h3, . . . , hn}(13)
+To obtain a robust fixed-length representation for classification, three complemen-
+tary pooling strategies are employed: attention pooling, masked max pooling, and
+masked mean pooling. Attention pooling assigns greater importance to the most infor-
+mative feature descriptors, masked max pooling captures the strongest activations
+16
+
+=== PAGE 17 ===
+within the sequence, and masked mean pooling summarizes the overall contextual
+information. The resulting pooled vectors are concatenated to form the final feature
+representation,
+F= [H att;H max;H mean] (14)
+whereH att,H max, andH mean denote the outputs of attention pooling, masked
+max pooling, and masked mean pooling, respectively.
+The concatenated feature vector is passed through a fully connected classification
+layer to obtain the class logits
+y=W F+b(15)
+The probability of each defect category is computed using the Softmax function,
+P(c i) = eyi
+PC
+k=1 eyk
+(16)
+whereP(c i) denotes the predicted probability of thei th defect class,y i represents
+the corresponding logit value, andCdenotes the total number of defect categories. The
+final predicted defect class is determined by selecting the category with the highest
+posterior probability.
+In summary, the SteelSense-BiLSTM architecture presents a combined frame-
+work of self-defined tokenization, semantic feature embedding, sequence learning by
+using bidirectional LSTM and feature aggregation via multi-view pooling for classify-
+ing industrial steel surfaces. This combined strategy which exploits hand-engineered
+features as prompts and context aware sequence modeling method yields a computa-
+tionally efficient as well as interpretable classifier when compared with end-to-end deep
+learning models. Besides that, the data pre-processing and batching process based on
+HPC would increase the computational scale of the proposed framework.
+3.2.5 Hybrid Defect Localization
+Defect localization is the fundamental component in the automated steel surface
+inspection system because it not only gives defect type, but also detects the spatial
+coordinate of defects in the images. The good localization allows human eye observa-
+tion, defect size measurement, and subsequent production quality control. Therefore,
+this work proposes a hybrid localization technique for realizing robust localization
+under varying annotation condition: uses XML labels to localize defect when they
+exist, and switch to contour based regional detect method.
+For images containing XML annotation files, the proposed framework extracts
+the ground-truth bounding-box coordinates directly from the annotations provided
+in the NEU-DET [2] & SteelDefectX[7] datasets . The extracted coordinates are
+rescaled according to the resized image dimensions to preserve the spatial corre-
+spondence between the annotation and the processed image. This approach provides
+accurate localization for fully annotated samples while maintaining consistency with
+the preprocessing stage.
+In absence of annotation files, the framework provides a method for automatically
+localizing potential regions by estimating candidates based on the contour of the object
+17
+
+=== PAGE 18 ===
+in the image [17]. The original image is smoothed with a Gaussian filter in order
+to reduce noise, afterwards Canny edge detection [20] is performed. The results of
+edge detection is then thresholded, combined using morphology operations in order to
+get connected lines and noise region filtered out. Finally contour searching finds the
+region of candidate defects and its bounding boxes are computed based on the defined
+geometrical restrictions.
+Since localization for each image is independent, the proposed High-Performance
+Computing (HPC) pipeline processes multiple images concurrently. This parallel exe-
+cution significantly reduces localization time for large-scale industrial datasets while
+maintaining the accuracy of the detected defect regions.
+The area of each detected defect region is computed as
+Ar = (xmax −x min)(ymax −y min) (17)
+where (xmin, ymin) and (x max, ymax) denote the coordinates of the upper-left and
+lower-right corners of the detected bounding box, respectively.
+To quantify the extent of surface damage, the defect coverage percentage is
+calculated as
+Dpct =
+PR
+r=1 Ar
+H×W ×100 (18)
+whereA r denotes the area of ther th detected defect region,Rrepresents the
+total number of detected regions, andHandWdenote the image height and width,
+respectively.
+The localization module outputs the final result, comprising the classification pre-
+diction of the defect, the confidence level of that prediction, and the physical location
+of the predicted region of the defect. The proposed hybrid localization method can be
+applied to fully and partially annotated data, effectively localizing the defect, visual-
+izing the region containing it, and also enabling the identification and visualization
+of unannotated but detectable regions. HPC provides efficiency and better scalability
+for the proposed localization method in the form of a parallel localization pipeline.
+4 Experimental Results
+In this section, we conducted experiments to evaluate the effectiveness of the proposed
+SteelSense-BiLSTM framework for steel surface defect classification and localization.
+Specifically, we first illustrate the datasets employed for experimental evaluation and
+experimental configurations for developing and evaluating the models, followed by pre-
+senting quantitative results of our method. Then we compare the proposed framework
+with several state-of-the-art methods to confirm its efficiency, cost-effectiveness and
+potential applicability in real-world steel industry.
+18
+
+=== PAGE 19 ===
+NEU-DET SteelDefectX
+(a) Crazing
+NEU-DET SteelDefectX
+(b) Inclusion
+NEU-DET SteelDefectX
+(c) Patches
+19
+
+=== PAGE 20 ===
+NEU-DET SteelDefectX
+(d) Pitted Surface
+NEU-DET SteelDefectX
+(e) Rolled-in Scale
+NEU-DET SteelDefectX
+(f) Scratches
+20
+
+=== PAGE 21 ===
+Fig. 4: Qualitative comparison of the surface defect detection results obtained on the
+NEU-DET and SteelDefectX datasets. For each defect category, the left image presents
+the detection result from the NEU-DET datasets, while the right image presents the
+corresponding result from the SteelDefectX datasets. The visualized defect categories
+are: (a) crazing, (b) inclusion, (c) patches, (d) pitted surface, (e) rolled-in scale, and (f)
+scratches. The results demonstrate the ability of the proposed framework to accurately
+identify and localize diverse surface defects across datasets containing variations in
+texture, illumination, background characteristics, and defect appearance.
+4.1 Experimental Setup
+This subsection describes the technical details of the experiments carried out to
+evaluate the proposed SteelSense-BiLSTM framework. It includes the implementa-
+tion environment, feature processing pipeline, datasets partitioning strategy, and
+evaluation protocol adopted for steel surface defect classification and localization.
+4.1.1 Hardware and Software Configuration
+All experiments are performed on a workstation with an Intel Core i7 processor and
+16GB of RAM with GPU that includes 8GB of memory by Python 3.11 language.
+Image preprocessing steps were achieved by the OpenCV library; handcraft feature
+was extracted using NumPy and Scikit-image library, and the proposed SteelSense-
+BiLSTM was developed and trained by PyTorch library. All experiments were run in
+an operating system like Windows 11. We also enable the GPU acceleration through
+the CUDA framework to make the model training and inference faster.
+Following handcrafted feature extraction, the numerical descriptors were trans-
+formed into structured feature prompts using the proposed feature-to-prompt transfor-
+mation strategy. The generated prompts were subsequently processed by the custom
+tokenizer, which converted them into fixed-length integer sequences through padding
+and truncation before they were provided as input to the proposed SteelSense-BiLSTM
+classifier.
+To improve computational efficiency, the preprocessing, handcrafted feature
+extraction, feature-to-prompt transformation, and tokenization stages ran on an
+HPC-enabled pipeline. Each image passes through these stages independently, so pro-
+cessing them in parallel cut preprocessing overhead and raised throughput on large
+steel-surface datasets.
+4.1.2 Training Configuration
+The NEU-DET & SteelDefectX datasets was split into 80% for training and 20%
+for validation set by a random split. A stratified split was used to keep the original
+distribution of the number of occurrences of six different types of defects, so that we
+can train and evaluate the model on an unbiased data set.
+The proposed SteelSense-BiLSTM model was trained with the Adam optimizer,
+where the initial learning rate is 1×10 −3, and the batch size is set to 32, for 30 epochs.
+Categorical cross-entropy was used as loss function as this is the problem of multi-
+class classification. Dropout layers with 0.15 and 0.30 after the embedding layer and
+21
+
+=== PAGE 22 ===
+Table 4:Performance Comparison on the NEU-DET & SteelDefectX
+datasets
+Detector Method mAP AP 50 AP75 Acc.
+YOLOv8 YOLO-based Detector 0.4709 0.7608 0.5574 –
+MHSVM+ Multiple Hyperspheres SVM with Additional Information [1] 0.8234 – – 0.9735
+EDDN End-to-End Defect Detection Network (SSD-based) [3] 0.7242 – – –
+DIN Defect Inspection Network [4] 0.8052 – – –
+DL Deep Learning Feature Fusion Model [8] 0.7312 – – 0.7312
+Attention-Based BiLSTM FrameworkSteelSense-BiLSTM (NEU-DET) 0.8254 0.8935 0.7618 0.9989SteelSense-BiLSTM (SteelDefectX) 0.6811 0.8210 0.7032 0.9945
+before the classification head are used for promoting generalization of the model and
+avoid overfitting.
+In addition, to increase the prediction robustness, the snapshot ensembling method
+was used. We kept the 5 model checkpoints having the highest accuracy during the
+validation in training stage and ensemble their predictions in inference time, so that
+the prediction can provide final classification. This ensembling can lower prediction
+variance and enhance the stability and generalizing ability of this framework.
+4.1.3 Evaluation Metrics
+The proposed framework was evaluated using both classification and localization met-
+rics. Classification performance was assessed using Accuracy, Precision, Recall, and
+F1-score [8]. Localization performance was evaluated using the XML annotation files
+provided with the NEU-DET [2] & SteelDefectX[7] datasets. For images without anno-
+tation files, a contour-based localization strategy was employed. Localization quality
+was further evaluated using Intersection over Union (IoU), AP 50, AP 75, and mean
+Average Precision (mAP), which are widely adopted metrics for object detection and
+localization [9, 10].
+To provide a comprehensive evaluation, the proposed framework was evaluated
+with both predictive and computational performance measures in order to achieve a
+holistic analysis. Classification capabilities were measured by accuracy, precision, recall
+and F1-score, while localization performance were obtained by IoU, AP50, AP75 and
+mAP. Besides, we examined the computational efficiency including the time consumed
+during pre-processing, feature extraction, inference latency and efficiency on large scale
+cases based on our proposed HPC execution framework.
+4.2 Classification Performance
+The overall performance results on a standard multi-class classification context for
+NEU-DET & SteelDefectX datasets of the introduced SteelSense-BiLSTM model are
+tested with usual metrics. Overall accuracy has been chosen as major metric, macro-
+averaged precision, macro-averaged recall, and macro-averaged F1-score have been
+performed in order to give an adequate performance result over all classes.
+Our framework’s final performance in terms of different classification measures
+can be reported in Table 5. SteelSense-BiLSTM overall classification performance as
+shown in the results shows that it performs good in classification accuracy, as well as
+22
+
+=== PAGE 23 ===
+balances between precision, recall, and F1-score for the whole datasets, suggesting that
+feature-prompt learning based deep model has the ability to perceive discriminative
+information about steel surface defects and extend to unseen examples.
+This framework incorporates several methods that foster robustness: manual craft-
+ing of a feature extraction step with automatic feature-to-prompt transformational
+layer, sequence modeling utilizing BiLSTM architecture, multi-view pooling, and
+snapshot ensemble method. Since the presented classification outcomes compete well
+against the prior work, and the proposed architecture is also rather light-weight in
+terms of trainable parameters, the architecture is favorable to be adopted in real
+industrial inspection systems where computational resource are often critical. Detailed
+classification performance for individual type of defect is discussed in next subsection.
+4.3 Per-Class Performance Analysis
+Table 5 shows the class-wise detection results for all six steel surface defects using the
+proposed SteelSense-BiLSTM framework on the NEU-DET & SteelDefectX datasets.
+In particular, class-wise precision, recall and F1-score are used to analyze the
+detectability of specific classes of defects.
+The performance of the proposed method remains stable on six different defect
+classes, which proves its efficiency of extracting distinguishing features with different
+surface textures and structures. The defects with specific visual traits, for example,
+“Scratches” and “Rolled-in Scale”, can be accurately predicted with high probability
+and the similar appearing defect classes “Inclusion” and “Pitted Surface” can also
+show comparable performance with only few performance gap.
+The balanced values of Precision and Recall show the capability of the model to
+constrain the false positives and false negatives across varied types of defects. The
+consistent high values of F1-Scores in each class affirm the stability of the classifier
+of the introduced framework and not exhibiting a tendency toward any specific class
+which means the learned features can be effective enough to cater for challenging
+defect patterns for manufacturing processes, especially steel defect analysis.
+Overall, the class-wise evaluation confirms that the proposed SteelSense-BiLSTM
+framework provides stable and consistent prediction performance across all six defect
+categories, highlighting its effectiveness for automated steel surface defect classification
+in real-world manufacturing environments.
+4.4 Computational Performance Analysis
+The computational overhead was not the only metric investigated for the newly pro-
+posed SteelSense-BiLSTM framework along with accuracy. By incorporating HPC into
+the workflow, it is possible to perform some operations such as preprocessing, crafting
+features, converting the features into prompts, and converting into tokens in parallel,
+which is extremely efficient computationally.
+The lightweight BiLSTM architecture requires significantly fewer computational
+resources than conventional deep CNN and Transformer-based models while main-
+taining competitive classification performance. This makes the proposed framework
+23
+
+=== PAGE 24 ===
+Table 5: Class-wise classification performance comparison of the proposed SteelSense-
+BiLSTM framework on the NEU-DET[2] and SteelDefectX[7]
+Defect Class NEU-DET SteelDefectX
+Precision Recall F1-score Precision Recall F1-score
+Crazing 0.987 0.981 0.984 0.995 1.000 1.000
+Inclusion 0.982 0.984 0.983 0.996 0.993 0.995
+Scratches 0.987 0.989 0.988 0.975 0.991 0.983
+Rolled-in Scale 0.968 0.970 0.969 0.995 1.000 0.998
+Patches 1.000 0.978 0.976 1.000 0.990 0.995
+Pitted Surface 0.988 0.985 0.986 1.000 0.995 0.998
+suitable for real-time industrial inspection systems where both prediction accuracy
+and processing speed are critical requirements.
+Future work is planned focusing on the application of distributed training and
+multi-GPU training methods to scale these solutions for massive scale industrial
+inspection data.
+4.5 Comparison with State-of-the-Art Methods
+To demonstrate the superiority of the proposed framework, we compare its perfor-
+mance with a few typical state-of-the-art methods on steel surface defect detection
+and classification. We perform this comparison across machine learning based models,
+CNN based models, object detection models and the latest deep learning models on
+the NEU-DET & SteelDefectX datasets.
+Table 4 gives a comparative analysis of the feature-prompt based SteelSense-
+BiLSTM approach with the State-of-the-art for steel surface defect detection. The
+present feature-prompt based SteelSense-BiLSTM approach departs from traditional
+feature learning end-to-end approaches using CNNs for such tasks through its reliance
+on feature descriptors computed via handcrafted features and efficient modeling of
+sequence by using an efficient lightweight BiLSTM model[6, 21], thereby, resulting
+in good interpretability, simple implementation and reduced computational cost as
+compared to standard big deep vision backbone networks[12].
+The proposed framework not only achieved a significantly higher performance than
+current state-of-the-art methods in Table 4, but the proposed framework that inte-
+grates handcrafted feature, specific tokenization method, BiLSTM sequence modeling
+and multi-view pooling mechanism was able to learn effective features to distinguish
+defects. The lightweight nature of the framework makes it well-suited to deployment
+in industrial applications where resources may be limited.
+Moreover, although the current HPC implementation accelerates preprocessing and
+feature generation, future work will investigate distributed multi-GPU training and
+large-scale parallel inference to further improve computational scalability.Despite these
+advantages, the proposed framework has certain limitations. Its performance depends
+24
+
+=== PAGE 25 ===
+on the quality and discriminative capability of the extracted handcrafted features.
+Furthermore, although the contour-based localization strategy provides satisfactory
+localization results, fully supervised object detection frameworks with dedicated
+bounding-box regression networks may achieve higher localization accuracy when large
+annotated datasets are available [9, 10].
+4.6 Discussion
+The results show that the proposed SteelSense-BiLSTM framework delivers good
+robustness and stability in automating the classification of steel surface defects using
+the NEU-DET & SteelDefectX datasets. Leveraging handcrafted feature selection and
+sequence learning allows the network to clearly differentiate the styles of the defects
+with improved detection accuracy at low system load, which meets demands in the
+industrial sector. Over the entire training procedure, the curves for training and val-
+idation are shown to be stable convergence. They show that no over-fitting can be
+obviously observed during training or after testing.
+A significant observation from the experimental validation is that the feature
+prompt based representation by formulating handcrafted descriptors as prompts
+(instead of being learned from image pixels directly) is a good idea that provides
+the BiLSTM network with the ability to correlate the heterogeneous descriptors such
+as statistical, texture, edge, geometric features. Therefore, the framework learned
+discriminative feature representations with substantially less trainable parameters
+compared to most existing methods that adopt deep convolution or attention.
+This proposed strategy of multi-view pooling boosts high quality features still
+higher. Our attention pooling strategy learns to extract features by assigning attention
+value to relevant feature tokens, and maximum pooling extract local feature of strong
+response and average pooling maintain the rich context information among features,
+so to obtain richer fused features, which leads to more robust and stable performance
+on classification of different types of defects.
+The experimental results demonstrated that the proposed framework showed a
+steady performance for all the six surface defect classes in the NEU-DET & SteelDe-
+fectX datasets. The distinctive feature defects with different structural traits can still
+be recognized confidently, and similar defects can also get compatible detection ability.
+Besides, the balanced value of precision, recall and F1-score on each class illustrated
+that the presented model does not have too obvious advantages and disadvantages on
+any particular type of defects.
+From a computational standpoint, the proposed framework provides an appealing
+compromise between classifier performance and computational demands. Requiring
+only 1.75 Million training parameters, and an overall model size close to 7.89MB,
+the framework is far less complex in terms of the sheer number of parameters when
+compared to many of the recent deep learning architectures, rendering SteelSense-
+BiLSTM efficient for real-time, resource-constrained industrial applications such as
+on-site inspection.
+One of the key strengths of the proposed SteelSense-BiLSTM framework is its effi-
+cient balance between predictive performance and computational complexity. Despite
+its lightweight architecture, the framework achieves reliable classification performance
+25
+
+=== PAGE 26 ===
+while maintaining low memory requirements and fast inference, making it well suited
+for resource-constrained industrial inspection systems.
+However, there are a number of limitations in the research although there were
+satisfactory experimental results. The proposed methodology was tested on a single
+benchmark datasets: NEU-DET & SteelDefectX and feature engineering by selecting
+manually the features is a pre-defined procedure. Such handmade features demonstrate
+good discriminative ability but they possibly may perform differently in varied lighting
+situations or production environments. Therefore more results would be desired if
+tested on large scaled industrial image database concerning various light intensities,
+contaminations and manufacturing factors.
+The proposed framework was evaluated on the publicly available NEU-DET [2]
+& SteelDefectX [7] datasets, which consists of six representative categories of steel
+surface defects. Experimental results demonstrate that the feature-prompt represen-
+tation effectively preserves the discriminative characteristics of different defect types,
+resulting in high classification and localization performance. To improve the general
+applicability of the proposed framework, a hybrid localization strategy was employed.
+XML annotations were directly utilized for defect localization whenever bounding-
+box labels were available, whereas contour-based localization was adopted for images
+without bounding-box annotations. Consequently, the proposed framework can be
+effectively applied to both fully annotated and partially annotated datasets [3, 4].
+To improve computational efficiency, image preprocessing, handcrafted feature
+extraction, feature-prompt generation, and sequence preparation were implemented
+using a High-Performance Computing (HPC) pipeline. The stages in this workflow
+are designed to run in parallel since each image can be processed separately from the
+rest of them, thus allowing high through-put when working with industrial datasets
+of millions of images. We are able to process data in parallel with a small overhead,
+not affecting the complexity of our model and making it suitable for practical appli-
+cations in the industrial environment. Our approach leverages the power of sequence
+learning in a light manner, combined with data parallel processing, offering an efficient
+and scalable model to the industrial steel surface inspection problem under restricted
+computation power and real-time processing constraint [12].
+5 Conclusion
+This manuscript presented SteelSense-BiLSTM, a lightweight feature-prompt learning
+framework for steel surface defect classification and localization. Instead of learning
+directly from raw images, the proposed framework extracts handcrafted statistical,
+texture, edge, and geometric features [18, 19], transforms them into structured feature
+prompts, and models their relationships using an attention-enhanced Bidirectional
+Long Short-Term Memory (BiLSTM) network [21]. This structure has retained the
+interpretability of handmade features and has been supported by learning sequences
+for defective classification. The light architecture is designed to have few parame-
+ters comparing with other standard deep convolutional neural networks [6, 12], and
+therefore, can be deployed in industrial contexts with low computing capabilities.
+26
+
+=== PAGE 27 ===
+Our future work involves extending the developed framework to distributed and
+multi-GPU environments to enable large-scale training and parallelizing inference
+algorithms to optimize them for real-time industrial deployment. Integrating feature
+prompt learning with Graph Neural Networks (GNNs) [22, 23], Knowledge Graphs
+[24], and Vision-Language Models (VLMs) [25, 26] is also another interesting research
+direction that will significantly boost defect representations, contextual reasoning
+and semantic understanding, laying a solid foundation for next-generation smart
+manufacturing systems to make smarter and more reliable decisions.
+Declarations
+Funding:No funding was received for this study.
+Conflict of Interest:The authors declare that they have no competing interests.
+Ethics Approval and Consent to Participate:Not applicable.
+Consent for Publication:Not applicable.
+Data Availability:Data are available from the corresponding author upon
+reasonable request.
+Materials Availability:Materials are available from the corresponding author
+upon reasonable request.
+Code Availability:Source code is available from the corresponding author upon
+reasonable request.
+Author Contributions:All authors contributed to the study conception,
+methodology, manuscript preparation, and approved the final version of the
+manuscript.
+References
+[1] Gong, R., Wu, C., Chu, M.: Steel surface defect classification using multiple hyper-
+spheres support vector machine with additional information. Chemometrics and
+Intelligent Laboratory Systems172, 109–117 (2018)
+[2] University, N.: NEU Surface Defect Database (NEU-DET Dataset) (2020)
+[3] Lv, X., Duan, F., Jiang, J.J., Fu, X., Gan, L.: Deep metallic surface defect
+detection: The new benchmark and detection network. Sensors20(6), 1562 (2020)
+[4] Hao, R., Lu, B., Cheng, Y., Li, X., Huang, B.: A steel surface defect inspection
+approach toward smart industrial monitoring. Journal of Intelligent Manufactur-
+ing32, 1833–1843 (2021)
+[5] Song, K., Yan, Y.: A noise robust method based on completed local binary
+patterns for hot-rolled steel strip surface defects. Applied Surface Science285,
+858–864 (2013)
+[6] He, K., Zhang, X., Ren, S., Sun, J.: Deep residual learning for image recogni-
+tion. In: Proceedings of the IEEE Conference on Computer Vision and Pattern
+27
+
+=== PAGE 28 ===
+Recognition, pp. 770–778 (2016)
+[7] Zhao, S., Gui, J., Yu, B., Dong, L., Gui, Z.: Steeldefectx: A coarse-to-fine vision-
+language dataset and benchmark for generalizable steel surface defect detection.
+arXiv preprint arXiv:2603.21824 (2026)
+[8] Li, Z., Wei, X., Hassaballah, M., Li, Y., Jiang, X.: A deep learning model for steel
+surface defect detection. Complex & Intelligent Systems10(1), 885–897 (2024)
+[9] Ren, S., He, K., Girshick, R., Sun, J.: Faster r-cnn: Towards real-time object
+detection with region proposal networks. In: Advances in Neural Information
+Processing Systems, pp. 91–99 (2015)
+[10] Redmon, J., Divvala, S., Girshick, R., Farhadi, A.: You only look once: Unified,
+real-time object detection. In: Proceedings of the IEEE Conference on Computer
+Vision and Pattern Recognition, pp. 779–788 (2016)
+[11] Lin, T.-Y., Doll´ ar, P., Girshick, R., He, K., Hariharan, B., Belongie, S.: Feature
+pyramid networks for object detection. In: Proceedings of the IEEE Conference
+on Computer Vision and Pattern Recognition, pp. 2117–2125 (2017)
+[12] Sandler, M., Howard, A., Zhu, M., Zhmoginov, A., Chen, L.-C.: Mobilenetv2:
+Inverted residuals and linear bottlenecks. In: Proceedings of the IEEE Conference
+on Computer Vision and Pattern Recognition, pp. 4510–4520 (2018)
+[13] Huang, Y., Qiu, J., Zhou, X.: Surface defect detection based on deep learning: A
+review. IEEE Access8, 201238–201254 (2020)
+[14] Wang, J., Li, B., Chen, X.: A survey on deep learning for surface defect detection.
+IEEE Access9, 120845–120863 (2021)
+[15] Kingma, D.P., Ba, J.: Adam: A method for stochastic optimization. International
+Conference on Learning Representations (2015)
+[16] Smith, L.N.: A disciplined approach to neural network hyper-parameters: One
+cycle policy. arXiv preprint arXiv:1803.09820 (2018)
+[17] Gonzalez, R.C., Woods, R.E.: Digital Image Processing. Pearson, ??? (2008)
+[18] Haralick, R.M., Shanmugam, K., Dinstein, I.: Textural features for image clas-
+sification. IEEE Transactions on Systems, Man, and Cybernetics3(6), 610–621
+(1973)
+[19] Ojala, T., Pietik¨ ainen, M., M¨ aenp¨ a¨ a, T.: Multiresolution gray-scale and rotation
+invariant texture classification with local binary patterns. IEEE Transactions on
+Pattern Analysis and Machine Intelligence24(7), 971–987 (2002)
+[20] Canny, J.: A computational approach to edge detection. IEEE Transactions on
+28
+
+=== PAGE 29 ===
+Pattern Analysis and Machine Intelligence8(6), 679–698 (1986)
+[21] Hochreiter, S., Schmidhuber, J.: Long short-term memory. Neural Computation
+9(8), 1735–1780 (1997)
+[22] Scarselli, F., Gori, M., Tsoi, A.C., Hagenbuchner, M., Monfardini, G.: The graph
+neural network model. IEEE Transactions on Neural Networks20(1), 61–80
+(2009)
+[23] Kipf, T.N., Welling, M.: Semi-supervised classification with graph convolutional
+networks. In: International Conference on Learning Representations (ICLR)
+(2017)
+[24] Hogan, A., Blomqvist, E., Cochez, M.,et al.: Knowledge graphs. ACM Computing
+Surveys54(4), 1–37 (2021)
+[25] Radford, A., Kim, J.W., Hallacy, C.,et al.: Learning transferable visual mod-
+els from natural language supervision. In: International Conference on Machine
+Learning (ICML), pp. 8748–8763. PMLR, ??? (2021)
+[26] Liu, H., Li, C., Li, Y., Lee, Y.J.: Visual instruction tuning. Advances in Neural
+Information Processing Systems36(2024)
+29

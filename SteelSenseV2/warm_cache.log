@@ -1,0 +1,78 @@
+
+======================================================================
+neu_det
+======================================================================
+[split] neu_det: 1800 images, 6 classes
+[split] intra-dataset: 1796 groups, 2 contain >1 image (6 images), 0 cross-class near-duplicate pairs
+[split] reusing frozen split split_v1.csv (identical to the CNN baselines' split)
+[split] frozen split puts 1 duplicate groups on both sides; re-splitting instead
+[split] {'train': 1260, 'test': 360, 'val': 180}
+[split] manifest -> C:\Users\anmol\OneDrive\Desktop\Steel_Surface_Defect_NEU_DET-DATASET\SteelSenseV2\results\splits\split_neu_det.csv  sha256=0808987a9d103275...
+[features] 250/1260 images
+[features] 500/1260 images
+[features] 750/1260 images
+[features] 1000/1260 images
+[features] 1250/1260 images
+[features] cached -> feat_196a799fe4d9d8a143f7.npz  X=(5040, 92)
+[pipeline] train: 1260 images -> 5040 rows, 92 features
+[features] cache hit feat_674a69c971e12ff271b7.npz  X=(180, 92)
+[pipeline] val: 180 images -> 180 rows, 92 features
+[features] cache hit feat_e844124db2ecc80f156a.npz  X=(360, 92)
+[pipeline] test: 360 images -> 360 rows, 92 features
+[pipeline] vocab=647 tokens, seq_len=94, bins=5/quantile
+[pipeline] test out-of-range rate: 0.0242% of values (0.022 features/image)
+[neu_det] done in 343.8s  train=5040 rows / 1260 images, val=180, test=360, classes=6, vocab=647
+
+======================================================================
+steeldefectx
+======================================================================
+[split] steeldefectx: 4871 images, 24 classes
+[split] cross-dataset audit against neu_det (1800 reference images) ...
+[split] dropped 1326 cross-dataset duplicates
+[split] removed classes below min_class_size: ['Crazing', 'Patches', 'Pitted surface', 'Rolled in scale', 'White rust']
+[split] intra-dataset: 3511 groups, 16 contain >1 image (34 images), 0 cross-class near-duplicate pairs
+[split] {'train': 2466, 'test': 709, 'val': 354}
+[split] manifest -> C:\Users\anmol\OneDrive\Desktop\Steel_Surface_Defect_NEU_DET-DATASET\SteelSenseV2\results\splits\split_steeldefectx.csv  sha256=60b7a4de1622bfe3...
+[features] 250/2466 images
+[features] 500/2466 images
+[features] 750/2466 images
+[features] 1000/2466 images
+[features] 1250/2466 images
+[features] 1500/2466 images
+[features] 1750/2466 images
+[features] 2000/2466 images
+[features] 2250/2466 images
+[features] cached -> feat_ec0899cfbf6f3e7d6d4b.npz  X=(9864, 92)
+[pipeline] train: 2466 images -> 9864 rows, 92 features
+[features] cache hit feat_cbb93cc291a847e31358.npz  X=(354, 92)
+[pipeline] val: 354 images -> 354 rows, 92 features
+[features] 250/709 images
+[features] 500/709 images
+[features] cached -> feat_78a4bb3bfaca6bf0dfd3.npz  X=(709, 92)
+[pipeline] test: 709 images -> 709 rows, 92 features
+[pipeline] vocab=647 tokens, seq_len=94, bins=5/quantile
+[pipeline] test out-of-range rate: 0.0445% of values (0.041 features/image)
+[steeldefectx] done in 1139.7s  train=9864 rows / 2466 images, val=354, test=709, classes=19, vocab=647
+
+======================================================================
+steeldefectx_paper
+======================================================================
+[split] steeldefectx_paper: 1631 images, 6 classes
+[split] intra-dataset: 1629 groups, 1 contain >1 image (3 images), 0 cross-class near-duplicate pairs
+[split] {'train': 1142, 'test': 326, 'val': 163}
+[split] manifest -> C:\Users\anmol\OneDrive\Desktop\Steel_Surface_Defect_NEU_DET-DATASET\SteelSenseV2\results\splits\split_steeldefectx_paper.csv  sha256=4352c5df88860faf...
+[features] 250/1142 images
+[features] 500/1142 images
+[features] 750/1142 images
+[features] 1000/1142 images
+[features] cached -> feat_7188f745fde23cc0beca.npz  X=(4568, 92)
+[pipeline] train: 1142 images -> 4568 rows, 92 features
+[features] cached -> feat_a7c8ddcea46abb81061a.npz  X=(163, 92)
+[pipeline] val: 163 images -> 163 rows, 92 features
+[features] 250/326 images
+[features] cached -> feat_44b8d61bde6c001b3852.npz  X=(326, 92)
+[pipeline] test: 326 images -> 326 rows, 92 features
+[pipeline] vocab=647 tokens, seq_len=94, bins=5/quantile
+[pipeline] test out-of-range rate: 0.0667% of values (0.061 features/image)
+[steeldefectx_paper] done in 448.5s  train=4568 rows / 1142 images, val=163, test=326, classes=6, vocab=647
+1142 images, val=163, test=326, classes=6, vocab=647
