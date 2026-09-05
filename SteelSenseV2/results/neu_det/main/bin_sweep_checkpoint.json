@@ -39,6 +39,18 @@
       "balanced_accuracy_mean": 0.9986111111111111,
       "test_oor_rate_pct": 0.0242,
       "n_seeds": 2
+    },
+    {
+      "strategy": "quantile",
+      "n_bins": 10,
+      "vocab_size": 1107,
+      "test_accuracy_mean": 0.9972222222222222,
+      "test_accuracy_sd": 0.0,
+      "macro_f1_mean": 0.9972220293075909,
+      "macro_f1_sd": 0.0,
+      "balanced_accuracy_mean": 0.9972222222222222,
+      "test_oor_rate_pct": 0.0242,
+      "n_seeds": 2
     }
   ]
 }
