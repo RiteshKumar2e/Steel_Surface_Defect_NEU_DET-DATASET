@@ -1,0 +1,4 @@
+model,input,params_M,size_MB,MMACs,latency_bs1_ms,test_macro_f1
+SteelSense-BiLSTM,92 descriptor tokens,1.917,7.312,258.048,21.1292,0.9966709512690052
+MobileNetV3-Small (ImageNet),3x224x224 image,1.524,5.814,61.46,30.3567,0.9972220293075909
+ShuffleNetV2-x0.5 (ImageNet),3x224x224 image,0.348,1.327,43.554,34.522,1.0
