@@ -98,10 +98,57 @@ def run_seeds(
     seeds: Optional[Sequence[int]] = None,
     arch: Optional[str] = None,
     verbose: bool = True,
+    checkpoint_dir: Optional[Path] = None,
 ) -> Dict:
+    """Multi-seed main result. `checkpoint_dir`, if given, makes this resumable:
+    each seed's metrics + test-set probabilities are flushed to disk right after
+    that seed finishes, and a re-call with the same seeds/arch skips whatever is
+    already on disk. This matters here because a single seed can take tens of
+    minutes on CPU -- without it, a timeout or interrupted kernel on seed 5 of 5
+    would throw away all 4 already-finished seeds, exactly like the unchecked
+    version of run_bin_sweep used to.
+
+    The kept live model/snapshots (`out["_model"]`, used downstream for
+    interpretability) come from whichever seed is trained fresh in this call.
+    If every requested seed is already cached, its snapshots are reloaded from
+    disk (`torch.save`d alongside the metrics) rather than retraining --
+    without this, a resumed run would pay a full seed's training cost just to
+    re-populate a model object every single time it's re-invoked.
+    """
     seeds = list(seeds or cfg.seeds)
+    manifest_path = Path(checkpoint_dir) / "manifest.json" if checkpoint_dir else None
+    cached: Dict[int, Dict] = {}
+    if manifest_path is not None and manifest_path.exists():
+        saved = json.loads(manifest_path.read_text(encoding="utf-8"))
+        if saved.get("seeds_pool") == seeds and saved.get("arch") == (arch or cfg.model.arch):
+            cached = {int(k): v for k, v in saved.get("per_seed", {}).items()}
+            if verbose and cached:
+                print(f"[run_seeds] resuming: {len(cached)}/{len(seeds)} seed(s) already cached")
+        elif verbose:
+            print("[run_seeds] checkpoint seeds/arch differ from this call -- starting fresh")
+
+    def _flush(per_seed: Dict[int, Dict]):
+        if manifest_path is None:
+            return
+        manifest_path.parent.mkdir(parents=True, exist_ok=True)
+        tmp = manifest_path.with_suffix(".tmp")
+        tmp.write_text(
+            json.dumps({"seeds_pool": seeds, "arch": arch or cfg.model.arch, "per_seed": per_seed}, indent=2),
+            encoding="utf-8",
+        )
+        tmp.replace(manifest_path)
+
     runs, all_probs, keep = [], [], None
+    per_seed_cache = dict(cached)
     for s in seeds:
+        if s in cached:
+            runs.append(cached[s]["metrics"])
+            all_probs.append(np.load(Path(checkpoint_dir) / f"probs_seed{s}.npy"))
+            if verbose:
+                print(f"[seed {s}] loaded from checkpoint  "
+                      f"acc {cached[s]['metrics']['accuracy']:.4f}  "
+                      f"macroF1 {cached[s]['metrics']['macro_f1']:.4f}")
+            continue
         if verbose:
             print(f"[seed {s}] training {arch or cfg.model.arch} ...")
         model, res, m, probs = _fit_eval(bundle, cfg, s, arch=arch, verbose=verbose)
@@ -112,6 +159,50 @@ def run_seeds(
         if verbose:
             print(f"[seed {s}] TEST acc {m['accuracy']:.4f}  "
                   f"macroF1 {m['macro_f1']:.4f}  balAcc {m['balanced_accuracy']:.4f}")
+        if checkpoint_dir is not None:
+            Path(checkpoint_dir).mkdir(parents=True, exist_ok=True)
+            np.save(Path(checkpoint_dir) / f"probs_seed{s}.npy", probs)
+            torch.save(res.snapshots, Path(checkpoint_dir) / f"model_seed{s}.pt")
+            per_seed_cache[s] = {"metrics": m}
+            _flush(per_seed_cache)
+
+    if keep is None:
+        # Every seed came from cache. Reload a model from disk instead of
+        # retraining: rebuild the architecture (instant) and load whichever
+        # cached seed's snapshots were saved, falling back to a fresh train
+        # only if an older checkpoint predates snapshot saving.
+        from model import build_model
+        from engine import FitResult
+
+        s = next((sd for sd in seeds if (Path(checkpoint_dir) / f"model_seed{sd}.pt").exists()), None)
+        if s is not None:
+            if verbose:
+                print(f"[seed {s}] reloading cached model snapshots from disk "
+                      f"(all seeds were cached, no retraining needed)")
+            mcfg = copy.deepcopy(cfg.model)
+            if arch:
+                mcfg.arch = arch
+            model = build_model(mcfg.arch, len(bundle.tokenizer), len(bundle.classes), mcfg)
+            snapshots = torch.load(Path(checkpoint_dir) / f"model_seed{s}.pt", weights_only=False)
+            cm = cached[s]["metrics"]
+            res = FitResult(
+                snapshots=snapshots, val_scores=cm.get("val_scores_of_snapshots", []),
+                history=[], n_params=cm.get("n_params", 0), size_mb=cm.get("size_mb", 0.0),
+                train_seconds=cm.get("train_seconds", 0.0), epochs_run=cm.get("epochs_run", 0),
+            )
+            keep = (model, res)
+        else:
+            s = seeds[0]
+            if verbose:
+                print(f"[seed {s}] retraining once more for a live model object "
+                      f"(all seeds were cached, but no saved snapshots found)")
+            model, res, m, probs = _fit_eval(bundle, cfg, s, arch=arch, verbose=verbose)
+            keep = (model, res)
+            if checkpoint_dir is not None:
+                # Save snapshots now so the NEXT resume of this same seed can
+                # reload instead of retraining -- this is exactly the gap that
+                # made this retrain necessary in the first place.
+                torch.save(res.snapshots, Path(checkpoint_dir) / f"model_seed{s}.pt")
 
     agg = aggregate_seeds(runs)
     mean_probs = np.mean(all_probs, axis=0)
@@ -164,6 +255,9 @@ def run_order_ablation(
     df: pd.DataFrame,
     cfg: ExperimentConfig,
     seeds: Optional[Sequence[int]] = None,
+    epochs: Optional[int] = None,
+    early_stop_patience: Optional[int] = None,
+    checkpoint_dir: Optional[Path] = None,
     verbose: bool = True,
 ) -> Dict:
     """Four conditions that between them settle whether recurrence is earned.
@@ -177,23 +271,59 @@ def run_order_ablation(
     is not using order at all. A == D says the recurrent encoder buys nothing
     over an order-free encoder of the same width, and the architecture claim in
     the paper must be withdrawn.
+
+    `epochs`/`early_stop_patience` optionally lighten the budget for this
+    ablation only (12 fits add up fast on CPU). `checkpoint_dir`, if given,
+    saves each condition's result immediately and skips it on a re-call, same
+    resilience contract as `run_bin_sweep`/`run_seeds`.
     """
     seeds = list(seeds or cfg.seeds)[:3]
+    abl_cfg = copy.deepcopy(cfg)
+    if epochs is not None:
+        abl_cfg.train.epochs = epochs
+    if early_stop_patience is not None:
+        abl_cfg.train.early_stop_patience = early_stop_patience
+
     conditions = [
         ("A_bilstm_canonical", "bilstm", "canonical"),
         ("B_bilstm_fixed_shuffle", "bilstm", "shuffled"),
         ("C_bilstm_per_sample_shuffle", "bilstm", "per_sample"),
         ("D_deepsets_canonical", "deepsets", "canonical"),
     ]
-    results: Dict[str, Dict] = {}
-    scores: Dict[str, List[float]] = {}
+
+    manifest_path = Path(checkpoint_dir) / "manifest.json" if checkpoint_dir else None
+    done: Dict[str, Dict] = {}
+    if manifest_path is not None and manifest_path.exists():
+        saved = json.loads(manifest_path.read_text(encoding="utf-8"))
+        if saved.get("seeds") == seeds:
+            done = saved.get("results", {})
+            if verbose and done:
+                print(f"[order_ablation] resuming: {len(done)}/{len(conditions)} "
+                      f"condition(s) already done")
+        elif verbose:
+            print("[order_ablation] checkpoint seeds differ -- starting fresh")
+
+    def _flush(results_: Dict):
+        if manifest_path is None:
+            return
+        manifest_path.parent.mkdir(parents=True, exist_ok=True)
+        tmp = manifest_path.with_suffix(".tmp")
+        tmp.write_text(json.dumps({"seeds": seeds, "results": results_}, indent=2), encoding="utf-8")
+        tmp.replace(manifest_path)
+
+    results: Dict[str, Dict] = dict(done)
+    scores: Dict[str, List[float]] = {
+        k: [r["macro_f1"] for r in v["per_seed"]] for k, v in done.items()
+    }
     for key, arch, order in conditions:
+        if key in done:
+            continue
         if verbose:
             print(f"\n=== {key} (arch={arch}, order={order}) ===")
-        b = build_bundle(df, cfg, order=order, order_seed=1234, verbose=False)
+        b = build_bundle(df, abl_cfg, order=order, order_seed=1234, verbose=False)
         runs = []
         for s in seeds:
-            _, _, m, _ = _fit_eval(b, cfg, s, arch=arch, verbose=False)
+            _, _, m, _ = _fit_eval(b, abl_cfg, s, arch=arch, verbose=False)
             runs.append(m)
             if verbose:
                 print(f"  seed {s}: acc {m['accuracy']:.4f} macroF1 {m['macro_f1']:.4f}")
@@ -205,6 +335,7 @@ def run_order_ablation(
             "n_params": runs[0]["n_params"],
         }
         scores[key] = [r["macro_f1"] for r in runs]
+        _flush(results)
 
     base = "A_bilstm_canonical"
     results["paired_tests_vs_A"] = {
@@ -368,6 +499,7 @@ def run_component_ablation(
     seeds: Optional[Sequence[int]] = None,
     epochs: Optional[int] = None,
     early_stop_patience: Optional[int] = None,
+    checkpoint_path: Optional[Path] = None,
     verbose: bool = True,
 ) -> Dict:
     """Six conditions, everything else held fixed at the main run's split,
@@ -398,6 +530,13 @@ def run_component_ablation(
     completely different model family does on the raw vector, but they
     cannot isolate discretization itself, because trees and a generic MLP
     are not the deployed encoder. `no_discretization_numeric` is.
+
+    `checkpoint_path`, if given, makes this resumable at (condition, seed)
+    granularity: every finished fit is flushed to disk immediately, and a
+    re-call with the same seeds skips whatever already succeeded. This
+    ablation is ~16 fits deep, easily hours on CPU, so losing it all to one
+    interrupted kernel is exactly the failure mode `run_bin_sweep` and
+    `run_order_ablation` already had to be hardened against.
     """
     seeds = list(seeds or cfg.seeds)[:3]
     abl_cfg = copy.deepcopy(cfg)
@@ -414,51 +553,89 @@ def run_component_ablation(
     Xva = (bundle.val.X - mu) / sd
     Xte = (bundle.test.X - mu) / sd
 
-    conditions: Dict[str, List[Dict]] = {}
+    units: Dict[str, Dict] = {}
+    if checkpoint_path is not None:
+        checkpoint_path = Path(checkpoint_path)
+        if checkpoint_path.exists():
+            saved = json.loads(checkpoint_path.read_text(encoding="utf-8"))
+            if saved.get("seeds") == seeds:
+                units = saved.get("units", {})
+                if verbose and units:
+                    print(f"[component_ablation] resuming: {len(units)} unit(s) already cached")
+            elif verbose:
+                print("[component_ablation] checkpoint seeds differ from this call "
+                      "-- ignoring it and starting fresh")
 
-    full_runs: List[Dict] = []
-    no_ens_runs: List[Dict] = []
+    def _flush():
+        if checkpoint_path is None:
+            return
+        checkpoint_path.parent.mkdir(parents=True, exist_ok=True)
+        tmp = checkpoint_path.with_suffix(".tmp")
+        tmp.write_text(json.dumps({"seeds": seeds, "units": units}, indent=2),
+                        encoding="utf-8")
+        tmp.replace(checkpoint_path)
+
+    def _get_or_run(key: str, fn):
+        if key in units:
+            return units[key]
+        m = fn()
+        units[key] = m
+        _flush()
+        if verbose:
+            print(f"  {key:36s} macroF1 {m['macro_f1']:.4f}")
+        return m
+
+    conditions: Dict[str, List[Dict]] = {
+        "full_5snapshot_ensemble": [],
+        "no_ensemble_best_checkpoint": [],
+        "pool_attention_only": [],
+        "pool_max_only": [],
+        "pool_mean_only": [],
+        "no_discretization_numeric": [],
+    }
+
     for s in seeds:
+        full_key, noens_key = f"full_5snapshot_ensemble:{s}", f"no_ensemble_best_checkpoint:{s}"
+        if full_key in units and noens_key in units:
+            conditions["full_5snapshot_ensemble"].append(units[full_key])
+            conditions["no_ensemble_best_checkpoint"].append(units[noens_key])
+            continue
         model, res, m, _ = _fit_eval(bundle, abl_cfg, s, verbose=False)
-        full_runs.append(m)
         m_single, _ = evaluate_model(
             model, res, bundle.test.ids, bundle.test.y, bundle.classes, use_ensemble=False
         )
         m_single["seed"] = s
         m_single["arch"] = m["arch"]
         m_single["pooling"] = m["pooling"]
-        no_ens_runs.append(m_single)
-    conditions["full_5snapshot_ensemble"] = full_runs
-    conditions["no_ensemble_best_checkpoint"] = no_ens_runs
-    if verbose:
-        for name in ("full_5snapshot_ensemble", "no_ensemble_best_checkpoint"):
-            f1 = np.mean([r["macro_f1"] for r in conditions[name]])
-            print(f"  {name:30s} macroF1 {f1:.4f}")
+        units[full_key], units[noens_key] = m, m_single
+        _flush()
+        if verbose:
+            print(f"  {full_key:36s} macroF1 {m['macro_f1']:.4f}")
+            print(f"  {noens_key:36s} macroF1 {m_single['macro_f1']:.4f}")
+        conditions["full_5snapshot_ensemble"].append(m)
+        conditions["no_ensemble_best_checkpoint"].append(m_single)
 
     for pooling, key in (
         ("attention", "pool_attention_only"),
         ("max", "pool_max_only"),
         ("mean", "pool_mean_only"),
     ):
-        runs = [
-            _fit_eval(bundle, abl_cfg, s, pooling=pooling, verbose=False)[2] for s in seeds
-        ]
-        conditions[key] = runs
-        if verbose:
-            f1 = np.mean([r["macro_f1"] for r in runs])
-            print(f"  {key:30s} macroF1 {f1:.4f}")
+        for s in seeds:
+            m = _get_or_run(
+                f"{key}:{s}",
+                lambda pooling=pooling, s=s: _fit_eval(bundle, abl_cfg, s, pooling=pooling, verbose=False)[2],
+            )
+            conditions[key].append(m)
 
-    numeric_runs = [
-        _fit_eval_numeric(
-            Xtr, bundle.train.y, Xva, bundle.val.y, Xte, bundle.test.y,
-            bundle.classes, abl_cfg, s, pooling="all", verbose=False,
-        )[2]
-        for s in seeds
-    ]
-    conditions["no_discretization_numeric"] = numeric_runs
-    if verbose:
-        f1 = np.mean([r["macro_f1"] for r in numeric_runs])
-        print(f"  {'no_discretization_numeric':30s} macroF1 {f1:.4f}")
+    for s in seeds:
+        m = _get_or_run(
+            f"no_discretization_numeric:{s}",
+            lambda s=s: _fit_eval_numeric(
+                Xtr, bundle.train.y, Xva, bundle.val.y, Xte, bundle.test.y,
+                bundle.classes, abl_cfg, s, pooling="all", verbose=False,
+            )[2],
+        )
+        conditions["no_discretization_numeric"].append(m)
 
     summary = []
     for name, runs in conditions.items():

@@ -1,0 +1,652 @@
+{
+  "seeds_pool": [
+    42,
+    1337,
+    2024,
+    7,
+    20250101
+  ],
+  "arch": "bilstm",
+  "per_seed": {
+    "42": {
+      "metrics": {
+        "accuracy": 0.9969325153374233,
+        "balanced_accuracy": 0.9984984984984985,
+        "macro_f1": 0.9974914662221165,
+        "weighted_f1": 0.9969417199829933,
+        "macro_precision": 0.9965277777777778,
+        "macro_recall": 0.9984984984984985,
+        "cohen_kappa": 0.9961535738726196,
+        "n_test": 326,
+        "n_errors": 1,
+        "per_class": {
+          "Crazing": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 42
+          },
+          "Inclusion": {
+            "precision": 1.0,
+            "recall": 0.990990990990991,
+            "f1": 0.995475113122172,
+            "support": 111
+          },
+          "Patches": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 42
+          },
+          "Pitted surface": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 42
+          },
+          "Rolled in scale": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 42
+          },
+          "Scratches": {
+            "precision": 0.9791666666666666,
+            "recall": 1.0,
+            "f1": 0.9894736842105263,
+            "support": 47
+          }
+        },
+        "confusion_matrix": [
+          [
+            42,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            110,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            42,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            42,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            42,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            0,
+            47
+          ]
+        ],
+        "classes": [
+          "Crazing",
+          "Inclusion",
+          "Patches",
+          "Pitted surface",
+          "Rolled in scale",
+          "Scratches"
+        ],
+        "nll": 0.0971103087067604,
+        "mean_confidence": 0.9247498512268066,
+        "ece": 0.07218262370378692,
+        "ensemble": true,
+        "ensemble_size": 5,
+        "val_scores_of_snapshots": [
+          0.9760718786255529,
+          0.9760718786255529,
+          0.971117431915787,
+          0.9709237246568624,
+          0.9709237246568624
+        ],
+        "n_params": 1916839,
+        "size_mb": 7.312,
+        "train_seconds": 5419.5,
+        "epochs_run": 37,
+        "seed": 42,
+        "arch": "bilstm",
+        "pooling": "all"
+      }
+    },
+    "1337": {
+      "metrics": {
+        "accuracy": 0.99079754601227,
+        "balanced_accuracy": 0.9914062999169381,
+        "macro_f1": 0.9911613700987515,
+        "weighted_f1": 0.990766114480623,
+        "macro_precision": 0.9909993411004533,
+        "macro_recall": 0.9914062999169381,
+        "cohen_kappa": 0.9884526831572111,
+        "n_test": 326,
+        "n_errors": 3,
+        "per_class": {
+          "Crazing": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 42
+          },
+          "Inclusion": {
+            "precision": 0.990990990990991,
+            "recall": 0.990990990990991,
+            "f1": 0.990990990990991,
+            "support": 111
+          },
+          "Patches": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 42
+          },
+          "Pitted surface": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 42
+          },
+          "Rolled in scale": {
+            "precision": 0.9767441860465116,
+            "recall": 1.0,
+            "f1": 0.9882352941176471,
+            "support": 42
+          },
+          "Scratches": {
+            "precision": 0.9782608695652174,
+            "recall": 0.9574468085106383,
+            "f1": 0.967741935483871,
+            "support": 47
+          }
+        },
+        "confusion_matrix": [
+          [
+            42,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            110,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            42,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            42,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            42,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            1,
+            45
+          ]
+        ],
+        "classes": [
+          "Crazing",
+          "Inclusion",
+          "Patches",
+          "Pitted surface",
+          "Rolled in scale",
+          "Scratches"
+        ],
+        "nll": 0.10282403230667114,
+        "mean_confidence": 0.920896589756012,
+        "ece": 0.0710941543974028,
+        "ensemble": true,
+        "ensemble_size": 5,
+        "val_scores_of_snapshots": [
+          0.966126564815314,
+          0.9659766770409896,
+          0.9659766770409896,
+          0.9656367400412899,
+          0.9656367400412899
+        ],
+        "n_params": 1916839,
+        "size_mb": 7.312,
+        "train_seconds": 3987.89,
+        "epochs_run": 31,
+        "seed": 1337,
+        "arch": "bilstm",
+        "pooling": "all"
+      }
+    },
+    "2024": {
+      "metrics": {
+        "accuracy": 0.9877300613496932,
+        "balanced_accuracy": 0.9874380459486841,
+        "macro_f1": 0.9884126870053712,
+        "weighted_f1": 0.9877007842996831,
+        "macro_precision": 0.9895246521257645,
+        "macro_recall": 0.9874380459486841,
+        "cohen_kappa": 0.9845910240351665,
+        "n_test": 326,
+        "n_errors": 4,
+        "per_class": {
+          "Crazing": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 42
+          },
+          "Inclusion": {
+            "precision": 0.9821428571428571,
+            "recall": 0.990990990990991,
+            "f1": 0.9865470852017937,
+            "support": 111
+          },
+          "Patches": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 42
+          },
+          "Pitted surface": {
+            "precision": 1.0,
+            "recall": 0.9761904761904762,
+            "f1": 0.9879518072289156,
+            "support": 42
+          },
+          "Rolled in scale": {
+            "precision": 0.9767441860465116,
+            "recall": 1.0,
+            "f1": 0.9882352941176471,
+            "support": 42
+          },
+          "Scratches": {
+            "precision": 0.9782608695652174,
+            "recall": 0.9574468085106383,
+            "f1": 0.967741935483871,
+            "support": 47
+          }
+        },
+        "confusion_matrix": [
+          [
+            42,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            110,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            42,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            41,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            42,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            1,
+            45
+          ]
+        ],
+        "classes": [
+          "Crazing",
+          "Inclusion",
+          "Patches",
+          "Pitted surface",
+          "Rolled in scale",
+          "Scratches"
+        ],
+        "nll": 0.09586367756128311,
+        "mean_confidence": 0.926080048084259,
+        "ece": 0.06414307736180311,
+        "ensemble": true,
+        "ensemble_size": 5,
+        "val_scores_of_snapshots": [
+          0.9793442805248721,
+          0.9709237246568624,
+          0.9709237246568624,
+          0.9709237246568624,
+          0.9709237246568624
+        ],
+        "n_params": 1916839,
+        "size_mb": 7.312,
+        "train_seconds": 3384.6,
+        "epochs_run": 28,
+        "seed": 2024,
+        "arch": "bilstm",
+        "pooling": "all"
+      }
+    },
+    "7": {
+      "metrics": {
+        "accuracy": 0.9877300613496932,
+        "balanced_accuracy": 0.987860200626158,
+        "macro_f1": 0.9873761526946562,
+        "weighted_f1": 0.9876680293039384,
+        "macro_precision": 0.9872190372190373,
+        "macro_recall": 0.987860200626158,
+        "cohen_kappa": 0.9846044864226683,
+        "n_test": 326,
+        "n_errors": 4,
+        "per_class": {
+          "Crazing": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 42
+          },
+          "Inclusion": {
+            "precision": 0.990990990990991,
+            "recall": 0.990990990990991,
+            "f1": 0.990990990990991,
+            "support": 111
+          },
+          "Patches": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 42
+          },
+          "Pitted surface": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 42
+          },
+          "Rolled in scale": {
+            "precision": 0.9545454545454546,
+            "recall": 1.0,
+            "f1": 0.9767441860465116,
+            "support": 42
+          },
+          "Scratches": {
+            "precision": 0.9777777777777777,
+            "recall": 0.9361702127659575,
+            "f1": 0.9565217391304348,
+            "support": 47
+          }
+        },
+        "confusion_matrix": [
+          [
+            42,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            110,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            42,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            42,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            42,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            2,
+            44
+          ]
+        ],
+        "classes": [
+          "Crazing",
+          "Inclusion",
+          "Patches",
+          "Pitted surface",
+          "Rolled in scale",
+          "Scratches"
+        ],
+        "nll": 0.10266412794589996,
+        "mean_confidence": 0.927697479724884,
+        "ece": 0.06657607277478178,
+        "ensemble": true,
+        "ensemble_size": 5,
+        "val_scores_of_snapshots": [
+          0.971117431915787,
+          0.9709237246568624,
+          0.9656771990614995,
+          0.9656367400412899,
+          0.9656367400412899
+        ],
+        "n_params": 1916839,
+        "size_mb": 7.312,
+        "train_seconds": 3875.11,
+        "epochs_run": 32,
+        "seed": 7,
+        "arch": "bilstm",
+        "pooling": "all"
+      }
+    },
+    "20250101": {
+      "metrics": {
+        "accuracy": 0.9877300613496932,
+        "balanced_accuracy": 0.9874380459486841,
+        "macro_f1": 0.9884126870053712,
+        "weighted_f1": 0.9877007842996831,
+        "macro_precision": 0.9895246521257645,
+        "macro_recall": 0.9874380459486841,
+        "cohen_kappa": 0.9845910240351665,
+        "n_test": 326,
+        "n_errors": 4,
+        "per_class": {
+          "Crazing": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 42
+          },
+          "Inclusion": {
+            "precision": 0.9821428571428571,
+            "recall": 0.990990990990991,
+            "f1": 0.9865470852017937,
+            "support": 111
+          },
+          "Patches": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "support": 42
+          },
+          "Pitted surface": {
+            "precision": 1.0,
+            "recall": 0.9761904761904762,
+            "f1": 0.9879518072289156,
+            "support": 42
+          },
+          "Rolled in scale": {
+            "precision": 0.9767441860465116,
+            "recall": 1.0,
+            "f1": 0.9882352941176471,
+            "support": 42
+          },
+          "Scratches": {
+            "precision": 0.9782608695652174,
+            "recall": 0.9574468085106383,
+            "f1": 0.967741935483871,
+            "support": 47
+          }
+        },
+        "confusion_matrix": [
+          [
+            42,
+            0,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            110,
+            0,
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            42,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            41,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            42,
+            0
+          ],
+          [
+            0,
+            1,
+            0,
+            0,
+            1,
+            45
+          ]
+        ],
+        "classes": [
+          "Crazing",
+          "Inclusion",
+          "Patches",
+          "Pitted surface",
+          "Rolled in scale",
+          "Scratches"
+        ],
+        "nll": 0.10016273707151413,
+        "mean_confidence": 0.9240509271621704,
+        "ece": 0.070096487830753,
+        "ensemble": true,
+        "ensemble_size": 5,
+        "val_scores_of_snapshots": [
+          0.9814716599399684,
+          0.9814716599399684,
+          0.9765450007579899,
+          0.9760718786255529,
+          0.9760718786255529
+        ],
+        "n_params": 1916839,
+        "size_mb": 7.312,
+        "train_seconds": 2976.72,
+        "epochs_run": 26,
+        "seed": 20250101,
+        "arch": "bilstm",
+        "pooling": "all"
+      }
+    }
+  }
+}

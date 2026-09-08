@@ -410,7 +410,9 @@ never the same one) and Major Issue 4 (mean ± SD over independent seeds, not a 
 configuration) from the decision letter.
 """))
     c.append(code(r"""
-main = experiments.run_seeds(bundle, cfg, verbose=True)
+main = experiments.run_seeds(
+    bundle, cfg, verbose=True, checkpoint_dir=OUT / "main_run_checkpoint",
+)
 
 agg = main["aggregate"]
 tbl = pd.DataFrame({
@@ -621,7 +623,10 @@ not using order at all. A ≈ D means the recurrent encoder buys nothing over an
 encoder of the same width — in which case the paper should say so and use the cheaper one.
 """))
     c.append(code(r"""
-order_ab = experiments.run_order_ablation(df, cfg, seeds=cfg.seeds[:3], verbose=True)
+order_ab = experiments.run_order_ablation(
+    df, cfg, seeds=cfg.seeds[:3], epochs=30, early_stop_patience=8,
+    checkpoint_dir=OUT / "order_ablation_checkpoint", verbose=True,
+)
 
 rows = []
 for k, v in order_ab.items():
@@ -664,7 +669,8 @@ information, or does it help" — with everything else about the architecture un
 """))
     c.append(code(r"""
 ablation = experiments.run_component_ablation(
-    bundle, cfg, seeds=cfg.seeds[:3], epochs=30, early_stop_patience=8, verbose=True,
+    bundle, cfg, seeds=cfg.seeds[:3], epochs=30, early_stop_patience=8,
+    checkpoint_path=OUT / "component_ablation_checkpoint.json", verbose=True,
 )
 abl_df = pd.DataFrame(ablation["summary"]).sort_values("macro_f1_mean", ascending=False)
 display(abl_df)
@@ -1109,25 +1115,48 @@ the leakage question" into a resolved question.
 """),
     code(r"""
 overlap = {}
-for ds in ["steeldefectx_paper", "steeldefectx_paper_clean"]:
-    print(f"{ds} ...", flush=True)
-    d2 = splits.build_split(ds, SplitConfig(), RESULTS_DIR / "splits", verbose=False)
-    c2 = ExperimentConfig(dataset=ds)
-    c2.train.epochs = cfg.train.epochs
-    b2 = pipeline.build_bundle(d2, c2, verbose=False)
-    r2 = experiments.run_seeds(b2, c2, seeds=cfg.seeds[:3], verbose=False)
-    overlap[ds] = {
-        "images": int(len(d2)),
-        "classes": int(d2["class"].nunique()),
-        "test_images": r2["n_test_images"],
-        "accuracy": r2["aggregate"]["accuracy"]["mean"],
-        "accuracy_sd": r2["aggregate"]["accuracy"]["sd"],
-        "macro_f1": r2["aggregate"]["macro_f1"]["mean"],
-        "macro_f1_sd": r2["aggregate"]["macro_f1"]["sd"],
-        "balanced_accuracy": r2["aggregate"]["balanced_accuracy"]["mean"],
-    }
-    print(f"  acc {overlap[ds]['accuracy']:.4f}  macroF1 {overlap[ds]['macro_f1']:.4f}  "
-          f"({overlap[ds]['classes']} classes, {overlap[ds]['images']} images)")
+
+# "AS REPORTED" is steeldefectx_paper -- the exact dataset/config already
+# trained with 5 seeds in section 3. Retraining it here would burn real time
+# for no new information, so this row reuses `main` (and gets 5 seeds of
+# evidence instead of 3 for free).
+overlap["steeldefectx_paper"] = {
+    "images": int(len(df)),
+    "classes": int(df["class"].nunique()),
+    "test_images": main["n_test_images"],
+    "accuracy": main["aggregate"]["accuracy"]["mean"],
+    "accuracy_sd": main["aggregate"]["accuracy"]["sd"],
+    "macro_f1": main["aggregate"]["macro_f1"]["mean"],
+    "macro_f1_sd": main["aggregate"]["macro_f1"]["sd"],
+    "balanced_accuracy": main["aggregate"]["balanced_accuracy"]["mean"],
+}
+print(f"steeldefectx_paper: reused the main {len(cfg.seeds)}-seed result -- "
+      f"acc {overlap['steeldefectx_paper']['accuracy']:.4f}  "
+      f"macroF1 {overlap['steeldefectx_paper']['macro_f1']:.4f}")
+
+# The genuinely new run: the same subset with NEU-DET duplicates removed.
+# Lighter budget than the main run -- this is a diagnostic comparison, not
+# the headline result, and every run so far plateaus well before epoch 30.
+ds = "steeldefectx_paper_clean"
+print(f"{ds} ...", flush=True)
+d2 = splits.build_split(ds, SplitConfig(), RESULTS_DIR / "splits", verbose=False)
+c2 = ExperimentConfig(dataset=ds)
+c2.train.epochs = 30
+c2.train.early_stop_patience = 8
+b2 = pipeline.build_bundle(d2, c2, verbose=False)
+r2 = experiments.run_seeds(b2, c2, seeds=cfg.seeds[:3], verbose=False)
+overlap[ds] = {
+    "images": int(len(d2)),
+    "classes": int(d2["class"].nunique()),
+    "test_images": r2["n_test_images"],
+    "accuracy": r2["aggregate"]["accuracy"]["mean"],
+    "accuracy_sd": r2["aggregate"]["accuracy"]["sd"],
+    "macro_f1": r2["aggregate"]["macro_f1"]["mean"],
+    "macro_f1_sd": r2["aggregate"]["macro_f1"]["sd"],
+    "balanced_accuracy": r2["aggregate"]["balanced_accuracy"]["mean"],
+}
+print(f"  acc {overlap[ds]['accuracy']:.4f}  macroF1 {overlap[ds]['macro_f1']:.4f}  "
+      f"({overlap[ds]['classes']} classes, {overlap[ds]['images']} images)")
 
 ov = pd.DataFrame(overlap).T
 ov.index = ["6-class subset AS REPORTED", "same subset, NEU-DET duplicates removed"]
