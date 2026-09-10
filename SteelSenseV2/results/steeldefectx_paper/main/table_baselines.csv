@@ -1,0 +1,9 @@
+model,representation,accuracy,accuracy_sd,macro_f1,macro_f1_sd,balanced_accuracy,n_params
+SteelSense-BiLSTM,binned descriptors as text prompt,0.9901840490797547,0.003999510678038463,0.9905708726052534,0.004115977064253323,0.9905282181877926,1916839.0
+XGBoost,raw un-discretized descriptor vector,0.9969325153374233,,0.9974605011492036,,0.9964539007092199,17222.0
+RandomForest,raw un-discretized descriptor vector,0.99079754601227,,0.9923815034476108,,0.9914062999169381,182928.0
+MLP,raw un-discretized descriptor vector,0.9877300613496932,,0.9873761526946562,,0.987860200626158,57478.0
+LogisticRegression,raw un-discretized descriptor vector,0.9815950920245399,,0.9822514627873576,,0.9828125998338765,558.0
+SVM-RBF,raw un-discretized descriptor vector,0.9877300613496932,,0.9873761526946562,,0.987860200626158,91471.0
+MobileNetV3-Small,raw image pixels,0.9938650306748467,,0.9934916847069641,,0.992485646740966,
+ShuffleNetV2-x0.5,raw image pixels,1.0,,1.0,,1.0,

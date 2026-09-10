@@ -1,0 +1,178 @@
+{
+  "dataset": "steeldefectx_paper_clean",
+  "n_images_raw": 1631,
+  "cross_dataset": {
+    "reference": "neu_det",
+    "thresholds": {
+      "hamming_max": 6,
+      "corr_min": 0.97
+    },
+    "n_dropped": 1046,
+    "pct_dropped": 64.13,
+    "per_class": {
+      "Crazing": {
+        "n": 210,
+        "dropped": 209,
+        "pct": 99.5
+      },
+      "Inclusion": {
+        "n": 557,
+        "dropped": 207,
+        "pct": 37.2
+      },
+      "Patches": {
+        "n": 210,
+        "dropped": 210,
+        "pct": 100.0
+      },
+      "Pitted surface": {
+        "n": 210,
+        "dropped": 210,
+        "pct": 100.0
+      },
+      "Rolled in scale": {
+        "n": 210,
+        "dropped": 210,
+        "pct": 100.0
+      },
+      "Scratches": {
+        "n": 234,
+        "dropped": 0,
+        "pct": 0.0
+      }
+    },
+    "examples": [
+      {
+        "query": "cracking_01.jpg",
+        "ref": "crazing_1.jpg",
+        "corr": 0.9991,
+        "hamming": 0
+      },
+      {
+        "query": "cracking_02.jpg",
+        "ref": "crazing_10.jpg",
+        "corr": 0.9996,
+        "hamming": 0
+      },
+      {
+        "query": "cracking_03.jpg",
+        "ref": "crazing_100.jpg",
+        "corr": 0.9992,
+        "hamming": 0
+      },
+      {
+        "query": "cracking_04.jpg",
+        "ref": "crazing_101.jpg",
+        "corr": 0.9987,
+        "hamming": 0
+      },
+      {
+        "query": "cracking_06.jpg",
+        "ref": "crazing_103.jpg",
+        "corr": 0.9994,
+        "hamming": 0
+      },
+      {
+        "query": "cracking_07.jpg",
+        "ref": "crazing_104.jpg",
+        "corr": 0.9996,
+        "hamming": 0
+      },
+      {
+        "query": "cracking_08.jpg",
+        "ref": "crazing_105.jpg",
+        "corr": 0.9986,
+        "hamming": 0
+      },
+      {
+        "query": "cracking_09.jpg",
+        "ref": "crazing_106.jpg",
+        "corr": 0.9995,
+        "hamming": 0
+      },
+      {
+        "query": "cracking_10.jpg",
+        "ref": "crazing_107.jpg",
+        "corr": 0.9988,
+        "hamming": 0
+      },
+      {
+        "query": "cracking_100.jpg",
+        "ref": "crazing_189.jpg",
+        "corr": 0.9989,
+        "hamming": 1
+      },
+      {
+        "query": "cracking_101.jpg",
+        "ref": "crazing_19.jpg",
+        "corr": 0.9992,
+        "hamming": 1
+      },
+      {
+        "query": "cracking_103.jpg",
+        "ref": "crazing_191.jpg",
+        "corr": 0.999,
+        "hamming": 0
+      },
+      {
+        "query": "cracking_105.jpg",
+        "ref": "crazing_193.jpg",
+        "corr": 0.9993,
+        "hamming": 1
+      },
+      {
+        "query": "cracking_106.jpg",
+        "ref": "crazing_194.jpg",
+        "corr": 0.9993,
+        "hamming": 1
+      },
+      {
+        "query": "cracking_107.jpg",
+        "ref": "crazing_195.jpg",
+        "corr": 0.999,
+        "hamming": 0
+      }
+    ]
+  },
+  "classes_removed_too_small": {
+    "Crazing": 1,
+    "Patches": 0,
+    "Pitted surface": 0,
+    "Rolled in scale": 0
+  },
+  "intra_dataset": {
+    "n_images": 584,
+    "n_groups": 584,
+    "n_multi_image_groups": 0,
+    "n_images_in_multi_groups": 0,
+    "largest_group": 1,
+    "policy": "group",
+    "thresholds": {
+      "hamming_max": 2,
+      "corr_min": 0.98
+    },
+    "n_cross_class_near_duplicate_pairs": 0,
+    "cross_class_examples": [],
+    "duplicate_group_members": []
+  },
+  "reused_frozen_split": false,
+  "group_violations_final": 0,
+  "counts": {
+    "train": 409,
+    "test": 117,
+    "val": 58
+  },
+  "per_class_counts": {
+    "Inclusion": {
+      "test": 70,
+      "train": 245,
+      "val": 35
+    },
+    "Scratches": {
+      "test": 47,
+      "train": 164,
+      "val": 23
+    }
+  },
+  "manifest_sha256": "5da6387e4283117a1c22389f6dc25f83aca227da0a906a1a225aec0a0660e79d"
+}
