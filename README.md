@@ -2,17 +2,6 @@
 
 <div align="center">
 
-![Steel Defect Detection](https://img.shields.io/badge/Steel%20Defect-Detection-blue?style=for-the-badge&logo=tensorflow&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![Deep Learning](https://img.shields.io/badge/Deep%20Learning-Neural%20Networks-green?style=for-the-badge)
-
-### 🚀 Advanced Multi-scale Feature Fusion CNN for Steel Surface Defect Classification
-
-*Revolutionizing steel quality control with state-of-the-art deep learning architecture*
-
-</div>
-
 ---
 
 ## 📑 Table of Contents
@@ -29,6 +18,7 @@
 - [🧠 Model Architecture](#-model-architecture)
 - [📈 Results](#-results)
 - [🤖 From-Scratch Tiny LLMs (Alternative Approach)](#-from-scratch-tiny-llms-alternative-approach)
+- [🔬 SteelSense-BiLSTM + SteelDefectX (Second Alternative Approach)](#-steelsense-bilstm--steeldefectx-second-alternative-approach)
 - [🎮 Usage Examples](#-usage-examples)
 - [📚 API Reference](#-api-reference)
 - [🤝 Contributing](#-contributing)
@@ -42,50 +32,27 @@
 
 <div align="center">
 
-```mermaid
-graph TD
-    A[Steel Surface Image] --> B[AMFF-CNN Model]
-    B --> C{Defect Classification}
-    C --> D[Crazing]
-    C --> E[Inclusion]
-    C --> F[Patches]
-    C --> G[Pitted Surface]
-    C --> H[Rolled-in Scale]
-    C --> I[Scratches]
-    
-%% Dark-themed Mermaid node styles
-style A fill:#37474f,stroke:#cfd8dc,color:#eceff1
-style B fill:#4527a0,stroke:#d1c4e9,color:#ffffff
-style C fill:#ff8f00,stroke:#ffe0b2,color:#ffffff
-style D fill:#2e7d32,stroke:#a5d6a7,color:#ffffff
-style E fill:#2e7d32,stroke:#a5d6a7,color:#ffffff
-style F fill:#2e7d32,stroke:#a5d6a7,color:#ffffff
-style G fill:#2e7d32,stroke:#a5d6a7,color:#ffffff
-style H fill:#2e7d32,stroke:#a5d6a7,color:#ffffff
-style I fill:#2e7d32,stroke:#a5d6a7,color:#ffffff
+This project implements a **lightweight MobileNetV2–FPN framework (AMFF-CNN)** for six-class steel surface-defect **classification**, with **Grad-CAM-based post-hoc weak localization** (no bounding-box supervision, no detection head). The network is trained exclusively with image-level categorical cross-entropy. Its multi-scale fusion pathway combines three modules:
 
-```
+- 🧩 **AMFF (Attention-Modulated Multi-Feature Fusion)**: parallel channel + spatial attention applied at each FPN lateral-fusion point
+- 🔀 **CSAF (Cross-Scale Adaptive Fusion)**: learns per-sample, softmax-normalized contribution weights across the P2–P5 pyramid levels
+- 🔍 **SEAM (Spatial Enhancement Attention Module)**: parallel dilated depthwise convolutions (rates 1, 3, 5) for spatial context enhancement
 
-</div>
+> Naming note: earlier drafts of this project used **CEAM**; it has been retired in favor of **CSAF** everywhere in the code and this README.
 
-This project implements an **Advanced Multi-scale Feature Fusion Convolutional Neural Network (AMFF-CNN)** for automatic detection and classification of steel surface defects. The model combines two innovative attention mechanisms:
-
-- 🔍 **SEAM (Spatial Enhancement Attention Module)**: Multi-scale feature extraction with spatial attention
-- 🎯 **CEAM (Cross-layer Enhancement Attention Module)**: Cross-layer feature fusion with guided attention
-
-### 🎪 Interactive Demo
+### 🎪 Sample Defect Images (real NEU-DET samples)
 
 <details>
 <summary>🖼️ Click to see sample defect images</summary>
 
-| Defect Type | Sample | Description |
-|-------------|--------|-------------|
-| **Crazing** | ![Crazing](https://via.placeholder.com/100x100/ff6b6b/ffffff?text=Crazing) | Fine cracks on steel surface |
-| **Inclusion** | ![Inclusion](https://via.placeholder.com/100x100/4ecdc4/ffffff?text=Inclusion) | Foreign material embedded |
-| **Patches** | ![Patches](https://via.placeholder.com/100x100/45b7d1/ffffff?text=Patches) | Irregular surface patches |
-| **Pitted Surface** | ![Pitted](https://via.placeholder.com/100x100/f9ca24/ffffff?text=Pitted) | Small holes or depressions |
-| **Rolled-in Scale** | ![Scale](https://via.placeholder.com/100x100/6c5ce7/ffffff?text=Scale) | Scale pressed into surface |
-| **Scratches** | ![Scratches](https://via.placeholder.com/100x100/a55eea/ffffff?text=Scratch) | Linear surface damage |
+| Defect Type               | Sample                                                         | Description                                               |
+| ------------------------- | -------------------------------------------------------------- | --------------------------------------------------------- |
+| **Crazing**         | ![Crazing](NEU-DET/IMAGES/crazing/crazing_1.jpg)               | Fine crack-like structures from thermal/mechanical stress |
+| **Inclusion**       | ![Inclusion](NEU-DET/IMAGES/inclusion/inclusion_1.jpg)         | Non-metallic particles embedded in the surface            |
+| **Patches**         | ![Patches](NEU-DET/IMAGES/patches/patches_1.jpg)               | Irregular regions with distinct surface texture           |
+| **Pitted Surface**  | ![Pitted](NEU-DET/IMAGES/pitted_surface/pitted_surface_1.jpg)  | Localized depressions / corrosion-like spots              |
+| **Rolled-in Scale** | ![Scale](NEU-DET/IMAGES/rolled-in_scale/rolled-in_scale_1.jpg) | Oxide material pressed in during hot rolling              |
+| **Scratches**       | ![Scratches](NEU-DET/IMAGES/scratches/scratches_1.jpg)         | Linear marks from rollers, tools, or handling             |
 
 </details>
 
@@ -95,106 +62,72 @@ This project implements an **Advanced Multi-scale Feature Fusion Convolutional N
 
 <div align="center">
 
-| 🌟 Feature | 📝 Description | 💪 Benefit |
-|------------|----------------|------------|
-| **Multi-scale Processing** | SEAM module with dilated convolutions (rates: 1,2,3,4) | Captures defects at different scales |
-| **Cross-layer Fusion** | CEAM module for hierarchical feature integration | Enhanced feature representation |
-| **Attention Mechanisms** | Channel + Spatial attention for focus enhancement | Improved defect localization |
-| **Comparative Analysis** | Base CNN vs AMFF-CNN performance comparison | Demonstrates improvement |
-| **Visualization Tools** | Prediction visualization and training curves | Better model interpretability |
-
-</div>
-
 ---
 
 ## 🏗️ Architecture
 
-### 🧠 AMFF-CNN Architecture Flow
+### 🧠 AMFF-CNN Architecture Flow (as implemented in `new_model_code.ipynb`)
 
 ```mermaid
 flowchart TB
-    subgraph "Input Layer"
-        A[Input Image 128x128x3]
+    A[Input 200x200x1 grayscale<br/>replicated to 200x200x3] --> B[MobileNetV2 backbone<br/>ImageNet-pretrained]
+    B --> C2[C2 50x50x144]
+    B --> C3[C3 25x25x192]
+    B --> C4[C4 13x13x576]
+    B --> C5[C5 7x7x1280]
+
+    subgraph FPN["FPN top-down pathway, 128 channels"]
+        C2 --> P2fuse[AMFF fuse -> P2]
+        C3 --> P3fuse[AMFF fuse -> P3]
+        C4 --> P4fuse[AMFF fuse -> P4]
+        C5 --> P5[Lateral P5]
+        P5 --> P4fuse --> P3fuse --> P2fuse
     end
-    
-    subgraph "Feature Extraction"
-        B[Conv2D 32 filters + MaxPool]
-        C[Conv2D 64 filters + MaxPool]
-    end
-    
-    subgraph "AMFF Block 1"
-        D[SEAM Module]
-        E[CEAM Module]
-        F[Feature Fusion]
-    end
-    
-    subgraph "AMFF Block 2"
-        G[SEAM Module]
-        H[CEAM Module]
-        I[Feature Fusion]
-    end
-    
-    subgraph "Classification"
-        J[Global Average Pooling]
-        K[Dense 128 + Dropout]
-        L[Dense 6 classes + Softmax]
-    end
-    
-    A --> B
-    B --> C
-    C --> D
-    C --> E
-    D --> F
-    E --> F
-    F --> G
-    F --> H
-    G --> I
-    H --> I
-    I --> J
-    J --> K
-    K --> L
-    
-%% Dark-themed Mermaid node styles
+
+    P2fuse --> CSAF[CSAF: learned softmax<br/>weights across P2-P5]
+    P3fuse --> CSAF
+    P4fuse --> CSAF
+    P5 --> CSAF
+
+    CSAF --> SEAM[SEAM: dilated depthwise<br/>convs, rates 1/3/5]
+    SEAM --> GAP[Global Average Pooling]
+    GAP --> DROP[Dropout 0.5]
+    DROP --> OUT[Dense 6 + Softmax]
+
 style A fill:#37474f,stroke:#cfd8dc,color:#eceff1
 style B fill:#4527a0,stroke:#d1c4e9,color:#ffffff
-style C fill:#ff8f00,stroke:#ffe0b2,color:#ffffff
-style D fill:#2e7d32,stroke:#a5d6a7,color:#ffffff
-style E fill:#2e7d32,stroke:#a5d6a7,color:#ffffff
-style F fill:#2e7d32,stroke:#a5d6a7,color:#ffffff
-style G fill:#2e7d32,stroke:#a5d6a7,color:#ffffff
-style H fill:#2e7d32,stroke:#a5d6a7,color:#ffffff
-style I fill:#2e7d32,stroke:#a5d6a7,color:#ffffff
-style J fill:#2e7d32,stroke:#a5d6a7,color:#ffffff
-style K fill:#2e7d32,stroke:#a5d6a7,color:#ffffff
-style L fill:#2e7d32,stroke:#a5d6a7,color:#ffffff
-
+style CSAF fill:#ff8f00,stroke:#ffe0b2,color:#ffffff
+style SEAM fill:#ff8f00,stroke:#ffe0b2,color:#ffffff
+style OUT fill:#2e7d32,stroke:#a5d6a7,color:#ffffff
 ```
 
-### 🔍 SEAM Module Details
+📎 The exact rendered diagram used in the paper: [`paper_results/figures/figure2_architecture.png`](paper_results/figures/figure2_architecture.png)
+
+### 🔍 SEAM Module (real implementation)
 
 <details>
 <summary>Click to expand SEAM architecture</summary>
 
 ```python
-def seam_module(input_tensor, filters):
-    # Multi-scale dilated convolutions
-    d1 = Conv2D(filters, (3,3), dilation_rate=1)(input_tensor)
-    d2 = Conv2D(filters, (3,3), dilation_rate=2)(input_tensor)
-    d3 = Conv2D(filters, (3,3), dilation_rate=3)(input_tensor)
-    d4 = Conv2D(filters, (3,3), dilation_rate=4)(input_tensor)
-    
-    # Feature fusion and attention
-    concat = Concatenate()([d1, d2, d3, d4])
-    conv_fused = Conv2D(filters, (3,3))(concat)
-    
-    # Channel attention
-    gap = GlobalAveragePooling2D()(conv_fused)
-    channel_att = Dense(filters, activation='sigmoid')(gap)
-    
-    # Spatial attention
-    spatial_att = Conv2D(1, (7,7), activation='sigmoid')(conv_fused)
-    
-    return enhanced_features
+class SEAM(layers.Layer):
+    """Spatial Enhancement Attention Module — parallel dilated depthwise convs,
+    concatenated, collapsed to a sigmoid spatial gate, applied residually."""
+
+    def __init__(self, dilation_rates=(1, 3, 5), **kw):
+        super().__init__(**kw)
+        self.dilation_rates = tuple(dilation_rates)
+
+    def build(self, input_shape):
+        self.branches = [layers.DepthwiseConv2D(3, padding="same", dilation_rate=r,
+                                                 use_bias=False) for r in self.dilation_rates]
+        self.bns = [layers.BatchNormalization() for _ in self.dilation_rates]
+        self.attn = layers.Conv2D(1, 1, padding="same", activation="sigmoid")
+
+    def call(self, x, training=None):
+        feats = [tf.nn.relu(bn(br(x), training=training))
+                 for br, bn in zip(self.branches, self.bns)]
+        a = self.attn(tf.concat(feats, axis=-1))
+        return x * (1.0 + a)          # residual gating
 ```
 
 </details>
@@ -287,14 +220,14 @@ def predict_defect(model, img_path):
     img = image.load_img(img_path, target_size=(128, 128))
     img_array = image.img_to_array(img) / 255.0
     img_array = np.expand_dims(img_array, axis=0)
-    
+  
     predictions = model.predict(img_array)
     class_names = ['crazing', 'inclusion', 'patches', 
                    'pitted_surface', 'rolled-in_scale', 'scratches']
-    
+  
     predicted_class = class_names[np.argmax(predictions)]
     confidence = np.max(predictions) * 100
-    
+  
     return predicted_class, confidence
 
 # Usage
@@ -324,22 +257,9 @@ Steel_Surface_Defect/
 └── README.md
 ```
 
-
-### 📈 Dataset Statistics
+### 📈 Dataset Statistics — fixed, leakage-free 70/10/20 split
 
 <div align="center">
-
-| Class | Training Images | Validation Images | Total |
-|-------|----------------|-------------------|-------|
-| Crazing | 240 | 60 | 300 |
-| Inclusion | 240 | 60 | 300 |
-| Patches | 240 | 60 | 300 |
-| Pitted Surface | 240 | 60 | 300 |
-| Rolled-in Scale | 240 | 60 | 300 |
-| Scratches | 240 | 60 | 300 |
-| **Total** | **1440** | **360** | **1800** |
-
-</div>
 
 ---
 
@@ -348,103 +268,121 @@ Steel_Surface_Defect/
 ### 🎯 AMFF-CNN Components
 
 <details>
-<summary>🔍 SEAM Module (Spatial Enhancement Attention Module)</summary>
+<summary>🧩 AMFF (Attention-Modulated Multi-Feature Fusion)</summary>
 
-The SEAM module enhances feature representation through:
+Applied at each FPN lateral-fusion point, in **parallel** (not sequential like CBAM):
 
-- **Multi-scale Dilated Convolutions**: Captures features at different receptive field sizes
-- **Channel Attention**: Emphasizes important feature channels
-- **Spatial Attention**: Focuses on relevant spatial locations
+- **Channel branch**: GAP → bottleneck MLP → sigmoid gate
+- **Spatial branch**: 7×7 conv over concatenated avg/max channel descriptors
+- Channel-refined, spatial-refined, and the original lateral feature are concatenated and projected — a residual path that stabilizes optimization
 
 ```python
-# Dilated convolutions with different rates
-d1 = Conv2D(filters, (3,3), dilation_rate=1)  # Local features
-d2 = Conv2D(filters, (3,3), dilation_rate=2)  # Medium-scale features
-d3 = Conv2D(filters, (3,3), dilation_rate=3)  # Large-scale features
-d4 = Conv2D(filters, (3,3), dilation_rate=4)  # Global features
+z = GAP(F); ac = sigmoid(W2 @ relu(W1 @ z)); Fc = F * ac        # channel
+as_ = sigmoid(Conv7x7([avg_c(F); max_c(F)])); Fs = F * as_       # spatial
+Fout = relu(BN(Conv([Fc; Fs; F])))                               # fuse + residual
 ```
 
 </details>
 
 <details>
-<summary>🎯 CEAM Module (Cross-layer Enhancement Attention Module)</summary>
+<summary>🔀 CSAF (Cross-Scale Adaptive Fusion) — the paper's central contribution</summary>
 
-The CEAM module facilitates information flow between layers:
-
-- **Feature Resizing**: Matches spatial dimensions across layers
-- **Guided Attention**: Uses current layer to guide previous layer features
-- **Cross-layer Fusion**: Combines multi-level features effectively
+Unlike AMFF (attention within one tensor), CSAF jointly summarizes **all four** pyramid levels (P2–P5) and learns a **softmax-normalized, per-sample** contribution weight for each — so emphasizing one level necessarily reduces the others.
 
 ```python
-# Resize previous layer features
-prev_resized = tf.image.resize(previous_features, target_shape)
-# Generate attention weights
-attention_weights = Conv2D(filters, (3,3), activation='sigmoid')(current_features)
-# Apply guided attention
-enhanced_features = Multiply()([prev_resized, attention_weights])
+w = softmax_over_levels(MLP([GAP(P2); GAP(P3); GAP(P4); GAP(P5)]))
+F_csaf = sum(w[l] * P_tilde[l] for l in range(4))
 ```
+
+`CSAF.VALID_MODES` also implements the ablation controls used to test this claim: `add` (plain FPN sum), `concat` (PANet-style fixed proportion), `fixed` (learned but input-independent), `local` (per-sample but not cross-scale), `csaf` (proposed).
 
 </details>
 
-### 📊 Model Comparison
+### 📊 Model Comparison (real measurements — see [Results](#-results) for the full ablation)
 
-| Model | Parameters | FLOPs | Accuracy | Training Time |
-|-------|------------|-------|----------|---------------|
-| Base CNN | 2.1M | 1.2G | 93.47% | 45 min |
-| AMFF-CNN | 3.8M | 2.1G | 98.58% | 78 min |
+| Model                                    | Total Params        | Trainable           | MACs (M)          | CPU Latency (median) | CPU FPS       |
+| ---------------------------------------- | ------------------- | ------------------- | ----------------- | -------------------- | ------------- |
+| MobileNetV2 (backbone only)              | 2,423,110           | 164,870             | 269.53            | 47.00 ms             | 21.3          |
+| MobileNetV2 + FPN                        | 3,196,102           | 937,862             | 1362.43           | 116.06 ms            | 8.6           |
+| **Proposed full (AMFF+CSAF+SEAM)** | **3,364,064** | **1,104,288** | **1373.17** | **118.24 ms**  | **8.5** |
+
+*(Measured on this repo's own hardware: AMD64, 2 physical / 4 logical cores, 9.9 GB RAM, CPU-only, TensorFlow 2.15.0, batch size 1, 20 warmup + 200 timed runs, median reported.)*
 
 ---
 
 ## 📈 Results
 
-### 🏆 Performance Metrics
+All numbers below are **measured**, not asserted — from the executed pipeline in
+`new_model_code.ipynb` (real training runs, real Grad-CAM localization scoring, real
+CPU latency benchmarking on this repo's own machine), backed by CSVs in
+`paper_results/tables/`. Where a finding contradicts the paper's original framing, it's
+reported as-is rather than smoothed over.
+
+### 🏆 Final Held-Out Test Set (360 images, 60/class)
 
 <div align="center">
 
-```mermaid
-graph LR
-    subgraph "Model Performance"
-        A[Base CNN<br/>93.47%] 
-        B[AMFF-CNN<br/>98.58%]
-    end
-    
-    subgraph "Improvement"
-        C[+7.3%<br/>Accuracy Gain]
-    end
-    
-    A -.-> C
-    B --> C
-    
-style A fill:#37474f,stroke:#cfd8dc,color:#eceff1
-style B fill:#4527a0,stroke:#d1c4e9,color:#ffffff
-style C fill:#ff8f00,stroke:#ffe0b2,color:#ffffff
-```
-
-</div>
-
-### 📊 Detailed Results
-
 <details>
-<summary>🎯 Per-Class Performance</summary>
+<summary>🎯 Per-class classification (held-out test set)</summary>
 
-| Defect Type | Base CNN | AMFF-CNN | Improvement |
-|-------------|----------|----------|-------------|
-| Crazing | 82.3% | 91.7% | +9.4% |
-| Inclusion | 79.1% | 89.2% | +10.1% |
-| Patches | 88.7% | 94.3% | +5.6% |
-| Pitted Surface | 81.5% | 90.8% | +9.3% |
-| Rolled-in Scale | 87.2% | 95.1% | +7.9% |
-| Scratches | 93.6% | 97.2% | +3.6% |
+| Defect Class    | Precision | Recall  | F1      | Support |
+| --------------- | --------- | ------- | ------- | ------- |
+| Crazing         | 98.36%    | 100.00% | 99.17%  | 60      |
+| Inclusion       | 100.00%   | 61.67%  | 76.29%  | 60      |
+| Patches         | 100.00%   | 98.33%  | 99.16%  | 60      |
+| Pitted Surface  | 75.95%    | 100.00% | 86.33%  | 60      |
+| Rolled-in Scale | 100.00%   | 100.00% | 100.00% | 60      |
+| Scratches       | 93.75%    | 100.00% | 96.77%  | 60      |
+
+**Inclusion is the hard class**: 19 of 60 inclusion images are misclassified as pitted surface (genuine visual similarity — both are localized, spotted texture disruptions), which is also why pitted-surface precision drops even though its recall is perfect.
+
+![Confusion matrix](paper_results/figures/confusion_full_seed42.png)
 
 </details>
 
-### 📈 Training Curves
+<details>
+<summary>📉 Training curves (frozen-backbone phase → fine-tune phase)</summary>
 
-The training process shows consistent improvement with AMFF-CNN:
+![Training history](paper_results/figures/history_full_seed42.png)
 
-- **Faster Convergence**: AMFF-CNN reaches high accuracy earlier
-- **Better Stability**: Less overfitting compared to base CNN
-- **Higher Final Accuracy**: 92.7% vs 85.4% validation accuracy
+</details>
+
+<details>
+<summary>🖼️ Qualitative classification + CAM localization examples</summary>
+
+![Qualitative results](paper_results/figures/qualitative_proposed.png)
+
+</details>
+
+### 🧪 Real Ablation Study — module ladder (seed=42, manuscript-spec 30+30 epochs, patience=10)
+
+**Read this on AP50, not accuracy** — accuracy saturates at 99.7–100% across every variant on this dataset, so it carries no signal about which module helps. AP50 (CAM-based weak localization) is the informative column.
+
+| Variant                | Accuracy | Macro-F1 | Params    | AP50  | AP75 | mAP50:95 |
+| ---------------------- | -------- | -------- | --------- | ----- | ---- | -------- |
+| Baseline (MobileNetV2) | 100.00   | 100.00   | 2,423,110 | 8.85  | 2.38 | 3.63     |
+| + FPN                  | 100.00   | 100.00   | 3,196,102 | 9.12  | 2.69 | 3.89     |
+| + FPN + AMFF           | 100.00   | 100.00   | 3,358,111 | 10.11 | 3.21 | 4.59     |
+| + FPN + CSAF           | 100.00   | 100.00   | 3,196,678 | 8.02  | 2.93 | 3.73     |
+| + FPN + AMFF + CSAF    | 99.72    | 99.72    | 3,358,687 | 9.23  | 4.02 | 4.62     |
+| Full (+ SEAM)          | 100.00   | 100.00   | 3,364,064 | 6.26  | 2.51 | 3.02     |
+
+![Ablation confusion grid](paper_results/figures/ablation_confusion_grid.png)
+
+#### Multi-seed confirmation (does the AP50 pattern hold up, or is it single-seed noise?)
+
+The critical comparisons — stacking CSAF onto AMFF, then stacking SEAM onto everything — were re-run across 3 seeds (42, 1337, 2026):
+
+| Delta                               | seed=42 | seed=1337 | seed=2026     | mean ± sd               | Verdict                                                |
+| ----------------------------------- | ------- | --------- | ------------- | ------------------------ | ------------------------------------------------------ |
+| CSAF's effect (+AMFF → +AMFF+CSAF) | −0.88  | 0.00      | +0.51         | **−0.12 ± 0.70** | **Noise** — mean is smaller than its own spread |
+| SEAM's effect (+AMFF+CSAF → Full)  | −2.97  | −2.18    | *(pending)* | ≈**−2.6** so far | Consistently negative across seeds so far              |
+
+**Honest conclusion:** CSAF's apparent effect on localization AP50 is not statistically distinguishable from zero at this sample size — don't claim it helps *or* hurts. SEAM's negative effect on AP50 looks more consistent across seeds and needs to be reported plainly rather than assumed to be an improvement.
+
+### ⚡ Efficiency (real, isolated CPU measurement — see [Model Comparison](#-model-architecture) table above)
+
+Params/FLOPs/MACs/model-size are architecture-exact and fully reproducible. Latency is hardware- and load-sensitive: a clean, uncontended remeasurement on this exact machine (AMD64, 2 physical/4 logical cores, 9.9 GB RAM, no GPU) gave 47.00 ms/21.3 FPS for the backbone alone and 118.24 ms/8.5 FPS for the full model — **not real-time**, and reported as such rather than oversold.
 
 ---
 
@@ -462,14 +400,14 @@ into a text prompt** — no raw-pixel CNN, no pretrained weights, and **no exter
 
 ### 🧩 The Two From-Scratch Models
 
-| | **LLM 1** | **LLM 2** |
-|---|---|---|
-| Name | `TinySteelLLM_FromScratch` | `SteelSense-BiLSTM` |
-| Architecture | Transformer encoder (self-attention) | BiLSTM + multi-view attention pooling |
-| Config | embed 96, 2 layers, 4 heads, 18 epochs, lr 3e-4 | embed 96, hidden 192×2, dropout 0.30, 30 epochs, lr 8e-4 (OneCycle) |
-| Prompt | coarse (~18 tokens, 4-level bins) | rich (~40 tokens, 7-level bins + GLCM + per-quadrant) |
-| Extras | — | label smoothing 0.06, +2 jittered copies, top-5 snapshot ensemble |
-| Weights | `tiny_steel_llm_from_scratch.pt` | `tiny_steel_llm2_bilstm_from_scratch.pt` |
+|              | **LLM 1**                                 | **LLM 2**                                                      |
+| ------------ | ----------------------------------------------- | -------------------------------------------------------------------- |
+| Name         | `TinySteelLLM_FromScratch`                    | `SteelSense-BiLSTM`                                                |
+| Architecture | Transformer encoder (self-attention)            | BiLSTM + multi-view attention pooling                                |
+| Config       | embed 96, 2 layers, 4 heads, 18 epochs, lr 3e-4 | embed 96, hidden 192×2, dropout 0.30, 30 epochs, lr 8e-4 (OneCycle) |
+| Prompt       | coarse (~18 tokens, 4-level bins)               | rich (~40 tokens, 7-level bins + GLCM + per-quadrant)                |
+| Extras       | —                                              | label smoothing 0.06, +2 jittered copies, top-5 snapshot ensemble    |
+| Weights      | `tiny_steel_llm_from_scratch.pt`              | `tiny_steel_llm2_bilstm_from_scratch.pt`                           |
 
 ### 🔄 How the LLM Pipeline Works
 
@@ -516,11 +454,55 @@ different things and must not be conflated:
   localization on NEU-DET genuinely lands in the **low tens of percent AP50**, not 90%+.
 
 ### 🖼️ Architecture Figures
+
 - `SteelScratchLLM/SteelSense_BiLSTM_architecture.png/.pdf` — LLM 2 model diagram
 - `SteelScratchLLM/SteelSense_BiLSTM_pipeline.png/.pdf` — LLM 2 full 8-stage pipeline
 
 > Both LLMs target the **same six defect classes** as the AMFF-CNN
 > (crazing, inclusion, patches, pitted_surface, rolled-in_scale, scratches).
+
+---
+
+## 🔬 SteelSense-BiLSTM + SteelDefectX (Second Alternative Approach)
+
+A **third, independent** approach lives in [`SteelSenseV2/`](SteelSenseV2/): 92 handcrafted
+texture/shape descriptors (GLCM, LBP, Canny/Sobel/Laplacian, contour geometry, FFT bands,
+quadrant stats) are discretized into tokens and classified by a **BiLSTM** (`SteelSense-BiLSTM`,
+~1.75M params). It is evaluated on **two datasets**: NEU-DET (this repo's main dataset) and
+**SteelDefectX**, a second six-class steel-defect corpus.
+
+> 📖 Full protocol: [`SteelSenseV2/README.md`](SteelSenseV2/README.md) ·
+> reviewer-response mapping in `SteelSenseV2/REVIEWER_RESPONSE.md`
+
+### 📊 Real, multi-seed results (5 seeds, val-selected, test scored once)
+
+| Dataset                       | Accuracy                 | Macro-F1       | Localization AP50 (real detector) | Params |
+| ----------------------------- | ------------------------ | -------------- | --------------------------------- | ------ |
+| NEU-DET                       | **99.67% ± 0.23** | 99.67% ± 0.23 | 5.51%                             | 1.75M  |
+| SteelDefectX (6-class subset) | **99.02% ± 0.40** | 99.06% ± 0.41 | —                                | 1.75M  |
+
+*(These are the corrected, reviewer-response numbers — a 5-seed mean ± sd with checkpoint selection on validation only and test scored once. An earlier internal run reported 99.89% on NEU-DET and used the same split for both checkpoint selection and reporting, which is not a valid test-set number and should not be cited.)*
+
+### ⚠️ Important caveat: SteelDefectX overlaps NEU-DET — don't read these as independent confirmation
+
+Pixel-level verification (dHash + correlation ≥ 0.97) found that **SteelDefectX is not an independent second corpus**:
+
+| SteelDefectX class | images | also in NEU-DET |
+| ------------------ | ------ | --------------- |
+| Patches            | 210    | 210 (100%)      |
+| Pitted surface     | 210    | 210 (100%)      |
+| Rolled-in scale    | 210    | 210 (100%)      |
+| Crazing            | 210    | 209 (99.5%)     |
+| Inclusion          | 557    | ~207 (37%)      |
+| Scratches          | 234    | 210(100%)       |
+
+**Across the six-class subset used above: 1046 of 1631 images (64.1%) also appear in NEU-DET** — e.g. `cracking_01.jpg` (SteelDefectX) and `crazing_1.jpg` (NEU-DET) correlate at 0.999. This does **not** invalidate the SteelDefectX number as a standalone, internally-consistent benchmark (the split is duplicate-group-aware, so no image leaks across train/val/test *within* SteelDefectX). What it **does** rule out:
+
+- SteelDefectX and NEU-DET results are **not mutual, independent confirmation** of generalization
+- **no cross-dataset transfer claim** can be made from these two numbers
+- after de-duplication, 4 of the 6 classes shown above (Patches, Pitted surface, Rolled-in scale, Crazing) would no longer have independent SteelDefectX images at all
+
+Full detail: [`SteelSenseV2/README.md#the-dataset-overlap-finding`](SteelSenseV2/README.md).
 
 ---
 
@@ -542,32 +524,32 @@ def batch_predict(model, image_folder, output_csv=None):
     results = []
     class_names = ['crazing', 'inclusion', 'patches', 
                    'pitted_surface', 'rolled-in_scale', 'scratches']
-    
+  
     for img_path in Path(image_folder).glob('*.jpg'):
         try:
             # Load and preprocess image
             img = image.load_img(img_path, target_size=(128, 128))
             img_array = image.img_to_array(img) / 255.0
             img_array = np.expand_dims(img_array, axis=0)
-            
+          
             # Predict
             predictions = model.predict(img_array, verbose=0)
             predicted_class = class_names[np.argmax(predictions)]
             confidence = np.max(predictions)
-            
+          
             results.append({
                 'filename': img_path.name,
                 'predicted_class': predicted_class,
                 'confidence': confidence,
                 'all_probabilities': predictions[0].tolist()
             })
-            
+          
         except Exception as e:
             print(f"Error processing {img_path}: {e}")
-    
+  
     if output_csv:
         pd.DataFrame(results).to_csv(output_csv, index=False)
-    
+  
     return results
 
 # Usage
@@ -587,7 +569,7 @@ def plot_training_history(history_base, history_amff):
     Create comprehensive training visualizations
     """
     fig, axes = plt.subplots(2, 2, figsize=(15, 10))
-    
+  
     # Accuracy comparison
     axes[0,0].plot(history_base.history['accuracy'], label='Base CNN Train', linestyle='--')
     axes[0,0].plot(history_base.history['val_accuracy'], label='Base CNN Val', linestyle='--')
@@ -598,7 +580,7 @@ def plot_training_history(history_base, history_amff):
     axes[0,0].set_ylabel('Accuracy')
     axes[0,0].legend()
     axes[0,0].grid(True, alpha=0.3)
-    
+  
     # Loss comparison
     axes[0,1].plot(history_base.history['loss'], label='Base CNN Train', linestyle='--')
     axes[0,1].plot(history_base.history['val_loss'], label='Base CNN Val', linestyle='--')
@@ -609,7 +591,7 @@ def plot_training_history(history_base, history_amff):
     axes[0,1].set_ylabel('Loss')
     axes[0,1].legend()
     axes[0,1].grid(True, alpha=0.3)
-    
+  
     # Performance comparison bar chart
     models = ['Base CNN', 'AMFF-CNN']
     accuracies = [85.4, 92.7]  # Example values
@@ -617,13 +599,13 @@ def plot_training_history(history_base, history_amff):
     axes[1,0].set_title('Final Validation Accuracy')
     axes[1,0].set_ylabel('Accuracy (%)')
     axes[1,0].set_ylim(0, 100)
-    
+  
     # Add value labels on bars
     for bar, acc in zip(bars, accuracies):
         height = bar.get_height()
         axes[1,0].text(bar.get_x() + bar.get_width()/2., height + 1,
                        f'{acc:.1f}%', ha='center', va='bottom')
-    
+  
     # Learning rate vs accuracy (if using learning rate scheduling)
     axes[1,1].plot(range(len(history_amff.history['accuracy'])), 
                    history_amff.history['accuracy'], label='AMFF-CNN Accuracy')
@@ -632,7 +614,7 @@ def plot_training_history(history_base, history_amff):
     axes[1,1].set_ylabel('Accuracy')
     axes[1,1].legend()
     axes[1,1].grid(True, alpha=0.3)
-    
+  
     plt.tight_layout()
     plt.show()
 
@@ -653,36 +635,36 @@ def visualize_attention_maps(model, image_path, layer_names=['seam_module', 'cea
     Visualize attention maps from SEAM and CEAM modules
     """
     from tensorflow.keras.models import Model
-    
+  
     # Load and preprocess image
     img = image.load_img(image_path, target_size=(128, 128))
     img_array = image.img_to_array(img) / 255.0
     img_array = np.expand_dims(img_array, axis=0)
-    
+  
     # Create visualization model
     layer_outputs = [model.get_layer(name).output for name in layer_names]
     visualization_model = Model(inputs=model.input, outputs=layer_outputs)
-    
+  
     # Get activations
     activations = visualization_model.predict(img_array)
-    
+  
     # Plot attention maps
     fig, axes = plt.subplots(1, len(activations) + 1, figsize=(15, 5))
-    
+  
     # Original image
     axes[0].imshow(img)
     axes[0].set_title('Original Image')
     axes[0].axis('off')
-    
+  
     # Attention maps
     for i, (activation, layer_name) in enumerate(zip(activations, layer_names)):
         # Average across channels for visualization
         attention_map = np.mean(activation[0], axis=-1)
-        
+      
         axes[i+1].imshow(attention_map, cmap='jet', alpha=0.8)
         axes[i+1].set_title(f'{layer_name} Attention')
         axes[i+1].axis('off')
-    
+  
     plt.tight_layout()
     plt.show()
 
@@ -705,19 +687,19 @@ visualize_attention_maps(amff_model, 'sample_defect.jpg')
 def build_amff_cnn(input_shape=(128, 128, 3), num_classes=6):
     """
     Build AMFF-CNN model with SEAM and CEAM modules
-    
+  
     Parameters:
     -----------
     input_shape : tuple
         Input image shape (height, width, channels)
     num_classes : int
         Number of defect classes
-    
+  
     Returns:
     --------
     model : tensorflow.keras.Model
         Compiled AMFF-CNN model
-    
+  
     Example:
     --------
     >>> model = build_amff_cnn(input_shape=(128, 128, 3), num_classes=6)
@@ -734,16 +716,16 @@ def build_amff_cnn(input_shape=(128, 128, 3), num_classes=6):
 def seam_module(input_tensor, filters):
     """
     Spatial Enhancement Attention Module
-    
+  
     Implements multi-scale dilated convolutions with channel and spatial attention
-    
+  
     Parameters:
     -----------
     input_tensor : tf.Tensor
         Input feature tensor
     filters : int
         Number of output filters
-    
+  
     Returns:
     --------
     tf.Tensor
@@ -760,9 +742,9 @@ def seam_module(input_tensor, filters):
 def ceam_module(current, previous, filters):
     """
     Cross-layer Enhancement Attention Module
-    
+  
     Fuses features from current and previous layers with guided attention
-    
+  
     Parameters:
     -----------
     current : tf.Tensor
@@ -771,7 +753,7 @@ def ceam_module(current, previous, filters):
         Previous layer features
     filters : int
         Number of output filters
-    
+  
     Returns:
     --------
     tf.Tensor
@@ -832,7 +814,7 @@ def create_advanced_data_pipeline(data_dir, config):
     Create advanced data pipeline with augmentation and preprocessing
     """
     from tensorflow.keras.preprocessing.image import ImageDataGenerator
-    
+  
     # Training data generator with augmentation
     train_datagen = ImageDataGenerator(
         rescale=1./255,
@@ -844,13 +826,13 @@ def create_advanced_data_pipeline(data_dir, config):
         shear_range=config['data_augmentation']['shear_range'],
         validation_split=config['validation_split']
     )
-    
+  
     # Validation data generator (no augmentation)
     val_datagen = ImageDataGenerator(
         rescale=1./255,
         validation_split=config['validation_split']
     )
-    
+  
     # Create generators
     train_generator = train_datagen.flow_from_directory(
         data_dir,
@@ -861,7 +843,7 @@ def create_advanced_data_pipeline(data_dir, config):
         shuffle=True,
         seed=42
     )
-    
+  
     val_generator = val_datagen.flow_from_directory(
         data_dir,
         target_size=(config['img_size'], config['img_size']),
@@ -871,7 +853,7 @@ def create_advanced_data_pipeline(data_dir, config):
         shuffle=False,
         seed=42
     )
-    
+  
     return train_generator, val_generator
 ```
 
@@ -934,23 +916,23 @@ def predict():
         # Get image from request
         file = request.files['image']
         img = Image.open(file.stream)
-        
+      
         # Preprocess image
         img = img.resize((128, 128))
         img_array = np.array(img) / 255.0
         img_array = np.expand_dims(img_array, axis=0)
-        
+      
         # Make prediction
         predictions = model.predict(img_array)
         predicted_class = class_names[np.argmax(predictions)]
         confidence = float(np.max(predictions))
-        
+      
         return jsonify({
             'predicted_class': predicted_class,
             'confidence': confidence,
             'all_probabilities': predictions[0].tolist()
         })
-        
+      
     except Exception as e:
         return jsonify({'error': str(e)}), 400
 
@@ -974,7 +956,7 @@ We welcome contributions! Here's how you can help:
 
 - 🐛 **Bug Fixes**: Report and fix issues
 - ✨ **New Features**: Add new functionality
-- 📚 **Documentation**: Improve docs and examples  
+- 📚 **Documentation**: Improve docs and examples
 - 🧪 **Testing**: Add unit tests and integration tests
 - 🎨 **Visualization**: Create better visualization tools
 - 📊 **Benchmarks**: Compare with other methods
@@ -985,21 +967,22 @@ We welcome contributions! Here's how you can help:
 <summary>🔄 Step-by-step Guide</summary>
 
 1. **Fork the repository**
+
    ```bash
    git fork https://github.com/yourusername/amff-cnn-steel-defect.git
    ```
-
 2. **Create a feature branch**
+
    ```bash
    git checkout -b feature/awesome-feature
    ```
-
 3. **Make your changes**
+
    - Follow PEP 8 style guidelines
    - Add docstrings and comments
    - Include unit tests
-
 4. **Test your changes**
+
    ```bash
    python -m pytest tests/
    ```
