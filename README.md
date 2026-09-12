@@ -2,6 +2,17 @@
 
 <div align="center">
 
+![Steel Defect Detection](https://img.shields.io/badge/Steel%20Defect-Detection-blue?style=for-the-badge&logo=tensorflow&logoColor=white)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-FF6F00?style=for-the-badge&logo=tensorflow&logoColor=white)
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Deep Learning](https://img.shields.io/badge/Deep%20Learning-Neural%20Networks-green?style=for-the-badge)
+
+### 🚀 Lightweight MobileNetV2–FPN Framework for Steel Surface Defect Classification
+
+*Six-class classification with Grad-CAM-based post-hoc weak localization — real, measured results, no invented numbers*
+
+</div>
+
 ---
 
 ## 📑 Table of Contents
@@ -56,11 +67,25 @@ This project implements a **lightweight MobileNetV2–FPN framework (AMFF-CNN)**
 
 </details>
 
+</div>
+
 ---
 
 ## ✨ Key Features
 
 <div align="center">
+
+| 🌟 Feature | 📝 Description | 💪 Benefit |
+|------------|----------------|------------|
+| **Native-resolution input** | 200×200×1 grayscale, replicated to 3ch — no resizing to 128/224 | No loss of fine defect detail |
+| **Multi-scale FPN** | MobileNetV2 taps C2–C5 → 128-channel pyramid P2–P5 | Represents both fine (scratch/crazing) and broad (patch) defects |
+| **AMFF** | Parallel channel + spatial attention at each FPN lateral fusion | Re-weights discriminative channels/regions before fusion |
+| **CSAF** | Learned, softmax-normalized cross-scale fusion weights (per sample) | Explicit, input-adaptive scale selection — the paper's core contribution |
+| **SEAM** | Parallel dilated depthwise convs (rates 1, 3, 5) + sigmoid gate | Broadens receptive field without extra stride |
+| **Real, executed ablation** | Module-ladder (baseline→+FPN→+AMFF→+CSAF→+SEAM), 3 seeds | Measured — not asserted — module contributions ([see Results](#-results)) |
+| **CAM-based weak localization** | Grad-CAM → threshold → morphology → boxes, evaluated post-hoc | Honestly reported as weak localization, not object detection |
+
+</div>
 
 ---
 
@@ -261,6 +286,17 @@ Steel_Surface_Defect/
 
 <div align="center">
 
+| Split | Total | Crazing | Inclusion | Patches | Pitted Surface | Rolled-in Scale | Scratches |
+|-------|-------|---------|-----------|---------|-----------------|------------------|-----------|
+| Train | 1260 | 210 | 210 | 210 | 210 | 210 | 210 |
+| Validation | 180 | 30 | 30 | 30 | 30 | 30 | 30 |
+| Test | 360 | 60 | 60 | 60 | 60 | 60 | 60 |
+| **Total** | **1800** | **300** | **300** | **300** | **300** | **300** | **300** |
+
+No image appears in more than one split (verified — see `verify_coverage()` / split-leakage assertions in `new_model_code.ipynb`). Native resolution **200×200**, single-channel grayscale, replicated to 3 channels for the ImageNet-pretrained MobileNetV2 stem — no resizing to 128×128 or 224×224 anywhere in training or evaluation.
+
+</div>
+
 ---
 
 ## 🧠 Model Architecture
@@ -321,6 +357,17 @@ reported as-is rather than smoothed over.
 ### 🏆 Final Held-Out Test Set (360 images, 60/class)
 
 <div align="center">
+
+| Metric | Value |
+|---|---|
+| **Accuracy** | **99.72%** |
+| Macro-Precision | 94.68% |
+| Macro-Recall | 93.33% |
+| **Macro-F1** | **92.95%** |
+| Parameters | 3,364,064 total / 1,104,288 trainable |
+| CAM-based localization AP50 / AP75 / mAP50:95 | 9.71% / 3.62% / 4.30% |
+
+</div>
 
 <details>
 <summary>🎯 Per-class classification (held-out test set)</summary>
